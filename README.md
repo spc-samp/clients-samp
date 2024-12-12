@@ -128,7 +128,7 @@ O arquivo `.spec` contém configurações cruciais:
 - Definição de dependências e recursos adicionais
 - 
 > [!WARNING]
-> A compilação direta do arquivo Python **EXCLUIRÁ** recursos essenciais como imagens e arquivos de instalação, a não ser que você adicione os parâmetros `--add-data "samp-client-r1.zip;."` e `--icon="ico-spc.ico"`.
+> A compilação direta do arquivo Python **EXCLUIRÁ** recursos essenciais como imagens e arquivos de instalação, a não ser que você adicione os parâmetros `--add-data "samp-client-v.zip;."` e `--icon="ico-spc.ico"`.
 
 ## Versões Disponíveis
 
@@ -226,7 +226,7 @@ def Instalacao_Client(self):
 
 ```python
 datas = [
-    ('archives/samp-client-r1.zip', 'archives'),
+    ('archives/samp-client-v.zip', 'archives'),
     ('icons/spc.png', 'icons'),
     ('icons/youtube.png', 'icons'),
     # Outros arquivos estáticos
