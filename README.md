@@ -59,7 +59,7 @@ clients-samp/
 Cada versão do client segue uma estrutura de diretório padrão:
 
 ```
-samp-client-rx/
+samp-client-v/
 │
 ├── archives/
 │   └── samp-client-v.zip      # Arquivos compactados para instalação
@@ -108,7 +108,7 @@ pip install sv-ttk
 pip install pyinstaller
 
 # Navegue até o diretório do client
-cd samp-client-rx
+cd samp-client-v
 
 # Compile o projeto
 pyinstaller samp-client-v.spec
@@ -203,7 +203,7 @@ def Verificacao_Completa(self):
 ```python
 def Instalacao_Client(self):
     caminho_zip = getattr(sys, "_MEIPASS", os.path.abspath("."))
-    arquivo_zip = os.path.join(caminho_zip, "archives", "samp-client-x.zip")
+    arquivo_zip = os.path.join(caminho_zip, "archives", "samp-client-v.zip")
     
     pasta_destino = self.pasta_selecionada.get()
 
@@ -238,7 +238,7 @@ exe = EXE(
     a.binaries,
     a.datas,
     [],
-    name='samp-client-x',
+    name='samp-client-v',
     debug=False,
     bootloader_ignore_signals=False,
     strip=False,
