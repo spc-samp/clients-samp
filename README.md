@@ -2,15 +2,15 @@
 
 ## 🌍
 
-- **English** > [README](tree/English).
-- **Español** > [README](tree/Espanol).
-- **Polski** > [README](tree/Polski).
-- **Türk** > [README](tree/Turk).
-- **Deutsch** > [README](tree/Deutsch).
-- **Русский** > [README](tree/Русский).
-- **Français** > [README](tree/Francais).
-- **Italiano** > [README](tree/Italiano).
-- **Svensk** > [README](tree/Svensk).
+- **English** > [README](https://github.com/spc-samp/clients-samp/tree/English).
+- **Español** > [README](https://github.com/spc-samp/clients-samp/tree/Espanol).
+- **Polski** > [README](https://github.com/spc-samp/clients-samp/tree/Polski).
+- **Türk** > [README](https://github.com/spc-samp/clients-samp/tree/Turk).
+- **Deutsch** > [README](https://github.com/spc-samp/clients-samp/tree/Deutsch).
+- **Русский** > [README](https://github.com/spc-samp/clients-samp/tree/Русский).
+- **Français** > [README](https://github.com/spc-samp/clients-samp/tree/Francais).
+- **Italiano** > [README](https://github.com/spc-samp/clients-samp/tree/Italiano).
+- **Svensk** > [README](https://github.com/spc-samp/clients-samp/tree/Svensk).
 
 ## Índice
 
