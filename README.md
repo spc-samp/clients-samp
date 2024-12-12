@@ -59,7 +59,7 @@ clients-samp/
 Jede Client-Version folgt einer Standardverzeichnisstruktur:
 
 ```
-samp-client-rx/
+samp-client-v/
 │
 ├── archives/
 │   └── samp-client-v.zip      # Komprimierte Installationsdateien
@@ -108,7 +108,7 @@ pip install sv-ttk
 pip install pyinstaller
 
 # In das Client-Verzeichnis wechseln
-cd samp-client-rx
+cd samp-client-v
 
 # Projekt kompilieren
 pyinstaller samp-client-v.spec
