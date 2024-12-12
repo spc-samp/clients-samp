@@ -239,7 +239,7 @@ exe = EXE(
     a.binaries,
     a.datas,
     [],
-    name='samp-client-x',
+    name='samp-client-v',
     debug=False,
     bootloader_ignore_signals=False,
     strip=False,
