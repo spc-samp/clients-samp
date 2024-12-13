@@ -10,7 +10,7 @@
 - **Русский** > [README](https://github.com/spc-samp/clients-samp/tree/Русский).
 - **Français** > [README](https://github.com/spc-samp/clients-samp/tree/Francais).
 - **Italiano** > [README](https://github.com/spc-samp/clients-samp/tree/Italiano).
-- **Svensk** > [README](https://github.com/spc-samp/clients-samp/tree/Svensk).
+- **Svenska** > [README](https://github.com/spc-samp/clients-samp/tree/Svensk).
 
 ## Spis treści
 
