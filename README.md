@@ -203,7 +203,7 @@ def Verification_Complete():
 ```python
 def Installation_Client():
     chemin_zip = getattr(sys, "_MEIPASS", os.path.abspath("."))
-    fichier_zip = os.path.join(chemin_zip, "archives", "samp-client-r1.zip")
+    fichier_zip = os.path.join(chemin_zip, "archives", "samp-client-v.zip")
     
     dossier_destination = self.dossier_selectionne.get()
 
