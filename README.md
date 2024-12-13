@@ -2,47 +2,47 @@
 
 ## 🌍
 
+- **Português** > [README](https://github.com/spc-samp/clients-samp).
 - **English** > [README](https://github.com/spc-samp/clients-samp/tree/English).
 - **Español** > [README](https://github.com/spc-samp/clients-samp/tree/Espanol).
 - **Polski** > [README](https://github.com/spc-samp/clients-samp/tree/Polski).
-- **Türk** > [README](https://github.com/spc-samp/clients-samp/tree/Turk).
 - **Deutsch** > [README](https://github.com/spc-samp/clients-samp/tree/Deutsch).
 - **Русский** > [README](https://github.com/spc-samp/clients-samp/tree/Русский).
 - **Français** > [README](https://github.com/spc-samp/clients-samp/tree/Francais).
 - **Italiano** > [README](https://github.com/spc-samp/clients-samp/tree/Italiano).
-- **Svenska** > [README](https://github.com/spc-samp/clients-samp/tree/Svenska).
+- **Svenska** > [README](https://github.com/spc-samp/clients-samp/tree/Svensk).
 
-## Índice
+## İçindekiler
 
 - [clients-samp](#clients-samp)
   - [🌍](#)
-  - [Índice](#índice)
-  - [Introdução](#introdução)
-  - [Estrutura do Projeto](#estrutura-do-projeto)
-  - [Dependências](#dependências)
-    - [Instalação das Dependências](#instalação-das-dependências)
-    - [Dependências Detalhadas](#dependências-detalhadas)
-  - [Instalação](#instalação)
-    - [Método 1: Executável Pré-Compilado](#método-1-executável-pré-compilado)
-    - [Método 2: Compilação Manual](#método-2-compilação-manual)
-  - [Importante](#importante)
-  - [Versões Disponíveis](#versões-disponíveis)
-  - [Detalhes Técnicos](#detalhes-técnicos)
-    - [Estrutura do Código](#estrutura-do-código)
-      - [Classe de Cores](#classe-de-cores)
-      - [Método de Criação de Label Estilizado](#método-de-criação-de-label-estilizado)
-    - [Métodos Fundamentais](#métodos-fundamentais)
-      - [Verificação de Pasta](#verificação-de-pasta)
-      - [Extração de Arquivos](#extração-de-arquivos)
-  - [Configurações do PyInstaller](#configurações-do-pyinstaller)
-    - [Exemplo de Arquivo Spec](#exemplo-de-arquivo-spec)
-    - [Configurações Importantes](#configurações-importantes)
+  - [İçindekiler](#i̇çindekiler)
+  - [Giriş](#giriş)
+  - [Proje Yapısı](#proje-yapısı)
+  - [Bağımlılıklar](#bağımlılıklar)
+    - [Bağımlılıkların Kurulumu](#bağımlılıkların-kurulumu)
+    - [Detaylı Bağımlılıklar](#detaylı-bağımlılıklar)
+  - [Kurulum](#kurulum)
+    - [Yöntem 1: Önceden Derlenmiş Yürütülebilir](#yöntem-1-önceden-derlenmiş-yürütülebilir)
+    - [Yöntem 2: Manuel Derleme](#yöntem-2-manuel-derleme)
+  - [Önemli](#önemli)
+  - [Mevcut Sürümler](#mevcut-sürümler)
+  - [Teknik Detaylar](#teknik-detaylar)
+    - [Kod Yapısı](#kod-yapısı)
+      - [Renk Sınıfı](#renk-sınıfı)
+      - [Stil Etiket Oluşturma Yöntemi](#stil-etiket-oluşturma-yöntemi)
+    - [Temel Metodlar](#temel-metodlar)
+      - [Klasör Doğrulaması](#klasör-doğrulaması)
+      - [Dosya Çıkarma](#dosya-çıkarma)
+  - [PyInstaller Ayarları](#pyinstaller-ayarları)
+    - [Spec Dosyası Örneği](#spec-dosyası-örneği)
+    - [Önemli Ayarlar](#önemli-ayarlar)
 
-## Introdução
+## Giriş
 
-O projeto **clients-samp** é um conjunto de instaladores para o mod SA:MP (San Andreas Multiplayer), desenvolvido para simplificar a instalação e configuração do client de jogo.
+**clients-samp** projesi, oyun istemcisinin kurulum ve yapılandırmasını basitleştirmek için geliştirilen SA:MP (San Andreas Multiplayer) mod yükleyicileri topluluğudur.
 
-## Estrutura do Projeto
+## Proje Yapısı
 
 ```
 clients-samp/
@@ -56,99 +56,99 @@ clients-samp/
 └── samp-client-r5/
 ```
 
-Cada versão do client segue uma estrutura de diretório padrão:
+Her istemci sürümü standart bir dizin yapısına sahiptir:
 
 ```
 samp-client-v/
 │
 ├── archives/
-│   └── samp-client-v.zip      # Arquivos compactados para instalação
+│   └── samp-client-v.zip      # Kurulum için sıkıştırılmış dosyalar
 │
-├── icons/                      # Ícones e imagens do instalador
+├── icons/                      # Yükleyici simgeleri ve görüntüleri
 │   ├── spc.png
 │   ├── discord.png
 │   └── ...
 │
-├── samp-client-v.py           # Script principal em Python
-└── samp-client-v.spec         # Configuração do PyInstaller
+├── samp-client-v.py           # Ana Python betiği
+└── samp-client-v.spec         # PyInstaller yapılandırması
 ```
 
-## Dependências
+## Bağımlılıklar
 
-### Instalação das Dependências
+### Bağımlılıkların Kurulumu
 
 ```bash
 pip install pillow
 pip install sv-ttk
 ```
 
-### Dependências Detalhadas
+### Detaylı Bağımlılıklar
 
-| Biblioteca | Versão Recomendada | Propósito |
-|-----------|---------------------|-----------|
-| `tkinter` | Padrão do Python | Interface gráfica |
-| `PIL` (Pillow) | 9.5.0+ | Processamento de imagens |
-| `sv_ttk` | 2.0.0+ | Tema moderno para Tkinter |
-| `threading` | Padrão do Python | Processamento assíncrono |
-| `zipfile` | Padrão do Python | Extração de arquivos |
-| `webbrowser` | Padrão do Python | Abertura de links externos |
+| Kütüphane | Önerilen Versiyon | Amaç |
+|-----------|-------------------|------|
+| `tkinter` | Python Varsayılan | Grafik arayüz |
+| `PIL` (Pillow) | 9.5.0+ | Görüntü işleme |
+| `sv_ttk` | 2.0.0+ | Tkinter için modern tema |
+| `threading` | Python Varsayılan | Asenkron işleme |
+| `zipfile` | Python Varsayılan | Dosya çıkarma |
+| `webbrowser` | Python Varsayılan | Dış bağlantıları açma |
 
-## Instalação
+## Kurulum
 
-### Método 1: Executável Pré-Compilado
+### Yöntem 1: Önceden Derlenmiş Yürütülebilir
 
-1. Acesse a seção de [releases](https://github.com/spc-samp/clients-samp/releases/tag/pt-1.0)
-2. Baixe o executável que você quer
-3. Execute o arquivo `.exe`
+1. [releases](https://github.com/spc-samp/clients-samp/releases/tag/tr-1.0) bölümüne gidin
+2. İstediğiniz yürütülebilir dosyayı indirin
+3. `.exe` dosyasını çalıştırın
 
-### Método 2: Compilação Manual
+### Yöntem 2: Manuel Derleme
 
 ```bash
-# Instale o PyInstaller
+# PyInstaller'ı yükleyin
 pip install pyinstaller
 
-# Navegue até o diretório do client
+# İstemci dizinine gidin
 cd samp-client-v
 
-# Compile o projeto
+# Projeyi derleyin
 pyinstaller samp-client-v.spec
 ```
 
-## Importante
+## Önemli
 
-**Atenção:** 
-- **NÃO** compile o arquivo Python (`samp-client-v.py`)
-- **SEMPRE** compile usando o arquivo `.spec` correspondente
-- Exemplo correto de compilação: `pyinstaller samp-client-v.spec`
+**Dikkat:** 
+- Python dosyasını (`samp-client-v.py`) **DERLEMEYİN**
+- Her zaman ilgili `.spec` dosyasını kullanarak derleyin
+- Doğru derleme örneği: `pyinstaller samp-client-v.spec`
 
-**Por quê?**
-O arquivo `.spec` contém configurações cruciais:
-- Inclusão de arquivos estáticos (ícones, arquivos ZIP)
-- Configurações de ícone do executável
-- Definição de dependências e recursos adicionais
-- 
+**Neden?**
+`.spec` dosyası kritik ayarları içerir:
+- Statik dosyaların dahil edilmesi (simgeler, ZIP dosyaları)
+- Yürütülebilir simge ayarları
+- Ek bağımlılıkların ve kaynakların tanımlanması
+
 > [!WARNING]
-> A compilação direta do arquivo Python **EXCLUIRÁ** recursos essenciais como imagens e arquivos de instalação, a não ser que você adicione os parâmetros `--add-data "samp-client-v.zip;."` e `--icon="ico-spc.ico"`.
+> Doğrudan Python dosyasını derlemek, görüntüler ve kurulum dosyaları gibi temel kaynakları **ÇIKARACAKTIR**, aksi takdirde `--add-data "samp-client-v.zip;."` ve `--icon="ico-spc.ico"` parametrelerini ekleyeceksiniz.
 
-## Versões Disponíveis
+## Mevcut Sürümler
 
 1. `samp-client-r1`
-2. `samp-client-r1-voip` SAMPVOICE incluso
+2. `samp-client-r1-voip` SAMPVOICE dahil
 3. `samp-client-r2`
 4. `samp-client-r3`
-5. `samp-client-r3-voip` SAMPVOICE incluso
+5. `samp-client-r3-voip` SAMPVOICE dahil
 6. `samp-client-r4`
 7. `samp-client-r5`
 
-## Detalhes Técnicos
+## Teknik Detaylar
 
-### Estrutura do Código
+### Kod Yapısı
 
-#### Classe de Cores
+#### Renk Sınıfı
 
 ```python
 @dataclass
-class Client_Cores:
+class Client_Renkleri:
     background: str = '#1E1E1E'
     primary: str = '#3B8AFF'
     secondary: str = '#2C2C2C'
@@ -156,80 +156,81 @@ class Client_Cores:
     text_secondary: str = '#A0A0A0'
 ```
 
-#### Método de Criação de Label Estilizado
+#### Stil Etiket Oluşturma Yöntemi
 
 ```python
-def CriarLabel_Estilizado(
+def Etiket_Olustur(
     self, 
     parent, 
-    texto: str, 
-    fonte: tuple = ('Segoe UI', 12), 
-    cor: Optional[str] = None
+    metin: str, 
+    font: tuple = ('Segoe UI', 12), 
+    renk: Optional[str] = None
 ) -> ttk.Label:
     return ttk.Label(
         parent, 
-        text=texto, 
-        font=fonte,
-        foreground=cor or self.colors.text_secondary
+        text=metin, 
+        font=font,
+        foreground=renk or self.colors.text_secondary
     )
 ```
 
-### Métodos Fundamentais
+### Temel Metodlar
 
-#### Verificação de Pasta
+#### Klasör Doğrulaması
 
 ```python
-def Verificacao_Completa(self):
-    pasta = self.pasta_selecionada.get()
+def Dogrulama_Tamamlandi():
+    klasor = self.secilen_klasor.get()
     
-    # Verificações de integridade da pasta
-    if not os.path.exists(pasta):
-        Exibir_Erro("Erro: A pasta selecionada não existe.")
+    # Klasör bütünlük kontrolleri
+    if not os.path.exists(klasor):
+        Hatay_Goster("Hata: Seçilen klasör mevcut değil.")
         return
 
-    if os.path.basename(pasta) != "Grand Theft Auto San Andreas":
-        Exibir_Erro("Erro: Pasta inválida.")
+    if os.path.basename(klasor) != "Grand Theft Auto San Andreas":
+        Hatay_Goster("Hata: Geçersiz klasör. Lütfen doğru GTA San Andreas klasörünü seçin.")
         return
 
-    # Verificação do executável
-    caminho_exe = os.path.join(pasta, "gta_sa.exe")
-    if not os.path.isfile(caminho_exe):
-        Exibir_Erro("Erro: Arquivo 'gta_sa.exe' não encontrado.")
+    # Yürütülebilir dosya kontrolü
+    exe_yolu = os.path.join(klasor, "gta_sa.exe")
+    if not os.path.isfile(exe_yolu):
+        Hatay_Goster("Hata: 'gta_sa.exe' dosyası klasörde bulunamadı.")
         return
 ```
 
-#### Extração de Arquivos
+#### Dosya Çıkarma
 
 ```python
-def Instalacao_Client(self):
-    caminho_zip = getattr(sys, "_MEIPASS", os.path.abspath("."))
-    arquivo_zip = os.path.join(caminho_zip, "archives", "samp-client-v.zip")
+def Client_Yukleme():
+    zip_yolu = getattr(sys, "_MEIPASS", os.path.abspath("."))
+    zip_dosyasi = os.path.join(zip_yolu, "archives", "samp-client-v.zip")
     
-    pasta_destino = self.pasta_selecionada.get()
+    hedef_klasor = self.secilen_klasor.get()
 
-    with zipfile.ZipFile(arquivo_zip, 'r') as zip_ref:
-        arquivos = zip_ref.namelist()
-        total_arquivos = len(arquivos)
+    with zipfile.ZipFile(zip_dosyasi, 'r') as zip_ref:
+        dosyalar = zip_ref.namelist()
+        toplam_dosya = len(dosyalar)
         
-        for i, arquivo in enumerate(arquivos, start=1):
-            # Barra de progresso e atualização de status
-            arquivo_label.config(text=f"Extraindo: {os.path.basename(arquivo)}")
-            barra_progresso['value'] = (i / total_arquivos) * 100
+        for i, dosya in enumerate(dosyalar, start=1):
+            # İlerleme çubuğu ve durum güncellemesi
+            dosya_etiketi.config(text=f"Çıkartılıyor: {os.path.basename(dosya)}")
+            ilerleme_cubugu['value'] = (i / toplam_dosya) * 100
+            self.root.update_idletasks()
             
-            zip_ref.extract(arquivo, pasta_destino)
-            self.arquivos_extraidos.append(arquivo)
+            zip_ref.extract(dosya, hedef_klasor)
+            self.cikarilan_dosyalar.append(dosya)
 ```
 
-## Configurações do PyInstaller
+## PyInstaller Ayarları
 
-### Exemplo de Arquivo Spec
+### Spec Dosyası Örneği
 
 ```python
 datas = [
     ('archives/samp-client-v.zip', 'archives'),
     ('icons/spc.png', 'icons'),
     ('icons/youtube.png', 'icons'),
-    # Outros arquivos estáticos
+    # Diğer statik dosyalar
 ]
 
 exe = EXE(
@@ -248,9 +249,9 @@ exe = EXE(
 )
 ```
 
-### Configurações Importantes
+### Önemli Ayarlar
 
-- `datas`: Define arquivos adicionais a serem incluídos
-- `name`: Nome do executável final
-- `icon`: Ícone personalizado para o executável
-- `console=False`: Oculta janela de console
+- `datas`: Eklenecek ek dosyaları tanımlar
+- `name`: Son yürütülebilir dosyanın adı
+- `icon`: Yürütülebilir için özel simge
+- `console=False`: Konsol penceresini gizler
