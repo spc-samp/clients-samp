@@ -12,7 +12,7 @@ from typing import Dict, Optional, Callable
 import webbrowser
 
 @dataclass
-class Client_Cores:
+class Client_Couleurs:
     background: str = '#1E1E1E'
     primary: str = '#3B8AFF'
     secondary: str = '#2C2C2C'
@@ -22,15 +22,15 @@ class Client_Cores:
 class Samp_Client_R2:
     def __init__(self, root: tk.Tk):
         self.root = root
-        self.Configurar_Raiz()
-        self.colors = Client_Cores()
-        self.pasta_selecionada = tk.StringVar(value="Nenhuma pasta foi selecionada, ainda")
-        self.arquivos_extraidos = []
-        self.Configurar_Tema()
-        self.CriarInterface_Inicial()
-        self.Configurar_IconJanela()
+        self.Configurer_Racine()
+        self.colors = Client_Couleurs()
+        self.dossier_selectionne = tk.StringVar(value="Aucun dossier n'a ete selectionne")
+        self.fichiers_extraits = []
+        self.Configurer_Theme()
+        self.Creer_Interface_Initiale()
+        self.Configurer_IconeFenetre()
 
-    def Configurar_IconJanela(self):
+    def Configurer_IconeFenetre(self):
         base_path = getattr(sys, '_MEIPASS', os.path.abspath("."))
         icon_path = os.path.join(base_path, "icons", "spc.png")
 
@@ -38,337 +38,337 @@ class Samp_Client_R2:
         icon = ImageTk.PhotoImage(img)
         self.root.iconphoto(True, icon)
 
-    def Configurar_Raiz(self):
+    def Configurer_Racine(self):
         self.root.title("Client R2 - SPC")
         self.root.geometry("700x500")
         self.root.resizable(True, True)
 
-    def Configurar_Tema(self):
+    def Configurer_Theme(self):
         sv_ttk.set_theme("dark")
         self.root.configure(bg=self.colors.background)
 
-    def Limpar_Janela(self):
+    def Nettoyer_Fenetre(self):
         for widget in self.root.winfo_children():
             widget.destroy()
 
-    def CriarLabel_Estilizado(
+    def Creer_Label_Stylise(
         self, 
         parent, 
-        texto: str, 
+        texte: str, 
         fonte: tuple = ('Segoe UI', 12), 
-        cor: Optional[str] = None
+        couleur: Optional[str] = None
     ) -> ttk.Label:
         return ttk.Label(
             parent, 
-            text=texto, 
+            text=texte, 
             font=fonte,
-            foreground=cor or self.colors.text_secondary
+            foreground=couleur or self.colors.text_secondary
         )
 
-    def CriarBotao_Estilizado(
+    def Creer_Bouton_Stylise(
         self, 
         parent, 
-        texto: str, 
-        comando: Callable, 
-        estilo: str = 'Accent.TButton'
+        texte: str, 
+        commande: Callable, 
+        style: str = 'Accent.TButton'
     ) -> ttk.Button:
         return ttk.Button(
             parent, 
-            text=texto, 
-            command=comando,
-            style=estilo
+            text=texte, 
+            command=commande,
+            style=style
         )
 
-    def CriarInterface_Inicial(self):
-        self.Limpar_Janela()
+    def Creer_Interface_Initiale(self):
+        self.Nettoyer_Fenetre()
         
-        quadro_principal = ttk.Frame(self.root, padding="30 30 30 30")
-        quadro_principal.pack(fill=tk.BOTH, expand=True)
+        cadre_principal = ttk.Frame(self.root, padding="30 30 30 30")
+        cadre_principal.pack(fill=tk.BOTH, expand=True)
         
-        titulo = self.CriarLabel_Estilizado(
-            quadro_principal, 
-            "Instalador Client R2 SA:MP", 
+        titre = self.Creer_Label_Stylise(
+            cadre_principal, 
+            "Installateur Client R2 SA:MP", 
             fonte=('Segoe UI', 20, 'bold'), 
-            cor=self.colors.primary
+            couleur=self.colors.primary
         )
-        titulo.pack(pady=(0, 30))
+        titre.pack(pady=(0, 30))
         
-        subtitulo = self.CriarLabel_Estilizado(
-            quadro_principal, 
-            "Instalador do mod SA:MP (San Andreas Multiplayer), versão 0.3.7 R2"
+        sous_titre = self.Creer_Label_Stylise(
+            cadre_principal, 
+            "Installateur du mod SA:MP (San Andreas Multiplayer), version 0.3.7 R2"
         )
-        subtitulo.pack(pady=(0, 20))
+        sous_titre.pack(pady=(0, 20))
         
-        frame_pasta = ttk.Frame(quadro_principal)
-        frame_pasta.pack(fill=tk.X, pady=10)
+        frame_dossier = ttk.Frame(cadre_principal)
+        frame_dossier.pack(fill=tk.X, pady=10)
         
-        pasta_label = ttk.Label(
-            frame_pasta, 
-            textvariable=self.pasta_selecionada, 
+        label_dossier = ttk.Label(
+            frame_dossier, 
+            textvariable=self.dossier_selectionne, 
             font=('Consolas', 10), 
             wraplength=500,
             foreground=self.colors.text_primary
         )
-        pasta_label.pack(side=tk.LEFT, expand=True, fill=tk.X, padx=(0, 10))
+        label_dossier.pack(side=tk.LEFT, expand=True, fill=tk.X, padx=(0, 10))
         
-        botao_selecionar = self.CriarBotao_Estilizado(
-            frame_pasta, 
-            "Selecionar Pasta", 
-            self.Escolher_Pasta
+        bouton_selectionner = self.Creer_Bouton_Stylise(
+            frame_dossier, 
+            "Selectionner Dossier", 
+            self.Choisir_Dossier
         )
-        botao_selecionar.pack(side=tk.RIGHT)
+        bouton_selectionner.pack(side=tk.RIGHT)
 
-    def Escolher_Pasta(self):
-        pasta = filedialog.askdirectory(
-            title="Selecione a pasta Grand Theft Auto San Andreas",
+    def Choisir_Dossier(self):
+        dossier = filedialog.askdirectory(
+            title="Selectionnez le dossier Grand Theft Auto San Andreas",
             initialdir=os.path.expanduser("~")
         )
         
-        if pasta:
-            self.pasta_selecionada.set(pasta)
-            self.CriarInterface_VerificacaoPasta()
+        if dossier:
+            self.dossier_selectionne.set(dossier)
+            self.Creer_Interface_VerificationDossier()
 
-    def CriarInterface_VerificacaoPasta(self):
-        self.Limpar_Janela()
+    def Creer_Interface_VerificationDossier(self):
+        self.Nettoyer_Fenetre()
         
-        quadro_principal = ttk.Frame(self.root, padding="30 30 30 30")
-        quadro_principal.pack(fill=tk.BOTH, expand=True)
+        cadre_principal = ttk.Frame(self.root, padding="30 30 30 30")
+        cadre_principal.pack(fill=tk.BOTH, expand=True)
         
-        titulo = self.CriarLabel_Estilizado(
-            quadro_principal, 
-            "Verificando Pasta", 
+        titre = self.Creer_Label_Stylise(
+            cadre_principal, 
+            "Verification du Dossier", 
             fonte=('Segoe UI', 16, 'bold'), 
-            cor=self.colors.primary
+            couleur=self.colors.primary
         )
-        titulo.pack(pady=(0, 20))
+        titre.pack(pady=(0, 20))
         
-        status_label = self.CriarLabel_Estilizado(
-            quadro_principal, 
-            "Verificando se esta é a pasta correta do seu GTA..."
+        label_statut = self.Creer_Label_Stylise(
+            cadre_principal, 
+            "Verification si c'est le bon dossier de votre GTA..."
         )
-        status_label.pack(pady=20)
+        label_statut.pack(pady=20)
         
-        erro_label = ttk.Label(
-            quadro_principal, 
+        label_erreur = ttk.Label(
+            cadre_principal, 
             text="", 
             foreground="red", 
             font=('Segoe UI', 10)
         )
-        erro_label.pack(pady=10)
+        label_erreur.pack(pady=10)
         
-        barra_progresso = ttk.Progressbar(
-            quadro_principal, 
+        barre_progression = ttk.Progressbar(
+            cadre_principal, 
             length=600, 
             mode='determinate', 
             maximum=100
         )
-        barra_progresso.pack(pady=20)
+        barre_progression.pack(pady=20)
 
-        def Verificacao_Completa():
-            pasta = self.pasta_selecionada.get()
+        def Verification_Complete():
+            dossier = self.dossier_selectionne.get()
             
             for i in range(101):
-                barra_progresso['value'] = i
+                barre_progression['value'] = i
                 self.root.update_idletasks()
                 time.sleep(0.05)
             
-            def Exibir_Erro(mensagem):
-                erro_label.config(text=mensagem)
-                botao_tentar_novamente.pack()
+            def Afficher_Erreur(message):
+                label_erreur.config(text=message)
+                bouton_reessayer.pack()
             
-            if not os.path.exists(pasta):
-                Exibir_Erro("Erro: A pasta selecionada não existe.")
+            if not os.path.exists(dossier):
+                Afficher_Erreur("Erreur: Le dossier selectionne n'existe pas.")
                 return
 
-            if os.path.basename(pasta) != "Grand Theft Auto San Andreas":
-                Exibir_Erro("Erro: Pasta inválida. Selecione a pasta correta do GTA San Andreas (Grand Theft Auto San Andreas).")
+            if os.path.basename(dossier) != "Grand Theft Auto San Andreas":
+                Afficher_Erreur("Erreur: Dossier invalide. Selectionnez le dossier correct de GTA San Andreas (Grand Theft Auto San Andreas).")
                 return
 
-            caminho_exe = os.path.join(pasta, "gta_sa.exe")
-            if not os.path.isfile(caminho_exe):
-                Exibir_Erro("Erro: O arquivo 'gta_sa.exe' não foi encontrado na pasta.")
+            chemin_exe = os.path.join(dossier, "gta_sa.exe")
+            if not os.path.isfile(chemin_exe):
+                Afficher_Erreur("Erreur: Le fichier 'gta_sa.exe' n'a pas ete trouve dans le dossier.")
                 return
             
-            self.root.after(0, self.CriarInterface_ConfirmacaoClient)
+            self.root.after(0, self.Creer_Interface_ConfirmationClient)
 
-        def Tentar_Novamente():
-            botao_tentar_novamente.pack_forget()
-            erro_label.config(text="")
-            self.CriarInterface_Inicial()
+        def Reessayer():
+            bouton_reessayer.pack_forget()
+            label_erreur.config(text="")
+            self.Creer_Interface_Initiale()
 
-        botao_tentar_novamente = self.CriarBotao_Estilizado(
-            quadro_principal, 
-            "Tentar Novamente", 
-            Tentar_Novamente
+        bouton_reessayer = self.Creer_Bouton_Stylise(
+            cadre_principal, 
+            "Reessayer", 
+            Reessayer
         )
 
-        threading.Thread(target=Verificacao_Completa, daemon=True).start()
+        threading.Thread(target=Verification_Complete, daemon=True).start()
 
-    def CriarInterface_ConfirmacaoClient(self):
-        self.Limpar_Janela()
+    def Creer_Interface_ConfirmationClient(self):
+        self.Nettoyer_Fenetre()
         
-        quadro_principal = ttk.Frame(self.root, padding="30 30 30 30")
-        quadro_principal.pack(fill=tk.BOTH, expand=True)
+        cadre_principal = ttk.Frame(self.root, padding="30 30 30 30")
+        cadre_principal.pack(fill=tk.BOTH, expand=True)
         
-        titulo = self.CriarLabel_Estilizado(
-            quadro_principal, 
-            "Instalar Client", 
+        titre = self.Creer_Label_Stylise(
+            cadre_principal, 
+            "Installer Client", 
             fonte=('Segoe UI', 16, 'bold'), 
-            cor=self.colors.primary
+            couleur=self.colors.primary
         )
-        titulo.pack(pady=(0, 20))
+        titre.pack(pady=(0, 20))
         
-        subtitulo = self.CriarLabel_Estilizado(
-            quadro_principal, 
-            "Pasta verificada com sucesso. Deseja prosseguir com a instalação\ndo Client R2?"
+        sous_titre = self.Creer_Label_Stylise(
+            cadre_principal, 
+            "Dossier verifie avec succes. Voulez-vous continuer\nl'installation du Client R2?"
         )
-        subtitulo.pack(pady=20)
+        sous_titre.pack(pady=20)
         
-        frame_botoes = ttk.Frame(quadro_principal)
-        frame_botoes.pack(pady=20)
+        frame_boutons = ttk.Frame(cadre_principal)
+        frame_boutons.pack(pady=20)
         
-        botao_prosseguir = self.CriarBotao_Estilizado(
-            frame_botoes, 
-            "Prosseguir", 
-            self.IniciarInstalacao_Client, 
+        bouton_continuer = self.Creer_Bouton_Stylise(
+            frame_boutons, 
+            "Continuer", 
+            self.Commencer_Installation_Client, 
             'Accent.TButton'
         )
-        botao_prosseguir.pack(side=tk.LEFT, padx=10)
+        bouton_continuer.pack(side=tk.LEFT, padx=10)
         
-        botao_cancelar = self.CriarBotao_Estilizado(
-            frame_botoes, 
-            "Cancelar", 
-            self.Cancelar_Instalacao
+        bouton_annuler = self.Creer_Bouton_Stylise(
+            frame_boutons, 
+            "Annuler", 
+            self.Annuler_Installation
         )
-        botao_cancelar.pack(side=tk.LEFT, padx=10)
+        bouton_annuler.pack(side=tk.LEFT, padx=10)
 
-    def IniciarInstalacao_Client(self):
-        self.Limpar_Janela()
+    def Commencer_Installation_Client(self):
+        self.Nettoyer_Fenetre()
         
-        quadro_principal = ttk.Frame(self.root, padding="30 30 30 30")
-        quadro_principal.pack(fill=tk.BOTH, expand=True)
+        cadre_principal = ttk.Frame(self.root, padding="30 30 30 30")
+        cadre_principal.pack(fill=tk.BOTH, expand=True)
         
-        titulo = self.CriarLabel_Estilizado(
-            quadro_principal, 
-            "Instalando Client R2", 
+        titre = self.Creer_Label_Stylise(
+            cadre_principal, 
+            "Installation Client R2", 
             fonte=('Segoe UI', 16, 'bold'), 
-            cor=self.colors.primary
+            couleur=self.colors.primary
         )
-        titulo.pack(pady=(0, 20))
+        titre.pack(pady=(0, 20))
         
-        status_label = self.CriarLabel_Estilizado(
-            quadro_principal, 
-            "Instalando Client, aguarde..."
+        label_statut = self.Creer_Label_Stylise(
+            cadre_principal, 
+            "Installation du Client, veuillez patienter..."
         )
-        status_label.pack(pady=20)
+        label_statut.pack(pady=20)
         
-        barra_progresso = ttk.Progressbar(
-            quadro_principal, 
+        barre_progression = ttk.Progressbar(
+            cadre_principal, 
             length=600, 
             mode='determinate', 
             maximum=100
         )
-        barra_progresso.pack(pady=20)
+        barre_progression.pack(pady=20)
         
-        arquivo_label = ttk.Label(
-            quadro_principal, 
+        label_fichier = ttk.Label(
+            cadre_principal, 
             text="", 
             font=('Consolas', 10),
             foreground=self.colors.text_primary
         )
-        arquivo_label.pack(pady=10)
+        label_fichier.pack(pady=10)
 
-        def Instalacao_Client():
-            caminho_zip = getattr(sys, "_MEIPASS", os.path.abspath("."))
-            arquivo_zip = os.path.join(caminho_zip, "archives", "samp-client-r2.zip")
+        def Installation_Client():
+            chemin_zip = getattr(sys, "_MEIPASS", os.path.abspath("."))
+            fichier_zip = os.path.join(chemin_zip, "archives", "samp-client-r2.zip")
             
-            pasta_destino = self.pasta_selecionada.get()
+            dossier_destination = self.dossier_selectionne.get()
 
-            with zipfile.ZipFile(arquivo_zip, 'r') as zip_ref:
-                arquivos = zip_ref.namelist()
-                total_arquivos = len(arquivos)
+            with zipfile.ZipFile(fichier_zip, 'r') as zip_ref:
+                fichiers = zip_ref.namelist()
+                total_fichiers = len(fichiers)
                 
-                for i, arquivo in enumerate(arquivos, start=1):
-                    arquivo_label.config(text=f"Extraindo: {os.path.basename(arquivo)}")
-                    barra_progresso['value'] = (i / total_arquivos) * 100
+                for i, fichier in enumerate(fichiers, start=1):
+                    label_fichier.config(text=f"Extraction: {os.path.basename(fichier)}")
+                    barre_progression['value'] = (i / total_fichiers) * 100
                     self.root.update_idletasks()
                     
-                    zip_ref.extract(arquivo, pasta_destino)
-                    self.arquivos_extraidos.append(arquivo)
+                    zip_ref.extract(fichier, dossier_destination)
+                    self.fichiers_extraits.append(fichier)
                     time.sleep(0.1)
             
-            arquivo_label.config(text="Instalação concluída!")
-            barra_progresso['value'] = 100
+            label_fichier.config(text="Installation terminee!")
+            barre_progression['value'] = 100
             self.root.update_idletasks()
             time.sleep(1)
             
-            self.root.after(0, self.MostrarResumoInstalacao)
+            self.root.after(0, self.Afficher_Resume_Installation)
         
-        threading.Thread(target=Instalacao_Client, daemon=True).start()
+        threading.Thread(target=Installation_Client, daemon=True).start()
 
-    def MostrarResumoInstalacao(self):
-        self.Limpar_Janela()
+    def Afficher_Resume_Installation(self):
+        self.Nettoyer_Fenetre()
         
-        quadro_principal = ttk.Frame(self.root, padding="30 30 30 30")
-        quadro_principal.pack(fill=tk.BOTH, expand=True)
+        cadre_principal = ttk.Frame(self.root, padding="30 30 30 30")
+        cadre_principal.pack(fill=tk.BOTH, expand=True)
         
-        titulo = self.CriarLabel_Estilizado(
-            quadro_principal, 
-            "Arquivos Extraídos", 
+        titre = self.Creer_Label_Stylise(
+            cadre_principal, 
+            "Fichiers Extraits", 
             fonte=('Segoe UI', 16, 'bold'), 
-            cor=self.colors.primary
+            couleur=self.colors.primary
         )
-        titulo.pack(pady=(0, 20))
+        titre.pack(pady=(0, 20))
         
-        frame_rolagem = ttk.Frame(quadro_principal)
-        frame_rolagem.pack(fill=tk.BOTH, expand=True, pady=20)
+        frame_defilement = ttk.Frame(cadre_principal)
+        frame_defilement.pack(fill=tk.BOTH, expand=True, pady=20)
         
-        canvas = tk.Canvas(frame_rolagem)
-        scrollbar = ttk.Scrollbar(frame_rolagem, orient="vertical", command=canvas.yview)
-        scrollable_frame = ttk.Frame(canvas)
+        canvas = tk.Canvas(frame_defilement)
+        scrollbar = ttk.Scrollbar(frame_defilement, orient="vertical", command=canvas.yview)
+        frame_defilable = ttk.Frame(canvas)
 
-        scrollable_frame.bind(
+        frame_defilable.bind(
             "<Configure>",
             lambda e: canvas.configure(scrollregion=canvas.bbox("all"))
         )
 
-        canvas.create_window((0, 0), window=scrollable_frame, anchor="nw")
+        canvas.create_window((0, 0), window=frame_defilable, anchor="nw")
         canvas.configure(yscrollcommand=scrollbar.set)
 
         canvas.pack(side="left", fill="both", expand=True)
         scrollbar.pack(side="right", fill="y")
         
-        for arquivo in self.arquivos_extraidos:
-            label_arquivo = ttk.Label(
-                scrollable_frame, 
-                text=arquivo, 
+        for fichier in self.fichiers_extraits:
+            label_fichier = ttk.Label(
+                frame_defilable, 
+                text=fichier, 
                 font=('Consolas', 10)
             )
-            label_arquivo.pack(anchor='w', padx=10, pady=2)
+            label_fichier.pack(anchor='w', padx=10, pady=2)
         
-        botao_concluido = self.CriarBotao_Estilizado(
-            quadro_principal, 
-            "Concluído", 
-            self.CriarInterface_Sociais, 
+        bouton_termine = self.Creer_Bouton_Stylise(
+            cadre_principal, 
+            "Termine", 
+            self.Creer_Interface_Sociales, 
             'Accent.TButton'
         )
-        botao_concluido.pack(pady=20)
+        bouton_termine.pack(pady=20)
 
-    def CriarInterface_Sociais(self):
-        self.Limpar_Janela()
+    def Creer_Interface_Sociales(self):
+        self.Nettoyer_Fenetre()
         
-        quadro_principal = ttk.Frame(self.root, padding="30 30 30 30")
-        quadro_principal.pack(fill=tk.BOTH, expand=True)
+        cadre_principal = ttk.Frame(self.root, padding="30 30 30 30")
+        cadre_principal.pack(fill=tk.BOTH, expand=True)
         
-        titulo = self.CriarLabel_Estilizado(
-            quadro_principal, 
-            "Sociais", 
+        titre = self.Creer_Label_Stylise(
+            cadre_principal, 
+            "Reseaux Sociaux", 
             fonte=('Segoe UI', 24, 'bold'), 
-            cor=self.colors.primary
+            couleur=self.colors.primary
         )
-        titulo.pack(pady=(0, 40))
+        titre.pack(pady=(0, 40))
         
-        links_sociais = [
+        liens_sociaux = [
             (" Discord SPC", "https://discord.gg/3fApZh66Tf", "discord.png"),
             (" Instagram", "https://www.instagram.com/spc.samp/", "instagram.png"),
             (" YouTube", "https://www.youtube.com/@spc-samp", "youtube.png"),
@@ -376,93 +376,93 @@ class Samp_Client_R2:
             (" GitHub", "https://github.com/spc-samp", "github.png"),
         ]
         
-        frame_botoes = ttk.Frame(quadro_principal)
-        frame_botoes.pack(expand=True)
+        frame_boutons = ttk.Frame(cadre_principal)
+        frame_boutons.pack(expand=True)
         
-        def Abrir_Link(link):
-            webbrowser.open(link, new=2)
+        def Ouvrir_Lien(lien):
+            webbrowser.open(lien, new=2)
         
-        def redimensionar_icone(caminho_icone, tamanho=(30, 30)):
+        def redimensionner_icone(chemin_icone, taille=(30, 30)):
             base_path = getattr(sys, "_MEIPASS", os.path.dirname(os.path.abspath(__file__)))
-            caminho_completo = os.path.join(base_path, caminho_icone)
+            chemin_complet = os.path.join(base_path, chemin_icone)
             
-            imagem = Image.open(caminho_completo)
-            imagem_redimensionada = imagem.resize(tamanho, Image.LANCZOS)
-            return ImageTk.PhotoImage(imagem_redimensionada)
+            image = Image.open(chemin_complet)
+            image_redimensionnee = image.resize(taille, Image.LANCZOS)
+            return ImageTk.PhotoImage(image_redimensionnee)
         
-        for i in range(0, len(links_sociais), 2):
-            frame_linha = ttk.Frame(frame_botoes)
-            frame_linha.pack(fill=tk.X, pady=10)
+        for i in range(0, len(liens_sociaux), 2):
+            frame_ligne = ttk.Frame(frame_boutons)
+            frame_ligne.pack(fill=tk.X, pady=10)
             
             for j in range(2):
-                if i + j < len(links_sociais):
-                    nome, link, icone_path = links_sociais[i + j]
+                if i + j < len(liens_sociaux):
+                    nom, lien, chemin_icone = liens_sociaux[i + j]
                     
-                    icone = redimensionar_icone(os.path.join('icons', icone_path))
+                    icone = redimensionner_icone(os.path.join('icons', chemin_icone))
                     
-                    botao_social = ttk.Button(
-                        frame_linha, 
-                        text=nome, 
+                    bouton_social = ttk.Button(
+                        frame_ligne, 
+                        text=nom, 
                         image=icone, 
                         compound=tk.LEFT,
-                        command=lambda l=link: Abrir_Link(l)
+                        command=lambda l=lien: Ouvrir_Lien(l)
                     )
-                    botao_social.image = icone
-                    botao_social.pack(side=tk.LEFT, padx=10, expand=True, fill=tk.X)
+                    bouton_social.image = icone
+                    bouton_social.pack(side=tk.LEFT, padx=10, expand=True, fill=tk.X)
         
-        botao_fechar = ttk.Button(
-            frame_botoes, 
-            text="Fechar", 
+        bouton_fermer = ttk.Button(
+            frame_boutons, 
+            text="Fermer", 
             command=self.root.quit,
-            style='Fechar.TButton'
+            style='Fermer.TButton'
         )
-        botao_fechar.pack(pady=10, padx=20, fill=tk.X)
+        bouton_fermer.pack(pady=10, padx=20, fill=tk.X)
 
         style = ttk.Style()
         style.configure(
-            'Fechar.TButton', 
+            'Fermer.TButton', 
             background='red', 
             foreground='white', 
             font=('Segoe UI', 12)
         )
 
-    def Cancelar_Instalacao(self):
-        self.Limpar_Janela()
+    def Annuler_Installation(self):
+        self.Nettoyer_Fenetre()
         
-        quadro_principal = ttk.Frame(self.root, padding="30 30 30 30")
-        quadro_principal.pack(fill=tk.BOTH, expand=True)
+        cadre_principal = ttk.Frame(self.root, padding="30 30 30 30")
+        cadre_principal.pack(fill=tk.BOTH, expand=True)
         
-        titulo = self.CriarLabel_Estilizado(
-            quadro_principal, 
-            "Cancelando Instalação", 
+        titre = self.Creer_Label_Stylise(
+            cadre_principal, 
+            "Annulation de l'Installation", 
             fonte=('Segoe UI', 16, 'bold'), 
-            cor=self.colors.primary
+            couleur=self.colors.primary
         )
-        titulo.pack(pady=(0, 20))
+        titre.pack(pady=(0, 20))
         
-        status_label = self.CriarLabel_Estilizado(
-            quadro_principal, 
-            "Aguarde, toda a operação está sendo cancelada..."
+        label_statut = self.Creer_Label_Stylise(
+            cadre_principal, 
+            "Veuillez patienter, toute l'operation est en cours d'annulation..."
         )
-        status_label.pack(pady=20)
+        label_statut.pack(pady=20)
         
-        barra_progresso = ttk.Progressbar(
-            quadro_principal, 
+        barre_progression = ttk.Progressbar(
+            cadre_principal, 
             length=600, 
             mode='determinate', 
             maximum=100
         )
-        barra_progresso.pack(pady=20)
+        barre_progression.pack(pady=20)
 
-        def Cancelamento():
+        def Annulation():
             for i in range(101):
-                barra_progresso['value'] = i
+                barre_progression['value'] = i
                 self.root.update_idletasks()
                 time.sleep(0.05)
             
-            self.root.after(0, self.CriarInterface_Sociais)
+            self.root.after(0, self.Creer_Interface_Sociales)
 
-        threading.Thread(target=Cancelamento, daemon=True).start()
+        threading.Thread(target=Annulation, daemon=True).start()
 
 def main_client():
     root = tk.Tk()
