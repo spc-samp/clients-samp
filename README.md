@@ -97,7 +97,7 @@ pip install sv-ttk
 
 ### Metoda 1: Wstępnie skompilowany plik wykonywalny
 
-1. Przejdź do sekcji [wydań](https://github.com/spc-samp/clients-samp/releases/tag/pl-1.0)
+1. Przejdź do sekcji [releases](https://github.com/spc-samp/clients-samp/releases/tag/pl-1.0)
 2. Pobierz żądany plik wykonywalny
 3. Uruchom plik `.exe`
 
