@@ -2,47 +2,47 @@
 
 ## 🌍
 
-- **English** > [README](https://github.com/spc-samp/clients-samp/tree/English).
-- **Español** > [README](https://github.com/spc-samp/clients-samp/tree/Espanol).
-- **Polski** > [README](https://github.com/spc-samp/clients-samp/tree/Polski).
-- **Türk** > [README](https://github.com/spc-samp/clients-samp/tree/Turk).
-- **Deutsch** > [README](https://github.com/spc-samp/clients-samp/tree/Deutsch).
-- **Русский** > [README](https://github.com/spc-samp/clients-samp/tree/Русский).
-- **Français** > [README](https://github.com/spc-samp/clients-samp/tree/Francais).
-- **Italiano** > [README](https://github.com/spc-samp/clients-samp/tree/Italiano).
-- **Svensk** > [README](https://github.com/spc-samp/clients-samp/tree/Svensk).
+- **Português** > [README](https://github.com/spc-samp/clients-samp)
+- **English** > [README](https://github.com/spc-samp/clients-samp/tree/English)
+- **Español** > [README](https://github.com/spc-samp/clients-samp/tree/Espanol)
+- **Polski** > [README](https://github.com/spc-samp/clients-samp/tree/Polski)
+- **Türk** > [README](https://github.com/spc-samp/clients-samp/tree/Turk)
+- **Deutsch** > [README](https://github.com/spc-samp/clients-samp/tree/Deutsch)
+- **Русский** > [README](https://github.com/spc-samp/clients-samp/tree/Русский)
+- **Français** > [README](https://github.com/spc-samp/clients-samp/tree/Francais)
+- **Italiano** > [README](https://github.com/spc-samp/clients-samp/tree/Italiano)
 
-## Índice
+## Innehållsförteckning
 
 - [clients-samp](#clients-samp)
   - [🌍](#)
-  - [Índice](#índice)
-  - [Introdução](#introdução)
-  - [Estrutura do Projeto](#estrutura-do-projeto)
-  - [Dependências](#dependências)
-    - [Instalação das Dependências](#instalação-das-dependências)
-    - [Dependências Detalhadas](#dependências-detalhadas)
-  - [Instalação](#instalação)
-    - [Método 1: Executável Pré-Compilado](#método-1-executável-pré-compilado)
-    - [Método 2: Compilação Manual](#método-2-compilação-manual)
-  - [Importante](#importante)
-  - [Versões Disponíveis](#versões-disponíveis)
-  - [Detalhes Técnicos](#detalhes-técnicos)
-    - [Estrutura do Código](#estrutura-do-código)
-      - [Classe de Cores](#classe-de-cores)
-      - [Método de Criação de Label Estilizado](#método-de-criação-de-label-estilizado)
-    - [Métodos Fundamentais](#métodos-fundamentais)
-      - [Verificação de Pasta](#verificação-de-pasta)
-      - [Extração de Arquivos](#extração-de-arquivos)
-  - [Configurações do PyInstaller](#configurações-do-pyinstaller)
-    - [Exemplo de Arquivo Spec](#exemplo-de-arquivo-spec)
-    - [Configurações Importantes](#configurações-importantes)
+  - [Innehållsförteckning](#innehållsförteckning)
+  - [Introduktion](#introduktion)
+  - [Projektstruktur](#projektstruktur)
+  - [Beroenden](#beroenden)
+    - [Installation av beroenden](#installation-av-beroenden)
+    - [Detaljerade beroenden](#detaljerade-beroenden)
+  - [Installation](#installation)
+    - [Metod 1: Förkompilerad körbar fil](#metod-1-förkompilerad-körbar-fil)
+    - [Metod 2: Manuell kompilering](#metod-2-manuell-kompilering)
+  - [Viktigt](#viktigt)
+  - [Tillgängliga versioner](#tillgängliga-versioner)
+  - [Tekniska detaljer](#tekniska-detaljer)
+    - [Kodstruktur](#kodstruktur)
+      - [Färgklass](#färgklass)
+      - [Metod för att skapa stiliserad etikett](#metod-för-att-skapa-stiliserad-etikett)
+    - [Grundläggande metoder](#grundläggande-metoder)
+      - [Mappverifiering](#mappverifiering)
+      - [Filextrahering](#filextrahering)
+  - [PyInstaller-konfigurationer](#pyinstaller-konfigurationer)
+    - [Exempel på spec-fil](#exempel-på-spec-fil)
+    - [Viktiga konfigurationer](#viktiga-konfigurationer)
 
-## Introdução
+## Introduktion
 
-O projeto **clients-samp** é um conjunto de instaladores para o mod SA:MP (San Andreas Multiplayer), desenvolvido para simplificar a instalação e configuração do client de jogo.
+Projektet **clients-samp** är en samling installationsprogram för SA:MP-modden (San Andreas Multiplayer), utvecklat för att förenkla installationen och konfigurationen av spelets klient.
 
-## Estrutura do Projeto
+## Projektstruktur
 
 ```
 clients-samp/
@@ -56,99 +56,99 @@ clients-samp/
 └── samp-client-r5/
 ```
 
-Cada versão do client segue uma estrutura de diretório padrão:
+Varje version av klienten följer en standardmappstruktur:
 
 ```
 samp-client-v/
 │
 ├── archives/
-│   └── samp-client-v.zip      # Arquivos compactados para instalação
+│   └── samp-client-v.zip      # Komprimerade filer för installation
 │
-├── icons/                      # Ícones e imagens do instalador
+├── icons/                      # Installationsprogram ikoner och bilder
 │   ├── spc.png
 │   ├── discord.png
 │   └── ...
 │
-├── samp-client-v.py           # Script principal em Python
-└── samp-client-v.spec         # Configuração do PyInstaller
+├── samp-client-v.py           # Huvudskript i Python
+└── samp-client-v.spec         # PyInstaller-konfiguration
 ```
 
-## Dependências
+## Beroenden
 
-### Instalação das Dependências
+### Installation av beroenden
 
 ```bash
 pip install pillow
 pip install sv-ttk
 ```
 
-### Dependências Detalhadas
+### Detaljerade beroenden
 
-| Biblioteca | Versão Recomendada | Propósito |
-|-----------|---------------------|-----------|
-| `tkinter` | Padrão do Python | Interface gráfica |
-| `PIL` (Pillow) | 9.5.0+ | Processamento de imagens |
-| `sv_ttk` | 2.0.0+ | Tema moderno para Tkinter |
-| `threading` | Padrão do Python | Processamento assíncrono |
-| `zipfile` | Padrão do Python | Extração de arquivos |
-| `webbrowser` | Padrão do Python | Abertura de links externos |
+| Bibliotek | Rekommenderad version | Syfte |
+|-----------|------------------------|--------|
+| `tkinter` | Standard i Python | Grafiskt gränssnitt |
+| `PIL` (Pillow) | 9.5.0+ | Bildbehandling |
+| `sv_ttk` | 2.0.0+ | Modernt tema för Tkinter |
+| `threading` | Standard i Python | Asynkron behandling |
+| `zipfile` | Standard i Python | Filextrahering |
+| `webbrowser` | Standard i Python | Öppna externa länkar |
 
-## Instalação
+## Installation
 
-### Método 1: Executável Pré-Compilado
+### Metod 1: Förkompilerad körbar fil
 
-1. Acesse a seção de [releases](https://github.com/spc-samp/clients-samp/releases/tag/pt-1.0)
-2. Baixe o executável que você quer
-3. Execute o arquivo `.exe`
+1. Gå till [releases](https://github.com/spc-samp/clients-samp/releases/tag/sv-1.0)
+2. Ladda ner den körbara fil du vill ha
+3. Kör `.exe`-filen
 
-### Método 2: Compilação Manual
+### Metod 2: Manuell kompilering
 
 ```bash
-# Instale o PyInstaller
+# Installera PyInstaller
 pip install pyinstaller
 
-# Navegue até o diretório do client
+# Navigera till klientmappen
 cd samp-client-v
 
-# Compile o projeto
+# Kompilera projekt
 pyinstaller samp-client-v.spec
 ```
 
-## Importante
+## Viktigt
 
-**Atenção:** 
-- **NÃO** compile o arquivo Python (`samp-client-v.py`)
-- **SEMPRE** compile usando o arquivo `.spec` correspondente
-- Exemplo correto de compilação: `pyinstaller samp-client-v.spec`
+**Observera:** 
+- **KOMPILERA INTE** Python-filen (`samp-client-v.py`)
+- **KOMPILERA ALLTID** med motsvarande `.spec`-fil
+- Korrekt kompileringsexempel: `pyinstaller samp-client-v.spec`
 
-**Por quê?**
-O arquivo `.spec` contém configurações cruciais:
-- Inclusão de arquivos estáticos (ícones, arquivos ZIP)
-- Configurações de ícone do executável
-- Definição de dependências e recursos adicionais
-- 
+**Varför?**
+`.spec`-filen innehåller kritiska konfigurationer:
+- Inkludering av statiska filer (ikoner, ZIP-filer)
+- Konfigurationer för körbar filikoner
+- Definition av ytterligare beroenden och resurser
+
 > [!WARNING]
-> A compilação direta do arquivo Python **EXCLUIRÁ** recursos essenciais como imagens e arquivos de instalação, a não ser que você adicione os parâmetros `--add-data "samp-client-v.zip;."` e `--icon="ico-spc.ico"`.
+> Direkt kompilering av Python-filen kommer att **UTESLUTA** väsentliga resurser som bilder och installationsfiler, såvida du inte lägger till parametrarna `--add-data "samp-client-v.zip;."` och `--icon="ico-spc.ico"`.
 
-## Versões Disponíveis
+## Tillgängliga versioner
 
 1. `samp-client-r1`
-2. `samp-client-r1-voip` SAMPVOICE incluso
+2. `samp-client-r1-voip` SAMPVOICE inkluderad
 3. `samp-client-r2`
 4. `samp-client-r3`
-5. `samp-client-r3-voip` SAMPVOICE incluso
+5. `samp-client-r3-voip` SAMPVOICE inkluderad
 6. `samp-client-r4`
 7. `samp-client-r5`
 
-## Detalhes Técnicos
+## Tekniska detaljer
 
-### Estrutura do Código
+### Kodstruktur
 
-#### Classe de Cores
+#### Färgklass
 
 ```python
 @dataclass
-class Client_Cores:
+class Client_Farger:
     background: str = '#1E1E1E'
     primary: str = '#3B8AFF'
     secondary: str = '#2C2C2C'
@@ -156,80 +156,81 @@ class Client_Cores:
     text_secondary: str = '#A0A0A0'
 ```
 
-#### Método de Criação de Label Estilizado
+#### Metod för att skapa stiliserad etikett
 
 ```python
-def CriarLabel_Estilizado(
+def Skapa_Stiliserad_Etikett(
     self, 
     parent, 
-    texto: str, 
-    fonte: tuple = ('Segoe UI', 12), 
-    cor: Optional[str] = None
+    text: str, 
+    font: tuple = ('Segoe UI', 12), 
+    color: Optional[str] = None
 ) -> ttk.Label:
     return ttk.Label(
         parent, 
-        text=texto, 
-        font=fonte,
-        foreground=cor or self.colors.text_secondary
+        text=text, 
+        font=font,
+        foreground=color or self.colors.text_secondary
     )
 ```
 
-### Métodos Fundamentais
+### Grundläggande metoder
 
-#### Verificação de Pasta
+#### Mappverifiering
 
 ```python
-def Verificacao_Completa(self):
-    pasta = self.pasta_selecionada.get()
+def Verifiering_Slutford():
+    mapp = self.vald_mapp.get()
     
-    # Verificações de integridade da pasta
-    if not os.path.exists(pasta):
-        Exibir_Erro("Erro: A pasta selecionada não existe.")
+    # Mappintegritetsverifieringar
+    if not os.path.exists(mapp):
+        Visa_Fel("Fel: Den valda mappen finns inte.")
         return
 
-    if os.path.basename(pasta) != "Grand Theft Auto San Andreas":
-        Exibir_Erro("Erro: Pasta inválida.")
+    if os.path.basename(mapp) != "Grand Theft Auto San Andreas":
+        Visa_Fel("Fel: Ogiltig mapp. Välj rätt mapp för GTA San Andreas (Grand Theft Auto San Andreas).")
         return
 
-    # Verificação do executável
-    caminho_exe = os.path.join(pasta, "gta_sa.exe")
-    if not os.path.isfile(caminho_exe):
-        Exibir_Erro("Erro: Arquivo 'gta_sa.exe' não encontrado.")
+    # Kontroll av körbar fil
+    exe_stig = os.path.join(mapp, "gta_sa.exe")
+    if not os.path.isfile(exe_stig):
+        Visa_Fel("Fel: Filen 'gta_sa.exe' hittades inte i mappen.")
         return
 ```
 
-#### Extração de Arquivos
+#### Filextrahering
 
 ```python
-def Instalacao_Client(self):
-    caminho_zip = getattr(sys, "_MEIPASS", os.path.abspath("."))
-    arquivo_zip = os.path.join(caminho_zip, "archives", "samp-client-v.zip")
+def Client_Installation():
+    zip_stig = getattr(sys, "_MEIPASS", os.path.abspath("."))
+    arkiv_zip = os.path.join(zip_stig, "archives", "samp-client-v.zip")
     
-    pasta_destino = self.pasta_selecionada.get()
+    mapp_destination = self.vald_mapp.get()
 
-    with zipfile.ZipFile(arquivo_zip, 'r') as zip_ref:
-        arquivos = zip_ref.namelist()
-        total_arquivos = len(arquivos)
+    with zipfile.ZipFile(arkiv_zip, 'r') as zip_ref:
+        arkiv = zip_ref.namelist()
+        total_arkiv = len(arkiv)
         
-        for i, arquivo in enumerate(arquivos, start=1):
-            # Barra de progresso e atualização de status
-            arquivo_label.config(text=f"Extraindo: {os.path.basename(arquivo)}")
-            barra_progresso['value'] = (i / total_arquivos) * 100
+        for i, arkiv_item in enumerate(arkiv, start=1):
+            # Förloppsindikator och statusuppdatering
+            arkiv_etikett.config(text=f"Extraherar: {os.path.basename(arkiv_item)}")
+            framsteg_bar['value'] = (i / total_arkiv) * 100
+            self.root.update_idletasks()
             
-            zip_ref.extract(arquivo, pasta_destino)
-            self.arquivos_extraidos.append(arquivo)
+            zip_ref.extract(arkiv_item, mapp_destination)
+            self.extraherade_filer.append(arkiv_item)
 ```
 
-## Configurações do PyInstaller
+## PyInstaller-konfigurationer
 
-### Exemplo de Arquivo Spec
+### Exempel på spec-fil
 
 ```python
 datas = [
     ('archives/samp-client-v.zip', 'archives'),
     ('icons/spc.png', 'icons'),
     ('icons/youtube.png', 'icons'),
-    # Outros arquivos estáticos
+    # Andra statiska filer
 ]
 
 exe = EXE(
@@ -248,9 +249,9 @@ exe = EXE(
 )
 ```
 
-### Configurações Importantes
+### Viktiga konfigurationer
 
-- `datas`: Define arquivos adicionais a serem incluídos
-- `name`: Nome do executável final
-- `icon`: Ícone personalizado para o executável
-- `console=False`: Oculta janela de console
+- `datas`: Definierar ytterligare filer som ska inkluderas
+- `name`: Namn på slutlig körbar fil
+- `icon`: Anpassad ikon för körbar fil
+- `console=False`: Döljer konsolfönster
