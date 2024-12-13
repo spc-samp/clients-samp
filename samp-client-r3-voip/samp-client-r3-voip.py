@@ -12,7 +12,7 @@ from typing import Dict, Optional, Callable
 import webbrowser
 
 @dataclass
-class Client_Cores:
+class Client_Colores:
     background: str = '#1E1E1E'
     primary: str = '#3B8AFF'
     secondary: str = '#2C2C2C'
@@ -23,14 +23,14 @@ class Samp_Client_R3_Voip:
     def __init__(self, root: tk.Tk):
         self.root = root
         self.Configurar_Raiz()
-        self.colors = Client_Cores()
-        self.pasta_selecionada = tk.StringVar(value="Nenhuma pasta foi selecionada, ainda")
-        self.arquivos_extraidos = []
+        self.colors = Client_Colores()
+        self.carpeta_seleccionada = tk.StringVar(value="Ninguna carpeta ha sido seleccionada aun")
+        self.archivos_extraidos = []
         self.Configurar_Tema()
-        self.CriarInterface_Inicial()
-        self.Configurar_IconJanela()
+        self.Crear_Interfaz_Inicial()
+        self.Configurar_IconVentana()
 
-    def Configurar_IconJanela(self):
+    def Configurar_IconVentana(self):
         base_path = getattr(sys, '_MEIPASS', os.path.abspath("."))
         icon_path = os.path.join(base_path, "icons", "spc.png")
 
@@ -47,25 +47,25 @@ class Samp_Client_R3_Voip:
         sv_ttk.set_theme("dark")
         self.root.configure(bg=self.colors.background)
 
-    def Limpar_Janela(self):
+    def Limpiar_Ventana(self):
         for widget in self.root.winfo_children():
             widget.destroy()
 
-    def CriarLabel_Estilizado(
+    def Crear_Etiqueta_Estilizada(
         self, 
         parent, 
         texto: str, 
-        fonte: tuple = ('Segoe UI', 12), 
-        cor: Optional[str] = None
+        fuente: tuple = ('Segoe UI', 12), 
+        color: Optional[str] = None
     ) -> ttk.Label:
         return ttk.Label(
             parent, 
             text=texto, 
-            font=fonte,
-            foreground=cor or self.colors.text_secondary
+            font=fuente,
+            foreground=color or self.colors.text_secondary
         )
 
-    def CriarBotao_Estilizado(
+    def Crear_Boton_Estilizado(
         self, 
         parent, 
         texto: str, 
@@ -79,252 +79,252 @@ class Samp_Client_R3_Voip:
             style=estilo
         )
 
-    def CriarInterface_Inicial(self):
-        self.Limpar_Janela()
+    def Crear_Interfaz_Inicial(self):
+        self.Limpiar_Ventana()
         
-        quadro_principal = ttk.Frame(self.root, padding="30 30 30 30")
-        quadro_principal.pack(fill=tk.BOTH, expand=True)
+        cuadro_principal = ttk.Frame(self.root, padding="30 30 30 30")
+        cuadro_principal.pack(fill=tk.BOTH, expand=True)
         
-        titulo = self.CriarLabel_Estilizado(
-            quadro_principal, 
+        titulo = self.Crear_Etiqueta_Estilizada(
+            cuadro_principal, 
             "Instalador Client R3 Voip SA:MP", 
-            fonte=('Segoe UI', 20, 'bold'), 
-            cor=self.colors.primary
+            fuente=('Segoe UI', 20, 'bold'), 
+            color=self.colors.primary
         )
         titulo.pack(pady=(0, 30))
         
-        subtitulo = self.CriarLabel_Estilizado(
-            quadro_principal, 
-            "Instalador do mod SA:MP (San Andreas Multiplayer), versão 0.3.7 R3 Voip"
+        subtitulo = self.Crear_Etiqueta_Estilizada(
+            cuadro_principal, 
+            "Instalador del mod SA:MP (San Andreas Multiplayer), versión 0.3.7 R3 Voip"
         )
         subtitulo.pack(pady=(0, 20))
         
-        frame_pasta = ttk.Frame(quadro_principal)
-        frame_pasta.pack(fill=tk.X, pady=10)
+        frame_carpeta = ttk.Frame(cuadro_principal)
+        frame_carpeta.pack(fill=tk.X, pady=10)
         
-        pasta_label = ttk.Label(
-            frame_pasta, 
-            textvariable=self.pasta_selecionada, 
+        carpeta_label = ttk.Label(
+            frame_carpeta, 
+            textvariable=self.carpeta_seleccionada, 
             font=('Consolas', 10), 
             wraplength=500,
             foreground=self.colors.text_primary
         )
-        pasta_label.pack(side=tk.LEFT, expand=True, fill=tk.X, padx=(0, 10))
+        carpeta_label.pack(side=tk.LEFT, expand=True, fill=tk.X, padx=(0, 10))
         
-        botao_selecionar = self.CriarBotao_Estilizado(
-            frame_pasta, 
-            "Selecionar Pasta", 
-            self.Escolher_Pasta
+        boton_seleccionar = self.Crear_Boton_Estilizado(
+            frame_carpeta, 
+            "Seleccionar Carpeta", 
+            self.Elegir_Carpeta
         )
-        botao_selecionar.pack(side=tk.RIGHT)
+        boton_seleccionar.pack(side=tk.RIGHT)
 
-    def Escolher_Pasta(self):
-        pasta = filedialog.askdirectory(
-            title="Selecione a pasta Grand Theft Auto San Andreas",
+    def Elegir_Carpeta(self):
+        carpeta = filedialog.askdirectory(
+            title="Seleccione la carpeta de Grand Theft Auto San Andreas",
             initialdir=os.path.expanduser("~")
         )
         
-        if pasta:
-            self.pasta_selecionada.set(pasta)
-            self.CriarInterface_VerificacaoPasta()
+        if carpeta:
+            self.carpeta_seleccionada.set(carpeta)
+            self.Crear_Interfaz_Verificacion_Carpeta()
 
-    def CriarInterface_VerificacaoPasta(self):
-        self.Limpar_Janela()
+    def Crear_Interfaz_Verificacion_Carpeta(self):
+        self.Limpiar_Ventana()
         
-        quadro_principal = ttk.Frame(self.root, padding="30 30 30 30")
-        quadro_principal.pack(fill=tk.BOTH, expand=True)
+        cuadro_principal = ttk.Frame(self.root, padding="30 30 30 30")
+        cuadro_principal.pack(fill=tk.BOTH, expand=True)
         
-        titulo = self.CriarLabel_Estilizado(
-            quadro_principal, 
-            "Verificando Pasta", 
-            fonte=('Segoe UI', 16, 'bold'), 
-            cor=self.colors.primary
+        titulo = self.Crear_Etiqueta_Estilizada(
+            cuadro_principal, 
+            "Verificando Carpeta", 
+            fuente=('Segoe UI', 16, 'bold'), 
+            color=self.colors.primary
         )
         titulo.pack(pady=(0, 20))
         
-        status_label = self.CriarLabel_Estilizado(
-            quadro_principal, 
-            "Verificando se esta é a pasta correta do seu GTA..."
+        status_label = self.Crear_Etiqueta_Estilizada(
+            cuadro_principal, 
+            "Verificando si esta es la carpeta correcta de su GTA..."
         )
         status_label.pack(pady=20)
         
-        erro_label = ttk.Label(
-            quadro_principal, 
+        error_label = ttk.Label(
+            cuadro_principal, 
             text="", 
             foreground="red", 
             font=('Segoe UI', 10)
         )
-        erro_label.pack(pady=10)
+        error_label.pack(pady=10)
         
-        barra_progresso = ttk.Progressbar(
-            quadro_principal, 
+        barra_progreso = ttk.Progressbar(
+            cuadro_principal, 
             length=600, 
             mode='determinate', 
             maximum=100
         )
-        barra_progresso.pack(pady=20)
+        barra_progreso.pack(pady=20)
 
-        def Verificacao_Completa():
-            pasta = self.pasta_selecionada.get()
+        def Verificacion_Completa():
+            carpeta = self.carpeta_seleccionada.get()
             
             for i in range(101):
-                barra_progresso['value'] = i
+                barra_progreso['value'] = i
                 self.root.update_idletasks()
                 time.sleep(0.05)
             
-            def Exibir_Erro(mensagem):
-                erro_label.config(text=mensagem)
-                botao_tentar_novamente.pack()
+            def Mostrar_Error(mensaje):
+                error_label.config(text=mensaje)
+                boton_intentar_nuevamente.pack()
             
-            if not os.path.exists(pasta):
-                Exibir_Erro("Erro: A pasta selecionada não existe.")
+            if not os.path.exists(carpeta):
+                Mostrar_Error("Error: La carpeta seleccionada no existe.")
                 return
 
-            if os.path.basename(pasta) != "Grand Theft Auto San Andreas":
-                Exibir_Erro("Erro: Pasta inválida. Selecione a pasta correta do GTA San Andreas (Grand Theft Auto San Andreas).")
+            if os.path.basename(carpeta) != "Grand Theft Auto San Andreas":
+                Mostrar_Error("Error: Carpeta inválida. Seleccione la carpeta correcta de GTA San Andreas (Grand Theft Auto San Andreas).")
                 return
 
-            caminho_exe = os.path.join(pasta, "gta_sa.exe")
-            if not os.path.isfile(caminho_exe):
-                Exibir_Erro("Erro: O arquivo 'gta_sa.exe' não foi encontrado na pasta.")
+            ruta_exe = os.path.join(carpeta, "gta_sa.exe")
+            if not os.path.isfile(ruta_exe):
+                Mostrar_Error("Error: El archivo 'gta_sa.exe' no se encontró en la carpeta.")
                 return
             
-            self.root.after(0, self.CriarInterface_ConfirmacaoClient)
+            self.root.after(0, self.Crear_Interfaz_Confirmacion_Client)
 
-        def Tentar_Novamente():
-            botao_tentar_novamente.pack_forget()
-            erro_label.config(text="")
-            self.CriarInterface_Inicial()
+        def Intentar_Nuevamente():
+            boton_intentar_nuevamente.pack_forget()
+            error_label.config(text="")
+            self.Crear_Interfaz_Inicial()
 
-        botao_tentar_novamente = self.CriarBotao_Estilizado(
-            quadro_principal, 
-            "Tentar Novamente", 
-            Tentar_Novamente
+        boton_intentar_nuevamente = self.Crear_Boton_Estilizado(
+            cuadro_principal, 
+            "Intentar de Nuevo", 
+            Intentar_Nuevamente
         )
 
-        threading.Thread(target=Verificacao_Completa, daemon=True).start()
+        threading.Thread(target=Verificacion_Completa, daemon=True).start()
 
-    def CriarInterface_ConfirmacaoClient(self):
-        self.Limpar_Janela()
+    def Crear_Interfaz_Confirmacion_Client(self):
+        self.Limpiar_Ventana()
         
-        quadro_principal = ttk.Frame(self.root, padding="30 30 30 30")
-        quadro_principal.pack(fill=tk.BOTH, expand=True)
+        cuadro_principal = ttk.Frame(self.root, padding="30 30 30 30")
+        cuadro_principal.pack(fill=tk.BOTH, expand=True)
         
-        titulo = self.CriarLabel_Estilizado(
-            quadro_principal, 
+        titulo = self.Crear_Etiqueta_Estilizada(
+            cuadro_principal, 
             "Instalar Client", 
-            fonte=('Segoe UI', 16, 'bold'), 
-            cor=self.colors.primary
+            fuente=('Segoe UI', 16, 'bold'), 
+            color=self.colors.primary
         )
         titulo.pack(pady=(0, 20))
         
-        subtitulo = self.CriarLabel_Estilizado(
-            quadro_principal, 
-            "Pasta verificada com sucesso. Deseja prosseguir com a instalação\ndo Client R3 Voip?"
+        subtitulo = self.Crear_Etiqueta_Estilizada(
+            cuadro_principal, 
+            "Carpeta verificada con éxito. ¿Desea continuar con la instalación\ndel Client R3 Voip?"
         )
         subtitulo.pack(pady=20)
         
-        frame_botoes = ttk.Frame(quadro_principal)
-        frame_botoes.pack(pady=20)
+        frame_botones = ttk.Frame(cuadro_principal)
+        frame_botones.pack(pady=20)
         
-        botao_prosseguir = self.CriarBotao_Estilizado(
-            frame_botoes, 
-            "Prosseguir", 
-            self.IniciarInstalacao_Client, 
+        boton_continuar = self.Crear_Boton_Estilizado(
+            frame_botones, 
+            "Continuar", 
+            self.Iniciar_Instalacion_Client, 
             'Accent.TButton'
         )
-        botao_prosseguir.pack(side=tk.LEFT, padx=10)
+        boton_continuar.pack(side=tk.LEFT, padx=10)
         
-        botao_cancelar = self.CriarBotao_Estilizado(
-            frame_botoes, 
+        boton_cancelar = self.Crear_Boton_Estilizado(
+            frame_botones, 
             "Cancelar", 
-            self.Cancelar_Instalacao
+            self.Cancelar_Instalacion
         )
-        botao_cancelar.pack(side=tk.LEFT, padx=10)
+        boton_cancelar.pack(side=tk.LEFT, padx=10)
 
-    def IniciarInstalacao_Client(self):
-        self.Limpar_Janela()
+    def Iniciar_Instalacion_Client(self):
+        self.Limpiar_Ventana()
         
-        quadro_principal = ttk.Frame(self.root, padding="30 30 30 30")
-        quadro_principal.pack(fill=tk.BOTH, expand=True)
+        cuadro_principal = ttk.Frame(self.root, padding="30 30 30 30")
+        cuadro_principal.pack(fill=tk.BOTH, expand=True)
         
-        titulo = self.CriarLabel_Estilizado(
-            quadro_principal, 
+        titulo = self.Crear_Etiqueta_Estilizada(
+            cuadro_principal, 
             "Instalando Client R3 Voip", 
-            fonte=('Segoe UI', 16, 'bold'), 
-            cor=self.colors.primary
+            fuente=('Segoe UI', 16, 'bold'), 
+            color=self.colors.primary
         )
         titulo.pack(pady=(0, 20))
         
-        status_label = self.CriarLabel_Estilizado(
-            quadro_principal, 
-            "Instalando Client, aguarde..."
+        status_label = self.Crear_Etiqueta_Estilizada(
+            cuadro_principal, 
+            "Instalando Client, por favor espere..."
         )
         status_label.pack(pady=20)
         
-        barra_progresso = ttk.Progressbar(
-            quadro_principal, 
+        barra_progreso = ttk.Progressbar(
+            cuadro_principal, 
             length=600, 
             mode='determinate', 
             maximum=100
         )
-        barra_progresso.pack(pady=20)
+        barra_progreso.pack(pady=20)
         
-        arquivo_label = ttk.Label(
-            quadro_principal, 
+        archivo_label = ttk.Label(
+            cuadro_principal, 
             text="", 
             font=('Consolas', 10),
             foreground=self.colors.text_primary
         )
-        arquivo_label.pack(pady=10)
+        archivo_label.pack(pady=10)
 
-        def Instalacao_Client():
-            caminho_zip = getattr(sys, "_MEIPASS", os.path.abspath("."))
-            arquivo_zip = os.path.join(caminho_zip, "archives", "samp-client-r3-voip.zip")
+        def Instalacion_Client():
+            ruta_zip = getattr(sys, "_MEIPASS", os.path.abspath("."))
+            archivo_zip = os.path.join(ruta_zip, "archives", "samp-client-r3-voip.zip")
             
-            pasta_destino = self.pasta_selecionada.get()
+            carpeta_destino = self.carpeta_seleccionada.get()
 
-            with zipfile.ZipFile(arquivo_zip, 'r') as zip_ref:
-                arquivos = zip_ref.namelist()
-                total_arquivos = len(arquivos)
+            with zipfile.ZipFile(archivo_zip, 'r') as zip_ref:
+                archivos = zip_ref.namelist()
+                total_archivos = len(archivos)
                 
-                for i, arquivo in enumerate(arquivos, start=1):
-                    arquivo_label.config(text=f"Extraindo: {os.path.basename(arquivo)}")
-                    barra_progresso['value'] = (i / total_arquivos) * 100
+                for i, archivo in enumerate(archivos, start=1):
+                    archivo_label.config(text=f"Extrayendo: {os.path.basename(archivo)}")
+                    barra_progreso['value'] = (i / total_archivos) * 100
                     self.root.update_idletasks()
                     
-                    zip_ref.extract(arquivo, pasta_destino)
-                    self.arquivos_extraidos.append(arquivo)
+                    zip_ref.extract(archivo, carpeta_destino)
+                    self.archivos_extraidos.append(archivo)
                     time.sleep(0.1)
             
-            arquivo_label.config(text="Instalação concluída!")
-            barra_progresso['value'] = 100
+            archivo_label.config(text="¡Instalación completada!")
+            barra_progreso['value'] = 100
             self.root.update_idletasks()
             time.sleep(1)
             
-            self.root.after(0, self.MostrarResumoInstalacao)
+            self.root.after(0, self.Mostrar_Resumen_Instalacion)
         
-        threading.Thread(target=Instalacao_Client, daemon=True).start()
+        threading.Thread(target=Instalacion_Client, daemon=True).start()
 
-    def MostrarResumoInstalacao(self):
-        self.Limpar_Janela()
+    def Mostrar_Resumen_Instalacion(self):
+        self.Limpiar_Ventana()
         
-        quadro_principal = ttk.Frame(self.root, padding="30 30 30 30")
-        quadro_principal.pack(fill=tk.BOTH, expand=True)
+        cuadro_principal = ttk.Frame(self.root, padding="30 30 30 30")
+        cuadro_principal.pack(fill=tk.BOTH, expand=True)
         
-        titulo = self.CriarLabel_Estilizado(
-            quadro_principal, 
-            "Arquivos Extraídos", 
-            fonte=('Segoe UI', 16, 'bold'), 
-            cor=self.colors.primary
+        titulo = self.Crear_Etiqueta_Estilizada(
+            cuadro_principal, 
+            "Archivos Extraidos", 
+            fuente=('Segoe UI', 16, 'bold'), 
+            color=self.colors.primary
         )
         titulo.pack(pady=(0, 20))
         
-        frame_rolagem = ttk.Frame(quadro_principal)
-        frame_rolagem.pack(fill=tk.BOTH, expand=True, pady=20)
+        frame_desplazamiento = ttk.Frame(cuadro_principal)
+        frame_desplazamiento.pack(fill=tk.BOTH, expand=True, pady=20)
         
-        canvas = tk.Canvas(frame_rolagem)
-        scrollbar = ttk.Scrollbar(frame_rolagem, orient="vertical", command=canvas.yview)
+        canvas = tk.Canvas(frame_desplazamiento)
+        scrollbar = ttk.Scrollbar(frame_desplazamiento, orient="vertical", command=canvas.yview)
         scrollable_frame = ttk.Frame(canvas)
 
         scrollable_frame.bind(
@@ -338,37 +338,37 @@ class Samp_Client_R3_Voip:
         canvas.pack(side="left", fill="both", expand=True)
         scrollbar.pack(side="right", fill="y")
         
-        for arquivo in self.arquivos_extraidos:
-            label_arquivo = ttk.Label(
+        for archivo in self.archivos_extraidos:
+            label_archivo = ttk.Label(
                 scrollable_frame, 
-                text=arquivo, 
+                text=archivo, 
                 font=('Consolas', 10)
             )
-            label_arquivo.pack(anchor='w', padx=10, pady=2)
+            label_archivo.pack(anchor='w', padx=10, pady=2)
         
-        botao_concluido = self.CriarBotao_Estilizado(
-            quadro_principal, 
-            "Concluído", 
-            self.CriarInterface_Sociais, 
+        boton_completado = self.Crear_Boton_Estilizado(
+            cuadro_principal, 
+            "Completado", 
+            self.Crear_Interfaz_Sociales, 
             'Accent.TButton'
         )
-        botao_concluido.pack(pady=20)
+        boton_completado.pack(pady=20)
 
-    def CriarInterface_Sociais(self):
-        self.Limpar_Janela()
+    def Crear_Interfaz_Sociales(self):
+        self.Limpiar_Ventana()
         
-        quadro_principal = ttk.Frame(self.root, padding="30 30 30 30")
-        quadro_principal.pack(fill=tk.BOTH, expand=True)
+        cuadro_principal = ttk.Frame(self.root, padding="30 30 30 30")
+        cuadro_principal.pack(fill=tk.BOTH, expand=True)
         
-        titulo = self.CriarLabel_Estilizado(
-            quadro_principal, 
-            "Sociais", 
-            fonte=('Segoe UI', 24, 'bold'), 
-            cor=self.colors.primary
+        titulo = self.Crear_Etiqueta_Estilizada(
+            cuadro_principal, 
+            "Sociales", 
+            fuente=('Segoe UI', 24, 'bold'), 
+            color=self.colors.primary
         )
         titulo.pack(pady=(0, 40))
         
-        links_sociais = [
+        enlaces_sociales = [
             (" Discord SPC", "https://discord.gg/3fApZh66Tf", "discord.png"),
             (" Instagram", "https://www.instagram.com/spc.samp/", "instagram.png"),
             (" YouTube", "https://www.youtube.com/@spc-samp", "youtube.png"),
@@ -376,93 +376,93 @@ class Samp_Client_R3_Voip:
             (" GitHub", "https://github.com/spc-samp", "github.png"),
         ]
         
-        frame_botoes = ttk.Frame(quadro_principal)
-        frame_botoes.pack(expand=True)
+        frame_botones = ttk.Frame(cuadro_principal)
+        frame_botones.pack(expand=True)
         
-        def Abrir_Link(link):
-            webbrowser.open(link, new=2)
+        def Abrir_Enlace(enlace):
+            webbrowser.open(enlace, new=2)
         
-        def redimensionar_icone(caminho_icone, tamanho=(30, 30)):
+        def redimensionar_icono(ruta_icono, tamano=(30, 30)):
             base_path = getattr(sys, "_MEIPASS", os.path.dirname(os.path.abspath(__file__)))
-            caminho_completo = os.path.join(base_path, caminho_icone)
+            ruta_completa = os.path.join(base_path, ruta_icono)
             
-            imagem = Image.open(caminho_completo)
-            imagem_redimensionada = imagem.resize(tamanho, Image.LANCZOS)
-            return ImageTk.PhotoImage(imagem_redimensionada)
+            imagen = Image.open(ruta_completa)
+            imagen_redimensionada = imagen.resize(tamano, Image.LANCZOS)
+            return ImageTk.PhotoImage(imagen_redimensionada)
         
-        for i in range(0, len(links_sociais), 2):
-            frame_linha = ttk.Frame(frame_botoes)
-            frame_linha.pack(fill=tk.X, pady=10)
+        for i in range(0, len(enlaces_sociales), 2):
+            frame_linea = ttk.Frame(frame_botones)
+            frame_linea.pack(fill=tk.X, pady=10)
             
             for j in range(2):
-                if i + j < len(links_sociais):
-                    nome, link, icone_path = links_sociais[i + j]
+                if i + j < len(enlaces_sociales):
+                    nombre, enlace, ruta_icono = enlaces_sociales[i + j]
                     
-                    icone = redimensionar_icone(os.path.join('icons', icone_path))
+                    icono = redimensionar_icono(os.path.join('icons', ruta_icono))
                     
-                    botao_social = ttk.Button(
-                        frame_linha, 
-                        text=nome, 
-                        image=icone, 
+                    boton_social = ttk.Button(
+                        frame_linea, 
+                        text=nombre, 
+                        image=icono, 
                         compound=tk.LEFT,
-                        command=lambda l=link: Abrir_Link(l)
+                        command=lambda l=enlace: Abrir_Enlace(l)
                     )
-                    botao_social.image = icone
-                    botao_social.pack(side=tk.LEFT, padx=10, expand=True, fill=tk.X)
+                    boton_social.image = icono
+                    boton_social.pack(side=tk.LEFT, padx=10, expand=True, fill=tk.X)
         
-        botao_fechar = ttk.Button(
-            frame_botoes, 
-            text="Fechar", 
+        boton_cerrar = ttk.Button(
+            frame_botones, 
+            text="Cerrar", 
             command=self.root.quit,
-            style='Fechar.TButton'
+            style='Cerrar.TButton'
         )
-        botao_fechar.pack(pady=10, padx=20, fill=tk.X)
+        boton_cerrar.pack(pady=10, padx=20, fill=tk.X)
 
         style = ttk.Style()
         style.configure(
-            'Fechar.TButton', 
+            'Cerrar.TButton', 
             background='red', 
             foreground='white', 
             font=('Segoe UI', 12)
         )
 
-    def Cancelar_Instalacao(self):
-        self.Limpar_Janela()
+    def Cancelar_Instalacion(self):
+        self.Limpiar_Ventana()
         
-        quadro_principal = ttk.Frame(self.root, padding="30 30 30 30")
-        quadro_principal.pack(fill=tk.BOTH, expand=True)
+        cuadro_principal = ttk.Frame(self.root, padding="30 30 30 30")
+        cuadro_principal.pack(fill=tk.BOTH, expand=True)
         
-        titulo = self.CriarLabel_Estilizado(
-            quadro_principal, 
-            "Cancelando Instalação", 
-            fonte=('Segoe UI', 16, 'bold'), 
-            cor=self.colors.primary
+        titulo = self.Crear_Etiqueta_Estilizada(
+            cuadro_principal, 
+            "Cancelando Instalación", 
+            fuente=('Segoe UI', 16, 'bold'), 
+            color=self.colors.primary
         )
         titulo.pack(pady=(0, 20))
         
-        status_label = self.CriarLabel_Estilizado(
-            quadro_principal, 
-            "Aguarde, toda a operação está sendo cancelada..."
+        status_label = self.Crear_Etiqueta_Estilizada(
+            cuadro_principal, 
+            "Espere, toda la operación se está cancelando..."
         )
         status_label.pack(pady=20)
         
-        barra_progresso = ttk.Progressbar(
-            quadro_principal, 
+        barra_progreso = ttk.Progressbar(
+            cuadro_principal, 
             length=600, 
             mode='determinate', 
             maximum=100
         )
-        barra_progresso.pack(pady=20)
+        barra_progreso.pack(pady=20)
 
-        def Cancelamento():
+        def Cancelamiento():
             for i in range(101):
-                barra_progresso['value'] = i
+                barra_progreso['value'] = i
                 self.root.update_idletasks()
                 time.sleep(0.05)
             
-            self.root.after(0, self.CriarInterface_Sociais)
+            self.root.after(0, self.Crear_Interfaz_Sociales)
 
-        threading.Thread(target=Cancelamento, daemon=True).start()
+        threading.Thread(target=Cancelamiento, daemon=True).start()
 
 def main_client():
     root = tk.Tk()
