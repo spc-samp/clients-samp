@@ -95,7 +95,7 @@ class Samp_Client_DL_R1:
         
         subtitulo = self.Crear_Etiqueta_Estilizada(
             cuadro_principal, 
-            "Instalador del mod SA:MP (San Andreas Multiplayer), versión 0.3.7 DL R1"
+            "Instalador del mod SA:MP (San Andreas Multiplayer), versión 0.3 DL R1"
         )
         subtitulo.pack(pady=(0, 20))
         
