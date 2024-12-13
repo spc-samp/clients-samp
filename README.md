@@ -2,6 +2,7 @@
 
 ## 🌍
 
+- **Português** > [README](https://github.com/spc-samp/clients-samp).
 - **English** > [README](https://github.com/spc-samp/clients-samp/tree/English).
 - **Español** > [README](https://github.com/spc-samp/clients-samp/tree/Espanol).
 - **Polski** > [README](https://github.com/spc-samp/clients-samp/tree/Polski).
@@ -9,40 +10,39 @@
 - **Deutsch** > [README](https://github.com/spc-samp/clients-samp/tree/Deutsch).
 - **Русский** > [README](https://github.com/spc-samp/clients-samp/tree/Русский).
 - **Français** > [README](https://github.com/spc-samp/clients-samp/tree/Francais).
-- **Italiano** > [README](https://github.com/spc-samp/clients-samp/tree/Italiano).
 - **Svensk** > [README](https://github.com/spc-samp/clients-samp/tree/Svensk).
 
-## Índice
+## Indice
 
 - [clients-samp](#clients-samp)
   - [🌍](#)
-  - [Índice](#índice)
-  - [Introdução](#introdução)
-  - [Estrutura do Projeto](#estrutura-do-projeto)
-  - [Dependências](#dependências)
-    - [Instalação das Dependências](#instalação-das-dependências)
-    - [Dependências Detalhadas](#dependências-detalhadas)
-  - [Instalação](#instalação)
-    - [Método 1: Executável Pré-Compilado](#método-1-executável-pré-compilado)
-    - [Método 2: Compilação Manual](#método-2-compilação-manual)
+  - [Indice](#indice)
+  - [Introduzione](#introduzione)
+  - [Struttura del Progetto](#struttura-del-progetto)
+  - [Dipendenze](#dipendenze)
+    - [Installazione delle Dipendenze](#installazione-delle-dipendenze)
+    - [Dettagli delle Dipendenze](#dettagli-delle-dipendenze)
+  - [Installazione](#installazione)
+    - [Metodo 1: Eseguibile Pre-Compilato](#metodo-1-eseguibile-pre-compilato)
+    - [Metodo 2: Compilazione Manuale](#metodo-2-compilazione-manuale)
   - [Importante](#importante)
-  - [Versões Disponíveis](#versões-disponíveis)
-  - [Detalhes Técnicos](#detalhes-técnicos)
-    - [Estrutura do Código](#estrutura-do-código)
-      - [Classe de Cores](#classe-de-cores)
-      - [Método de Criação de Label Estilizado](#método-de-criação-de-label-estilizado)
-    - [Métodos Fundamentais](#métodos-fundamentais)
-      - [Verificação de Pasta](#verificação-de-pasta)
-      - [Extração de Arquivos](#extração-de-arquivos)
-  - [Configurações do PyInstaller](#configurações-do-pyinstaller)
-    - [Exemplo de Arquivo Spec](#exemplo-de-arquivo-spec)
-    - [Configurações Importantes](#configurações-importantes)
+  - [Versioni Disponibili](#versioni-disponibili)
+  - [Dettagli Tecnici](#dettagli-tecnici)
+    - [Struttura del Codice](#struttura-del-codice)
+      - [Classe Colori](#classe-colori)
+      - [Metodo di Creazione di un'Etichetta Stilizzata](#metodo-di-creazione-di-unetichetta-stilizzata)
+    - [Metodi Fondamentali](#metodi-fondamentali)
+      - [Verifica della Cartella](#verifica-della-cartella)
+      - [Estrazione dei File](#estrazione-dei-file)
+  - [Configurazioni di PyInstaller](#configurazioni-di-pyinstaller)
+    - [Esempio di File Spec](#esempio-di-file-spec)
+    - [Configurazioni Importanti](#configurazioni-importanti)
 
-## Introdução
+## Introduzione
 
-O projeto **clients-samp** é um conjunto de instaladores para o mod SA:MP (San Andreas Multiplayer), desenvolvido para simplificar a instalação e configuração do client de jogo.
+Il progetto **clients-samp** è un insieme di programmi di installazione per il mod SA:MP (San Andreas Multiplayer), sviluppato per semplificare l'installazione e la configurazione del client di gioco.
 
-## Estrutura do Projeto
+## Struttura del Progetto
 
 ```
 clients-samp/
@@ -56,81 +56,81 @@ clients-samp/
 └── samp-client-r5/
 ```
 
-Cada versão do client segue uma estrutura de diretório padrão:
+Ogni versione del client segue una struttura di directory standard:
 
 ```
 samp-client-v/
 │
 ├── archives/
-│   └── samp-client-v.zip      # Arquivos compactados para instalação
+│   └── samp-client-v.zip      # File compressi per l'installazione
 │
-├── icons/                      # Ícones e imagens do instalador
+├── icons/                      # Icone e immagini del programma di installazione
 │   ├── spc.png
 │   ├── discord.png
 │   └── ...
 │
-├── samp-client-v.py           # Script principal em Python
-└── samp-client-v.spec         # Configuração do PyInstaller
+├── samp-client-v.py           # Script principale in Python
+└── samp-client-v.spec         # Configurazione di PyInstaller
 ```
 
-## Dependências
+## Dipendenze
 
-### Instalação das Dependências
+### Installazione delle Dipendenze
 
 ```bash
 pip install pillow
 pip install sv-ttk
 ```
 
-### Dependências Detalhadas
+### Dettagli delle Dipendenze
 
-| Biblioteca | Versão Recomendada | Propósito |
-|-----------|---------------------|-----------|
-| `tkinter` | Padrão do Python | Interface gráfica |
-| `PIL` (Pillow) | 9.5.0+ | Processamento de imagens |
-| `sv_ttk` | 2.0.0+ | Tema moderno para Tkinter |
-| `threading` | Padrão do Python | Processamento assíncrono |
-| `zipfile` | Padrão do Python | Extração de arquivos |
-| `webbrowser` | Padrão do Python | Abertura de links externos |
+| Libreria | Versione Consigliata | Scopo |
+|----------|----------------------|-------|
+| `tkinter` | Standard di Python | Interfaccia grafica |
+| `PIL` (Pillow) | 9.5.0+ | Elaborazione immagini |
+| `sv_ttk` | 2.0.0+ | Tema moderno per Tkinter |
+| `threading` | Standard di Python | Elaborazione asincrona |
+| `zipfile` | Standard di Python | Estrazione di file |
+| `webbrowser` | Standard di Python | Apertura di link esterni |
 
-## Instalação
+## Installazione
 
-### Método 1: Executável Pré-Compilado
+### Metodo 1: Eseguibile Pre-Compilato
 
-1. Acesse a seção de [releases](https://github.com/spc-samp/clients-samp/releases/tag/pt-1.0)
-2. Baixe o executável que você quer
-3. Execute o arquivo `.exe`
+1. Accedi alla sezione [releases](https://github.com/spc-samp/clients-samp/releases/tag/pt-1.0)
+2. Scarica l'eseguibile desiderato
+3. Esegui il file `.exe`
 
-### Método 2: Compilação Manual
+### Metodo 2: Compilazione Manuale
 
 ```bash
-# Instale o PyInstaller
+# Installa PyInstaller
 pip install pyinstaller
 
-# Navegue até o diretório do client
+# Vai alla directory del client
 cd samp-client-v
 
-# Compile o projeto
+# Compila il progetto
 pyinstaller samp-client-v.spec
 ```
 
 ## Importante
 
-**Atenção:** 
-- **NÃO** compile o arquivo Python (`samp-client-v.py`)
-- **SEMPRE** compile usando o arquivo `.spec` correspondente
-- Exemplo correto de compilação: `pyinstaller samp-client-v.spec`
+**Attenzione:** 
+- **NON** compilare direttamente il file Python (`samp-client-v.py`)
+- **SEMPRE** compilare usando il file `.spec` corrispondente
+- Esempio corretto di compilazione: `pyinstaller samp-client-v.spec`
 
-**Por quê?**
-O arquivo `.spec` contém configurações cruciais:
-- Inclusão de arquivos estáticos (ícones, arquivos ZIP)
-- Configurações de ícone do executável
-- Definição de dependências e recursos adicionais
-- 
+**Perché?**
+Il file `.spec` contiene impostazioni cruciali:
+- Inclusione di file statici (icone, file ZIP)
+- Configurazioni dell'icona dell'eseguibile
+- Definizione di dipendenze e risorse aggiuntive
+
 > [!WARNING]
-> A compilação direta do arquivo Python **EXCLUIRÁ** recursos essenciais como imagens e arquivos de instalação, a não ser que você adicione os parâmetros `--add-data "samp-client-v.zip;."` e `--icon="ico-spc.ico"`.
+> La compilazione diretta del file Python **ESCLUDERÀ** risorse essenziali come immagini e file di installazione, a meno che non si aggiungano i parametri `--add-data "samp-client-v.zip;."` e `--icon="ico-spc.ico"`.
 
-## Versões Disponíveis
+## Versioni Disponibili
 
 1. `samp-client-r1`
 2. `samp-client-r1-voip` SAMPVOICE incluso
@@ -140,15 +140,15 @@ O arquivo `.spec` contém configurações cruciais:
 6. `samp-client-r4`
 7. `samp-client-r5`
 
-## Detalhes Técnicos
+## Dettagli Tecnici
 
-### Estrutura do Código
+### Struttura del Codice
 
-#### Classe de Cores
+#### Classe Colori
 
 ```python
 @dataclass
-class Client_Cores:
+class Client_Colori:
     background: str = '#1E1E1E'
     primary: str = '#3B8AFF'
     secondary: str = '#2C2C2C'
@@ -156,80 +156,81 @@ class Client_Cores:
     text_secondary: str = '#A0A0A0'
 ```
 
-#### Método de Criação de Label Estilizado
+#### Metodo di Creazione di un'Etichetta Stilizzata
 
 ```python
-def CriarLabel_Estilizado(
+def Crea_Bottone_Stilizzato(
     self, 
     parent, 
-    texto: str, 
-    fonte: tuple = ('Segoe UI', 12), 
-    cor: Optional[str] = None
-) -> ttk.Label:
-    return ttk.Label(
+    testo: str, 
+    comando: Callable, 
+    stile: str = 'Accent.TButton'
+) -> ttk.Button:
+    return ttk.Button(
         parent, 
-        text=texto, 
-        font=fonte,
-        foreground=cor or self.colors.text_secondary
+        text=testo, 
+        command=comando,
+        style=stile
     )
 ```
 
-### Métodos Fundamentais
+### Metodi Fondamentali
 
-#### Verificação de Pasta
+#### Verifica della Cartella
 
 ```python
-def Verificacao_Completa(self):
-    pasta = self.pasta_selecionada.get()
+def Verifica_Completata():
+    cartella = self.cartella_selezionata.get()
     
-    # Verificações de integridade da pasta
-    if not os.path.exists(pasta):
-        Exibir_Erro("Erro: A pasta selecionada não existe.")
+    # Verifiche di integrità della cartella
+    if not os.path.exists(cartella):
+        Mostra_Errore("Errore: La cartella selezionata non esiste.")
         return
 
-    if os.path.basename(pasta) != "Grand Theft Auto San Andreas":
-        Exibir_Erro("Erro: Pasta inválida.")
+    if os.path.basename(cartella) != "Grand Theft Auto San Andreas":
+        Mostra_Errore("Errore: Cartella non valida. Seleziona la cartella corretta di GTA San Andreas (Grand Theft Auto San Andreas).")
         return
 
-    # Verificação do executável
-    caminho_exe = os.path.join(pasta, "gta_sa.exe")
-    if not os.path.isfile(caminho_exe):
-        Exibir_Erro("Erro: Arquivo 'gta_sa.exe' não encontrado.")
+    # Verifica dell'eseguibile
+    percorso_exe = os.path.join(cartella, "gta_sa.exe")
+    if not os.path.isfile(percorso_exe):
+        Mostra_Errore("Errore: Il file 'gta_sa.exe' non è stato trovato nella cartella.")
         return
 ```
 
-#### Extração de Arquivos
+#### Estrazione dei File
 
 ```python
-def Instalacao_Client(self):
-    caminho_zip = getattr(sys, "_MEIPASS", os.path.abspath("."))
-    arquivo_zip = os.path.join(caminho_zip, "archives", "samp-client-v.zip")
+def Installazione_Client():
+    percorso_zip = getattr(sys, "_MEIPASS", os.path.abspath("."))
+    file_zip = os.path.join(percorso_zip, "archives", "samp-client-v.zip")
     
-    pasta_destino = self.pasta_selecionada.get()
+    cartella_destinazione = self.cartella_selezionata.get()
 
-    with zipfile.ZipFile(arquivo_zip, 'r') as zip_ref:
-        arquivos = zip_ref.namelist()
-        total_arquivos = len(arquivos)
+    with zipfile.ZipFile(file_zip, 'r') as zip_ref:
+        file = zip_ref.namelist()
+        totale_file = len(file)
         
-        for i, arquivo in enumerate(arquivos, start=1):
-            # Barra de progresso e atualização de status
-            arquivo_label.config(text=f"Extraindo: {os.path.basename(arquivo)}")
-            barra_progresso['value'] = (i / total_arquivos) * 100
+        for i, file_singolo in enumerate(file, start=1):
+            # Barra di progresso e aggiornamento dello stato
+            etichetta_file.config(text=f"Estraendo: {os.path.basename(file_singolo)}")
+            barra_progresso['value'] = (i / totale_file) * 100
+            self.root.update_idletasks()
             
-            zip_ref.extract(arquivo, pasta_destino)
-            self.arquivos_extraidos.append(arquivo)
+            zip_ref.extract(file_singolo, cartella_destinazione)
+            self.file_estratti.append(file_singolo)
 ```
 
-## Configurações do PyInstaller
+## Configurazioni di PyInstaller
 
-### Exemplo de Arquivo Spec
+### Esempio di File Spec
 
 ```python
 datas = [
     ('archives/samp-client-v.zip', 'archives'),
     ('icons/spc.png', 'icons'),
     ('icons/youtube.png', 'icons'),
-    # Outros arquivos estáticos
+    # Altri file statici
 ]
 
 exe = EXE(
@@ -248,9 +249,9 @@ exe = EXE(
 )
 ```
 
-### Configurações Importantes
+### Configurazioni Importanti
 
-- `datas`: Define arquivos adicionais a serem incluídos
-- `name`: Nome do executável final
-- `icon`: Ícone personalizado para o executável
-- `console=False`: Oculta janela de console
+- `datas`: Definisce file aggiuntivi da includere
+- `name`: Nome dell'eseguibile finale
+- `icon`: Icona personalizzata per l'eseguibile
+- `console=False`: Nasconde la finestra della console
