@@ -95,7 +95,7 @@ class Samp_Client_DL_R1:
         
         untertitel = self.Erstellen_Beschriftung_Stilisiert(
             hauptrahmen, 
-            "Installationsprogramm für SA:MP Mod (San Andreas Multiplayer), Version 0.3.7 DL R1"
+            "Installationsprogramm für SA:MP Mod (San Andreas Multiplayer), Version 0.3 DL R1"
         )
         untertitel.pack(pady=(0, 20))
         
