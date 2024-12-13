@@ -23,8 +23,8 @@
     - [Installation des Dépendances](#installation-des-dépendances)
     - [Dépendances Détaillées](#dépendances-détaillées)
   - [Installation](#installation)
-    - [Méthode 1 : Exécutable Pré-Compilé](#méthode-1--exécutable-pré-compilé)
-    - [Méthode 2 : Compilation Manuelle](#méthode-2--compilation-manuelle)
+    - [Méthode 1: Exécutable Pré-Compilé](#méthode-1-exécutable-pré-compilé)
+    - [Méthode 2: Compilation Manuelle](#méthode-2-compilation-manuelle)
   - [Important](#important)
   - [Versions Disponibles](#versions-disponibles)
   - [Détails Techniques](#détails-techniques)
@@ -56,7 +56,7 @@ clients-samp/
 └── samp-client-r5/
 ```
 
-Chaque version du client suit une structure de répertoire standard :
+Chaque version du client suit une structure de répertoire standard:
 
 ```
 samp-client-v/
@@ -95,13 +95,13 @@ pip install sv-ttk
 
 ## Installation
 
-### Méthode 1 : Exécutable Pré-Compilé
+### Méthode 1: Exécutable Pré-Compilé
 
 1. Accédez à la section [releases](https://github.com/spc-samp/clients-samp/releases/tag/fr-1.0)
 2. Téléchargez l'exécutable souhaité
 3. Exécutez le fichier `.exe`
 
-### Méthode 2 : Compilation Manuelle
+### Méthode 2: Compilation Manuelle
 
 ```bash
 # Installez PyInstaller
@@ -116,13 +116,13 @@ pyinstaller samp-client-v.spec
 
 ## Important
 
-**Attention :** 
+**Attention:** 
 - **NE PAS** compiler directement le fichier Python (`samp-client-v.py`)
 - **TOUJOURS** compiler en utilisant le fichier `.spec` correspondant
-- Exemple de compilation correct : `pyinstaller samp-client-v.spec`
+- Exemple de compilation correct: `pyinstaller samp-client-v.spec`
 
 **Pourquoi ?**
-Le fichier `.spec` contient des configurations cruciales :
+Le fichier `.spec` contient des configurations cruciales:
 - Inclusion de fichiers statiques (icônes, fichiers ZIP)
 - Configurations de l'icône de l'exécutable
 - Définition des dépendances et ressources supplémentaires
@@ -251,7 +251,7 @@ exe = EXE(
 
 ### Configurations Importantes
 
-- `datas` : Définit les fichiers supplémentaires à inclure
-- `name` : Nom de l'exécutable final
-- `icon` : Icône personnalisée pour l'exécutable
-- `console=False` : Masque la fenêtre de console
+- `datas`: Définit les fichiers supplémentaires à inclure
+- `name`: Nom de l'exécutable final
+- `icon`: Icône personnalisée pour l'exécutable
+- `console=False`: Masque la fenêtre de console
