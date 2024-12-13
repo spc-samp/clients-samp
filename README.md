@@ -2,8 +2,8 @@
 
 ## 🌍
 
+- **Português** > [README](https://github.com/spc-samp/clients-samp).
 - **English** > [README](https://github.com/spc-samp/clients-samp/tree/English).
-- **Español** > [README](https://github.com/spc-samp/clients-samp/tree/Espanol).
 - **Polski** > [README](https://github.com/spc-samp/clients-samp/tree/Polski).
 - **Türk** > [README](https://github.com/spc-samp/clients-samp/tree/Turk).
 - **Deutsch** > [README](https://github.com/spc-samp/clients-samp/tree/Deutsch).
@@ -17,32 +17,32 @@
 - [clients-samp](#clients-samp)
   - [🌍](#)
   - [Índice](#índice)
-  - [Introdução](#introdução)
-  - [Estrutura do Projeto](#estrutura-do-projeto)
-  - [Dependências](#dependências)
-    - [Instalação das Dependências](#instalação-das-dependências)
-    - [Dependências Detalhadas](#dependências-detalhadas)
-  - [Instalação](#instalação)
-    - [Método 1: Executável Pré-Compilado](#método-1-executável-pré-compilado)
-    - [Método 2: Compilação Manual](#método-2-compilação-manual)
+  - [Introducción](#introducción)
+  - [Estructura del Proyecto](#estructura-del-proyecto)
+  - [Dependencias](#dependencias)
+    - [Instalación de Dependencias](#instalación-de-dependencias)
+    - [Dependencias Detalladas](#dependencias-detalladas)
+  - [Instalación](#instalación)
+    - [Método 1: Ejecutable Pre-compilado](#método-1-ejecutable-pre-compilado)
+    - [Método 2: Compilación Manual](#método-2-compilación-manual)
   - [Importante](#importante)
-  - [Versões Disponíveis](#versões-disponíveis)
-  - [Detalhes Técnicos](#detalhes-técnicos)
-    - [Estrutura do Código](#estrutura-do-código)
-      - [Classe de Cores](#classe-de-cores)
-      - [Método de Criação de Label Estilizado](#método-de-criação-de-label-estilizado)
-    - [Métodos Fundamentais](#métodos-fundamentais)
-      - [Verificação de Pasta](#verificação-de-pasta)
-      - [Extração de Arquivos](#extração-de-arquivos)
-  - [Configurações do PyInstaller](#configurações-do-pyinstaller)
-    - [Exemplo de Arquivo Spec](#exemplo-de-arquivo-spec)
-    - [Configurações Importantes](#configurações-importantes)
+  - [Versiones Disponibles](#versiones-disponibles)
+  - [Detalles Técnicos](#detalles-técnicos)
+    - [Estructura del Código](#estructura-del-código)
+      - [Clase de Colores](#clase-de-colores)
+      - [Método de Creación de Etiqueta Estilizada](#método-de-creación-de-etiqueta-estilizada)
+    - [Métodos Fundamentales](#métodos-fundamentales)
+      - [Verificación de Carpeta](#verificación-de-carpeta)
+      - [Extracción de Archivos](#extracción-de-archivos)
+  - [Configuraciones de PyInstaller](#configuraciones-de-pyinstaller)
+    - [Ejemplo de Archivo Spec](#ejemplo-de-archivo-spec)
+    - [Configuraciones Importantes](#configuraciones-importantes)
 
-## Introdução
+## Introducción
 
-O projeto **clients-samp** é um conjunto de instaladores para o mod SA:MP (San Andreas Multiplayer), desenvolvido para simplificar a instalação e configuração do client de jogo.
+El proyecto **clients-samp** es un conjunto de instaladores para el mod SA:MP (San Andreas Multiplayer), desarrollado para simplificar la instalación y configuración del cliente de juego.
 
-## Estrutura do Projeto
+## Estructura del Proyecto
 
 ```
 clients-samp/
@@ -56,99 +56,99 @@ clients-samp/
 └── samp-client-r5/
 ```
 
-Cada versão do client segue uma estrutura de diretório padrão:
+Cada versión del cliente sigue una estructura de directorio estándar:
 
 ```
 samp-client-v/
 │
 ├── archives/
-│   └── samp-client-v.zip      # Arquivos compactados para instalação
+│   └── samp-client-v.zip      # Archivos comprimidos para instalación
 │
-├── icons/                      # Ícones e imagens do instalador
+├── icons/                      # Íconos e imágenes del instalador
 │   ├── spc.png
 │   ├── discord.png
 │   └── ...
 │
-├── samp-client-v.py           # Script principal em Python
-└── samp-client-v.spec         # Configuração do PyInstaller
+├── samp-client-v.py           # Script principal en Python
+└── samp-client-v.spec         # Configuración de PyInstaller
 ```
 
-## Dependências
+## Dependencias
 
-### Instalação das Dependências
+### Instalación de Dependencias
 
 ```bash
 pip install pillow
 pip install sv-ttk
 ```
 
-### Dependências Detalhadas
+### Dependencias Detalladas
 
-| Biblioteca | Versão Recomendada | Propósito |
+| Biblioteca | Versión Recomendada | Propósito |
 |-----------|---------------------|-----------|
-| `tkinter` | Padrão do Python | Interface gráfica |
-| `PIL` (Pillow) | 9.5.0+ | Processamento de imagens |
+| `tkinter` | Predeterminado de Python | Interfaz gráfica |
+| `PIL` (Pillow) | 9.5.0+ | Procesamiento de imágenes |
 | `sv_ttk` | 2.0.0+ | Tema moderno para Tkinter |
-| `threading` | Padrão do Python | Processamento assíncrono |
-| `zipfile` | Padrão do Python | Extração de arquivos |
-| `webbrowser` | Padrão do Python | Abertura de links externos |
+| `threading` | Predeterminado de Python | Procesamiento asíncrono |
+| `zipfile` | Predeterminado de Python | Extracción de archivos |
+| `webbrowser` | Predeterminado de Python | Apertura de enlaces externos |
 
-## Instalação
+## Instalación
 
-### Método 1: Executável Pré-Compilado
+### Método 1: Ejecutable Pre-compilado
 
-1. Acesse a seção de [releases](https://github.com/spc-samp/clients-samp/releases/tag/pt-1.0)
-2. Baixe o executável que você quer
-3. Execute o arquivo `.exe`
+1. Accede a la sección de [releases](https://github.com/spc-samp/clients-samp/releases/tag/es-1.0)
+2. Descarga el ejecutable que desees
+3. Ejecuta el archivo `.exe`
 
-### Método 2: Compilação Manual
+### Método 2: Compilación Manual
 
 ```bash
-# Instale o PyInstaller
+# Instala PyInstaller
 pip install pyinstaller
 
-# Navegue até o diretório do client
+# Navega al directorio del cliente
 cd samp-client-v
 
-# Compile o projeto
+# Compila el proyecto
 pyinstaller samp-client-v.spec
 ```
 
 ## Importante
 
-**Atenção:** 
-- **NÃO** compile o arquivo Python (`samp-client-v.py`)
-- **SEMPRE** compile usando o arquivo `.spec` correspondente
-- Exemplo correto de compilação: `pyinstaller samp-client-v.spec`
+**Atención:** 
+- **NO** compiles el archivo Python (`samp-client-v.py`)
+- **SIEMPRE** compile usando el archivo `.spec` correspondiente
+- Ejemplo correcto de compilación: `pyinstaller samp-client-v.spec`
 
-**Por quê?**
-O arquivo `.spec` contém configurações cruciais:
-- Inclusão de arquivos estáticos (ícones, arquivos ZIP)
-- Configurações de ícone do executável
-- Definição de dependências e recursos adicionais
-- 
+**¿Por qué?**
+El archivo `.spec` contiene configuraciones cruciales:
+- Inclusión de archivos estáticos (íconos, archivos ZIP)
+- Configuraciones de ícono del ejecutable
+- Definición de dependencias y recursos adicionales
+
 > [!WARNING]
-> A compilação direta do arquivo Python **EXCLUIRÁ** recursos essenciais como imagens e arquivos de instalação, a não ser que você adicione os parâmetros `--add-data "samp-client-v.zip;."` e `--icon="ico-spc.ico"`.
+> La compilación directa del archivo Python **EXCLUIRÁ** recursos esenciales como imágenes y archivos de instalación, a menos que agregue los parámetros `--add-data "samp-client-v.zip;."` y `--icon="ico-spc.ico"`.
 
-## Versões Disponíveis
+## Versiones Disponibles
 
 1. `samp-client-r1`
-2. `samp-client-r1-voip` SAMPVOICE incluso
+2. `samp-client-r1-voip` SAMPVOICE incluido
 3. `samp-client-r2`
 4. `samp-client-r3`
-5. `samp-client-r3-voip` SAMPVOICE incluso
+5. `samp-client-r3-voip` SAMPVOICE incluido
 6. `samp-client-r4`
 7. `samp-client-r5`
 
-## Detalhes Técnicos
+## Detalles Técnicos
 
-### Estrutura do Código
+### Estructura del Código
 
-#### Classe de Cores
+#### Clase de Colores
 
 ```python
 @dataclass
-class Client_Cores:
+class Client_Colores:
     background: str = '#1E1E1E'
     primary: str = '#3B8AFF'
     secondary: str = '#2C2C2C'
@@ -156,80 +156,81 @@ class Client_Cores:
     text_secondary: str = '#A0A0A0'
 ```
 
-#### Método de Criação de Label Estilizado
+#### Método de Creación de Etiqueta Estilizada
 
 ```python
-def CriarLabel_Estilizado(
+def Crear_Etiqueta_Estilizada(
     self, 
     parent, 
     texto: str, 
-    fonte: tuple = ('Segoe UI', 12), 
-    cor: Optional[str] = None
+    fuente: tuple = ('Segoe UI', 12), 
+    color: Optional[str] = None
 ) -> ttk.Label:
     return ttk.Label(
         parent, 
         text=texto, 
-        font=fonte,
-        foreground=cor or self.colors.text_secondary
+        font=fuente,
+        foreground=color or self.colors.text_secondary
     )
 ```
 
-### Métodos Fundamentais
+### Métodos Fundamentales
 
-#### Verificação de Pasta
+#### Verificación de Carpeta
 
 ```python
-def Verificacao_Completa(self):
-    pasta = self.pasta_selecionada.get()
-    
-    # Verificações de integridade da pasta
-    if not os.path.exists(pasta):
-        Exibir_Erro("Erro: A pasta selecionada não existe.")
+def Verificacion_Completa():
+    carpeta = self.carpeta_seleccionada.get()
+
+    # Verificaciones de integridad de la carpeta
+    if not os.path.exists(carpeta):
+        Mostrar_Error("Error: La carpeta seleccionada no existe.")
         return
 
-    if os.path.basename(pasta) != "Grand Theft Auto San Andreas":
-        Exibir_Erro("Erro: Pasta inválida.")
+    if os.path.basename(carpeta) != "Grand Theft Auto San Andreas":
+        Mostrar_Error("Error: Carpeta inválida. Seleccione la carpeta correcta de GTA San Andreas (Grand Theft Auto San Andreas).")
         return
 
-    # Verificação do executável
-    caminho_exe = os.path.join(pasta, "gta_sa.exe")
-    if not os.path.isfile(caminho_exe):
-        Exibir_Erro("Erro: Arquivo 'gta_sa.exe' não encontrado.")
+    # Verificación del ejecutable
+    ruta_exe = os.path.join(carpeta, "gta_sa.exe")
+    if not os.path.isfile(ruta_exe):
+        Mostrar_Error("Error: El archivo 'gta_sa.exe' no se encontró en la carpeta.")
         return
 ```
 
-#### Extração de Arquivos
+#### Extracción de Archivos
 
 ```python
-def Instalacao_Client(self):
-    caminho_zip = getattr(sys, "_MEIPASS", os.path.abspath("."))
-    arquivo_zip = os.path.join(caminho_zip, "archives", "samp-client-v.zip")
+def Instalacion_Client():
+    ruta_zip = getattr(sys, "_MEIPASS", os.path.abspath("."))
+    archivo_zip = os.path.join(ruta_zip, "archives", "samp-client-v.zip")
     
-    pasta_destino = self.pasta_selecionada.get()
+    carpeta_destino = self.carpeta_seleccionada.get()
 
-    with zipfile.ZipFile(arquivo_zip, 'r') as zip_ref:
-        arquivos = zip_ref.namelist()
-        total_arquivos = len(arquivos)
+    with zipfile.ZipFile(archivo_zip, 'r') as zip_ref:
+        archivos = zip_ref.namelist()
+        total_archivos = len(archivos)
         
-        for i, arquivo in enumerate(arquivos, start=1):
-            # Barra de progresso e atualização de status
-            arquivo_label.config(text=f"Extraindo: {os.path.basename(arquivo)}")
-            barra_progresso['value'] = (i / total_arquivos) * 100
+        for i, archivo in enumerate(archivos, start=1):
+            # Barra de progreso y actualización de estado
+            archivo_label.config(text=f"Extrayendo: {os.path.basename(archivo)}")
+            barra_progreso['value'] = (i / total_archivos) * 100
+            self.root.update_idletasks()
             
-            zip_ref.extract(arquivo, pasta_destino)
-            self.arquivos_extraidos.append(arquivo)
+            zip_ref.extract(archivo, carpeta_destino)
+            self.archivos_extraidos.append(archivo)
 ```
 
-## Configurações do PyInstaller
+## Configuraciones de PyInstaller
 
-### Exemplo de Arquivo Spec
+### Ejemplo de Archivo Spec
 
 ```python
 datas = [
     ('archives/samp-client-v.zip', 'archives'),
     ('icons/spc.png', 'icons'),
     ('icons/youtube.png', 'icons'),
-    # Outros arquivos estáticos
+    # Otros archivos estáticos
 ]
 
 exe = EXE(
@@ -248,9 +249,9 @@ exe = EXE(
 )
 ```
 
-### Configurações Importantes
+### Configuraciones Importantes
 
-- `datas`: Define arquivos adicionais a serem incluídos
-- `name`: Nome do executável final
-- `icon`: Ícone personalizado para o executável
-- `console=False`: Oculta janela de console
+- `datas`: Define archivos adicionales a incluir
+- `name`: Nombre del ejecutable final
+- `icon`: Ícono personalizado para el ejecutable
+- `console=False`: Oculta la ventana de consola
