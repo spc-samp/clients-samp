@@ -95,7 +95,7 @@ class Samp_Client_DL_R1:
         
         underrubrik = self.Skapa_Stiliserad_Etikett(
             huvud_ram, 
-            "Installationsprogram for mod SA:MP (San Andreas Multiplayer), version 0.3.7 DL R1"
+            "Installationsprogram for mod SA:MP (San Andreas Multiplayer), version 0.3 DL R1"
         )
         underrubrik.pack(pady=(0, 20))
         
