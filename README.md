@@ -2,15 +2,15 @@
 
 ## 🌍
 
-- **Português** > [README](https://github.com/spc-samp/clients-samp)
-- **English** > [README](https://github.com/spc-samp/clients-samp/tree/English)
-- **Español** > [README](https://github.com/spc-samp/clients-samp/tree/Espanol)
-- **Polski** > [README](https://github.com/spc-samp/clients-samp/tree/Polski)
-- **Türk** > [README](https://github.com/spc-samp/clients-samp/tree/Turk)
-- **Deutsch** > [README](https://github.com/spc-samp/clients-samp/tree/Deutsch)
-- **Français** > [README](https://github.com/spc-samp/clients-samp/tree/Francais)
-- **Italiano** > [README](https://github.com/spc-samp/clients-samp/tree/Italiano)
-- **Svenska** > [README](https://github.com/spc-samp/clients-samp/tree/Svensk)
+- **Português** > [README](https://github.com/spc-samp/clients-samp).
+- **English** > [README](https://github.com/spc-samp/clients-samp/tree/English).
+- **Español** > [README](https://github.com/spc-samp/clients-samp/tree/Espanol).
+- **Polski** > [README](https://github.com/spc-samp/clients-samp/tree/Polski).
+- **Türk** > [README](https://github.com/spc-samp/clients-samp/tree/Turk).
+- **Deutsch** > [README](https://github.com/spc-samp/clients-samp/tree/Deutsch).
+- **Français** > [README](https://github.com/spc-samp/clients-samp/tree/Francais).
+- **Italiano** > [README](https://github.com/spc-samp/clients-samp/tree/Italiano).
+- **Svenska** > [README](https://github.com/spc-samp/clients-samp/tree/Svensk).
 
 ## Содержание
 
