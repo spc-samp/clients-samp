@@ -95,7 +95,7 @@ class Samp_Client_DL_R1:
         
         subtitle = self.Create_Styled_Label(
             main_frame, 
-            "Installer for SA:MP (San Andreas Multiplayer) mod, version 0.3.7 DL R1"
+            "Installer for SA:MP (San Andreas Multiplayer) mod, version 0.3 DL R1"
         )
         subtitle.pack(pady=(0, 20))
         
