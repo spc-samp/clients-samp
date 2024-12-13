@@ -10,7 +10,7 @@
 - **Deutsch** > [README](https://github.com/spc-samp/clients-samp/tree/Deutsch).
 - **Русский** > [README](https://github.com/spc-samp/clients-samp/tree/Русский).
 - **Français** > [README](https://github.com/spc-samp/clients-samp/tree/Francais).
-- **Svensk** > [README](https://github.com/spc-samp/clients-samp/tree/Svensk).
+- **Svenska** > [README](https://github.com/spc-samp/clients-samp/tree/Svensk).
 
 ## Indice
 
