@@ -10,7 +10,7 @@
 - **Deutsch** > [README](https://github.com/spc-samp/clients-samp/tree/Deutsch).
 - **Русский** > [README](https://github.com/spc-samp/clients-samp/tree/Русский).
 - **Italiano** > [README](https://github.com/spc-samp/clients-samp/tree/Italiano).
-- **Svensk** > [README](https://github.com/spc-samp/clients-samp/tree/Svensk).
+- **Svenska** > [README](https://github.com/spc-samp/clients-samp/tree/Svensk).
 
 ## Table des Matières
 
