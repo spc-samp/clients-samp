@@ -2,7 +2,7 @@
 
 ## 🌍
 
-- **English** > [README](https://github.com/spc-samp/clients-samp/tree/English)
+- **Português** > [README](https://github.com/spc-samp/clients-samp)
 - **Español** > [README](https://github.com/spc-samp/clients-samp/tree/Espanol)
 - **Polski** > [README](https://github.com/spc-samp/clients-samp/tree/Polski)
 - **Türk** > [README](https://github.com/spc-samp/clients-samp/tree/Turk)
