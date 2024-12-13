@@ -95,7 +95,7 @@ class Samp_Client_DL_R1:
         
         sous_titre = self.Creer_Label_Stylise(
             cadre_principal, 
-            "Installateur du mod SA:MP (San Andreas Multiplayer), version 0.3.7 DL R1"
+            "Installateur du mod SA:MP (San Andreas Multiplayer), version 0.3 DL R1"
         )
         sous_titre.pack(pady=(0, 20))
         
