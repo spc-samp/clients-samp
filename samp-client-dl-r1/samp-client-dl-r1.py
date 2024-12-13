@@ -95,7 +95,7 @@ class Samp_Client_DL_R1:
         
         alt_baslik = self.Etiket_Olustur(
             ana_cerceve, 
-            "SA:MP (San Andreas Multiplayer) mod yukleyicisi, versiyon 0.3.7 DL R1"
+            "SA:MP (San Andreas Multiplayer) mod yukleyicisi, versiyon 0.3 DL R1"
         )
         alt_baslik.pack(pady=(0, 20))
         
