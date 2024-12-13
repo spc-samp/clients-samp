@@ -12,7 +12,7 @@ from typing import Dict, Optional, Callable
 import webbrowser
 
 @dataclass
-class Client_Cores:
+class Client_Renkleri:
     background: str = '#1E1E1E'
     primary: str = '#3B8AFF'
     secondary: str = '#2C2C2C'
@@ -22,15 +22,15 @@ class Client_Cores:
 class Samp_Client_R2:
     def __init__(self, root: tk.Tk):
         self.root = root
-        self.Configurar_Raiz()
-        self.colors = Client_Cores()
-        self.pasta_selecionada = tk.StringVar(value="Nenhuma pasta foi selecionada, ainda")
-        self.arquivos_extraidos = []
-        self.Configurar_Tema()
-        self.CriarInterface_Inicial()
-        self.Configurar_IconJanela()
+        self.Koku_Yapilandirma()
+        self.colors = Client_Renkleri()
+        self.secilen_klasor = tk.StringVar(value="Henuz klasor secilmedi")
+        self.cikarilan_dosyalar = []
+        self.Tema_Yapilandirma()
+        self.Baslangic_Arayuzu_Olustur()
+        self.Pencere_Simgesi_Yapilandirma()
 
-    def Configurar_IconJanela(self):
+    def Pencere_Simgesi_Yapilandirma(self):
         base_path = getattr(sys, '_MEIPASS', os.path.abspath("."))
         icon_path = os.path.join(base_path, "icons", "spc.png")
 
@@ -38,337 +38,337 @@ class Samp_Client_R2:
         icon = ImageTk.PhotoImage(img)
         self.root.iconphoto(True, icon)
 
-    def Configurar_Raiz(self):
+    def Koku_Yapilandirma(self):
         self.root.title("Client R2 - SPC")
         self.root.geometry("700x500")
         self.root.resizable(True, True)
 
-    def Configurar_Tema(self):
+    def Tema_Yapilandirma(self):
         sv_ttk.set_theme("dark")
         self.root.configure(bg=self.colors.background)
 
-    def Limpar_Janela(self):
+    def Pencereyi_Temizle(self):
         for widget in self.root.winfo_children():
             widget.destroy()
 
-    def CriarLabel_Estilizado(
+    def Etiket_Olustur(
         self, 
         parent, 
-        texto: str, 
-        fonte: tuple = ('Segoe UI', 12), 
-        cor: Optional[str] = None
+        metin: str, 
+        font: tuple = ('Segoe UI', 12), 
+        renk: Optional[str] = None
     ) -> ttk.Label:
         return ttk.Label(
             parent, 
-            text=texto, 
-            font=fonte,
-            foreground=cor or self.colors.text_secondary
+            text=metin, 
+            font=font,
+            foreground=renk or self.colors.text_secondary
         )
 
-    def CriarBotao_Estilizado(
+    def Dugme_Olustur(
         self, 
         parent, 
-        texto: str, 
-        comando: Callable, 
-        estilo: str = 'Accent.TButton'
+        metin: str, 
+        komut: Callable, 
+        stil: str = 'Accent.TButton'
     ) -> ttk.Button:
         return ttk.Button(
             parent, 
-            text=texto, 
-            command=comando,
-            style=estilo
+            text=metin, 
+            command=komut,
+            style=stil
         )
 
-    def CriarInterface_Inicial(self):
-        self.Limpar_Janela()
+    def Baslangic_Arayuzu_Olustur(self):
+        self.Pencereyi_Temizle()
         
-        quadro_principal = ttk.Frame(self.root, padding="30 30 30 30")
-        quadro_principal.pack(fill=tk.BOTH, expand=True)
+        ana_cerceve = ttk.Frame(self.root, padding="30 30 30 30")
+        ana_cerceve.pack(fill=tk.BOTH, expand=True)
         
-        titulo = self.CriarLabel_Estilizado(
-            quadro_principal, 
-            "Instalador Client R2 SA:MP", 
-            fonte=('Segoe UI', 20, 'bold'), 
-            cor=self.colors.primary
+        baslik = self.Etiket_Olustur(
+            ana_cerceve, 
+            "Client R2 SA:MP Yukleyici", 
+            font=('Segoe UI', 20, 'bold'), 
+            renk=self.colors.primary
         )
-        titulo.pack(pady=(0, 30))
+        baslik.pack(pady=(0, 30))
         
-        subtitulo = self.CriarLabel_Estilizado(
-            quadro_principal, 
-            "Instalador do mod SA:MP (San Andreas Multiplayer), versão 0.3.7 R2"
+        alt_baslik = self.Etiket_Olustur(
+            ana_cerceve, 
+            "SA:MP (San Andreas Multiplayer) mod yukleyicisi, versiyon 0.3.7 R2"
         )
-        subtitulo.pack(pady=(0, 20))
+        alt_baslik.pack(pady=(0, 20))
         
-        frame_pasta = ttk.Frame(quadro_principal)
-        frame_pasta.pack(fill=tk.X, pady=10)
+        klasor_cercevesi = ttk.Frame(ana_cerceve)
+        klasor_cercevesi.pack(fill=tk.X, pady=10)
         
-        pasta_label = ttk.Label(
-            frame_pasta, 
-            textvariable=self.pasta_selecionada, 
+        klasor_etiketi = ttk.Label(
+            klasor_cercevesi, 
+            textvariable=self.secilen_klasor, 
             font=('Consolas', 10), 
             wraplength=500,
             foreground=self.colors.text_primary
         )
-        pasta_label.pack(side=tk.LEFT, expand=True, fill=tk.X, padx=(0, 10))
+        klasor_etiketi.pack(side=tk.LEFT, expand=True, fill=tk.X, padx=(0, 10))
         
-        botao_selecionar = self.CriarBotao_Estilizado(
-            frame_pasta, 
-            "Selecionar Pasta", 
-            self.Escolher_Pasta
+        klasor_sec_dugmesi = self.Dugme_Olustur(
+            klasor_cercevesi, 
+            "Klasor Sec", 
+            self.Klasor_Sec
         )
-        botao_selecionar.pack(side=tk.RIGHT)
+        klasor_sec_dugmesi.pack(side=tk.RIGHT)
 
-    def Escolher_Pasta(self):
-        pasta = filedialog.askdirectory(
-            title="Selecione a pasta Grand Theft Auto San Andreas",
+    def Klasor_Sec(self):
+        klasor = filedialog.askdirectory(
+            title="Grand Theft Auto San Andreas klasorunu secin",
             initialdir=os.path.expanduser("~")
         )
         
-        if pasta:
-            self.pasta_selecionada.set(pasta)
-            self.CriarInterface_VerificacaoPasta()
+        if klasor:
+            self.secilen_klasor.set(klasor)
+            self.Klasor_Dogrulama_Arayuzu()
 
-    def CriarInterface_VerificacaoPasta(self):
-        self.Limpar_Janela()
+    def Klasor_Dogrulama_Arayuzu(self):
+        self.Pencereyi_Temizle()
         
-        quadro_principal = ttk.Frame(self.root, padding="30 30 30 30")
-        quadro_principal.pack(fill=tk.BOTH, expand=True)
+        ana_cerceve = ttk.Frame(self.root, padding="30 30 30 30")
+        ana_cerceve.pack(fill=tk.BOTH, expand=True)
         
-        titulo = self.CriarLabel_Estilizado(
-            quadro_principal, 
-            "Verificando Pasta", 
-            fonte=('Segoe UI', 16, 'bold'), 
-            cor=self.colors.primary
+        baslik = self.Etiket_Olustur(
+            ana_cerceve, 
+            "Klasoru Dogrulama", 
+            font=('Segoe UI', 16, 'bold'), 
+            renk=self.colors.primary
         )
-        titulo.pack(pady=(0, 20))
+        baslik.pack(pady=(0, 20))
         
-        status_label = self.CriarLabel_Estilizado(
-            quadro_principal, 
-            "Verificando se esta é a pasta correta do seu GTA..."
+        durum_etiketi = self.Etiket_Olustur(
+            ana_cerceve, 
+            "GTA klasorunun dogru olup olmadigini kontrol ediliyor..."
         )
-        status_label.pack(pady=20)
+        durum_etiketi.pack(pady=20)
         
-        erro_label = ttk.Label(
-            quadro_principal, 
+        hata_etiketi = ttk.Label(
+            ana_cerceve, 
             text="", 
             foreground="red", 
             font=('Segoe UI', 10)
         )
-        erro_label.pack(pady=10)
+        hata_etiketi.pack(pady=10)
         
-        barra_progresso = ttk.Progressbar(
-            quadro_principal, 
+        ilerleme_cubugu = ttk.Progressbar(
+            ana_cerceve, 
             length=600, 
             mode='determinate', 
             maximum=100
         )
-        barra_progresso.pack(pady=20)
+        ilerleme_cubugu.pack(pady=20)
 
-        def Verificacao_Completa():
-            pasta = self.pasta_selecionada.get()
+        def Dogrulama_Tamamlandi():
+            klasor = self.secilen_klasor.get()
             
             for i in range(101):
-                barra_progresso['value'] = i
+                ilerleme_cubugu['value'] = i
                 self.root.update_idletasks()
                 time.sleep(0.05)
             
-            def Exibir_Erro(mensagem):
-                erro_label.config(text=mensagem)
-                botao_tentar_novamente.pack()
+            def Hatay_Goster(mesaj):
+                hata_etiketi.config(text=mesaj)
+                tekrar_dugmesi.pack()
             
-            if not os.path.exists(pasta):
-                Exibir_Erro("Erro: A pasta selecionada não existe.")
+            if not os.path.exists(klasor):
+                Hatay_Goster("Hata: Secilen klasor mevcut degil.")
                 return
 
-            if os.path.basename(pasta) != "Grand Theft Auto San Andreas":
-                Exibir_Erro("Erro: Pasta inválida. Selecione a pasta correta do GTA San Andreas (Grand Theft Auto San Andreas).")
+            if os.path.basename(klasor) != "Grand Theft Auto San Andreas":
+                Hatay_Goster("Hata: Gecersiz klasor. Lutfen dogru GTA San Andreas klasorunu secin.")
                 return
 
-            caminho_exe = os.path.join(pasta, "gta_sa.exe")
-            if not os.path.isfile(caminho_exe):
-                Exibir_Erro("Erro: O arquivo 'gta_sa.exe' não foi encontrado na pasta.")
+            exe_yolu = os.path.join(klasor, "gta_sa.exe")
+            if not os.path.isfile(exe_yolu):
+                Hatay_Goster("Hata: 'gta_sa.exe' dosyasi klasorde bulunamadi.")
                 return
             
-            self.root.after(0, self.CriarInterface_ConfirmacaoClient)
+            self.root.after(0, self.Client_Onay_Arayuzu)
 
-        def Tentar_Novamente():
-            botao_tentar_novamente.pack_forget()
-            erro_label.config(text="")
-            self.CriarInterface_Inicial()
+        def Tekrar_Dene():
+            tekrar_dugmesi.pack_forget()
+            hata_etiketi.config(text="")
+            self.Baslangic_Arayuzu_Olustur()
 
-        botao_tentar_novamente = self.CriarBotao_Estilizado(
-            quadro_principal, 
-            "Tentar Novamente", 
-            Tentar_Novamente
+        tekrar_dugmesi = self.Dugme_Olustur(
+            ana_cerceve, 
+            "Tekrar Dene", 
+            Tekrar_Dene
         )
 
-        threading.Thread(target=Verificacao_Completa, daemon=True).start()
+        threading.Thread(target=Dogrulama_Tamamlandi, daemon=True).start()
 
-    def CriarInterface_ConfirmacaoClient(self):
-        self.Limpar_Janela()
+    def Client_Onay_Arayuzu(self):
+        self.Pencereyi_Temizle()
         
-        quadro_principal = ttk.Frame(self.root, padding="30 30 30 30")
-        quadro_principal.pack(fill=tk.BOTH, expand=True)
+        ana_cerceve = ttk.Frame(self.root, padding="30 30 30 30")
+        ana_cerceve.pack(fill=tk.BOTH, expand=True)
         
-        titulo = self.CriarLabel_Estilizado(
-            quadro_principal, 
-            "Instalar Client", 
-            fonte=('Segoe UI', 16, 'bold'), 
-            cor=self.colors.primary
+        baslik = self.Etiket_Olustur(
+            ana_cerceve, 
+            "Client'yi Kur", 
+            font=('Segoe UI', 16, 'bold'), 
+            renk=self.colors.primary
         )
-        titulo.pack(pady=(0, 20))
+        baslik.pack(pady=(0, 20))
         
-        subtitulo = self.CriarLabel_Estilizado(
-            quadro_principal, 
-            "Pasta verificada com sucesso. Deseja prosseguir com a instalação\ndo Client R2?"
+        alt_baslik = self.Etiket_Olustur(
+            ana_cerceve, 
+            "Klasor basariyla dogrulandi. R2 Client Sini yuklemek istiyor musunuz?"
         )
-        subtitulo.pack(pady=20)
+        alt_baslik.pack(pady=20)
         
-        frame_botoes = ttk.Frame(quadro_principal)
-        frame_botoes.pack(pady=20)
+        dugme_cercevesi = ttk.Frame(ana_cerceve)
+        dugme_cercevesi.pack(pady=20)
         
-        botao_prosseguir = self.CriarBotao_Estilizado(
-            frame_botoes, 
-            "Prosseguir", 
-            self.IniciarInstalacao_Client, 
+        devam_dugmesi = self.Dugme_Olustur(
+            dugme_cercevesi, 
+            "Devam", 
+            self.Client_Yuklemeye_Basla, 
             'Accent.TButton'
         )
-        botao_prosseguir.pack(side=tk.LEFT, padx=10)
+        devam_dugmesi.pack(side=tk.LEFT, padx=10)
         
-        botao_cancelar = self.CriarBotao_Estilizado(
-            frame_botoes, 
-            "Cancelar", 
-            self.Cancelar_Instalacao
+        iptal_dugmesi = self.Dugme_Olustur(
+            dugme_cercevesi, 
+            "Iptal", 
+            self.Yuklemeyi_Iptal_Et
         )
-        botao_cancelar.pack(side=tk.LEFT, padx=10)
+        iptal_dugmesi.pack(side=tk.LEFT, padx=10)
 
-    def IniciarInstalacao_Client(self):
-        self.Limpar_Janela()
+    def Client_Yuklemeye_Basla(self):
+        self.Pencereyi_Temizle()
         
-        quadro_principal = ttk.Frame(self.root, padding="30 30 30 30")
-        quadro_principal.pack(fill=tk.BOTH, expand=True)
+        ana_cerceve = ttk.Frame(self.root, padding="30 30 30 30")
+        ana_cerceve.pack(fill=tk.BOTH, expand=True)
         
-        titulo = self.CriarLabel_Estilizado(
-            quadro_principal, 
-            "Instalando Client R2", 
-            fonte=('Segoe UI', 16, 'bold'), 
-            cor=self.colors.primary
+        baslik = self.Etiket_Olustur(
+            ana_cerceve, 
+            "R2 Client'si Yukleniyor", 
+            font=('Segoe UI', 16, 'bold'), 
+            renk=self.colors.primary
         )
-        titulo.pack(pady=(0, 20))
+        baslik.pack(pady=(0, 20))
         
-        status_label = self.CriarLabel_Estilizado(
-            quadro_principal, 
-            "Instalando Client, aguarde..."
+        durum_etiketi = self.Etiket_Olustur(
+            ana_cerceve, 
+            "Client yukleniyor, lutfen bekleyin..."
         )
-        status_label.pack(pady=20)
+        durum_etiketi.pack(pady=20)
         
-        barra_progresso = ttk.Progressbar(
-            quadro_principal, 
+        ilerleme_cubugu = ttk.Progressbar(
+            ana_cerceve, 
             length=600, 
             mode='determinate', 
             maximum=100
         )
-        barra_progresso.pack(pady=20)
+        ilerleme_cubugu.pack(pady=20)
         
-        arquivo_label = ttk.Label(
-            quadro_principal, 
+        dosya_etiketi = ttk.Label(
+            ana_cerceve, 
             text="", 
             font=('Consolas', 10),
             foreground=self.colors.text_primary
         )
-        arquivo_label.pack(pady=10)
+        dosya_etiketi.pack(pady=10)
 
-        def Instalacao_Client():
-            caminho_zip = getattr(sys, "_MEIPASS", os.path.abspath("."))
-            arquivo_zip = os.path.join(caminho_zip, "archives", "samp-client-r2.zip")
+        def Client_Yukleme():
+            zip_yolu = getattr(sys, "_MEIPASS", os.path.abspath("."))
+            zip_dosyasi = os.path.join(zip_yolu, "archives", "samp-client-r2.zip")
             
-            pasta_destino = self.pasta_selecionada.get()
+            hedef_klasor = self.secilen_klasor.get()
 
-            with zipfile.ZipFile(arquivo_zip, 'r') as zip_ref:
-                arquivos = zip_ref.namelist()
-                total_arquivos = len(arquivos)
+            with zipfile.ZipFile(zip_dosyasi, 'r') as zip_ref:
+                dosyalar = zip_ref.namelist()
+                toplam_dosya = len(dosyalar)
                 
-                for i, arquivo in enumerate(arquivos, start=1):
-                    arquivo_label.config(text=f"Extraindo: {os.path.basename(arquivo)}")
-                    barra_progresso['value'] = (i / total_arquivos) * 100
+                for i, dosya in enumerate(dosyalar, start=1):
+                    dosya_etiketi.config(text=f"Cikartiliyor: {os.path.basename(dosya)}")
+                    ilerleme_cubugu['value'] = (i / toplam_dosya) * 100
                     self.root.update_idletasks()
                     
-                    zip_ref.extract(arquivo, pasta_destino)
-                    self.arquivos_extraidos.append(arquivo)
+                    zip_ref.extract(dosya, hedef_klasor)
+                    self.cikarilan_dosyalar.append(dosya)
                     time.sleep(0.1)
             
-            arquivo_label.config(text="Instalação concluída!")
-            barra_progresso['value'] = 100
+            dosya_etiketi.config(text="Yukleme tamamlandi!")
+            ilerleme_cubugu['value'] = 100
             self.root.update_idletasks()
             time.sleep(1)
             
-            self.root.after(0, self.MostrarResumoInstalacao)
+            self.root.after(0, self.Yukleme_Ozeti_Goster)
         
-        threading.Thread(target=Instalacao_Client, daemon=True).start()
+        threading.Thread(target=Client_Yukleme, daemon=True).start()
 
-    def MostrarResumoInstalacao(self):
-        self.Limpar_Janela()
+    def Yukleme_Ozeti_Goster(self):
+        self.Pencereyi_Temizle()
         
-        quadro_principal = ttk.Frame(self.root, padding="30 30 30 30")
-        quadro_principal.pack(fill=tk.BOTH, expand=True)
+        ana_cerceve = ttk.Frame(self.root, padding="30 30 30 30")
+        ana_cerceve.pack(fill=tk.BOTH, expand=True)
         
-        titulo = self.CriarLabel_Estilizado(
-            quadro_principal, 
-            "Arquivos Extraídos", 
-            fonte=('Segoe UI', 16, 'bold'), 
-            cor=self.colors.primary
+        baslik = self.Etiket_Olustur(
+            ana_cerceve, 
+            "Cikarilan Dosyalar", 
+            font=('Segoe UI', 16, 'bold'), 
+            renk=self.colors.primary
         )
-        titulo.pack(pady=(0, 20))
+        baslik.pack(pady=(0, 20))
         
-        frame_rolagem = ttk.Frame(quadro_principal)
-        frame_rolagem.pack(fill=tk.BOTH, expand=True, pady=20)
+        kaydirma_cercevesi = ttk.Frame(ana_cerceve)
+        kaydirma_cercevesi.pack(fill=tk.BOTH, expand=True, pady=20)
         
-        canvas = tk.Canvas(frame_rolagem)
-        scrollbar = ttk.Scrollbar(frame_rolagem, orient="vertical", command=canvas.yview)
-        scrollable_frame = ttk.Frame(canvas)
+        tuvali = tk.Canvas(kaydirma_cercevesi)
+        kaydirma_cubugu = ttk.Scrollbar(kaydirma_cercevesi, orient="vertical", command=tuvali.yview)
+        kaydirilanabilir_cerceve = ttk.Frame(tuvali)
 
-        scrollable_frame.bind(
+        kaydirilanabilir_cerceve.bind(
             "<Configure>",
-            lambda e: canvas.configure(scrollregion=canvas.bbox("all"))
+            lambda e: tuvali.configure(scrollregion=tuvali.bbox("all"))
         )
 
-        canvas.create_window((0, 0), window=scrollable_frame, anchor="nw")
-        canvas.configure(yscrollcommand=scrollbar.set)
+        tuvali.create_window((0, 0), window=kaydirilanabilir_cerceve, anchor="nw")
+        tuvali.configure(yscrollcommand=kaydirma_cubugu.set)
 
-        canvas.pack(side="left", fill="both", expand=True)
-        scrollbar.pack(side="right", fill="y")
+        tuvali.pack(side="left", fill="both", expand=True)
+        kaydirma_cubugu.pack(side="right", fill="y")
         
-        for arquivo in self.arquivos_extraidos:
-            label_arquivo = ttk.Label(
-                scrollable_frame, 
-                text=arquivo, 
+        for dosya in self.cikarilan_dosyalar:
+            dosya_etiketi = ttk.Label(
+                kaydirilanabilir_cerceve, 
+                text=dosya, 
                 font=('Consolas', 10)
             )
-            label_arquivo.pack(anchor='w', padx=10, pady=2)
+            dosya_etiketi.pack(anchor='w', padx=10, pady=2)
         
-        botao_concluido = self.CriarBotao_Estilizado(
-            quadro_principal, 
-            "Concluído", 
-            self.CriarInterface_Sociais, 
+        tamamlandi_dugmesi = self.Dugme_Olustur(
+            ana_cerceve, 
+            "Tamamlandi", 
+            self.Sosyal_Arayuzu_Olustur, 
             'Accent.TButton'
         )
-        botao_concluido.pack(pady=20)
+        tamamlandi_dugmesi.pack(pady=20)
 
-    def CriarInterface_Sociais(self):
-        self.Limpar_Janela()
+    def Sosyal_Arayuzu_Olustur(self):
+        self.Pencereyi_Temizle()
         
-        quadro_principal = ttk.Frame(self.root, padding="30 30 30 30")
-        quadro_principal.pack(fill=tk.BOTH, expand=True)
+        ana_cerceve = ttk.Frame(self.root, padding="30 30 30 30")
+        ana_cerceve.pack(fill=tk.BOTH, expand=True)
         
-        titulo = self.CriarLabel_Estilizado(
-            quadro_principal, 
-            "Sociais", 
-            fonte=('Segoe UI', 24, 'bold'), 
-            cor=self.colors.primary
+        baslik = self.Etiket_Olustur(
+            ana_cerceve, 
+            "Sosyal Medya", 
+            font=('Segoe UI', 24, 'bold'), 
+            renk=self.colors.primary
         )
-        titulo.pack(pady=(0, 40))
+        baslik.pack(pady=(0, 40))
         
-        links_sociais = [
+        sosyal_linkler = [
             (" Discord SPC", "https://discord.gg/3fApZh66Tf", "discord.png"),
             (" Instagram", "https://www.instagram.com/spc.samp/", "instagram.png"),
             (" YouTube", "https://www.youtube.com/@spc-samp", "youtube.png"),
@@ -376,93 +376,93 @@ class Samp_Client_R2:
             (" GitHub", "https://github.com/spc-samp", "github.png"),
         ]
         
-        frame_botoes = ttk.Frame(quadro_principal)
-        frame_botoes.pack(expand=True)
+        dugme_cercevesi = ttk.Frame(ana_cerceve)
+        dugme_cercevesi.pack(expand=True)
         
-        def Abrir_Link(link):
+        def Linki_Ac(link):
             webbrowser.open(link, new=2)
         
-        def redimensionar_icone(caminho_icone, tamanho=(30, 30)):
+        def Simgeyi_Yeniden_Boyutlandir(simge_yolu, boyut=(30, 30)):
             base_path = getattr(sys, "_MEIPASS", os.path.dirname(os.path.abspath(__file__)))
-            caminho_completo = os.path.join(base_path, caminho_icone)
+            tam_yol = os.path.join(base_path, simge_yolu)
             
-            imagem = Image.open(caminho_completo)
-            imagem_redimensionada = imagem.resize(tamanho, Image.LANCZOS)
-            return ImageTk.PhotoImage(imagem_redimensionada)
+            resim = Image.open(tam_yol)
+            yeniden_boyutlandirilmis_resim = resim.resize(boyut, Image.LANCZOS)
+            return ImageTk.PhotoImage(yeniden_boyutlandirilmis_resim)
         
-        for i in range(0, len(links_sociais), 2):
-            frame_linha = ttk.Frame(frame_botoes)
-            frame_linha.pack(fill=tk.X, pady=10)
+        for i in range(0, len(sosyal_linkler), 2):
+            satir_cercevesi = ttk.Frame(dugme_cercevesi)
+            satir_cercevesi.pack(fill=tk.X, pady=10)
             
             for j in range(2):
-                if i + j < len(links_sociais):
-                    nome, link, icone_path = links_sociais[i + j]
+                if i + j < len(sosyal_linkler):
+                    ad, link, simge_yolu = sosyal_linkler[i + j]
                     
-                    icone = redimensionar_icone(os.path.join('icons', icone_path))
+                    simge = Simgeyi_Yeniden_Boyutlandir(os.path.join('icons', simge_yolu))
                     
-                    botao_social = ttk.Button(
-                        frame_linha, 
-                        text=nome, 
-                        image=icone, 
+                    sosyal_dugme = ttk.Button(
+                        satir_cercevesi, 
+                        text=ad, 
+                        image=simge, 
                         compound=tk.LEFT,
-                        command=lambda l=link: Abrir_Link(l)
+                        command=lambda l=link: Linki_Ac(l)
                     )
-                    botao_social.image = icone
-                    botao_social.pack(side=tk.LEFT, padx=10, expand=True, fill=tk.X)
+                    sosyal_dugme.image = simge
+                    sosyal_dugme.pack(side=tk.LEFT, padx=10, expand=True, fill=tk.X)
         
-        botao_fechar = ttk.Button(
-            frame_botoes, 
-            text="Fechar", 
+        kapat_dugmesi = ttk.Button(
+            dugme_cercevesi, 
+            text="Kapat", 
             command=self.root.quit,
-            style='Fechar.TButton'
+            style='Kapat.TButton'
         )
-        botao_fechar.pack(pady=10, padx=20, fill=tk.X)
+        kapat_dugmesi.pack(pady=10, padx=20, fill=tk.X)
 
-        style = ttk.Style()
-        style.configure(
-            'Fechar.TButton', 
+        stil = ttk.Style()
+        stil.configure(
+            'Kapat.TButton', 
             background='red', 
             foreground='white', 
             font=('Segoe UI', 12)
         )
 
-    def Cancelar_Instalacao(self):
-        self.Limpar_Janela()
+    def Yuklemeyi_Iptal_Et(self):
+        self.Pencereyi_Temizle()
         
-        quadro_principal = ttk.Frame(self.root, padding="30 30 30 30")
-        quadro_principal.pack(fill=tk.BOTH, expand=True)
+        ana_cerceve = ttk.Frame(self.root, padding="30 30 30 30")
+        ana_cerceve.pack(fill=tk.BOTH, expand=True)
         
-        titulo = self.CriarLabel_Estilizado(
-            quadro_principal, 
-            "Cancelando Instalação", 
-            fonte=('Segoe UI', 16, 'bold'), 
-            cor=self.colors.primary
+        baslik = self.Etiket_Olustur(
+            ana_cerceve, 
+            "Yuklemeyi Iptal Et", 
+            font=('Segoe UI', 16, 'bold'), 
+            renk=self.colors.primary
         )
-        titulo.pack(pady=(0, 20))
+        baslik.pack(pady=(0, 20))
         
-        status_label = self.CriarLabel_Estilizado(
-            quadro_principal, 
-            "Aguarde, toda a operação está sendo cancelada..."
+        durum_etiketi = self.Etiket_Olustur(
+            ana_cerceve, 
+            "Lutfen bekleyin, islem iptal ediliyor..."
         )
-        status_label.pack(pady=20)
+        durum_etiketi.pack(pady=20)
         
-        barra_progresso = ttk.Progressbar(
-            quadro_principal, 
+        ilerleme_cubugu = ttk.Progressbar(
+            ana_cerceve, 
             length=600, 
             mode='determinate', 
             maximum=100
         )
-        barra_progresso.pack(pady=20)
+        ilerleme_cubugu.pack(pady=20)
 
-        def Cancelamento():
+        def Iptal_Etme():
             for i in range(101):
-                barra_progresso['value'] = i
+                ilerleme_cubugu['value'] = i
                 self.root.update_idletasks()
                 time.sleep(0.05)
             
-            self.root.after(0, self.CriarInterface_Sociais)
+            self.root.after(0, self.Sosyal_Arayuzu_Olustur)
 
-        threading.Thread(target=Cancelamento, daemon=True).start()
+        threading.Thread(target=Iptal_Etme, daemon=True).start()
 
 def main_client():
     root = tk.Tk()
