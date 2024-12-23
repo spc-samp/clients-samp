@@ -1,0 +1,37 @@
+<translations>
+  <string key="continue">Continue</string>
+  <string key="cancel">Cancel</string>
+  <string key="finish">Finish</string>
+  <string key="close">Close</string>
+
+  <string key="client_installer_title">Client R4 SA:MP Installer</string>
+  <string key="client_installer_description">This executable, which is actually the installer for the SA:MP (San Andreas Multiplayer) mod version 0.3.7 R4, was designed and developed by Calasans, CEO of SPC. The motivation behind creating a new installer stems from the need to replace the original installers currently available on third-party sites. This practice seriously compromises user security, as these installers can be manipulated to include malicious code.
+
+Unlike these unsafe alternatives, SPC's official installer stands out not only by offering reliability and practicality but is also completely Open Source. This means any user can audit the source code, verify its integrity, and even compile it themselves. This transparency reinforces SPC's commitment to security, trust, and freedom for users when using SA:MP.</string>
+
+  <string key="folder_title">GTA San Andreas Folder</string>
+  <string key="folder_description">It is necessary to select the exact GTA San Andreas directory, identified as "Grand Theft Auto San Andreas". Additionally, the executable file named "gta_sa.exe" must be located in this directory. If all requirements are met, you can proceed with the installation of Client R4.</string>
+  <string key="selected_folder_title">Folder ⬇</string>
+  <string key="no_folder_selected">You haven't selected any folder yet.</string>
+  <string key="select_folder">Select Folder</string>
+  <string key="other_folder">Other Folder</string>
+  <string key="selected_folder">Selected path:</string>
+
+  <string key="folder_verification_title">Folder Verification</string>
+  <string key="verifying_folder">Please wait. The folder is in the process of evaluation...</string>
+  <string key="invalid_folder">Error: The selected directory is invalid. Please select the "Grand Theft Auto San Andreas" folder.</string>
+  <string key="invalid_file">Error: The selected directory does not contain the "gta_sa.exe" executable file.</string>
+
+  <string key="install_client_title">Client R4 SA:MP Installation</string>
+  <string key="install_client_description">Now that you've reached this part, you must decide whether to proceed with downloading the SA:MP (San Andreas Multiplayer) mod. If you choose to continue, the extraction process will begin, allowing you to play SA:MP fully. If, on the other hand, you choose to cancel, the entire operation will be interrupted and invalidated.</string>
+
+  <string key="canceling_downloand_title">Canceling Download</string>
+  <string key="canceling_downloand">Please wait. The entire operation is in the process of cancellation...</string>
+
+  <string key="file_extraction_title">File Extraction</string>
+  <string key="extracting_files">Extracting files...</string>
+
+  <string key="extraction_completed_title">Extraction Completed</string>
+
+  <string key="social_title">SPC Social Media</string>
+</translations>

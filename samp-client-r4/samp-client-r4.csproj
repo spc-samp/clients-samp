@@ -1,0 +1,45 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+    <PropertyGroup>
+        <OutputType>WinExe</OutputType>
+        <TargetFramework>net9.0-windows</TargetFramework>
+        <UseWindowsForms>true</UseWindowsForms>
+        <ApplicationManifest>adm.manifest</ApplicationManifest>
+        <ApplicationIcon>icons\social\ico-spc.ico</ApplicationIcon>
+        <!--
+        This project does not require assembly signing for compilation. However, if the user wishes to sign the assembly to ensure a unique identity and greater security, they can do so by generating their
+        own cryptographic key (a .snk or .pfx file).
+
+        Signing the assembly offers the following advantages:
+        - Integrity: Ensures that the assembly has not been altered or corrupted after its creation.
+        - Unique Identity: Helps manage versions and prevent conflicts between assemblies with the same name, ensuring the signed assembly is exclusively yours.
+        - Security: Signed assemblies are required in environments such as the GAC (Global Assembly Cache), if you want to distribute the project in a more controlled and secure manner.
+
+        If you wish to sign the assembly, follow these steps:
+        1. Generate a cryptographic key using the command `sn -k MyKey.snk`.
+        2. Update the .csproj file with the path to the generated key in the <AssemblyOriginatorKeyFile> attribute.
+        3. Set the <SignAssembly> property to 'true'.
+
+        - Important: Make sure to keep your private key secure and do not include it in public repositories.
+
+        If you are not interested in signing the assembly, simply keep the lines below commented, and the compilation will proceed normally without signing.
+        
+        <SignAssembly>true</SignAssembly>
+        <AssemblyOriginatorKeyFile>MyKey.snk</AssemblyOriginatorKeyFile>
+        -->
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <FileVersion>1.0.0.0</FileVersion>
+        <Company>SA-MP Programming Community</Company>
+        <Product>samp-client-r4</Product>
+        <Copyright>Copyright © SPC</Copyright>
+        <Description>Instalador do mod (San Andreas Multiplayer) versão 0.3.7 R4.</Description>
+        <!---->
+        <RollForward>LatestMajor</RollForward>
+        <RuntimeFrameworkVersion>9.0.0</RuntimeFrameworkVersion>
+    </PropertyGroup>
+    <!---->
+    <ItemGroup>
+        <EmbeddedResource Include="archives\**\*" />
+        <EmbeddedResource Include="icons\**\*" />
+        <EmbeddedResource Include="translations\**\*" />
+    </ItemGroup>
+</Project>

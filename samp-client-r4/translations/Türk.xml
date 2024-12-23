@@ -1,0 +1,37 @@
+<translations>
+  <string key="continue">Devam et</string>
+  <string key="cancel">İptal</string>
+  <string key="finish">Bitir</string>
+  <string key="close">Kapat</string>
+
+  <string key="client_installer_title">Client R4 SA:MP Yükleyici</string>
+  <string key="client_installer_description">Bu yürütülebilir dosya, aslında SA:MP (San Andreas Multiplayer) mod yükleyicisi sürüm 0.3.7 R4'dir ve SPC'nin CEO'su Calasans tarafından tasarlanıp geliştirilmiştir. Yeni bir yükleyici oluşturmanın ardındaki motivasyon, şu anda üçüncü taraf siteler tarafından sağlanan orijinal yükleyicileri değiştirme ihtiyacından kaynaklanmaktadır. Bu durum, bu yükleyicilerin kötü amaçlı kod içerecek şekilde manipüle edilebilmesi nedeniyle kullanıcı güvenliğini ciddi şekilde tehlikeye atmaktadır.
+
+Bu güvensiz alternatiflerden farklı olarak, SPC'nin resmi yükleyicisi sadece güvenilirlik ve kullanım kolaylığı sunmakla kalmayıp, aynı zamanda tamamen açık kaynak (Open Source) kodludur. Bu, herhangi bir kullanıcının kaynak kodu inceleyebileceği, bütünlüğünü doğrulayabileceği ve hatta kendi başına derleyebileceği anlamına gelir. Bu şeffaflık, SPC'nin SA:MP kullanırken kullanıcıların güvenliği, güveni ve özgürlüğüne olan bağlılığını güçlendirir.</string>
+
+  <string key="folder_title">GTA San Andreas Klasörü</string>
+  <string key="folder_description">"Grand Theft Auto San Andreas" olarak adlandırılan GTA San Andreas dizinini özellikle seçmeniz gerekecektir. Ayrıca, "gta_sa.exe" adlı yürütülebilir dosyanın bu dizinde bulunması zorunludur. Tüm gereksinimler karşılandığında, Client R4 kurulumuna devam edebilirsiniz.</string>
+  <string key="selected_folder_title">Klasör ⬇</string>
+  <string key="no_folder_selected">Henüz bir klasör seçmediniz.</string>
+  <string key="select_folder">Klasör Seç</string>
+  <string key="other_folder">Başka Klasör</string>
+  <string key="selected_folder">Seçilen yol:</string>
+
+  <string key="folder_verification_title">Klasör Doğrulama</string>
+  <string key="verifying_folder">Lütfen bekleyin. Klasör değerlendiriliyor...</string>
+  <string key="invalid_folder">Hata: Seçilen dizin geçersiz. Lütfen "Grand Theft Auto San Andreas" klasörünü seçin.</string>
+  <string key="invalid_file">Hata: Seçilen dizinde "gta_sa.exe" yürütülebilir dosyası bulunmuyor.</string>
+
+  <string key="install_client_title">Client R4 SA:MP Kurulumu</string>
+  <string key="install_client_description">Bu aşamaya geldiğinize göre, SA:MP (San Andreas Multiplayer) modunu indirmeye devam etmek isteyip istemediğinize karar vermeniz gerekecek. Devam etmeyi seçerseniz, çıkarma işlemi başlayacak ve SA:MP'yi tam olarak oynamanıza olanak tanıyacaktır. Öte yandan, iptal etmeyi seçerseniz, tüm işlem durdurulacak ve geçersiz kılınacaktır.</string>
+  
+  <string key="canceling_downloand_title">İndirme İptali</string>
+  <string key="canceling_downloand">Lütfen bekleyin. Tüm işlem iptal ediliyor...</string>
+
+  <string key="file_extraction_title">Dosya Çıkarma</string>
+  <string key="extracting_files">Dosyalar çıkarılıyor...</string>
+  
+  <string key="extraction_completed_title">Çıkarma Tamamlandı</string>
+
+  <string key="social_title">SPC Sosyal</string>
+</translations>

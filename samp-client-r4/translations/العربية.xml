@@ -1,0 +1,37 @@
+<translations>
+  <string key="continue">متابعة</string>
+  <string key="cancel">إلغاء</string>
+  <string key="finish">إنهاء</string>
+  <string key="close">إغلاق</string>
+
+  <string key="client_installer_title">مثبت Client R4 SA:MP</string>
+  <string key="client_installer_description">هذا البرنامج التنفيذي، الذي هو في الواقع مثبت لتعديل SA:MP (San Andreas Multiplayer)، الإصدار 0.3.7 R4، تم تصميمه وتطويره بواسطة Calasans، الرئيس التنفيذي لشركة SPC. السبب وراء إنشاء مثبت جديد هو الحاجة إلى استبدال المثبتات الأصلية، التي يتم توفيرها حاليًا من قبل مواقع الطرف الثالث. هذه الممارسة تعرض أمن المستخدمين للخطر بشكل كبير، حيث يمكن التلاعب بهذه المثبتات لتتضمن رموزًا ضارة.
+
+على عكس هذه البدائل غير الآمنة، يتميز مثبت SPC الرسمي ليس فقط بتقديم الموثوقية والراحة، ولكن أيضًا بكونه مفتوح المصدر بالكامل. هذا يعني أن أي مستخدم يمكنه تدقيق الكود المصدري والتحقق من سلامته وحتى تجميعه بنفسه. هذه الشفافية تعزز التزام SPC بالأمان والثقة وحرية المستخدمين عند استخدام SA:MP.</string>
+
+  <string key="folder_title">مجلد GTA San Andreas</string>
+  <string key="folder_description">من الضروري تحديد الدليل المحدد الخاص بـ GTA San Andreas، المعروف باسم "Grand Theft Auto San Andreas". بالإضافة إلى ذلك، من الضروري أن يكون الملف التنفيذي المسمى "gta_sa.exe" موجودًا في هذا الدليل. إذا تم استيفاء جميع المتطلبات، سيكون من الممكن المضي قدمًا في تثبيت Client R4.</string>
+  <string key="selected_folder_title">المجلد ⬇</string>
+  <string key="no_folder_selected">لم تقم بتحديد أي مجلد بعد.</string>
+  <string key="select_folder">حدد المجلد</string>
+  <string key="other_folder">مجلد آخر</string>
+  <string key="selected_folder">المسار المحدد:</string>
+
+  <string key="folder_verification_title">التحقق من المجلد</string>
+  <string key="verifying_folder">يرجى الانتظار. المجلد قيد التقييم...</string>
+  <string key="invalid_folder">خطأ: الدليل المحدد غير صالح. يرجى تحديد مجلد "Grand Theft Auto San Andreas".</string>
+  <string key="invalid_file">خطأ: الدليل المحدد لا يحتوي على الملف التنفيذي "gta_sa.exe".</string>
+
+  <string key="install_client_title">تثبيت Client R4 SA:MP</string>
+  <string key="install_client_description">الآن وقد وصلت إلى هذا الجزء، يجب أن تقرر ما إذا كنت تريد المتابعة مع تنزيل تعديل SA:MP (San Andreas Multiplayer). إذا اخترت المتابعة، ستبدأ عملية الاستخراج، مما يتيح لك لعب SA:MP بشكل كامل. من ناحية أخرى، إذا اخترت الإلغاء، سيتم إيقاف العملية بأكملها وإلغاؤها.</string>
+  
+  <string key="canceling_downloand_title">إلغاء التنزيل</string>
+  <string key="canceling_downloand">يرجى الانتظار. العملية بأكملها قيد الإلغاء...</string>
+
+  <string key="file_extraction_title">استخراج الملفات</string>
+  <string key="extracting_files">جارٍ استخراج الملفات...</string>
+  
+  <string key="extraction_completed_title">اكتمل الاستخراج</string>
+
+  <string key="social_title">وسائل التواصل الاجتماعي SPC</string>
+</translations>

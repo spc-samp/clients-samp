@@ -1,0 +1,37 @@
+<translations>
+  <string key="continue">Συνέχεια</string>
+  <string key="cancel">Ακύρωση</string>
+  <string key="finish">Ολοκλήρωση</string>
+  <string key="close">Κλείσιμο</string>
+
+  <string key="client_installer_title">Πρόγραμμα εγκατάστασης Client R4 SA:MP</string>
+  <string key="client_installer_description">Αυτό το εκτελέσιμο αρχείο, που στην πραγματικότητα είναι το πρόγραμμα εγκατάστασης του mod SA:MP (San Andreas Multiplayer) έκδοσης 0.3.7 R4, σχεδιάστηκε και αναπτύχθηκε από τον Calasans, CEO της SPC. Το κίνητρο πίσω από τη δημιουργία ενός νέου προγράμματος εγκατάστασης προέρχεται από την ανάγκη αντικατάστασης των αρχικών προγραμμάτων εγκατάστασης που είναι διαθέσιμα σε ιστότοπους τρίτων. Αυτή η πρακτική θέτει σε σοβαρό κίνδυνο την ασφάλεια των χρηστών, καθώς αυτά τα προγράμματα εγκατάστασης μπορούν να τροποποιηθούν ώστε να περιέχουν κακόβουλο κώδικα.
+
+Σε αντίθεση με αυτές τις μη ασφαλείς εναλλακτικές λύσεις, το επίσημο πρόγραμμα εγκατάστασης της SPC ξεχωρίζει όχι μόνο προσφέροντας αξιοπιστία και πρακτικότητα, αλλά είναι επίσης πλήρως ανοιχτού κώδικα. Αυτό σημαίνει ότι κάθε χρήστης μπορεί να ελέγξει τον πηγαίο κώδικα, να επαληθεύσει την ακεραιότητά του και ακόμη και να τον μεταγλωττίσει μόνος του. Αυτή η διαφάνεια ενισχύει τη δέσμευση της SPC για την ασφάλεια, την εμπιστοσύνη και την ελευθερία των χρηστών κατά τη χρήση του SA:MP.</string>
+
+  <string key="folder_title">Φάκελος GTA San Andreas</string>
+  <string key="folder_description">Είναι απαραίτητο να επιλέξετε τον ακριβή κατάλογο του GTA San Andreas, που αναγνωρίζεται ως "Grand Theft Auto San Andreas". Επιπλέον, το εκτελέσιμο αρχείο με όνομα "gta_sa.exe" πρέπει να βρίσκεται σε αυτόν τον κατάλογο. Εάν πληρούνται όλες οι απαιτήσεις, μπορείτε να προχωρήσετε με την εγκατάσταση του Client R4.</string>
+  <string key="selected_folder_title">Φάκελος ⬇</string>
+  <string key="no_folder_selected">Δεν έχετε επιλέξει ακόμα φάκελο.</string>
+  <string key="select_folder">Επιλογή Φακέλου</string>
+  <string key="other_folder">Άλλος Φάκελος</string>
+  <string key="selected_folder">Επιλεγμένη διαδρομή:</string>
+
+  <string key="folder_verification_title">Επαλήθευση Φακέλου</string>
+  <string key="verifying_folder">Παρακαλώ περιμένετε. Ο φάκελος βρίσκεται σε διαδικασία αξιολόγησης...</string>
+  <string key="invalid_folder">Σφάλμα: Ο επιλεγμένος κατάλογος δεν είναι έγκυρος. Επιλέξτε τον φάκελο "Grand Theft Auto San Andreas".</string>
+  <string key="invalid_file">Σφάλμα: Ο επιλεγμένος κατάλογος δεν περιέχει το εκτελέσιμο αρχείο "gta_sa.exe".</string>
+
+  <string key="install_client_title">Εγκατάσταση του Client R4 SA:MP</string>
+  <string key="install_client_description">Τώρα που φτάσατε σε αυτό το μέρος, πρέπει να αποφασίσετε αν θέλετε να συνεχίσετε με τη λήψη του mod SA:MP (San Andreas Multiplayer). Εάν επιλέξετε να συνεχίσετε, θα ξεκινήσει η διαδικασία εξαγωγής, επιτρέποντάς σας να παίξετε το SA:MP πλήρως. Εάν αντίθετα επιλέξετε να ακυρώσετε, ολόκληρη η λειτουργία θα διακοπεί και θα ακυρωθεί.</string>
+
+  <string key="canceling_downloand_title">Ακύρωση Λήψης</string>
+  <string key="canceling_downloand">Παρακαλώ περιμένετε. Ολόκληρη η λειτουργία βρίσκεται σε διαδικασία ακύρωσης...</string>
+
+  <string key="file_extraction_title">Εξαγωγή Αρχείων</string>
+  <string key="extracting_files">Εξαγωγή αρχείων...</string>
+
+  <string key="extraction_completed_title">Η Εξαγωγή Ολοκληρώθηκε</string>
+
+  <string key="social_title">Κοινωνικά Δίκτυα SPC</string>
+</translations>

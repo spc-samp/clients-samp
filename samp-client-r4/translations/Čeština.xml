@@ -1,0 +1,37 @@
+<translations>
+  <string key="continue">Pokračovat</string>
+  <string key="cancel">Zrušit</string>
+  <string key="finish">Dokončit</string>
+  <string key="close">Zavřít</string>
+
+  <string key="client_installer_title">Instalátor Client R4 SA:MP</string>
+  <string key="client_installer_description">Tento spustitelný soubor, který je ve skutečnosti instalátorem módu SA:MP (San Andreas Multiplayer) verze 0.3.7 R4, byl navržen a vyvinut společností Calasans, generálním ředitelem SPC. Motivace k vytvoření nového instalátoru vychází z potřeby nahradit původní instalátory, které jsou v současné době dostupné na webech třetích stran. Tato praxe vážně ohrožuje bezpečnost uživatelů, protože tyto instalátory mohou být manipulovány tak, aby obsahovaly škodlivý kód.
+
+Na rozdíl od těchto nebezpečných alternativ se oficiální instalátor SPC vyznačuje nejen spolehlivostí a praktičností, ale je také zcela open source. To znamená, že každý uživatel může zkontrolovat zdrojový kód, ověřit jeho integritu a dokonce si ho sám zkompilovat. Tato transparentnost posiluje závazek SPC k bezpečnosti, důvěře a svobodě uživatelů při používání SA:MP.</string>
+
+  <string key="folder_title">Složka GTA San Andreas</string>
+  <string key="folder_description">Je nezbytné vybrat přesný adresář GTA San Andreas, identifikovaný jako "Grand Theft Auto San Andreas". Kromě toho musí být v tomto adresáři umístěn spustitelný soubor s názvem "gta_sa.exe". Pokud jsou splněny všechny požadavky, můžete pokračovat v instalaci Client R4.</string>
+  <string key="selected_folder_title">Složka ⬇</string>
+  <string key="no_folder_selected">Zatím jste nevybrali žádnou složku.</string>
+  <string key="select_folder">Vybrat Složku</string>
+  <string key="other_folder">Jiná Složka</string>
+  <string key="selected_folder">Vybraná cesta:</string>
+
+  <string key="folder_verification_title">Ověření Složky</string>
+  <string key="verifying_folder">Prosím čekejte. Složka je v procesu hodnocení...</string>
+  <string key="invalid_folder">Chyba: Vybraný adresář je neplatný. Vyberte prosím složku "Grand Theft Auto San Andreas".</string>
+  <string key="invalid_file">Chyba: Vybraný adresář neobsahuje spustitelný soubor "gta_sa.exe".</string>
+
+  <string key="install_client_title">Instalace Client R4 SA:MP</string>
+  <string key="install_client_description">Nyní, když jste se dostali do této části, musíte se rozhodnout, zda chcete pokračovat ve stahování módu SA:MP (San Andreas Multiplayer). Pokud se rozhodnete pokračovat, začne proces extrakce, který vám umožní hrát SA:MP v plném rozsahu. Pokud se naopak rozhodnete zrušit, celá operace bude přerušena a zneplatněna.</string>
+
+  <string key="canceling_downloand_title">Zrušení Stahování</string>
+  <string key="canceling_downloand">Prosím čekejte. Celá operace je v procesu rušení...</string>
+
+  <string key="file_extraction_title">Extrakce Souborů</string>
+  <string key="extracting_files">Probíhá extrakce souborů...</string>
+
+  <string key="extraction_completed_title">Extrakce Dokončena</string>
+
+  <string key="social_title">Sociální média SPC</string>
+</translations>
