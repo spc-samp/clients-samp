@@ -1,0 +1,37 @@
+<translations>
+  <string key="continue">जारी रखें</string>
+  <string key="cancel">रद्द करें</string>
+  <string key="finish">समाप्त करें</string>
+  <string key="close">बंद करें</string>
+
+  <string key="client_installer_title">Client R3 Voip SA:MP इंस्टॉलर</string>
+  <string key="client_installer_description">यह एक्जीक्यूटेबल फ़ाइल, जो वास्तव में SA:MP (San Andreas Multiplayer) मॉड वर्जन 0.3.7 R3 Voip का इंस्टॉलर है, SPC के CEO कालासंस द्वारा डिज़ाइन और विकसित किया गया है। एक नया इंस्टॉलर बनाने के पीछे का मुख्य कारण तृतीय-पक्ष साइटों पर वर्तमान में उपलब्ध मूल इंस्टॉलर को बदलने की आवश्यकता से उत्पन्न हुआ है। यह प्रथा उपयोगकर्ताओं की सुरक्षा को गंभीर रूप से खतरे में डालती है, क्योंकि इन इंस्टॉलर में दुर्भावनापूर्ण कोड शामिल किया जा सकता है।
+
+इन असुरक्षित विकल्पों के विपरीत, SPC का आधिकारिक इंस्टॉलर न केवल विश्वसनीयता और व्यावहारिकता प्रदान करता है, बल्कि यह पूरी तरह से ओपन सोर्स भी है। इसका मतलब है कि कोई भी उपयोगकर्ता सोर्स कोड की जांच कर सकता है, इसकी अखंडता को सत्यापित कर सकता है और यहां तक कि इसे स्वयं कंपाइल भी कर सकता है। यह पारदर्शिता SA:MP का उपयोग करते समय उपयोगकर्ताओं की सुरक्षा, विश्वास और स्वतंत्रता के प्रति SPC की प्रतिबद्धता को मजबूत करती है।</string>
+
+  <string key="folder_title">GTA San Andreas फ़ोल्डर</string>
+  <string key="folder_description">GTA San Andreas की सटीक डायरेक्टरी का चयन करना आवश्यक है, जिसे "Grand Theft Auto San Andreas" के रूप में पहचाना जाता है। इसके अतिरिक्त, "gta_sa.exe" नामक एक्जीक्यूटेबल फ़ाइल इस डायरेक्टरी में स्थित होनी चाहिए। यदि सभी आवश्यकताएं पूरी होती हैं, तो आप Client R3 Voip की स्थापना के साथ आगे बढ़ सकते हैं।</string>
+  <string key="selected_folder_title">फ़ोल्डर ⬇</string>
+  <string key="no_folder_selected">आपने अभी तक कोई फ़ोल्डर नहीं चुना है।</string>
+  <string key="select_folder">फ़ोल्डर चुनें</string>
+  <string key="other_folder">अन्य फ़ोल्डर</string>
+  <string key="selected_folder">चयनित पथ:</string>
+
+  <string key="folder_verification_title">फ़ोल्डर सत्यापन</string>
+  <string key="verifying_folder">कृपया प्रतीक्षा करें। फ़ोल्डर मूल्यांकन की प्रक्रिया में है...</string>
+  <string key="invalid_folder">त्रुटि: चयनित डायरेक्टरी अमान्य है। कृपया "Grand Theft Auto San Andreas" फ़ोल्डर चुनें।</string>
+  <string key="invalid_file">त्रुटि: चयनित डायरेक्टरी में "gta_sa.exe" एक्जीक्यूटेबल फ़ाइल नहीं है।</string>
+
+  <string key="install_client_title">Client R3 Voip SA:MP इंस्टॉलेशन</string>
+  <string key="install_client_description">अब जब आप इस भाग तक पहुंच गए हैं, आपको यह तय करना होगा कि क्या आप SA:MP (San Andreas Multiplayer) मॉड को डाउनलोड करना जारी रखना चाहते हैं। यदि आप जारी रखने का चयन करते हैं, तो निष्कर्षण प्रक्रिया शुरू हो जाएगी, जिससे आप SA:MP को पूरी तरह से खेल सकेंगे। दूसरी ओर, यदि आप रद्द करने का चयन करते हैं, तो पूरी प्रक्रिया रुक जाएगी और अमान्य हो जाएगी।</string>
+
+  <string key="canceling_downloand_title">डाउनलोड रद्द किया जा रहा है</string>
+  <string key="canceling_downloand">कृपया प्रतीक्षा करें। पूरी प्रक्रिया रद्द की जा रही है...</string>
+
+  <string key="file_extraction_title">फ़ाइल निष्कर्षण</string>
+  <string key="extracting_files">फ़ाइलें निकाली जा रही हैं...</string>
+
+  <string key="extraction_completed_title">निष्कर्षण पूर्ण</string>
+
+  <string key="social_title">SPC सोशल मीडिया</string>
+</translations>

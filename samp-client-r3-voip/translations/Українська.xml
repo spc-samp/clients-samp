@@ -1,0 +1,37 @@
+<translations>
+  <string key="continue">Продовжити</string>
+  <string key="cancel">Скасувати</string>
+  <string key="finish">Завершити</string>
+  <string key="close">Закрити</string>
+
+  <string key="client_installer_title">Встановлювач Client R3 Voip SA:MP</string>
+  <string key="client_installer_description">Цей виконуваний файл, який фактично є встановлювачем моду SA:MP (San Andreas Multiplayer) версії 0.3.7 R3 Voip, був розроблений та створений Calasans, генеральним директором SPC. Мотивація створення нового встановлювача полягає в необхідності замінити оригінальні встановлювачі, які наразі надаються сторонніми сайтами. Така практика серйозно загрожує безпеці користувачів, оскільки ці встановлювачі можуть бути змінені для включення шкідливого коду.
+
+На відміну від цих небезпечних альтернатив, офіційний встановлювач SPC відрізняється не лише надійністю та зручністю, але й є повністю відкритим кодом (Open Source). Це означає, що будь-який користувач може перевірити вихідний код, підтвердити його цілісність і навіть скомпілювати самостійно. Ця прозорість підкреслює зобов'язання SPC щодо безпеки, довіри та свободи користувачів при використанні SA:MP.</string>
+
+  <string key="folder_title">Папка GTA San Andreas</string>
+  <string key="folder_description">Необхідно вибрати саме директорію GTA San Andreas, яка називається "Grand Theft Auto San Andreas". Крім того, виконуваний файл "gta_sa.exe" повинен бути присутнім у цій директорії. Коли всі вимоги будуть виконані, можна буде продовжити встановлення Client R3 Voip.</string>
+  <string key="selected_folder_title">Папка ⬇</string>
+  <string key="no_folder_selected">Ви ще не вибрали папку.</string>
+  <string key="select_folder">Вибрати папку</string>
+  <string key="other_folder">Інша папка</string>
+  <string key="selected_folder">Вибраний шлях:</string>
+
+  <string key="folder_verification_title">Перевірка папки</string>
+  <string key="verifying_folder">Будь ласка, зачекайте. Відбувається перевірка папки...</string>
+  <string key="invalid_folder">Помилка: Вибрана директорія недійсна. Будь ласка, виберіть папку "Grand Theft Auto San Andreas".</string>
+  <string key="invalid_file">Помилка: Вибрана директорія не містить виконуваного файлу "gta_sa.exe".</string>
+
+  <string key="install_client_title">Встановлення Client R3 Voip SA:MP</string>
+  <string key="install_client_description">Тепер, коли ви дійшли до цього етапу, вам потрібно вирішити, чи бажаєте ви продовжити завантаження моду SA:MP (San Andreas Multiplayer). Якщо ви вирішите продовжити, почнеться процес розпакування, що дозволить вам повноцінно грати в SA:MP. З іншого боку, якщо ви виберете скасування, вся операція буде зупинена та анульована.</string>
+  
+  <string key="canceling_downloand_title">Скасування завантаження</string>
+  <string key="canceling_downloand">Будь ласка, зачекайте. Відбувається скасування всієї операції...</string>
+
+  <string key="file_extraction_title">Розпакування файлів</string>
+  <string key="extracting_files">Розпакування файлів...</string>
+  
+  <string key="extraction_completed_title">Розпакування завершено</string>
+
+  <string key="social_title">Соціальні мережі SPC</string>
+</translations>

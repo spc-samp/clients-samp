@@ -1,0 +1,37 @@
+<translations>
+  <string key="continue">Continua</string>
+  <string key="cancel">Annulla</string>
+  <string key="finish">Termina</string>
+  <string key="close">Chiudi</string>
+
+  <string key="client_installer_title">Installazione Client R3 Voip SA:MP</string>
+  <string key="client_installer_description">Questo eseguibile, che è in realtà il programma di installazione della mod SA:MP (San Andreas Multiplayer) versione 0.3.7 R3 Voip, è stato concepito e sviluppato da Calasans, CEO di SPC. La motivazione alla base della creazione di un nuovo programma di installazione deriva dalla necessità di sostituire i programmi di installazione originali, attualmente disponibili su siti di terze parti. Questa pratica compromette seriamente la sicurezza degli utenti, poiché questi programmi di installazione possono essere manipolati per includere codice malevolo.
+
+A differenza di queste alternative non sicure, il programma di installazione ufficiale SPC si distingue non solo per la sua affidabilità e praticità, ma anche per essere completamente (Open Source). Ciò significa che qualsiasi utente può controllare il codice sorgente, verificarne l'integrità e persino compilarlo autonomamente. Questa trasparenza rafforza l'impegno di SPC per la sicurezza, l'affidabilità e la libertà degli utenti nell'utilizzo di SA:MP.</string>
+
+  <string key="folder_title">Cartella di GTA San Andreas</string>
+  <string key="folder_description">È necessario selezionare specificamente la directory di GTA San Andreas, identificata come "Grand Theft Auto San Andreas". Inoltre, è imperativo che il file eseguibile denominato "gta_sa.exe" sia correttamente allocato in questa directory. Se tutti i requisiti sono soddisfatti, sarà possibile procedere con l'installazione del Client R3 Voip.</string>
+  <string key="selected_folder_title">Cartella ⬇</string>
+  <string key="no_folder_selected">Non hai ancora selezionato nessuna cartella.</string>
+  <string key="select_folder">Seleziona Cartella</string>
+  <string key="other_folder">Altra Cartella</string>
+  <string key="selected_folder">Percorso selezionato:</string>
+
+  <string key="folder_verification_title">Verifica della Cartella</string>
+  <string key="verifying_folder">Attendere prego. La cartella è in fase di verifica...</string>
+  <string key="invalid_folder">Errore: La directory selezionata non è valida. Selezionare la cartella "Grand Theft Auto San Andreas".</string>
+  <string key="invalid_file">Errore: La directory selezionata non contiene il file eseguibile "gta_sa.exe".</string>
+
+  <string key="install_client_title">Installazione del Client R3 Voip SA:MP</string>
+  <string key="install_client_description">Ora che sei arrivato a questo punto, dovrai decidere se procedere con il download della mod SA:MP (San Andreas Multiplayer). Se scegli di continuare, inizierà il processo di estrazione, permettendoti di giocare a SA:MP completamente. D'altra parte, se scegli di annullare, l'intera operazione verrà interrotta e invalidata.</string>
+  
+  <string key="canceling_downloand_title">Annullamento del Download</string>
+  <string key="canceling_downloand">Attendere prego. L'operazione è in fase di annullamento...</string>
+
+  <string key="file_extraction_title">Estrazione dei File</string>
+  <string key="extracting_files">Estrazione dei file in corso...</string>
+  
+  <string key="extraction_completed_title">Estrazione Completata</string>
+
+  <string key="social_title">Social SPC</string>
+</translations>

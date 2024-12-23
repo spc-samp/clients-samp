@@ -1,0 +1,37 @@
+<translations>
+  <string key="continue">続行</string>
+  <string key="cancel">キャンセル</string>
+  <string key="finish">完了</string>
+  <string key="close">閉じる</string>
+
+  <string key="client_installer_title">R3 Voip SA:MPクライアントインストーラー</string>
+  <string key="client_installer_description">このプログラムは、SA:MP（San Andreas Multiplayer）mod バージョン0.3.7 R3 Voipのインストーラーで、SPCのCEOであるCalasansによって設計・開発されました。新しいインストーラーを作成する動機は、現在サードパーティのサイトで提供されている元のインストーラーを置き換える必要性から生まれました。これらのインストーラーは悪意のあるコードを含むように改ざんされる可能性があり、ユーザーのセキュリティを深刻に損なう可能性があります。
+
+これらの安全でない代替手段とは異なり、SPCの公式インストーラーは、信頼性と利便性を提供するだけでなく、完全に（オープンソース）であることが特徴です。これは、ユーザーが誰でもソースコードを監査し、その整合性を確認し、さらに自分でコンパイルすることができることを意味します。この透明性は、SA:MPを使用する際のユーザーのセキュリティ、信頼、自由に対するSPCのコミットメントを強化します。</string>
+
+  <string key="folder_title">GTAサンアンドレアスフォルダ</string>
+  <string key="folder_description">"Grand Theft Auto San Andreas"として識別されるGTAサンアンドレアスのディレクトリを特に選択する必要があります。さらに、"gta_sa.exe"という実行ファイルがこのディレクトリに適切に配置されていることが不可欠です。すべての要件が満たされている場合、R3 Voipクライアントのインストールを進めることができます。</string>
+  <string key="selected_folder_title">フォルダ ⬇</string>
+  <string key="no_folder_selected">まだフォルダが選択されていません。</string>
+  <string key="select_folder">フォルダを選択</string>
+  <string key="other_folder">別のフォルダ</string>
+  <string key="selected_folder">選択されたパス：</string>
+
+  <string key="folder_verification_title">フォルダの確認</string>
+  <string key="verifying_folder">お待ちください。フォルダを確認中です...</string>
+  <string key="invalid_folder">エラー：選択されたディレクトリが無効です。"Grand Theft Auto San Andreas"フォルダを選択してください。</string>
+  <string key="invalid_file">エラー：選択されたディレクトリに実行ファイル"gta_sa.exe"が含まれていません。</string>
+
+  <string key="install_client_title">R3 Voip SA:MPクライアントのインストール</string>
+  <string key="install_client_description">ここまで来たところで、SA:MP（San Andreas Multiplayer）modのダウンロードを続行するかどうかを決定する必要があります。続行を選択した場合、抽出プロセスが開始され、SA:MPを完全にプレイすることができるようになります。一方、キャンセルを選択した場合、操作全体が中断され、無効になります。</string>
+  
+  <string key="canceling_downloand_title">ダウンロードのキャンセル</string>
+  <string key="canceling_downloand">お待ちください。操作をキャンセル中です...</string>
+
+  <string key="file_extraction_title">ファイルの抽出</string>
+  <string key="extracting_files">ファイルを抽出中...</string>
+  
+  <string key="extraction_completed_title">抽出完了</string>
+
+  <string key="social_title">SPC ソーシャル</string>
+</translations>
