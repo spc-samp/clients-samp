@@ -1,0 +1,37 @@
+<translations>
+  <string key="continue">Continuă</string>
+  <string key="cancel">Anulare</string>
+  <string key="finish">Finalizare</string>
+  <string key="close">Închide</string>
+
+  <string key="client_installer_title">Program de instalare Client R3 SA:MP</string>
+  <string key="client_installer_description">Acest executabil, care este de fapt programul de instalare pentru modul SA:MP (San Andreas Multiplayer) versiunea 0.3.7 R3, a fost conceput și dezvoltat de Calasans, CEO-ul SPC. Motivul din spatele creării unui nou program de instalare este nevoia de a înlocui programele de instalare originale, care sunt în prezent distribuite prin site-uri terțe. Această practică compromite grav securitatea utilizatorilor, deoarece aceste programe de instalare pot fi manipulate pentru a include coduri rău intenționate.
+
+Spre deosebire de aceste alternative nesigure, programul de instalare oficial SPC se remarcă nu doar prin fiabilitate și practicitate, ci și prin faptul că este complet (Open Source). Acest lucru înseamnă că orice utilizator poate audita codul sursă, verifica integritatea acestuia și chiar să îl compileze singur. Această transparență întărește angajamentul SPC față de securitatea, încrederea și libertatea utilizatorilor în utilizarea SA:MP.</string>
+
+  <string key="folder_title">Folder GTA San Andreas</string>
+  <string key="folder_description">Este esențial să selectați în mod specific directorul corespunzător GTA San Andreas, identificat ca "Grand Theft Auto San Andreas". În plus, este imperativ ca fișierul executabil numit "gta_sa.exe" să fie corect plasat în acest director. Dacă toate cerințele sunt îndeplinite, veți putea continua cu instalarea Client R3.</string>
+  <string key="selected_folder_title">Folder ⬇</string>
+  <string key="no_folder_selected">Nu ați selectat încă niciun folder.</string>
+  <string key="select_folder">Selectare Folder</string>
+  <string key="other_folder">Alt Folder</string>
+  <string key="selected_folder">Calea selectată:</string>
+
+  <string key="folder_verification_title">Verificare Folder</string>
+  <string key="verifying_folder">Vă rugăm să așteptați. Folderul este în curs de evaluare...</string>
+  <string key="invalid_folder">Eroare: Directorul selectat este invalid. Vă rugăm să selectați folderul "Grand Theft Auto San Andreas".</string>
+  <string key="invalid_file">Eroare: Directorul selectat nu conține fișierul executabil "gta_sa.exe".</string>
+
+  <string key="install_client_title">Instalare Client R3 SA:MP</string>
+  <string key="install_client_description">Acum că ați ajuns la această parte, trebuie să decideți dacă doriți să continuați cu descărcarea modului SA:MP (San Andreas Multiplayer). Dacă alegeți să continuați, procesul de extragere va începe, permițându-vă să jucați SA:MP complet. Pe de altă parte, dacă alegeți să anulați, întreaga operațiune va fi întreruptă și invalidată.</string>
+  
+  <string key="canceling_downloand_title">Anulare Descărcare</string>
+  <string key="canceling_downloand">Vă rugăm să așteptați. Întreaga operațiune este în curs de anulare...</string>
+
+  <string key="file_extraction_title">Extragere Fișiere</string>
+  <string key="extracting_files">Se extrag fișierele...</string>
+  
+  <string key="extraction_completed_title">Extragere Finalizată</string>
+
+  <string key="social_title">Social SPC</string>
+</translations>

@@ -1,0 +1,37 @@
+<translations>
+  <string key="continue">Lanjutkan</string>
+  <string key="cancel">Batal</string>
+  <string key="finish">Selesai</string>
+  <string key="close">Tutup</string>
+
+  <string key="client_installer_title">Pemasang Client R3 SA:MP</string>
+  <string key="client_installer_description">Program ini, yang merupakan penginstal mod SA:MP (San Andreas Multiplayer) versi 0.3.7 R3, dirancang dan dikembangkan oleh Calasans, CEO SPC. Alasan di balik pembuatan penginstal baru ini adalah untuk menggantikan penginstal asli yang saat ini tersedia di situs pihak ketiga. Praktik tersebut sangat membahayakan keamanan pengguna, karena penginstal tersebut dapat dimanipulasi untuk menyertakan kode berbahaya.
+
+Berbeda dengan alternatif yang tidak aman tersebut, penginstal resmi SPC tidak hanya menawarkan keandalan dan kepraktisan, tetapi juga sepenuhnya Open Source. Ini berarti setiap pengguna dapat mengaudit kode sumber, memverifikasi integritasnya, dan bahkan mengompilasi sendiri. Transparansi ini memperkuat komitmen SPC terhadap keamanan, kepercayaan, dan kebebasan pengguna saat menggunakan SA:MP.</string>
+
+  <string key="folder_title">Folder GTA San Andreas</string>
+  <string key="folder_description">Anda harus memilih direktori GTA San Andreas yang tepat, diidentifikasi sebagai "Grand Theft Auto San Andreas". Selain itu, file yang dapat dieksekusi yang disebut "gta_sa.exe" harus berada di direktori ini. Jika semua persyaratan terpenuhi, Anda dapat melanjutkan dengan instalasi Client R3.</string>
+  <string key="selected_folder_title">Folder ⬇</string>
+  <string key="no_folder_selected">Anda belum memilih folder.</string>
+  <string key="select_folder">Pilih Folder</string>
+  <string key="other_folder">Folder Lain</string>
+  <string key="selected_folder">Jalur yang dipilih:</string>
+
+  <string key="folder_verification_title">Verifikasi Folder</string>
+  <string key="verifying_folder">Harap tunggu. Folder sedang dalam proses evaluasi...</string>
+  <string key="invalid_folder">Kesalahan: Direktori yang dipilih tidak valid. Silakan pilih folder "Grand Theft Auto San Andreas".</string>
+  <string key="invalid_file">Kesalahan: Direktori yang dipilih tidak berisi file yang dapat dieksekusi "gta_sa.exe".</string>
+
+  <string key="install_client_title">Instalasi Client R3 SA:MP</string>
+  <string key="install_client_description">Sekarang setelah Anda sampai di bagian ini, Anda harus memutuskan apakah akan melanjutkan mengunduh mod SA:MP (San Andreas Multiplayer). Jika Anda memilih untuk melanjutkan, proses ekstraksi akan dimulai, memungkinkan Anda untuk memainkan SA:MP sepenuhnya. Jika tidak, jika Anda memilih untuk membatalkan, seluruh operasi akan dihentikan dan dibatalkan.</string>
+
+  <string key="canceling_downloand_title">Membatalkan Unduhan</string>
+  <string key="canceling_downloand">Harap tunggu. Seluruh operasi sedang dalam proses pembatalan...</string>
+
+  <string key="file_extraction_title">Ekstraksi File</string>
+  <string key="extracting_files">Mengekstrak file...</string>
+
+  <string key="extraction_completed_title">Ekstraksi Selesai</string>
+
+  <string key="social_title">Media Sosial SPC</string>
+</translations>

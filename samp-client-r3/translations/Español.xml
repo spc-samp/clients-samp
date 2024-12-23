@@ -1,0 +1,37 @@
+<translations>
+  <string key="continue">Continuar</string>
+  <string key="cancel">Cancelar</string>
+  <string key="finish">Finalizar</string>
+  <string key="close">Cerrar</string>
+
+  <string key="client_installer_title">Instalador Client R3 SA:MP</string>
+  <string key="client_installer_description">Este ejecutable, que en realidad es el instalador del mod SA:MP (San Andreas Multiplayer) versión 0.3.7 R3, fue diseñado y desarrollado por Calasans, CEO de SPC. La motivación detrás de la creación de un nuevo instalador surge de la necesidad de reemplazar los instaladores originales actualmente disponibles en sitios de terceros. Esta práctica compromete seriamente la seguridad de los usuarios, ya que estos instaladores pueden ser manipulados para incluir código malicioso.
+
+A diferencia de estas alternativas inseguras, el instalador oficial de SPC se destaca no solo por ofrecer confiabilidad y practicidad, sino que también es completamente de código abierto. Esto significa que cualquier usuario puede auditar el código fuente, verificar su integridad e incluso compilarlo por sí mismo. Esta transparencia refuerza el compromiso de SPC con la seguridad, la confianza y la libertad de los usuarios al usar SA:MP.</string>
+
+  <string key="folder_title">Carpeta de GTA San Andreas</string>
+  <string key="folder_description">Es necesario seleccionar el directorio exacto de GTA San Andreas, identificado como "Grand Theft Auto San Andreas". Además, el archivo ejecutable llamado "gta_sa.exe" debe estar ubicado en este directorio. Si se cumplen todos los requisitos, puede proceder con la instalación de Client R3.</string>
+  <string key="selected_folder_title">Carpeta ⬇</string>
+  <string key="no_folder_selected">Aún no has seleccionado ninguna carpeta.</string>
+  <string key="select_folder">Seleccionar Carpeta</string>
+  <string key="other_folder">Otra Carpeta</string>
+  <string key="selected_folder">Ruta seleccionada:</string>
+
+  <string key="folder_verification_title">Verificación de Carpeta</string>
+  <string key="verifying_folder">Por favor, espere. La carpeta está en proceso de evaluación...</string>
+  <string key="invalid_folder">Error: El directorio seleccionado no es válido. Por favor, seleccione la carpeta "Grand Theft Auto San Andreas".</string>
+  <string key="invalid_file">Error: El directorio seleccionado no contiene el archivo ejecutable "gta_sa.exe".</string>
+
+  <string key="install_client_title">Instalación de Client R3 SA:MP</string>
+  <string key="install_client_description">Ahora que has llegado a esta parte, debes decidir si deseas continuar con la descarga del mod SA:MP (San Andreas Multiplayer). Si eliges continuar, comenzará el proceso de extracción, permitiéndote jugar SA:MP completamente. Si, por el contrario, eliges cancelar, toda la operación será interrumpida e invalidada.</string>
+
+  <string key="canceling_downloand_title">Cancelando Descarga</string>
+  <string key="canceling_downloand">Por favor, espere. Toda la operación está en proceso de cancelación...</string>
+
+  <string key="file_extraction_title">Extracción de Archivos</string>
+  <string key="extracting_files">Extrayendo archivos...</string>
+
+  <string key="extraction_completed_title">Extracción Completada</string>
+
+  <string key="social_title">Redes Sociales SPC</string>
+</translations>
