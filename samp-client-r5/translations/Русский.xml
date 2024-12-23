@@ -1,0 +1,37 @@
+<translations>
+  <string key="continue">Продолжить</string>
+  <string key="cancel">Отмена</string>
+  <string key="finish">Завершить</string>
+  <string key="close">Закрыть</string>
+
+  <string key="client_installer_title">Установщик Client R5 SA:MP</string>
+  <string key="client_installer_description">Этот исполняемый файл, который фактически является установщиком мода SA:MP (San Andreas Multiplayer) версии 0.3.7 R5, был разработан и создан Calasans, генеральным директором SPC. Причина создания нового установщика заключается в необходимости замены оригинальных установщиков, которые в настоящее время распространяются через сторонние сайты. Такая практика серьезно подрывает безопасность пользователей, поскольку эти установщики могут быть изменены для включения вредоносного кода.
+
+В отличие от этих небезопасных альтернатив, официальный установщик SPC выделяется не только надежностью и практичностью, но и тем, что он полностью (Open Source). Это означает, что любой пользователь может проверить исходный код, проверить его целостность и даже скомпилировать его самостоятельно. Эта прозрачность подчеркивает приверженность SPC безопасности, доверию и свободе пользователей при использовании SA:MP.</string>
+
+  <string key="folder_title">Папка GTA San Andreas</string>
+  <string key="folder_description">Необходимо выбрать именно директорию GTA San Andreas, обозначенную как "Grand Theft Auto San Andreas". Кроме того, крайне важно, чтобы исполняемый файл "gta_sa.exe" находился в этой директории. Если все требования выполнены, вы сможете продолжить установку Client R5.</string>
+  <string key="selected_folder_title">Папка ⬇</string>
+  <string key="no_folder_selected">Вы еще не выбрали папку.</string>
+  <string key="select_folder">Выбрать Папку</string>
+  <string key="other_folder">Другая Папка</string>
+  <string key="selected_folder">Выбранный путь:</string>
+
+  <string key="folder_verification_title">Проверка Папки</string>
+  <string key="verifying_folder">Пожалуйста, подождите. Папка проверяется...</string>
+  <string key="invalid_folder">Ошибка: Выбранная директория недействительна. Пожалуйста, выберите папку "Grand Theft Auto San Andreas".</string>
+  <string key="invalid_file">Ошибка: В выбранной директории отсутствует исполняемый файл "gta_sa.exe".</string>
+
+  <string key="install_client_title">Установка Client R5 SA:MP</string>
+  <string key="install_client_description">Теперь, когда вы дошли до этого этапа, вам нужно решить, хотите ли вы продолжить загрузку мода SA:MP (San Andreas Multiplayer). Если вы решите продолжить, начнется процесс извлечения, позволяющий вам полноценно играть в SA:MP. С другой стороны, если вы решите отменить, вся операция будет прервана и аннулирована.</string>
+  
+  <string key="canceling_downloand_title">Отмена Загрузки</string>
+  <string key="canceling_downloand">Пожалуйста, подождите. Идет отмена всей операции...</string>
+
+  <string key="file_extraction_title">Извлечение Файлов</string>
+  <string key="extracting_files">Извлечение файлов...</string>
+  
+  <string key="extraction_completed_title">Извлечение Завершено</string>
+
+  <string key="social_title">Социальные сети SPC</string>
+</translations>
