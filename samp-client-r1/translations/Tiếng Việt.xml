@@ -1,0 +1,37 @@
+<translations>
+  <string key="continue">Tiếp tục</string>
+  <string key="cancel">Hủy bỏ</string>
+  <string key="finish">Hoàn thành</string>
+  <string key="close">Đóng</string>
+
+  <string key="client_installer_title">Trình cài đặt Client R1 SA:MP</string>
+  <string key="client_installer_description">Tệp thực thi này, thực chất là trình cài đặt mod SA:MP (San Andreas Multiplayer) phiên bản 0.3.7 R1, được thiết kế và phát triển bởi Calasans, CEO của SPC. Lý do tạo ra một trình cài đặt mới xuất phát từ nhu cầu thay thế các trình cài đặt gốc, hiện đang được cung cấp bởi các trang web của bên thứ ba. Thực tế này gây nguy hiểm nghiêm trọng đến bảo mật của người dùng, vì những trình cài đặt này có thể bị thao túng để chèn mã độc.
+
+Khác với những lựa chọn không an toàn này, trình cài đặt chính thức của SPC không chỉ nổi bật về độ tin cậy và tiện lợi, mà còn hoàn toàn mã nguồn mở (Open Source). Điều này có nghĩa là bất kỳ người dùng nào cũng có thể kiểm tra mã nguồn, xác minh tính toàn vẹn và thậm chí tự biên dịch. Tính minh bạch này củng cố cam kết của SPC về bảo mật, tin cậy và tự do cho người dùng khi sử dụng SA:MP.</string>
+
+  <string key="folder_title">Thư mục GTA San Andreas</string>
+  <string key="folder_description">Bạn cần phải chọn chính xác thư mục GTA San Andreas, được đặt tên là "Grand Theft Auto San Andreas". Ngoài ra, tệp thực thi "gta_sa.exe" phải có trong thư mục này. Khi đã đáp ứng tất cả các yêu cầu, bạn có thể tiếp tục cài đặt Client R1.</string>
+  <string key="selected_folder_title">Thư mục ⬇</string>
+  <string key="no_folder_selected">Bạn chưa chọn thư mục nào.</string>
+  <string key="select_folder">Chọn thư mục</string>
+  <string key="other_folder">Thư mục khác</string>
+  <string key="selected_folder">Đường dẫn đã chọn:</string>
+
+  <string key="folder_verification_title">Xác minh thư mục</string>
+  <string key="verifying_folder">Vui lòng đợi. Đang kiểm tra thư mục...</string>
+  <string key="invalid_folder">Lỗi: Thư mục được chọn không hợp lệ. Vui lòng chọn thư mục "Grand Theft Auto San Andreas".</string>
+  <string key="invalid_file">Lỗi: Thư mục được chọn không chứa tệp thực thi "gta_sa.exe".</string>
+
+  <string key="install_client_title">Cài đặt Client R1 SA:MP</string>
+  <string key="install_client_description">Đến bước này, bạn cần quyết định có muốn tiếp tục tải xuống mod SA:MP (San Andreas Multiplayer) hay không. Nếu chọn tiếp tục, quá trình giải nén sẽ bắt đầu, cho phép bạn chơi SA:MP đầy đủ. Ngược lại, nếu chọn hủy, toàn bộ quá trình sẽ bị dừng và vô hiệu.</string>
+  
+  <string key="canceling_downloand_title">Hủy tải xuống</string>
+  <string key="canceling_downloand">Vui lòng đợi. Đang hủy toàn bộ quá trình...</string>
+
+  <string key="file_extraction_title">Giải nén tệp</string>
+  <string key="extracting_files">Đang giải nén tệp...</string>
+  
+  <string key="extraction_completed_title">Giải nén hoàn tất</string>
+
+  <string key="social_title">Mạng xã hội SPC</string>
+</translations>

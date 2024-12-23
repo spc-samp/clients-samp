@@ -1,0 +1,37 @@
+<translations>
+  <string key="continue">Nastavi</string>
+  <string key="cancel">Odustani</string>
+  <string key="finish">Završi</string>
+  <string key="close">Zatvori</string>
+
+  <string key="client_installer_title">R1 SA:MP Client Instalacija</string>
+  <string key="client_installer_description">Ova izvršna datoteka, koja je zapravo instalacijski program za SA:MP (San Andreas Multiplayer) mod verzije 0.3.7 R1, osmišljena je i razvijena od strane Calasansa, izvršnog direktora SPC-a. Motivacija za stvaranje novog instalacijskog programa proizlazi iz potrebe za zamjenom originalnih instalacijskih programa koji su trenutno dostupni na web stranicama trećih strana. Ova praksa ozbiljno ugrožava sigurnost korisnika jer se ti instalacijski programi mogu manipulirati da uključuju zlonamjerni kod.
+
+Za razliku od tih nesigurnih alternativa, službeni SPC instalacijski program ističe se ne samo po svojoj pouzdanosti i praktičnosti, već i po tome što je potpuno (Open Source). To znači da bilo koji korisnik može provjeriti izvorni kod, potvrditi njegov integritet i čak ga samostalno kompilirati. Ova transparentnost pojačava predanost SPC-a sigurnosti, povjerenju i slobodi korisnika pri korištenju SA:MP-a.</string>
+
+  <string key="folder_title">GTA San Andreas Mapa</string>
+  <string key="folder_description">Potrebno je odabrati točnu mapu GTA San Andreas, identificiranu kao "Grand Theft Auto San Andreas". Također je neophodno da izvršna datoteka "gta_sa.exe" bude ispravno smještena u toj mapi. Ako su svi uvjeti ispunjeni, moći ćete nastaviti s instalacijom R1 Clienta.</string>
+  <string key="selected_folder_title">Mapa ⬇</string>
+  <string key="no_folder_selected">Još niste odabrali mapu.</string>
+  <string key="select_folder">Odaberi Mapu</string>
+  <string key="other_folder">Druga Mapa</string>
+  <string key="selected_folder">Odabrani put:</string>
+
+  <string key="folder_verification_title">Provjera Mape</string>
+  <string key="verifying_folder">Molimo pričekajte. Mapa se provjerava...</string>
+  <string key="invalid_folder">Pogreška: Odabrana mapa nije valjana. Molimo odaberite "Grand Theft Auto San Andreas" mapu.</string>
+  <string key="invalid_file">Pogreška: Odabrana mapa ne sadrži izvršnu datoteku "gta_sa.exe".</string>
+
+  <string key="install_client_title">Instalacija R1 SA:MP Clienta</string>
+  <string key="install_client_description">Sada kada ste došli do ovog dijela, morate odlučiti želite li nastaviti s preuzimanjem SA:MP (San Andreas Multiplayer) moda. Ako odlučite nastaviti, započet će proces ekstrakcije, omogućujući vam da igrate SA:MP u potpunosti. S druge strane, ako odlučite odustati, cijela operacija će biti prekinuta i poništena.</string>
+  
+  <string key="canceling_downloand_title">Otkazivanje Preuzimanja</string>
+  <string key="canceling_downloand">Molimo pričekajte. Operacija se otkazuje...</string>
+
+  <string key="file_extraction_title">Ekstrakcija Datoteka</string>
+  <string key="extracting_files">Ekstrahiranje datoteka...</string>
+  
+  <string key="extraction_completed_title">Ekstrakcija Završena</string>
+
+  <string key="social_title">SPC Društvene Mreže</string>
+</translations>
