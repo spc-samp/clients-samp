@@ -1,0 +1,37 @@
+<translations>
+  <string key="continue">Weiter</string>
+  <string key="cancel">Abbrechen</string>
+  <string key="finish">Fertigstellen</string>
+  <string key="close">Schließen</string>
+
+  <string key="client_installer_title">Client R2 SA:MP Installer</string>
+  <string key="client_installer_description">Diese ausführbare Datei, die eigentlich der Installer für den SA:MP (San Andreas Multiplayer) Mod Version 0.3.7 R2 ist, wurde von Calasans, CEO von SPC, entwickelt und programmiert. Die Motivation zur Erstellung eines neuen Installers entstand aus der Notwendigkeit, die Original-Installer zu ersetzen, die derzeit auf Drittanbieter-Websites verfügbar sind. Diese Praxis gefährdet die Sicherheit der Benutzer erheblich, da diese Installer manipuliert werden können, um bösartigen Code zu enthalten.
+
+Im Gegensatz zu diesen unsicheren Alternativen zeichnet sich der offizielle SPC-Installer nicht nur durch Zuverlässigkeit und Praktikabilität aus, sondern ist auch vollständig Open Source. Das bedeutet, dass jeder Benutzer den Quellcode prüfen, seine Integrität verifizieren und ihn sogar selbst kompilieren kann. Diese Transparenz stärkt SPCs Engagement für die Sicherheit, das Vertrauen und die Freiheit der Benutzer bei der Nutzung von SA:MP.</string>
+
+  <string key="folder_title">GTA San Andreas Ordner</string>
+  <string key="folder_description">Es ist erforderlich, das genaue GTA San Andreas-Verzeichnis auszuwählen, das als "Grand Theft Auto San Andreas" gekennzeichnet ist. Außerdem muss sich die ausführbare Datei "gta_sa.exe" in diesem Verzeichnis befinden. Wenn alle Anforderungen erfüllt sind, können Sie mit der Installation von Client R2 fortfahren.</string>
+  <string key="selected_folder_title">Ordner ⬇</string>
+  <string key="no_folder_selected">Sie haben noch keinen Ordner ausgewählt.</string>
+  <string key="select_folder">Ordner Auswählen</string>
+  <string key="other_folder">Anderer Ordner</string>
+  <string key="selected_folder">Ausgewählter Pfad:</string>
+
+  <string key="folder_verification_title">Ordnerüberprüfung</string>
+  <string key="verifying_folder">Bitte warten. Der Ordner wird überprüft...</string>
+  <string key="invalid_folder">Fehler: Das ausgewählte Verzeichnis ist ungültig. Bitte wählen Sie den Ordner "Grand Theft Auto San Andreas".</string>
+  <string key="invalid_file">Fehler: Das ausgewählte Verzeichnis enthält nicht die ausführbare Datei "gta_sa.exe".</string>
+
+  <string key="install_client_title">Installation von Client R2 SA:MP</string>
+  <string key="install_client_description">Jetzt, da Sie diesen Teil erreicht haben, müssen Sie entscheiden, ob Sie mit dem Download des SA:MP (San Andreas Multiplayer) Mods fortfahren möchten. Wenn Sie fortfahren, beginnt der Extraktionsprozess, der es Ihnen ermöglicht, SA:MP vollständig zu spielen. Wenn Sie sich andererseits für den Abbruch entscheiden, wird der gesamte Vorgang unterbrochen und ungültig.</string>
+
+  <string key="canceling_downloand_title">Download Wird Abgebrochen</string>
+  <string key="canceling_downloand">Bitte warten. Der gesamte Vorgang wird abgebrochen...</string>
+
+  <string key="file_extraction_title">Dateiextraktion</string>
+  <string key="extracting_files">Dateien werden extrahiert...</string>
+
+  <string key="extraction_completed_title">Extraktion Abgeschlossen</string>
+
+  <string key="social_title">SPC Soziale Medien</string>
+</translations>

@@ -1,0 +1,37 @@
+<translations>
+  <string key="continue">Fortsæt</string>
+  <string key="cancel">Annuller</string>
+  <string key="finish">Afslut</string>
+  <string key="close">Luk</string>
+
+  <string key="client_installer_title">Client R2 SA:MP Installationsprogram</string>
+  <string key="client_installer_description">Denne eksekverbare fil, som faktisk er installationsprogrammet til SA:MP (San Andreas Multiplayer) mod version 0.3.7 R2, er designet og udviklet af Calasans, CEO for SPC. Motivationen bag skabelsen af et nyt installationsprogram kommer fra behovet for at erstatte de originale installationsprogrammer, der i øjeblikket er tilgængelige på tredjepartswebsteder. Denne praksis kompromitterer alvorligt brugernes sikkerhed, da disse installationsprogrammer kan manipuleres til at indeholde ondsindet kode.
+
+I modsætning til disse usikre alternativer udmærker SPCs officielle installationsprogram sig ikke kun ved at tilbyde pålidelighed og praktiskhed, men er også helt open source. Dette betyder, at enhver bruger kan revidere kildekoden, verificere dens integritet og endda kompilere den selv. Denne gennemsigtighed styrker SPCs engagement i brugernes sikkerhed, tillid og frihed ved brug af SA:MP.</string>
+
+  <string key="folder_title">GTA San Andreas Mappe</string>
+  <string key="folder_description">Det er nødvendigt at vælge den nøjagtige GTA San Andreas-mappe, identificeret som "Grand Theft Auto San Andreas". Derudover skal den eksekverbare fil kaldet "gta_sa.exe" være placeret i denne mappe. Hvis alle krav er opfyldt, kan du fortsætte med installationen af Client R2.</string>
+  <string key="selected_folder_title">Mappe ⬇</string>
+  <string key="no_folder_selected">Du har ikke valgt en mappe endnu.</string>
+  <string key="select_folder">Vælg Mappe</string>
+  <string key="other_folder">Anden Mappe</string>
+  <string key="selected_folder">Valgt sti:</string>
+
+  <string key="folder_verification_title">Mappeverifikation</string>
+  <string key="verifying_folder">Vent venligst. Mappen er ved at blive evalueret...</string>
+  <string key="invalid_folder">Fejl: Den valgte mappe er ugyldig. Vælg venligst mappen "Grand Theft Auto San Andreas".</string>
+  <string key="invalid_file">Fejl: Den valgte mappe indeholder ikke den eksekverbare fil "gta_sa.exe".</string>
+
+  <string key="install_client_title">Installation af Client R2 SA:MP</string>
+  <string key="install_client_description">Nu hvor du er nået til denne del, skal du beslutte, om du vil fortsætte med at downloade SA:MP (San Andreas Multiplayer) modden. Hvis du vælger at fortsætte, vil udpakningsprocessen begynde, så du kan spille SA:MP fuldt ud. Hvis du derimod vælger at annullere, vil hele operationen blive afbrudt og ugyldiggjort.</string>
+
+  <string key="canceling_downloand_title">Annullerer Download</string>
+  <string key="canceling_downloand">Vent venligst. Hele operationen er ved at blive annulleret...</string>
+
+  <string key="file_extraction_title">Udpakning af Filer</string>
+  <string key="extracting_files">Udpakker filer...</string>
+
+  <string key="extraction_completed_title">Udpakning Fuldført</string>
+
+  <string key="social_title">SPC Sociale Medier</string>
+</translations>

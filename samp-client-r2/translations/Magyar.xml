@@ -1,0 +1,37 @@
+<translations>
+  <string key="continue">Folytatás</string>
+  <string key="cancel">Mégse</string>
+  <string key="finish">Befejezés</string>
+  <string key="close">Bezárás</string>
+
+  <string key="client_installer_title">Client R2 SA:MP Telepítő</string>
+  <string key="client_installer_description">Ez a végrehajtható fájl, amely valójában a SA:MP (San Andreas Multiplayer) mod 0.3.7 R2 verziójának telepítője, Calasans, a SPC vezérigazgatója által lett tervezve és fejlesztve. Az új telepítő létrehozásának alapvető motivációja az eredetileg harmadik féltől származó webhelyeken keresztül terjesztett telepítők lecserélésének szükségessége. Ez a gyakorlat súlyosan veszélyezteti a felhasználók biztonságát, mivel ezek a telepítők manipulálhatók rosszindulatú kódok beillesztésével.
+
+Ezekkel a nem biztonságos alternatívákkal ellentétben a SPC hivatalos telepítője nem csak megbízhatóságot és praktikusságot kínál, hanem teljesen nyílt forráskódú is. Ez azt jelenti, hogy bármely felhasználó ellenőrizheti a forráskódot, ellenőrizheti annak integritását, és akár saját maga is kompilálhatja. Ez az átláthatóság megerősíti a SPC elkötelezettségét a felhasználók biztonsága, bizalma és szabadsága iránt a SA:MP használata során.</string>
+
+  <string key="folder_title">GTA San Andreas Mappa</string>
+  <string key="folder_description">Kifejezetten a "Grand Theft Auto San Andreas" néven azonosított GTA San Andreas könyvtárat kell kiválasztani. Továbbá elengedhetetlen, hogy a "gta_sa.exe" nevű végrehajtható fájl megfelelően legyen elhelyezve ebben a könyvtárban. Ha minden követelmény teljesül, folytatható a Client R2 telepítése.</string>
+  <string key="selected_folder_title">Mappa ⬇</string>
+  <string key="no_folder_selected">Még nem választott mappát.</string>
+  <string key="select_folder">Mappa Kiválasztása</string>
+  <string key="other_folder">Másik Mappa</string>
+  <string key="selected_folder">Kiválasztott útvonal:</string>
+
+  <string key="folder_verification_title">Mappa Ellenőrzése</string>
+  <string key="verifying_folder">Kérjük, várjon. A mappa ellenőrzése folyamatban...</string>
+  <string key="invalid_folder">Hiba: A kiválasztott könyvtár érvénytelen. Kérjük, válassza ki a "Grand Theft Auto San Andreas" mappát.</string>
+  <string key="invalid_file">Hiba: A kiválasztott könyvtár nem tartalmazza a "gta_sa.exe" végrehajtható fájlt.</string>
+
+  <string key="install_client_title">Client R2 SA:MP Telepítése</string>
+  <string key="install_client_description">Most, hogy ehhez a részhez ért, el kell döntenie, hogy szeretné-e letölteni a SA:MP (San Andreas Multiplayer) modot. Ha a folytatás mellett dönt, megkezdődik a kicsomagolási folyamat, lehetővé téve a SA:MP teljes körű játékát. Másrészt, ha a megszakítást választja, a teljes művelet megszakad és érvénytelenné válik.</string>
+  
+  <string key="canceling_downloand_title">Letöltés Megszakítása</string>
+  <string key="canceling_downloand">Kérjük, várjon. A teljes művelet megszakítása folyamatban...</string>
+
+  <string key="file_extraction_title">Fájlok Kicsomagolása</string>
+  <string key="extracting_files">Fájlok kicsomagolása...</string>
+  
+  <string key="extraction_completed_title">Kicsomagolás Befejezve</string>
+
+  <string key="social_title">SPC Közösségi</string>
+</translations>
