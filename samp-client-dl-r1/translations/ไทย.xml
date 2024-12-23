@@ -1,0 +1,37 @@
+<translations>
+  <string key="continue">ดำเนินการต่อ</string>
+  <string key="cancel">ยกเลิก</string>
+  <string key="finish">เสร็จสิ้น</string>
+  <string key="close">ปิด</string>
+
+  <string key="client_installer_title">ตัวติดตั้ง Client DL R1 SA:MP</string>
+  <string key="client_installer_description">ไฟล์ที่สามารถรันได้นี้ ซึ่งเป็นตัวติดตั้งม็อด SA:MP (San Andreas Multiplayer) เวอร์ชัน 0.3.7 DL R1 ได้รับการออกแบบและพัฒนาโดย Calasans ซีอีโอของ SPC แรงจูงใจในการสร้างตัวติดตั้งใหม่นี้มาจากความจำเป็นในการแทนที่ตัวติดตั้งดั้งเดิมที่ปัจจุบันให้บริการโดยเว็บไซต์บุคคลที่สาม การปฏิบัตินี้ส่งผลเสียอย่างร้ายแรงต่อความปลอดภัยของผู้ใช้ เนื่องจากตัวติดตั้งเหล่านี้อาจถูกดัดแปลงให้รวมรหัสที่เป็นอันตราย
+
+แตกต่างจากตัวเลือกที่ไม่ปลอดภัยเหล่านี้ ตัวติดตั้งอย่างเป็นทางการของ SPC โดดเด่นไม่เพียงแค่ด้านความน่าเชื่อถือและความสะดวกในการใช้งานเท่านั้น แต่ยังเป็นโอเพนซอร์ส (Open Source) อย่างสมบูรณ์ นั่นหมายความว่าผู้ใช้ทุกคนสามารถตรวจสอบซอร์สโค้ด ยืนยันความถูกต้อง และแม้กระทั่งคอมไพล์ด้วยตัวเอง ความโปร่งใสนี้เสริมสร้างความมุ่งมั่นของ SPC ในด้านความปลอดภัย ความไว้วางใจ และเสรีภาพของผู้ใช้ในการใช้งาน SA:MP</string>
+
+  <string key="folder_title">โฟลเดอร์ GTA San Andreas</string>
+  <string key="folder_description">คุณจำเป็นต้องเลือกไดเรกทอรี GTA San Andreas ที่มีชื่อว่า "Grand Theft Auto San Andreas" โดยเฉพาะ นอกจากนี้ จำเป็นต้องมีไฟล์ที่สามารถรันได้ชื่อ "gta_sa.exe" อยู่ในไดเรกทอรีนี้อย่างถูกต้อง หากเป็นไปตามข้อกำหนดทั้งหมด คุณจะสามารถดำเนินการติดตั้ง Client DL R1 ต่อไปได้</string>
+  <string key="selected_folder_title">โฟลเดอร์ ⬇</string>
+  <string key="no_folder_selected">คุณยังไม่ได้เลือกโฟลเดอร์</string>
+  <string key="select_folder">เลือกโฟลเดอร์</string>
+  <string key="other_folder">โฟลเดอร์อื่น</string>
+  <string key="selected_folder">เส้นทางที่เลือก:</string>
+
+  <string key="folder_verification_title">การตรวจสอบโฟลเดอร์</string>
+  <string key="verifying_folder">โปรดรอ กำลังตรวจสอบโฟลเดอร์...</string>
+  <string key="invalid_folder">ข้อผิดพลาด: ไดเรกทอรีที่เลือกไม่ถูกต้อง กรุณาเลือกโฟลเดอร์ "Grand Theft Auto San Andreas"</string>
+  <string key="invalid_file">ข้อผิดพลาด: ไดเรกทอรีที่เลือกไม่มีไฟล์ที่สามารถรันได้ "gta_sa.exe"</string>
+
+  <string key="install_client_title">การติดตั้ง Client DL R1 SA:MP</string>
+  <string key="install_client_description">ตอนนี้คุณมาถึงจุดนี้แล้ว คุณต้องตัดสินใจว่าต้องการดำเนินการดาวน์โหลดม็อด SA:MP (San Andreas Multiplayer) ต่อหรือไม่ หากคุณเลือกที่จะดำเนินการต่อ กระบวนการแตกไฟล์จะเริ่มต้น ทำให้คุณสามารถเล่น SA:MP ได้อย่างเต็มรูปแบบ อย่างไรก็ตาม หากคุณเลือกที่จะยกเลิก การดำเนินการทั้งหมดจะถูกหยุดและยกเลิก</string>
+  
+  <string key="canceling_downloand_title">การยกเลิกการดาวน์โหลด</string>
+  <string key="canceling_downloand">โปรดรอ กำลังยกเลิกการดำเนินการทั้งหมด...</string>
+
+  <string key="file_extraction_title">การแตกไฟล์</string>
+  <string key="extracting_files">กำลังแตกไฟล์...</string>
+  
+  <string key="extraction_completed_title">การแตกไฟล์เสร็จสมบูรณ์</string>
+
+  <string key="social_title">สื่อสังคม SPC</string>
+</translations>

@@ -1,0 +1,37 @@
+<translations>
+  <string key="continue">继续</string>
+  <string key="cancel">取消</string>
+  <string key="finish">完成</string>
+  <string key="close">关闭</string>
+
+  <string key="client_installer_title">Client DL R1 SA:MP 安装程序</string>
+  <string key="client_installer_description">这个可执行文件实际上是 SA:MP（San Andreas Multiplayer）修改程序的安装程序，版本为 0.3.7 DL R1，由 SPC 的 CEO Calasans 设计和开发。创建新安装程序的动机在于需要替换目前由第三方网站提供的原始安装程序。这种做法严重危及用户安全，因为这些安装程序可能被篡改以包含恶意代码。
+
+与这些不安全的替代方案不同，SPC 的官方安装程序不仅提供可靠性和便利性，而且完全开源。这意味着任何用户都可以审核源代码，验证其完整性，甚至自行编译。这种透明度强化了 SPC 在用户使用 SA:MP 时对安全性、信任度和自由度的承诺。</string>
+
+  <string key="folder_title">GTA San Andreas 文件夹</string>
+  <string key="folder_description">必须选择特定的 GTA San Andreas 目录，即"Grand Theft Auto San Andreas"。此外，该目录中必须存在名为"gta_sa.exe"的可执行文件。如果满足所有要求，就可以继续安装 Client DL R1。</string>
+  <string key="selected_folder_title">文件夹 ⬇</string>
+  <string key="no_folder_selected">您尚未选择任何文件夹。</string>
+  <string key="select_folder">选择文件夹</string>
+  <string key="other_folder">其他文件夹</string>
+  <string key="selected_folder">选定路径：</string>
+
+  <string key="folder_verification_title">文件夹验证</string>
+  <string key="verifying_folder">请稍候。正在评估文件夹...</string>
+  <string key="invalid_folder">错误：选定的目录无效。请选择"Grand Theft Auto San Andreas"文件夹。</string>
+  <string key="invalid_file">错误：选定的目录不包含"gta_sa.exe"可执行文件。</string>
+
+  <string key="install_client_title">安装 Client DL R1 SA:MP</string>
+  <string key="install_client_description">现在您已经到达这一步，您需要决定是否继续下载 SA:MP（San Andreas Multiplayer）修改程序。如果选择继续，将开始解压过程，使您能够完整地玩 SA:MP。另一方面，如果选择取消，整个操作将被中止和作废。</string>
+  
+  <string key="canceling_downloand_title">取消下载</string>
+  <string key="canceling_downloand">请稍候。正在取消整个操作...</string>
+
+  <string key="file_extraction_title">文件解压</string>
+  <string key="extracting_files">正在解压文件...</string>
+  
+  <string key="extraction_completed_title">解压完成</string>
+
+  <string key="social_title">SPC 社交媒体</string>
+</translations>
