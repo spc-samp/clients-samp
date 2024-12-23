@@ -1,0 +1,37 @@
+<translations>
+  <string key="continue">Jatka</string>
+  <string key="cancel">Peruuta</string>
+  <string key="finish">Valmis</string>
+  <string key="close">Sulje</string>
+
+  <string key="client_installer_title">Client R1 Voip SA:MP -asennusohjelma</string>
+  <string key="client_installer_description">Tämä suoritettava tiedosto, joka on itse asiassa SA:MP (San Andreas Multiplayer) -modin versio 0.3.7 R1 Voip asennusohjelma, on SPC:n toimitusjohtajan Calasansin suunnittelema ja kehittämä. Uuden asennusohjelman luomisen taustalla on tarve korvata alkuperäiset asennusohjelmat, joita tällä hetkellä tarjoavat kolmannen osapuolen sivustot. Tämä käytäntö vaarantaa vakavasti käyttäjien turvallisuuden, koska näihin asennusohjelmiin voidaan lisätä haitallista koodia.
+
+Toisin kuin nämä epäturvalliset vaihtoehdot, SPC:n virallinen asennusohjelma erottuu paitsi luotettavuudellaan ja käytännöllisyydellään, myös siksi, että se on täysin avointa lähdekoodia (Open Source). Tämä tarkoittaa, että kuka tahansa käyttäjä voi tarkastaa lähdekoodin, varmistaa sen eheyden ja jopa kääntää sen itse. Tämä läpinäkyvyys vahvistaa SPC:n sitoutumista käyttäjien turvallisuuteen, luottamukseen ja vapauteen SA:MP:n käytössä.</string>
+
+  <string key="folder_title">GTA San Andreas -kansio</string>
+  <string key="folder_description">Sinun on valittava nimenomaan GTA San Andreas -hakemisto nimeltä "Grand Theft Auto San Andreas". Lisäksi on välttämätöntä, että suoritettava tiedosto nimeltä "gta_sa.exe" on asianmukaisesti sijoitettu tähän hakemistoon. Jos kaikki vaatimukset täyttyvät, voit jatkaa Client R1 Voip:n asennusta.</string>
+  <string key="selected_folder_title">Kansio ⬇</string>
+  <string key="no_folder_selected">Et ole vielä valinnut kansiota.</string>
+  <string key="select_folder">Valitse kansio</string>
+  <string key="other_folder">Toinen kansio</string>
+  <string key="selected_folder">Valittu polku:</string>
+
+  <string key="folder_verification_title">Kansion vahvistus</string>
+  <string key="verifying_folder">Odota hetki. Kansiota arvioidaan...</string>
+  <string key="invalid_folder">Virhe: Valittu hakemisto on virheellinen. Valitse "Grand Theft Auto San Andreas" -kansio.</string>
+  <string key="invalid_file">Virhe: Valittu hakemisto ei sisällä suoritettavaa tiedostoa "gta_sa.exe".</string>
+
+  <string key="install_client_title">Client R1 Voip SA:MP:n asennus</string>
+  <string key="install_client_description">Nyt kun olet tässä vaiheessa, sinun on päätettävä, haluatko jatkaa SA:MP (San Andreas Multiplayer) -modin latausta. Jos päätät jatkaa, purkamisprosessi alkaa, mikä mahdollistaa SA:MP:n täyden pelaamisen. Jos taas päätät peruuttaa, koko toiminto keskeytetään ja mitätöidään.</string>
+  
+  <string key="canceling_downloand_title">Latauksen peruutus</string>
+  <string key="canceling_downloand">Odota hetki. Koko toimintoa peruutetaan...</string>
+
+  <string key="file_extraction_title">Tiedostojen purkaminen</string>
+  <string key="extracting_files">Puretaan tiedostoja...</string>
+  
+  <string key="extraction_completed_title">Purkaminen valmis</string>
+
+  <string key="social_title">SPC:n sosiaalinen media</string>
+</translations>

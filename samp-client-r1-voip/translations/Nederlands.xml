@@ -1,0 +1,37 @@
+<translations>
+  <string key="continue">Doorgaan</string>
+  <string key="cancel">Annuleren</string>
+  <string key="finish">Voltooien</string>
+  <string key="close">Sluiten</string>
+
+  <string key="client_installer_title">Client R1 Voip SA:MP Installatieprogramma</string>
+  <string key="client_installer_description">Dit uitvoerbare bestand, dat in feite het installatieprogramma is van de SA:MP (San Andreas Multiplayer) mod versie 0.3.7 R1 Voip, is ontworpen en ontwikkeld door Calasans, CEO van SPC. De onderliggende motivatie voor het maken van een nieuw installatieprogramma ligt in de noodzaak om de originele installatieprogramma's te vervangen die momenteel via websites van derden worden verspreid. Deze praktijk brengt de veiligheid van gebruikers ernstig in gevaar, aangezien deze installatieprogramma's kunnen worden gemanipuleerd om kwaadaardige code te bevatten.
+
+In tegenstelling tot deze onveilige alternatieven onderscheidt het officiële installatieprogramma van SPC zich niet alleen door betrouwbaarheid en gebruiksgemak te bieden, maar ook door volledig open source te zijn. Dit betekent dat elke gebruiker de broncode kan controleren, de integriteit kan verifiëren en zelfs zelf kan compileren. Deze transparantie versterkt SPC's toewijding aan de veiligheid, het vertrouwen en de vrijheid van gebruikers bij het gebruik van SA:MP.</string>
+
+  <string key="folder_title">GTA San Andreas Map</string>
+  <string key="folder_description">Het is essentieel om specifiek de GTA San Andreas-directory te selecteren, geïdentificeerd als "Grand Theft Auto San Andreas". Bovendien is het cruciaal dat het uitvoerbare bestand genaamd "gta_sa.exe" correct in deze directory is geplaatst. Als aan alle vereisten is voldaan, kan worden doorgegaan met de installatie van Client R1 Voip.</string>
+  <string key="selected_folder_title">Map ⬇</string>
+  <string key="no_folder_selected">U heeft nog geen map geselecteerd.</string>
+  <string key="select_folder">Map Selecteren</string>
+  <string key="other_folder">Andere Map</string>
+  <string key="selected_folder">Geselecteerd pad:</string>
+
+  <string key="folder_verification_title">Map Verificatie</string>
+  <string key="verifying_folder">Een moment geduld. De map wordt geëvalueerd...</string>
+  <string key="invalid_folder">Fout: De geselecteerde directory is ongeldig. Selecteer de map "Grand Theft Auto San Andreas".</string>
+  <string key="invalid_file">Fout: De geselecteerde directory bevat niet het uitvoerbare bestand "gta_sa.exe".</string>
+
+  <string key="install_client_title">Client R1 Voip SA:MP Installatie</string>
+  <string key="install_client_description">Nu u bij dit deel bent aangekomen, moet u beslissen of u de SA:MP (San Andreas Multiplayer) mod wilt downloaden. Als u ervoor kiest om door te gaan, zal het extractieproces beginnen, waardoor u SA:MP volledig kunt spelen. Als u daarentegen kiest voor annuleren, wordt de hele operatie onderbroken en ongeldig verklaard.</string>
+  
+  <string key="canceling_downloand_title">Download Annuleren</string>
+  <string key="canceling_downloand">Een moment geduld. De volledige operatie wordt geannuleerd...</string>
+
+  <string key="file_extraction_title">Bestanden Uitpakken</string>
+  <string key="extracting_files">Bestanden uitpakken...</string>
+  
+  <string key="extraction_completed_title">Uitpakken Voltooid</string>
+
+  <string key="social_title">SPC Sociaal</string>
+</translations>
