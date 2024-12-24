@@ -5,7 +5,7 @@
   <string key="close">Tutup</string>
 
   <string key="client_installer_title">Pemasang Client DL R1 SA:MP</string>
-  <string key="client_installer_description">Program ini, yang merupakan penginstal mod SA:MP (San Andreas Multiplayer) versi 0.3.7 DL R1, dirancang dan dikembangkan oleh Calasans, CEO SPC. Alasan di balik pembuatan penginstal baru ini adalah untuk menggantikan penginstal asli yang saat ini tersedia di situs pihak ketiga. Praktik tersebut sangat membahayakan keamanan pengguna, karena penginstal tersebut dapat dimanipulasi untuk menyertakan kode berbahaya.
+  <string key="client_installer_description">Program ini, yang merupakan penginstal mod SA:MP (San Andreas Multiplayer) versi 0.3.DL R1, dirancang dan dikembangkan oleh Calasans, CEO SPC. Alasan di balik pembuatan penginstal baru ini adalah untuk menggantikan penginstal asli yang saat ini tersedia di situs pihak ketiga. Praktik tersebut sangat membahayakan keamanan pengguna, karena penginstal tersebut dapat dimanipulasi untuk menyertakan kode berbahaya.
 
 Berbeda dengan alternatif yang tidak aman tersebut, penginstal resmi SPC tidak hanya menawarkan keandalan dan kepraktisan, tetapi juga sepenuhnya Open Source. Ini berarti setiap pengguna dapat mengaudit kode sumber, memverifikasi integritasnya, dan bahkan mengompilasi sendiri. Transparansi ini memperkuat komitmen SPC terhadap keamanan, kepercayaan, dan kebebasan pengguna saat menggunakan SA:MP.</string>
 

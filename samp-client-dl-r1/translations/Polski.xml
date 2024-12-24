@@ -5,7 +5,7 @@
   <string key="close">Zamknij</string>
 
   <string key="client_installer_title">Instalator Client DL R1 SA:MP</string>
-  <string key="client_installer_description">Ten program, który w rzeczywistości jest instalatorem moda SA:MP (San Andreas Multiplayer) w wersji 0.3.7 DL R1, został zaprojektowany i opracowany przez Calasans, CEO SPC. Motywacją do stworzenia nowego instalatora była potrzeba zastąpienia oryginalnych instalatorów, obecnie dystrybuowanych przez strony internetowe stron trzecich. Praktyka ta stanowi poważne zagrożenie dla bezpieczeństwa użytkowników, ponieważ instalatory te mogą być zmanipulowane w celu włączenia złośliwego kodu.
+  <string key="client_installer_description">Ten program, który w rzeczywistości jest instalatorem moda SA:MP (San Andreas Multiplayer) w wersji 0.3.DL R1, został zaprojektowany i opracowany przez Calasans, CEO SPC. Motywacją do stworzenia nowego instalatora była potrzeba zastąpienia oryginalnych instalatorów, obecnie dystrybuowanych przez strony internetowe stron trzecich. Praktyka ta stanowi poważne zagrożenie dla bezpieczeństwa użytkowników, ponieważ instalatory te mogą być zmanipulowane w celu włączenia złośliwego kodu.
 
 W przeciwieństwie do tych niebezpiecznych alternatyw, oficjalny instalator SPC wyróżnia się nie tylko niezawodnością i praktycznością, ale także tym, że jest całkowicie otwartoźródłowy (Open Source). Oznacza to, że każdy użytkownik może sprawdzić kod źródłowy, zweryfikować jego integralność, a nawet samodzielnie go skompilować. Ta przejrzystość wzmacnia zaangażowanie SPC w bezpieczeństwo, zaufanie i wolność użytkowników korzystających z SA:MP.</string>
 

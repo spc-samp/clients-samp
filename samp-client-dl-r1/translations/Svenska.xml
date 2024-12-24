@@ -5,7 +5,7 @@
   <string key="close">Stäng</string>
 
   <string key="client_installer_title">Client DL R1 SA:MP Installationsprogram</string>
-  <string key="client_installer_description">Denna körbara fil, som i själva verket är installationsprogrammet för SA:MP (San Andreas Multiplayer) mod version 0.3.7 DL R1, har designats och utvecklats av Calasans, VD för SPC. Motivationen bakom skapandet av ett nytt installationsprogram ligger i behovet av att ersätta de ursprungliga installationsprogrammen som för närvarande tillhandahålls av tredjepartssidor. Denna praxis äventyrar allvarligt användarnas säkerhet eftersom dessa installationsprogram kan manipuleras för att inkludera skadlig kod.
+  <string key="client_installer_description">Denna körbara fil, som i själva verket är installationsprogrammet för SA:MP (San Andreas Multiplayer) mod version 0.3.DL R1, har designats och utvecklats av Calasans, VD för SPC. Motivationen bakom skapandet av ett nytt installationsprogram ligger i behovet av att ersätta de ursprungliga installationsprogrammen som för närvarande tillhandahålls av tredjepartssidor. Denna praxis äventyrar allvarligt användarnas säkerhet eftersom dessa installationsprogram kan manipuleras för att inkludera skadlig kod.
 
 Till skillnad från dessa osäkra alternativ utmärker sig SPC:s officiella installationsprogram inte bara genom sin tillförlitlighet och praktiska användning, utan också genom att vara helt öppen källkod (Open Source). Detta innebär att alla användare kan granska källkoden, verifiera dess integritet och till och med kompilera den själva. Denna transparens förstärker SPC:s engagemang för användarnas säkerhet, förtroende och frihet när de använder SA:MP.</string>
 

@@ -5,7 +5,7 @@
   <string key="close">Zavřít</string>
 
   <string key="client_installer_title">Instalátor Client DL R1 SA:MP</string>
-  <string key="client_installer_description">Tento spustitelný soubor, který je ve skutečnosti instalátorem módu SA:MP (San Andreas Multiplayer) verze 0.3.7 DL R1, byl navržen a vyvinut společností Calasans, generálním ředitelem SPC. Motivace k vytvoření nového instalátoru vychází z potřeby nahradit původní instalátory, které jsou v současné době dostupné na webech třetích stran. Tato praxe vážně ohrožuje bezpečnost uživatelů, protože tyto instalátory mohou být manipulovány tak, aby obsahovaly škodlivý kód.
+  <string key="client_installer_description">Tento spustitelný soubor, který je ve skutečnosti instalátorem módu SA:MP (San Andreas Multiplayer) verze 0.3.DL R1, byl navržen a vyvinut společností Calasans, generálním ředitelem SPC. Motivace k vytvoření nového instalátoru vychází z potřeby nahradit původní instalátory, které jsou v současné době dostupné na webech třetích stran. Tato praxe vážně ohrožuje bezpečnost uživatelů, protože tyto instalátory mohou být manipulovány tak, aby obsahovaly škodlivý kód.
 
 Na rozdíl od těchto nebezpečných alternativ se oficiální instalátor SPC vyznačuje nejen spolehlivostí a praktičností, ale je také zcela open source. To znamená, že každý uživatel může zkontrolovat zdrojový kód, ověřit jeho integritu a dokonce si ho sám zkompilovat. Tato transparentnost posiluje závazek SPC k bezpečnosti, důvěře a svobodě uživatelů při používání SA:MP.</string>
 

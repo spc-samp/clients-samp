@@ -5,7 +5,7 @@
   <string key="close">Închide</string>
 
   <string key="client_installer_title">Program de instalare Client DL R1 SA:MP</string>
-  <string key="client_installer_description">Acest executabil, care este de fapt programul de instalare pentru modul SA:MP (San Andreas Multiplayer) versiunea 0.3.7 DL R1, a fost conceput și dezvoltat de Calasans, CEO-ul SPC. Motivul din spatele creării unui nou program de instalare este nevoia de a înlocui programele de instalare originale, care sunt în prezent distribuite prin site-uri terțe. Această practică compromite grav securitatea utilizatorilor, deoarece aceste programe de instalare pot fi manipulate pentru a include coduri rău intenționate.
+  <string key="client_installer_description">Acest executabil, care este de fapt programul de instalare pentru modul SA:MP (San Andreas Multiplayer) versiunea 0.3.DL R1, a fost conceput și dezvoltat de Calasans, CEO-ul SPC. Motivul din spatele creării unui nou program de instalare este nevoia de a înlocui programele de instalare originale, care sunt în prezent distribuite prin site-uri terțe. Această practică compromite grav securitatea utilizatorilor, deoarece aceste programe de instalare pot fi manipulate pentru a include coduri rău intenționate.
 
 Spre deosebire de aceste alternative nesigure, programul de instalare oficial SPC se remarcă nu doar prin fiabilitate și practicitate, ci și prin faptul că este complet (Open Source). Acest lucru înseamnă că orice utilizator poate audita codul sursă, verifica integritatea acestuia și chiar să îl compileze singur. Această transparență întărește angajamentul SPC față de securitatea, încrederea și libertatea utilizatorilor în utilizarea SA:MP.</string>
 

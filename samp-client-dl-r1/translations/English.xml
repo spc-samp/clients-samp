@@ -5,7 +5,7 @@
   <string key="close">Close</string>
 
   <string key="client_installer_title">Client DL R1 SA:MP Installer</string>
-  <string key="client_installer_description">This executable, which is actually the installer for the SA:MP (San Andreas Multiplayer) mod version 0.3.7 DL R1, was designed and developed by Calasans, CEO of SPC. The motivation behind creating a new installer stems from the need to replace the original installers currently available on third-party sites. This practice seriously compromises user security, as these installers can be manipulated to include malicious code.
+  <string key="client_installer_description">This executable, which is actually the installer for the SA:MP (San Andreas Multiplayer) mod version 0.3.DL R1, was designed and developed by Calasans, CEO of SPC. The motivation behind creating a new installer stems from the need to replace the original installers currently available on third-party sites. This practice seriously compromises user security, as these installers can be manipulated to include malicious code.
 
 Unlike these unsafe alternatives, SPC's official installer stands out not only by offering reliability and practicality but is also completely Open Source. This means any user can audit the source code, verify its integrity, and even compile it themselves. This transparency reinforces SPC's commitment to security, trust, and freedom for users when using SA:MP.</string>
 

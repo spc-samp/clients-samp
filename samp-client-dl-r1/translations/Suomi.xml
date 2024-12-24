@@ -5,7 +5,7 @@
   <string key="close">Sulje</string>
 
   <string key="client_installer_title">Client DL R1 SA:MP -asennusohjelma</string>
-  <string key="client_installer_description">Tämä suoritettava tiedosto, joka on itse asiassa SA:MP (San Andreas Multiplayer) -modin versio 0.3.7 DL R1 asennusohjelma, on SPC:n toimitusjohtajan Calasansin suunnittelema ja kehittämä. Uuden asennusohjelman luomisen taustalla on tarve korvata alkuperäiset asennusohjelmat, joita tällä hetkellä tarjoavat kolmannen osapuolen sivustot. Tämä käytäntö vaarantaa vakavasti käyttäjien turvallisuuden, koska näihin asennusohjelmiin voidaan lisätä haitallista koodia.
+  <string key="client_installer_description">Tämä suoritettava tiedosto, joka on itse asiassa SA:MP (San Andreas Multiplayer) -modin versio 0.3.DL R1 asennusohjelma, on SPC:n toimitusjohtajan Calasansin suunnittelema ja kehittämä. Uuden asennusohjelman luomisen taustalla on tarve korvata alkuperäiset asennusohjelmat, joita tällä hetkellä tarjoavat kolmannen osapuolen sivustot. Tämä käytäntö vaarantaa vakavasti käyttäjien turvallisuuden, koska näihin asennusohjelmiin voidaan lisätä haitallista koodia.
 
 Toisin kuin nämä epäturvalliset vaihtoehdot, SPC:n virallinen asennusohjelma erottuu paitsi luotettavuudellaan ja käytännöllisyydellään, myös siksi, että se on täysin avointa lähdekoodia (Open Source). Tämä tarkoittaa, että kuka tahansa käyttäjä voi tarkastaa lähdekoodin, varmistaa sen eheyden ja jopa kääntää sen itse. Tämä läpinäkyvyys vahvistaa SPC:n sitoutumista käyttäjien turvallisuuteen, luottamukseen ja vapauteen SA:MP:n käytössä.</string>
 

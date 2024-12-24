@@ -5,7 +5,7 @@
   <string key="close">Zatvori</string>
 
   <string key="client_installer_title">DL R1 SA:MP Client Instalacija</string>
-  <string key="client_installer_description">Ova izvršna datoteka, koja je zapravo instalacijski program za SA:MP (San Andreas Multiplayer) mod verzije 0.3.7 DL R1, osmišljena je i razvijena od strane Calasansa, izvršnog direktora SPC-a. Motivacija za stvaranje novog instalacijskog programa proizlazi iz potrebe za zamjenom originalnih instalacijskih programa koji su trenutno dostupni na web stranicama trećih strana. Ova praksa ozbiljno ugrožava sigurnost korisnika jer se ti instalacijski programi mogu manipulirati da uključuju zlonamjerni kod.
+  <string key="client_installer_description">Ova izvršna datoteka, koja je zapravo instalacijski program za SA:MP (San Andreas Multiplayer) mod verzije 0.3.DL R1, osmišljena je i razvijena od strane Calasansa, izvršnog direktora SPC-a. Motivacija za stvaranje novog instalacijskog programa proizlazi iz potrebe za zamjenom originalnih instalacijskih programa koji su trenutno dostupni na web stranicama trećih strana. Ova praksa ozbiljno ugrožava sigurnost korisnika jer se ti instalacijski programi mogu manipulirati da uključuju zlonamjerni kod.
 
 Za razliku od tih nesigurnih alternativa, službeni SPC instalacijski program ističe se ne samo po svojoj pouzdanosti i praktičnosti, već i po tome što je potpuno (Open Source). To znači da bilo koji korisnik može provjeriti izvorni kod, potvrditi njegov integritet i čak ga samostalno kompilirati. Ova transparentnost pojačava predanost SPC-a sigurnosti, povjerenju i slobodi korisnika pri korištenju SA:MP-a.</string>
 

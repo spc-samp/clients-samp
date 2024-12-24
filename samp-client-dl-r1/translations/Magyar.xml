@@ -5,7 +5,7 @@
   <string key="close">Bezárás</string>
 
   <string key="client_installer_title">Client DL R1 SA:MP Telepítő</string>
-  <string key="client_installer_description">Ez a végrehajtható fájl, amely valójában a SA:MP (San Andreas Multiplayer) mod 0.3.7 DL R1 verziójának telepítője, Calasans, a SPC vezérigazgatója által lett tervezve és fejlesztve. Az új telepítő létrehozásának alapvető motivációja az eredetileg harmadik féltől származó webhelyeken keresztül terjesztett telepítők lecserélésének szükségessége. Ez a gyakorlat súlyosan veszélyezteti a felhasználók biztonságát, mivel ezek a telepítők manipulálhatók rosszindulatú kódok beillesztésével.
+  <string key="client_installer_description">Ez a végrehajtható fájl, amely valójában a SA:MP (San Andreas Multiplayer) mod 0.3.DL R1 verziójának telepítője, Calasans, a SPC vezérigazgatója által lett tervezve és fejlesztve. Az új telepítő létrehozásának alapvető motivációja az eredetileg harmadik féltől származó webhelyeken keresztül terjesztett telepítők lecserélésének szükségessége. Ez a gyakorlat súlyosan veszélyezteti a felhasználók biztonságát, mivel ezek a telepítők manipulálhatók rosszindulatú kódok beillesztésével.
 
 Ezekkel a nem biztonságos alternatívákkal ellentétben a SPC hivatalos telepítője nem csak megbízhatóságot és praktikusságot kínál, hanem teljesen nyílt forráskódú is. Ez azt jelenti, hogy bármely felhasználó ellenőrizheti a forráskódot, ellenőrizheti annak integritását, és akár saját maga is kompilálhatja. Ez az átláthatóság megerősíti a SPC elkötelezettségét a felhasználók biztonsága, bizalma és szabadsága iránt a SA:MP használata során.</string>
 

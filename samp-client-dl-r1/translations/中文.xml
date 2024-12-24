@@ -5,7 +5,7 @@
   <string key="close">关闭</string>
 
   <string key="client_installer_title">Client DL R1 SA:MP 安装程序</string>
-  <string key="client_installer_description">这个可执行文件实际上是 SA:MP（San Andreas Multiplayer）修改程序的安装程序，版本为 0.3.7 DL R1，由 SPC 的 CEO Calasans 设计和开发。创建新安装程序的动机在于需要替换目前由第三方网站提供的原始安装程序。这种做法严重危及用户安全，因为这些安装程序可能被篡改以包含恶意代码。
+  <string key="client_installer_description">这个可执行文件实际上是 SA:MP（San Andreas Multiplayer）修改程序的安装程序，版本为 0.3.DL R1，由 SPC 的 CEO Calasans 设计和开发。创建新安装程序的动机在于需要替换目前由第三方网站提供的原始安装程序。这种做法严重危及用户安全，因为这些安装程序可能被篡改以包含恶意代码。
 
 与这些不安全的替代方案不同，SPC 的官方安装程序不仅提供可靠性和便利性，而且完全开源。这意味着任何用户都可以审核源代码，验证其完整性，甚至自行编译。这种透明度强化了 SPC 在用户使用 SA:MP 时对安全性、信任度和自由度的承诺。</string>
 

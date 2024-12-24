@@ -5,7 +5,7 @@
   <string key="close">Lukk</string>
 
   <string key="client_installer_title">Client DL R1 SA:MP Installasjonsprogram</string>
-  <string key="client_installer_description">Dette programmet, som faktisk er SA:MP (San Andreas Multiplayer) mod-installasjonsprogrammet versjon 0.3.7 DL R1, ble designet og utviklet av Calasans, CEO for SPC. Motivasjonen bak å skape et nytt installasjonsprogram kommer fra behovet for å erstatte de originale installasjonsprogrammene, som for tiden distribueres av tredjepartsnettsteder. Denne praksisen utgjør en alvorlig sikkerhetsrisiko for brukerne, siden disse installasjonsprogrammene kan manipuleres til å inkludere ondsinnet kode.
+  <string key="client_installer_description">Dette programmet, som faktisk er SA:MP (San Andreas Multiplayer) mod-installasjonsprogrammet versjon 0.3.DL R1, ble designet og utviklet av Calasans, CEO for SPC. Motivasjonen bak å skape et nytt installasjonsprogram kommer fra behovet for å erstatte de originale installasjonsprogrammene, som for tiden distribueres av tredjepartsnettsteder. Denne praksisen utgjør en alvorlig sikkerhetsrisiko for brukerne, siden disse installasjonsprogrammene kan manipuleres til å inkludere ondsinnet kode.
 
 I motsetning til disse usikre alternativene, skiller SPC sitt offisielle installasjonsprogram seg ut ikke bare ved å tilby pålitelighet og brukervennlighet, men også ved å være helt åpen kildekode (Open Source). Dette betyr at enhver bruker kan revidere kildekoden, bekrefte dens integritet og til og med kompilere den selv. Denne åpenheten forsterker SPCs forpliktelse til sikkerhet, tillit og brukerfrihet når de bruker SA:MP.</string>
 

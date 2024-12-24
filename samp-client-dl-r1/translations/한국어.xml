@@ -5,7 +5,7 @@
   <string key="close">닫기</string>
 
   <string key="client_installer_title">Client DL R1 SA:MP 설치 프로그램</string>
-  <string key="client_installer_description">이 실행 파일은 SA:MP(San Andreas Multiplayer) 버전 0.3.7 DL R1의 설치 프로그램으로, SPC의 CEO인 Calasans가 설계하고 개발했습니다. 새로운 설치 프로그램을 만들게 된 동기는 현재 제3자 웹사이트에서 제공되는 기존 설치 프로그램을 대체할 필요성 때문입니다. 이러한 관행은 설치 프로그램이 악성 코드를 포함하도록 조작될 수 있어 사용자의 보안을 심각하게 손상시킵니다.
+  <string key="client_installer_description">이 실행 파일은 SA:MP(San Andreas Multiplayer) 버전 0.3.DL R1의 설치 프로그램으로, SPC의 CEO인 Calasans가 설계하고 개발했습니다. 새로운 설치 프로그램을 만들게 된 동기는 현재 제3자 웹사이트에서 제공되는 기존 설치 프로그램을 대체할 필요성 때문입니다. 이러한 관행은 설치 프로그램이 악성 코드를 포함하도록 조작될 수 있어 사용자의 보안을 심각하게 손상시킵니다.
 
 이러한 불안전한 대안과 달리, SPC의 공식 설치 프로그램은 신뢰성과 실용성을 제공할 뿐만 아니라 완전히 오픈 소스라는 점에서 두각을 나타냅니다. 이는 모든 사용자가 소스 코드를 감사하고, 무결성을 확인하며, 직접 컴파일할 수 있다는 것을 의미합니다. 이러한 투명성은 SA:MP 사용 시 사용자의 보안, 신뢰 및 자유에 대한 SPC의 약속을 강화합니다.</string>
 
