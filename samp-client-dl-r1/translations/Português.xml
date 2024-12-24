@@ -10,7 +10,7 @@
 Diferentemente dessas alternativas inseguras, o instalador oficial da SPC se destaca não apenas por oferecer confiabilidade e praticidade, mas também por ser completamente (Open Source). Isso significa que qualquer usuário pode auditar o código-fonte, verificar sua integridade e até mesmo compilá-lo por conta própria. Essa transparência reforça o compromisso da SPC com a segurança, a confiança e a liberdade dos usuários ao utilizar o SA:MP.</string>
 
   <string key="folder_title">Pasta do GTA San Andreas</string>
-  <string key="folder_description">Será indispensável selecionar especificamente o diretório correspondente ao GTA San Andreas, identificado como "Grand Theft Auto San Andreas". Além disso, é imperativo que o arquivo executável denominado "gta_san.exe" esteja devidamente alocado nesse diretório. Caso todos os requisitos sejam satisfeitos, será possível avançar com a instalação do Client DL R1.</string>
+  <string key="folder_description">Será indispensável selecionar especificamente o diretório correspondente ao GTA San Andreas, identificado como "Grand Theft Auto San Andreas". Além disso, é imperativo que o arquivo executável denominado "gta_sa.exe" esteja devidamente alocado nesse diretório. Caso todos os requisitos sejam satisfeitos, será possível avançar com a instalação do Client DL R1.</string>
   <string key="selected_folder_title">Pasta ⬇</string>
   <string key="no_folder_selected">Você não selecionou nenhuma pasta, ainda.</string>
   <string key="select_folder">Selecionar Pasta</string>
