@@ -9,7 +9,7 @@ Dieses Repository enthält den Quellcode verschiedener Installer für den SA:MP-
 
 ## Sprachen
 
-- Português: [README](https://github.com/spc-samp/clients-samp)
+- Português: [README](../../)
 - English: [README](../English/README.md)
 - Español: [README](../Espanol/README.md)
 - Français: [README](../Francais/README.md)
@@ -17,7 +17,7 @@ Dieses Repository enthält den Quellcode verschiedener Installer für den SA:MP-
 - Polski: [README](../Polski/README.md)
 - Русский: [README](../Русский/README.md)
 - Svenska: [README](../Svenska/README.md)
-- Turk: [README](../Turk/README.md)
+- Türkçe: [README](../Turkce/README.md)
 
 ## Inhaltsverzeichnis
 
@@ -56,6 +56,10 @@ Dieses Repository enthält den Quellcode verschiedener Installer für den SA:MP-
     - [Eingebettete Ressourcen](#eingebettete-ressourcen)
     - [Wichtige Hinweise](#wichtige-hinweise)
   - [Screenshots](#screenshots)
+  - [Lizenz](#lizenz)
+    - [Was Sie tun können ✅](#was-sie-tun-können-)
+    - [Was Sie tun müssen ⚠️](#was-sie-tun-müssen-️)
+    - [Was Sie nicht tun dürfen ❌](#was-sie-nicht-tun-dürfen-)
 
 ### Übersicht
 
@@ -620,3 +624,80 @@ Fehler:
 
 ![Error 1 Client - SPC](/screenshots/error_1.png)
 ![Error 2 Client - SPC](/screenshots/error_2.png)
+
+## Lizenz
+
+Copyright © SA-MP Programming Community
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+
+### Was Sie tun können ✅
+
+1. **Kommerzielle Nutzung**: 
+   - Sie können den Code für kommerzielle Zwecke nutzen
+   - Sie können Produkte verkaufen, die diesen Code verwenden
+   - Sie können ihn in Unternehmenslösungen integrieren
+
+2. **Modifikation**: 
+   - Sie können den Quellcode modifizieren
+   - Sie können ihn an Ihre Bedürfnisse anpassen
+   - Sie können abgeleitete Werke erstellen
+
+3. **Distribution**: 
+   - Sie können die Software verteilen
+   - Sie können Ihre Änderungen teilen
+   - Sie können sie in andere Projekte einbinden
+
+4. **Private Nutzung**: 
+   - Sie können den Code privat nutzen und modifizieren
+   - Keine Verpflichtung zur Veröffentlichung
+   - Kann in internen Projekten verwendet werden
+
+5. **Patentlizenz**: 
+   - Diese Lizenz gewährt ausdrücklich Patentrechte
+   - Schutz vor Patentansprüchen der Mitwirkenden
+   - Garantierte Nutzung ohne Patentsorgen
+
+### Was Sie tun müssen ⚠️
+
+1. **Lizenz einbinden**: 
+   - Eine Kopie der Lizenz muss dem Code beigefügt werden
+   - Muss leicht zugänglich sein
+   - Muss im Originalformat vorliegen
+
+2. **Änderungen angeben**: 
+   - Wesentliche Änderungen müssen angegeben werden
+   - Wichtige Änderungen dokumentieren
+   - Änderungsprotokoll führen
+
+3. **Urheberrechtsvermerk**: 
+   - Alle Urheberrechtsvermerke bewahren
+   - Ursprüngliche Zuschreibungen beibehalten
+   - Vermerke in allen Kopien einfügen
+
+4. **Änderungen dokumentieren**: 
+   - Alle vorgenommenen Änderungen dokumentieren
+   - Changelog pflegen
+   - Wichtige Modifikationen erklären
+
+### Was Sie nicht tun dürfen ❌
+
+1. **Marken verwenden**: 
+   - Diese Lizenz gewährt keine Rechte zur Markennutzung
+   - Namen und Logos dürfen nicht ohne Erlaubnis verwendet werden
+   - Separate Genehmigung für Marken erforderlich
+
+2. **Autoren haftbar machen**: 
+   - Die Autoren sind nicht für Schäden verantwortlich
+   - Keine Garantien für die Funktionalität
+   - Nutzung auf eigene Gefahr

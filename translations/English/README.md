@@ -9,7 +9,7 @@ This repository contains the source code of various Client SA:MP (San Andreas Mu
 
 ## Languages
 
-- Português: [README](https://github.com/spc-samp/clients-samp)
+- Português: [README](../../)
 - Deutsch: [README](../Deutsch/README.md)
 - Español: [README](../Espanol/README.md)
 - Français: [README](../Francais/README.md)
@@ -17,7 +17,7 @@ This repository contains the source code of various Client SA:MP (San Andreas Mu
 - Polski: [README](../Polski/README.md)
 - Русский: [README](../Русский/README.md)
 - Svenska: [README](../Svenska/README.md)
-- Türkçe: [README](../Turk/README.md)
+- Türkçe: [README](../Turkce/README.md)
 
 ## Index
 
@@ -56,6 +56,10 @@ This repository contains the source code of various Client SA:MP (San Andreas Mu
     - [Embedded Resources](#embedded-resources)
     - [Important Notes](#important-notes)
   - [Screenshots](#screenshots)
+  - [License](#license)
+    - [What you can do ✅](#what-you-can-do-)
+    - [What you must do ⚠️](#what-you-must-do-️)
+    - [What you cannot do ❌](#what-you-cannot-do-)
 
 ## Overview
 
@@ -620,3 +624,80 @@ Errors:
 
 ![Error 1 Client - SPC](/screenshots/error_1.png)
 ![Error 2 Client - SPC](/screenshots/error_2.png)
+
+## License
+
+Copyright © SA-MP Programming Community
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+
+### What you can do ✅
+
+1. **Commercial Use**: 
+   - You can use the code for commercial purposes
+   - You can sell products that use this code
+   - You can incorporate it into business solutions
+
+2. **Modification**: 
+   - You can modify the source code
+   - You can adapt it to your needs
+   - You can create derivative works
+
+3. **Distribution**: 
+   - You can distribute the software
+   - You can share your modifications
+   - You can include it in other projects
+
+4. **Private Use**: 
+   - You can use and modify the code privately
+   - There's no obligation to make it public
+   - You can use it in internal projects
+
+5. **Patent Grant**: 
+   - This license explicitly provides patent rights
+   - Protection against contributors' patent claims
+   - Guaranteed use without patent concerns
+
+### What you must do ⚠️
+
+1. **Include License**: 
+   - A copy of the license must be included with the code
+   - Must be easily accessible
+   - Must be in its original format
+
+2. **State Changes**: 
+   - Significant changes must be declared
+   - Document important alterations
+   - Maintain a record of modifications
+
+3. **Copyright Notice**: 
+   - Preserve all copyright notices
+   - Maintain original attributions
+   - Include notices in all copies
+
+4. **Document Changes**: 
+   - Document all changes made
+   - Maintain a changelog
+   - Explain important modifications
+
+### What you cannot do ❌
+
+1. **Use Trademarks**: 
+   - This license does not grant trademark rights
+   - Cannot use names and logos without permission
+   - Requires separate authorization for trademarks
+
+2. **Hold Authors Liable**: 
+   - Authors are not liable for damages
+   - No warranties of operation
+   - Use at your own risk

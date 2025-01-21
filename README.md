@@ -17,7 +17,7 @@ Este repositório contém o código-fonte de vários instaladores de Client SA:M
 - Polski: [README](translations/Polski/README.md)
 - Русский: [README](translations/Русский/README.md)
 - Svenska: [README](translations/Svenska/README.md)
-- Turk: [README](translations/Turk/README.md)
+- Türkçe: [README](translations/Turkce/README.md)
 
 ## Índice
 
@@ -56,6 +56,10 @@ Este repositório contém o código-fonte de vários instaladores de Client SA:M
     - [Recursos Incorporados](#recursos-incorporados)
     - [Observações Importantes](#observações-importantes)
   - [Screenshots](#screenshots)
+  - [Licença](#licença)
+    - [O que você pode fazer ✅](#o-que-você-pode-fazer-)
+    - [O que você deve fazer ⚠️](#o-que-você-deve-fazer-️)
+    - [O que você não pode fazer ❌](#o-que-você-não-pode-fazer-)
 
 ## Visão Geral
 
@@ -620,3 +624,80 @@ Erros:
 
 ![Error 1 Client - SPC](screenshots/error_1.png)
 ![Error 2 Client - SPC](screenshots/error_2.png)
+
+## Licença
+
+Copyright © SA-MP Programming Community
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+
+### O que você pode fazer ✅
+
+1. **Uso Comercial**: 
+   - Você pode usar o código para fins comerciais
+   - Pode vender produtos que utilizem este código
+   - Pode incorporar em soluções empresariais
+
+2. **Modificação**: 
+   - Você pode modificar o código fonte
+   - Pode adaptar para suas necessidades
+   - Pode criar trabalhos derivados
+
+3. **Distribuição**: 
+   - Você pode distribuir o software
+   - Pode compartilhar suas modificações
+   - Pode incluir em outros projetos
+
+4. **Uso Privado**: 
+   - Você pode usar e modificar o código privadamente
+   - Não há obrigação de tornar público
+   - Pode usar em projetos internos
+
+5. **Concessão de Patente**: 
+   - Esta licença fornece explicitamente direitos de patente
+   - Proteção contra reivindicações de patentes dos contribuidores
+   - Garantia de uso sem preocupações com patentes
+
+### O que você deve fazer ⚠️
+
+1. **Incluir Licença**: 
+   - Uma cópia da licença deve ser incluída com o código
+   - Deve ser facilmente acessível
+   - Deve estar no formato original
+
+2. **Declarar Mudanças**: 
+   - Mudanças significativas devem ser declaradas
+   - Documentar alterações importantes
+   - Manter um registro de modificações
+
+3. **Aviso de Direitos Autorais**: 
+   - Preserve todos os avisos de direitos autorais
+   - Mantenha atribuições originais
+   - Inclua avisos em todas as cópias
+
+4. **Documentar Alterações**: 
+   - Documente todas as alterações feitas
+   - Mantenha um changelog
+   - Explique modificações importantes
+
+### O que você não pode fazer ❌
+
+1. **Usar Marcas Registradas**: 
+   - Esta licença não concede direitos para uso de marcas
+   - Não pode usar nomes e logos sem permissão
+   - Requer autorização separada para marcas
+
+2. **Responsabilizar os Autores**: 
+   - Os autores não são responsáveis por danos
+   - Sem garantias de funcionamento
+   - Use por sua conta e risco

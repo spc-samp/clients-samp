@@ -9,7 +9,7 @@ To repo zawiera kod źródłowy kilku instalatorów Client SA:MP (San Andreas Mu
 
 ## Języki
 
-- Português: [README](https://github.com/spc-samp/clients-samp)
+- Português: [README](../../)
 - Deutsch: [README](../Deutsch/README.md)
 - English: [README](../English/README.md)
 - Español: [README](../Espanol/README.md)
@@ -17,7 +17,7 @@ To repo zawiera kod źródłowy kilku instalatorów Client SA:MP (San Andreas Mu
 - Italiano: [README](../Italiano/README.md)
 - Русский: [README](../Русский/README.md)
 - Svenska: [README](../Svenska/README.md)
-- Turk: [README](../Turk/README.md)
+- Türkçe: [README](../Turkce/README.md)
 
 ## Spis treści
 
@@ -56,6 +56,10 @@ To repo zawiera kod źródłowy kilku instalatorów Client SA:MP (San Andreas Mu
     - [Zasoby Osadzone](#zasoby-osadzone)
     - [Ważne Uwagi](#ważne-uwagi)
   - [Screenshots](#screenshots)
+  - [Licencja](#licencja)
+    - [Co możesz robić ✅](#co-możesz-robić-)
+    - [Co musisz zrobić ⚠️](#co-musisz-zrobić-️)
+    - [Czego nie możesz robić ❌](#czego-nie-możesz-robić-)
 
 ## Przegląd
 
@@ -620,3 +624,80 @@ Błędy:
 
 ![Error 1 Client - SPC](/screenshots/error_1.png)
 ![Error 2 Client - SPC](/screenshots/error_2.png)
+
+## Licencja
+
+Copyright © SA-MP Programming Community
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+
+### Co możesz robić ✅
+
+1. **Użytek komercyjny**: 
+   - Możesz używać kodu do celów komercyjnych
+   - Możesz sprzedawać produkty wykorzystujące ten kod
+   - Możesz włączać go do rozwiązań biznesowych
+
+2. **Modyfikacja**: 
+   - Możesz modyfikować kod źródłowy
+   - Możesz dostosowywać go do swoich potrzeb
+   - Możesz tworzyć prace pochodne
+
+3. **Dystrybucja**: 
+   - Możesz rozpowszechniać oprogramowanie
+   - Możesz udostępniać swoje modyfikacje
+   - Możesz włączać do innych projektów
+
+4. **Użytek prywatny**: 
+   - Możesz prywatnie używać i modyfikować kod
+   - Nie ma obowiązku upubliczniania
+   - Możesz używać w projektach wewnętrznych
+
+5. **Przyznanie patentu**: 
+   - Ta licencja wyraźnie zapewnia prawa patentowe
+   - Ochrona przed roszczeniami patentowymi współtwórców
+   - Gwarancja użytkowania bez obaw o patenty
+
+### Co musisz zrobić ⚠️
+
+1. **Dołączyć licencję**: 
+   - Kopia licencji musi być dołączona do kodu
+   - Musi być łatwo dostępna
+   - Musi być w oryginalnym formacie
+
+2. **Deklarować zmiany**: 
+   - Znaczące zmiany muszą być zadeklarowane
+   - Dokumentować ważne zmiany
+   - Prowadzić rejestr modyfikacji
+
+3. **Informacja o prawach autorskich**: 
+   - Zachowaj wszystkie informacje o prawach autorskich
+   - Zachowaj oryginalne przypisania
+   - Dołącz informacje do wszystkich kopii
+
+4. **Dokumentować zmiany**: 
+   - Dokumentuj wszystkie wprowadzone zmiany
+   - Prowadź changelog
+   - Wyjaśniaj ważne modyfikacje
+
+### Czego nie możesz robić ❌
+
+1. **Używać znaków towarowych**: 
+   - Ta licencja nie przyznaje praw do używania znaków towarowych
+   - Nie możesz używać nazw i logo bez pozwolenia
+   - Wymaga osobnego pozwolenia na znaki towarowe
+
+2. **Pociągać autorów do odpowiedzialności**: 
+   - Autorzy nie są odpowiedzialni za szkody
+   - Brak gwarancji działania
+   - Używasz na własne ryzyko

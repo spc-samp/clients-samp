@@ -9,7 +9,7 @@ Detta repository innehåller källkoden för flera installatörer för Client SA
 
 ## Språk
 
-- Português: [README](https://github.com/spc-samp/clients-samp)
+- Português: [README](../../)
 - Deutsch: [README](../Deutsch/README.md)
 - English: [README](../English/README.md)
 - Español: [README](../Espanol/README.md)
@@ -17,7 +17,7 @@ Detta repository innehåller källkoden för flera installatörer för Client SA
 - Italiano: [README](../Italiano/README.md)
 - Polski: [README](../Polski/README.md)
 - Русский: [README](../Русский/README.md)
-- Turk: [README](../Turk/README.md)
+- Türkçe: [README](../Turkce/README.md)
 
 ## Index
 
@@ -56,6 +56,10 @@ Detta repository innehåller källkoden för flera installatörer för Client SA
     - [Inbäddade Resurser](#inbäddade-resurser)
     - [Viktiga Observationer](#viktiga-observationer)
   - [Screenshots](#screenshots)
+  - [Licens](#licens)
+    - [Vad du kan göra ✅](#vad-du-kan-göra-)
+    - [Vad du måste göra ⚠️](#vad-du-måste-göra-️)
+    - [Vad du inte kan göra ❌](#vad-du-inte-kan-göra-)
 
 ## Översikt
 
@@ -620,3 +624,80 @@ Fel:
 
 ![Error 1 Client - SPC](/screenshots/error_1.png)
 ![Error 2 Client - SPC](/screenshots/error_2.png)
+
+## Licens
+
+Copyright © SA-MP Programming Community
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+
+### Vad du kan göra ✅
+
+1. **Kommersiell användning**: 
+   - Du kan använda koden för kommersiella ändamål
+   - Du kan sälja produkter som använder denna kod
+   - Du kan integrera den i företagslösningar
+
+2. **Modifiering**: 
+   - Du kan modifiera källkoden
+   - Du kan anpassa den efter dina behov
+   - Du kan skapa derivatverk
+
+3. **Distribution**: 
+   - Du kan distribuera programvaran
+   - Du kan dela dina modifieringar
+   - Du kan inkludera den i andra projekt
+
+4. **Privat användning**: 
+   - Du kan använda och modifiera koden privat
+   - Ingen skyldighet att göra det offentligt
+   - Du kan använda den i interna projekt
+
+5. **Patentbeviljande**: 
+   - Denna licens ger uttryckligen patenträttigheter
+   - Skydd mot patentanspråk från bidragsgivare
+   - Garanti för användning utan patentbekymmer
+
+### Vad du måste göra ⚠️
+
+1. **Inkludera licens**: 
+   - En kopia av licensen måste inkluderas med koden
+   - Måste vara lättillgänglig
+   - Måste vara i originalformat
+
+2. **Deklarera ändringar**: 
+   - Betydande ändringar måste deklareras
+   - Dokumentera viktiga ändringar
+   - Håll en ändringslogg
+
+3. **Upphovsrättsmeddelande**: 
+   - Bevara alla upphovsrättsmeddelanden
+   - Behåll ursprungliga attributioner
+   - Inkludera meddelanden i alla kopior
+
+4. **Dokumentera ändringar**: 
+   - Dokumentera alla gjorda ändringar
+   - Håll en ändringslogg
+   - Förklara viktiga modifieringar
+
+### Vad du inte kan göra ❌
+
+1. **Använda varumärken**: 
+   - Denna licens ger inga rättigheter till varumärkesanvändning
+   - Du kan inte använda namn och logotyper utan tillstånd
+   - Kräver separat godkännande för varumärken
+
+2. **Hålla författarna ansvariga**: 
+   - Författarna är inte ansvariga för skador
+   - Inga garantier för funktionalitet
+   - Använd på egen risk

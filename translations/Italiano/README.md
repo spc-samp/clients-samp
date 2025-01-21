@@ -9,7 +9,7 @@ Questo repository contiene il codice sorgente di diversi installer per il Client
 
 ## Lingue
 
-- Português: [README](https://github.com/spc-samp/clients-samp)
+- Português: [README](../../)
 - Deutsch: [README](../Deutsch/README.md)
 - English: [README](../English/README.md)
 - Español: [README](../Espanol/README.md)
@@ -17,7 +17,7 @@ Questo repository contiene il codice sorgente di diversi installer per il Client
 - Polski: [README](../Polski/README.md)
 - Русский: [README](../Русский/README.md)
 - Svenska: [README](../Svenska/README.md)
-- Turk: [README](../Turk/README.md)
+- Türkçe: [README](../Turkce/README.md)
 
 ## Indice
 
@@ -56,6 +56,10 @@ Questo repository contiene il codice sorgente di diversi installer per il Client
     - [Risorse Incorporate](#risorse-incorporate)
     - [Osservazioni Importanti](#osservazioni-importanti)
   - [Screenshots](#screenshots)
+  - [Licenza](#licenza)
+    - [Cosa puoi fare ✅](#cosa-puoi-fare-)
+    - [Cosa devi fare ⚠️](#cosa-devi-fare-️)
+    - [Cosa non puoi fare ❌](#cosa-non-puoi-fare-)
 
 ## Panoramica
 
@@ -620,3 +624,80 @@ Errori:
 
 ![Error 1 Client - SPC](/screenshots/error_1.png)
 ![Error 2 Client - SPC](/screenshots/error_2.png)
+
+## Licenza
+
+Copyright © SA-MP Programming Community
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+
+### Cosa puoi fare ✅
+
+1. **Uso Commerciale**: 
+   - Puoi utilizzare il codice per scopi commerciali
+   - Puoi vendere prodotti che utilizzano questo codice
+   - Puoi incorporarlo in soluzioni aziendali
+
+2. **Modifiche**: 
+   - Puoi modificare il codice sorgente
+   - Puoi adattarlo alle tue esigenze
+   - Puoi creare lavori derivati
+
+3. **Distribuzione**: 
+   - Puoi distribuire il software
+   - Puoi condividere le tue modifiche
+   - Puoi includerlo in altri progetti
+
+4. **Uso Privato**: 
+   - Puoi utilizzare e modificare il codice privatamente
+   - Non c'è obbligo di renderlo pubblico
+   - Puoi usarlo in progetti interni
+
+5. **Concessione di Brevetto**: 
+   - Questa licenza fornisce esplicitamente diritti di brevetto
+   - Protezione contro rivendicazioni di brevetti dai contributori
+   - Garanzia di utilizzo senza preoccupazioni sui brevetti
+
+### Cosa devi fare ⚠️
+
+1. **Includere la Licenza**: 
+   - Una copia della licenza deve essere inclusa con il codice
+   - Deve essere facilmente accessibile
+   - Deve essere nel formato originale
+
+2. **Dichiarare le Modifiche**: 
+   - Le modifiche significative devono essere dichiarate
+   - Documentare le modifiche importanti
+   - Mantenere un registro delle modifiche
+
+3. **Avviso di Copyright**: 
+   - Preservare tutti gli avvisi di copyright
+   - Mantenere le attribuzioni originali
+   - Includere gli avvisi in tutte le copie
+
+4. **Documentare le Modifiche**: 
+   - Documentare tutte le modifiche effettuate
+   - Mantenere un changelog
+   - Spiegare le modifiche importanti
+
+### Cosa non puoi fare ❌
+
+1. **Usare Marchi Registrati**: 
+   - Questa licenza non concede diritti per l'uso dei marchi
+   - Non puoi usare nomi e loghi senza permesso
+   - Richiede autorizzazione separata per i marchi
+
+2. **Responsabilizzare gli Autori**: 
+   - Gli autori non sono responsabili per danni
+   - Nessuna garanzia di funzionamento
+   - Uso a proprio rischio

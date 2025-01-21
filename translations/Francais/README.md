@@ -9,7 +9,7 @@ Ce dépôt contient le code source de plusieurs installateurs de Client SA:MP (S
 
 ## Langues
 
-- Português: [README](https://github.com/spc-samp/clients-samp)
+- Português: [README](../../)
 - Deutsch: [README](../Deutsch/README.md)
 - English: [README](../English/README.md)
 - Español: [README](../Espanol/README.md)
@@ -17,7 +17,7 @@ Ce dépôt contient le code source de plusieurs installateurs de Client SA:MP (S
 - Polski: [README](../Polski/README.md)
 - Русский: [README](../Русский/README.md)
 - Svenska: [README](../Svenska/README.md)
-- Turk: [README](../Turk/README.md)
+- Türkçe: [README](../Turkce/README.md)
 
 ## Index
 
@@ -56,6 +56,10 @@ Ce dépôt contient le code source de plusieurs installateurs de Client SA:MP (S
     - [Ressources intégrées](#ressources-intégrées)
     - [Remarques importantes](#remarques-importantes)
   - [Screenshots](#screenshots)
+  - [Licence](#licence)
+    - [Ce que vous pouvez faire ✅](#ce-que-vous-pouvez-faire-)
+    - [Ce que vous devez faire ⚠️](#ce-que-vous-devez-faire-️)
+    - [Ce que vous ne pouvez pas faire ❌](#ce-que-vous-ne-pouvez-pas-faire-)
 
 ## Aperçu
 
@@ -620,3 +624,80 @@ Erreurs:
 
 ![Error 1 Client - SPC](/screenshots/error_1.png)
 ![Error 2 Client - SPC](/screenshots/error_2.png)
+
+## Licence
+
+Copyright © SA-MP Programming Community
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+
+### Ce que vous pouvez faire ✅
+
+1. **Usage Commercial**: 
+   - Vous pouvez utiliser le code à des fins commerciales
+   - Vous pouvez vendre des produits utilisant ce code
+   - Vous pouvez l'intégrer dans des solutions d'entreprise
+
+2. **Modification**: 
+   - Vous pouvez modifier le code source
+   - Vous pouvez l'adapter à vos besoins
+   - Vous pouvez créer des œuvres dérivées
+
+3. **Distribution**: 
+   - Vous pouvez distribuer le logiciel
+   - Vous pouvez partager vos modifications
+   - Vous pouvez l'inclure dans d'autres projets
+
+4. **Usage Privé**: 
+   - Vous pouvez utiliser et modifier le code en privé
+   - Aucune obligation de le rendre public
+   - Vous pouvez l'utiliser dans des projets internes
+
+5. **Concession de Brevet**: 
+   - Cette licence accorde explicitement des droits de brevet
+   - Protection contre les revendications de brevets des contributeurs
+   - Garantie d'utilisation sans souci de brevets
+
+### Ce que vous devez faire ⚠️
+
+1. **Inclure la Licence**: 
+   - Une copie de la licence doit être incluse avec le code
+   - Elle doit être facilement accessible
+   - Elle doit être dans son format original
+
+2. **Déclarer les Changements**: 
+   - Les changements significatifs doivent être déclarés
+   - Documenter les modifications importantes
+   - Maintenir un registre des modifications
+
+3. **Avis de Droits d'Auteur**: 
+   - Préserver tous les avis de droits d'auteur
+   - Maintenir les attributions originales
+   - Inclure les avis dans toutes les copies
+
+4. **Documenter les Modifications**: 
+   - Documenter toutes les modifications effectuées
+   - Maintenir un changelog
+   - Expliquer les modifications importantes
+
+### Ce que vous ne pouvez pas faire ❌
+
+1. **Utiliser des Marques Déposées**: 
+   - Cette licence n'accorde pas de droits d'utilisation des marques
+   - Vous ne pouvez pas utiliser les noms et logos sans permission
+   - Nécessite une autorisation séparée pour les marques
+
+2. **Tenir les Auteurs Responsables**: 
+   - Les auteurs ne sont pas responsables des dommages
+   - Pas de garanties de fonctionnement
+   - Utilisation à vos propres risques
