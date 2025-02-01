@@ -1,16 +1,11 @@
-# samp-sdk
+# clients-samp
 
-[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
-[![Language](https://img.shields.io/badge/Language-C-00599C.svg)](https://en.wikipedia.org/wiki/C_(programming_language))
-[![SDK](https://img.shields.io/badge/SA--MP-SDK-orange.svg)](https://github.com/spc-samp/samp-sdk)
-[![Platform Windows](https://img.shields.io/badge/Windows-0078D6?style=flat&logo=windows&logoColor=white)](https://github.com/spc-samp/samp-sdk)
-[![Platform Linux](https://img.shields.io/badge/Linux-FCC624?style=flat&logo=linux&logoColor=black)](https://github.com/spc-samp/samp-sdk)
-[![Platform FreeBSD](https://img.shields.io/badge/FreeBSD-AB2B28?style=flat&logo=freebsd&logoColor=white)](https://github.com/spc-samp/samp-sdk)
-[![AMX](https://img.shields.io/badge/AMX-Powered-yellow.svg)](https://github.com/spc-samp/samp-sdk)
-[![Native Support](https://img.shields.io/badge/Natives-Supported-success.svg)](https://github.com/spc-samp/samp-sdk)
-[![Memory Safe](https://img.shields.io/badge/Memory-Safe-red.svg)](https://github.com/spc-samp/samp-sdk)
+[![Licença](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
+[![C#](https://img.shields.io/badge/C%23-11.0-blue.svg)](https://docs.microsoft.com/en-us/dotnet/csharp/)
+[![.NET](https://img.shields.io/badge/.NET-9.0-purple.svg)](https://dotnet.microsoft.com/)
+[![Windows Forms](https://img.shields.io/badge/Windows%20Forms-net9.0--windows-blue)](https://docs.microsoft.com/en-us/dotnet/desktop/winforms/)
 
-SA-MP (San Andreas Multiplayer) Software Development Kit (SDK), geliştiricilerin SA-MP sunucusu için eklentiler oluşturmasına olanak tanıyan kapsamlı bir C dosyaları ve header'lar koleksiyonudur. Bu SDK, geliştiricilerin Pawn scriptinde mevcut olanın ötesinde özellikler uygulamasına olanak tanıyan native fonksiyonlar aracılığıyla SA-MP sunucusunun işlevselliğini genişletmek için bir temel sağlar.
+Bu depo, SPC (SA-MP Programlama Topluluğu) tarafından geliştirilen çeşitli Client SA:MP (San Andreas Multiplayer) yükleyicilerinin kaynak kodunu içermektedir. Bu yükleyiciler, artık güvenilir olarak kabul edilmeyen modun orijinal yükleyicilerine güvenli ve güvenilir alternatifler sağlamak için oluşturulmuştur.
 
 ## Diller
 
@@ -26,644 +21,653 @@ SA-MP (San Andreas Multiplayer) Software Development Kit (SDK), geliştiricileri
 
 ## İçindekiler
 
-- [samp-sdk](#samp-sdk)
+- [clients-samp](#clients-samp)
   - [Diller](#diller)
   - [İçindekiler](#i̇çindekiler)
-  - [Temel Bileşenler](#temel-bileşenler)
-    - [AMX Sistemi](#amx-sistemi)
-      - [Temel AMX Header'ları](#temel-amx-headerları)
-    - [Platform Desteği](#platform-desteği)
-    - [Eklenti Sistemi](#eklenti-sistemi)
-      - [plugincommon.h](#plugincommonh)
-      - [amxplugin.c](#amxpluginc)
-    - [AMX Native Fonksiyonları](#amx-native-fonksiyonları)
-  - [Teknik Detaylar](#teknik-detaylar)
-    - [Bellek Yönetimi](#bellek-yönetimi)
-    - [Bellek İşlemleri](#bellek-i̇şlemleri)
-    - [Hata Yönetimi](#hata-yönetimi)
-    - [String İşleme](#string-i̇şleme)
-    - [String İşlemleri](#string-i̇şlemleri)
-  - [Unicode Desteği](#unicode-desteği)
-    - [Unicode İşlemleri](#unicode-i̇şlemleri)
-  - [Çapraz Platform Uyumluluğu](#çapraz-platform-uyumluluğu)
-  - [Sistem Gereksinimleri](#sistem-gereksinimleri)
-    - [Derleyici Desteği](#derleyici-desteği)
-  - [En İyi Uygulamalar](#en-i̇yi-uygulamalar)
-  - [Dahili Yapılar](#dahili-yapılar)
-    - [AMX Header Yapısı](#amx-header-yapısı)
-  - [Gelişmiş Özellikler](#gelişmiş-özellikler)
-    - [JIT Derleme Desteği](#jit-derleme-desteği)
-    - [Hata Ayıklama Arayüzü](#hata-ayıklama-arayüzü)
-    - [Public Fonksiyon Arayüzü](#public-fonksiyon-arayüzü)
-  - [Versiyon Bilgisi](#versiyon-bilgisi)
-    - [Versiyon Uyumluluğu](#versiyon-uyumluluğu)
+  - [Genel Bakış](#genel-bakış)
+  - [Mevcut Sürümler](#mevcut-sürümler)
+  - [Proje Yapısı](#proje-yapısı)
+  - [Özellikler](#özellikler)
+  - [Yükleme](#yükleme)
+  - [Derleme](#derleme)
+    - [Önkoşullar](#önkoşullar)
+    - [Nasıl Derlenir](#nasıl-derlenir)
+  - [Kod Yapısı ve Bileşenler](#kod-yapısı-ve-bileşenler)
+    - [Ana Bileşenler](#ana-bileşenler)
+      - [İstemci Yükleyici (`InstallerClient.cs`)](#i̇stemci-yükleyici-installerclientcs)
+    - [Servisler](#servisler)
+      - [Dosya Çıkartma Servisi (`FileExtraction.cs`)](#dosya-çıkartma-servisi-fileextractioncs)
+      - [Dil Desteği (`Language.cs`)](#dil-desteği-languagecs)
+      - [Dil Eşleştirme Servisi (`LanguageMapping.cs`)](#dil-eşleştirme-servisi-languagemappingcs)
+      - [Sosyal Medya Servisi (`SocialNetworks.cs`)](#sosyal-medya-servisi-socialnetworkscs)
+      - [Özelleştirilmiş Arayüz Bileşenleri](#özelleştirilmiş-arayüz-bileşenleri)
+        - [İlerleme Çubuğu (`CustomProgressBar.cs`)](#i̇lerleme-çubuğu-customprogressbarcs)
+        - [Tema Renkleri (`Colors.cs`)](#tema-renkleri-colorscs)
+    - [Güvenlik Özellikleri](#güvenlik-özellikleri)
+      - [Yönetici Yetkileri](#yönetici-yetkileri)
+      - [Assembly İmzası](#assembly-i̇mzası)
+    - [Uluslararasılaştırma](#uluslararasılaştırma)
+      - [Çeviri Sistemi](#çeviri-sistemi)
+      - [Bayrak Simgeleri](#bayrak-simgeleri)
+  - [Proje Yapılandırması (.csproj)](#proje-yapılandırması-csproj)
+    - [Temel Yapılandırmalar](#temel-yapılandırmalar)
+    - [Sürüm ve Şirket Bilgileri](#sürüm-ve-şirket-bilgileri)
+    - [Çalışma Zamanı Yapılandırmaları](#çalışma-zamanı-yapılandırmaları)
+    - [Yerleşik Kaynaklar](#yerleşik-kaynaklar)
+    - [Önemli Notlar](#önemli-notlar)
+  - [Screenshots](#screenshots)
   - [Lisans](#lisans)
     - [Kullanım Şartları ve Koşulları](#kullanım-şartları-ve-koşulları)
       - [1. Verilen İzinler](#1-verilen-i̇zinler)
       - [2. Zorunlu Koşullar](#2-zorunlu-koşullar)
-      - [3. Telif Hakları](#3-telif-hakları)
-      - [4. Garanti Reddi ve Sorumluluk Sınırlaması](#4-garanti-reddi-ve-sorumluluk-sınırlaması)
+      - [3. Kısıtlamalar ve Sınırlamalar](#3-kısıtlamalar-ve-sınırlamalar)
+      - [4. Fikri Mülkiyet](#4-fikri-mülkiyet)
+      - [5. Garanti Reddi ve Sorumluluk Sınırlaması](#5-garanti-reddi-ve-sorumluluk-sınırlaması)
 
-## Temel Bileşenler
+## Genel Bakış
 
-### AMX Sistemi
+Bu proje, SA:MP modunun farklı sürümleri için güvenli ve güvenilir yükleyiciler sağlamayı amaçlamaktadır. Her yükleyici, Windows Forms kullanılarak C# ile geliştirilmiştir ve modern, kullanıcı dostu bir arayüz sunar. Ayrıca çoklu dil desteği ve sosyal medya bağlantılarının bulunduğu bir pencere içerir.
 
-AMX (Abstract Machine eXecutor), SA-MP'de Pawn scriptlerini çalıştıran sanal makinedir. SDK, çeşitli C ve header dosyaları aracılığıyla AMX ile etkileşim için kapsamlı destek sağlar:
+## Mevcut Sürümler
 
-#### Temel AMX Header'ları
+Depo, aşağıdaki Client sürümlerini içermektedir:
 
-1. **amx.h**
+- `samp-client-dl-r1`: Client DL R1 Yükleyicisi
+- `samp-client-r1`: Client R1 Yükleyicisi
+- `samp-client-r1-voip`: SAMPVOICE entegrasyonu ile Client R1
+- `samp-client-r2`: Client R2 Yükleyicisi
+- `samp-client-r3`: Client R3 Yükleyicisi
+- `samp-client-r3-voip`: SAMPVOICE entegrasyonu ile Client R3
+- `samp-client-r4`: Client R4 Yükleyicisi
+- `samp-client-r5`: Client R5 Yükleyicisi
 
-    Tüm AMX ile ilgili işlevselliği birleştiren ana header dosyası. Şunları içerir:
-    - Script yürütme için temel AMX fonksiyonları
-    - Bellek yönetimi
-    - Native fonksiyon kaydı
-    - String işleme
-    - UTF-8 desteği
+## Proje Yapısı
 
-    Temel fonksiyonlar:
-    ```c
-    int AMXAPI amx_Init(AMX* amx, void* program);
-    int AMXAPI amx_Exec(AMX* amx, cell* retval, int index);
-    int AMXAPI amx_Register(AMX* amx, const AMX_NATIVE_INFO* nativelist, int number);
-    ```
+Her Client sürümü, tutarlı bir proje yapısını takip eder:
 
-2. **amx_cell.h**
-
-    AMX sisteminde kullanılan temel veri tiplerini tanımlar:
-    ```c
-    #if PAWN_CELL_SIZE==32
-        typedef uint32_t  ucell;
-        typedef int32_t   cell;
-    #elif PAWN_CELL_SIZE==64
-        typedef uint64_t  ucell;
-        typedef int64_t   cell;
-    #endif
-    ```
-
-3. **amx_structures.h**
-
-    AMX işlemi için gerekli yapıları içerir:
-
-    ```c
-    typedef struct tagAMX {
-        unsigned char _FAR *base;    // Temel adres
-        unsigned char _FAR *data;    // Veri segmenti
-        AMX_CALLBACK callback;       // Callback fonksiyonu
-        AMX_DEBUG debug;            // Debug callback
-        cell cip;                   // Kod talimat işaretçisi
-        cell frm;                   // Stack frame tabanı
-        cell hea;                   // Heap tabanı
-        cell stk;                   // Stack işaretçisi
-        // ... ek alanlar
-    } AMX;
-    ```
-
-### Platform Desteği
-
-SDK, çeşitli header'lar aracılığıyla sağlam platform-spesifik işleme içerir:
-
-1. **amx_platform.h**
-
-    Platform algılama ve yapılandırma sağlar:
-    ```c
-    #if (defined __linux || defined __linux__) && !defined __LINUX__
-        #define __LINUX__
-    #endif
-    #if defined FREEBSD && !defined __FreeBSD__
-        #define __FreeBSD__
-    #endif
-    ```
-
-2. **osdefs.h**
-
-    İşletim sistemine özgü tanımlamaları yönetir:
-    ```c
-    #if defined(__WATCOMC__)
-        #if defined(__WINDOWS__) || defined(__NT__)
-            #define _Windows 1
-        #endif
-        #ifdef __386__
-            #define __32BIT__ 1
-        #endif
-    #endif
-    ```
-
-### Eklenti Sistemi
-
-#### plugincommon.h
-
-Temel eklenti arayüzünü ve destek yapılarını tanımlar:
-
-```c
-#define SAMP_PLUGIN_VERSION 0x0200
-
-enum SUPPORTS_FLAGS {
-    SUPPORTS_VERSION = SAMP_PLUGIN_VERSION,
-    SUPPORTS_VERSION_MASK = 0xffff,
-    SUPPORTS_AMX_NATIVES = 0x10000
-};
-
-enum PLUGIN_DATA_TYPE {
-    PLUGIN_DATA_LOGPRINTF = 0x00,
-    PLUGIN_DATA_AMX_EXPORTS = 0x10,
-    PLUGIN_DATA_CALLPUBLIC_FS = 0x11,
-    PLUGIN_DATA_CALLPUBLIC_GM = 0x12
-};
+```
+clients-samp/
+└── samp-client-v/
+    ├── archives/
+    │   └── samp-client-{v}.zip
+    ├── icons/
+    │   ├── languages/
+    │   │   └── [dillerin bayrak ikonları]
+    │   └── social/
+    │       └── [sosyal medya ikonları]
+    ├── src/
+    │   ├── Core/
+    │   │   └── InstallerClient.cs
+    │   ├── Models/
+    │   │   └── Colors.cs
+    │   ├── Services/
+    │   │   ├── FileExtraction.cs
+    │   │   ├── Language.cs
+    │   │   ├── LanguageMapping.cs
+    │   │   └── SocialNetworks.cs
+    │   └── UI/
+    │       └── CustomProgressBar.cs
+    ├── translations/
+    │   └── [30 dil dosyası XML]
+    ├── adm.manifest
+    ├── compile.bat
+    ├── Main.cs
+    └── samp-client-{v}.csproj
 ```
 
-#### amxplugin.c
+## Özellikler
 
-`amxplugin.c` dosyası, AMX fonksiyonlarının platform-spesifik uygulamalarını sağlayan SA-MP SDK'nın kritik bir bileşenidir. Platform ve derleyiciye bağlı olarak iki farklı yaklaşım uygular:
+- Çoklu dil desteği (30 dil)
+- Modern ve sezgisel kullanıcı arayüzü
+- Güvenli dosya çıkarımı ve yükleme
+- Oyun dizininin doğrulanması
+- Gerçek zamanlı ilerleme takibi
+- Sosyal medya penceresi
+- Gelişmiş güvenlik için isteğe bağlı assembly imzası
+- Animasyonlu özel ilerleme çubuğu
+- Tutarlı renk şeması ve stil
 
-1. **Windows MSVC Uygulaması (32-bit)**
-    - Doğrudan fonksiyon tablosu erişimi için assembly ile çıplak fonksiyonlar kullanır
-    - AMX fonksiyonlarına doğrudan atlamalarla optimize edilmiş performans sağlar
-    - Örnek yapı:
-    ```c
-    #define NUDE __declspec(naked)
-    #define AMX_JUMP_HELPER(index) { 
-        _asm { mov eax, pAMXFunctions } 
-        _asm { jmp dword ptr[eax + index * 4] } 
-    }
-    ```
+## Yükleme
 
-2. **Çapraz Platform Uygulaması**
-    - Platform bağımsızlığı için fonksiyon işaretçileri kullanır
-    - Fonksiyon tanımlamaları için makro tabanlı bir sistem uygular
-    - Örnek yapı:
-    ```c
-    #define DEFINE_AMX_FN_TYPE(name, ret_type, ...) \
-        typedef ret_type AMXAPI (*name##_t)(__VA_ARGS__); \
-        ret_type AMXAPI name(__VA_ARGS__) { \
-            name##_t fn = ((name##_t*)pAMXFunctions)[PLUGIN_AMX_EXPORT_##name]; \
-            return fn(__VA_ARGS__); \
+1. Projenin [releases](https://github.com/spc-samp/clients-samp/releases) sayfasına gidin
+2. Derlenmiş en son Client sürümünü indirin
+3. Çalıştırın ve talimatları izleyin
+
+## Derleme
+
+### Önkoşullar
+
+- .NET SDK 9.0 veya daha üstü
+- Windows işletim sistemi
+- Visual Studio 2022 veya üstü (isteğe bağlı)
+- Visual Studio Code (isteğe bağlı)
+
+### Nasıl Derlenir
+
+Herhangi bir Client sürümünü derlemenin en kolay yolu sağlanan batch dosyasını kullanmaktır:
+
+1. Client sürümünün bulunduğu dizinde bir terminal açın
+2. Derleme komutunu çalıştırın:
+```bash
+.\compile
+```
+
+Ayrıca, doğrudan .NET CLI kullanarak derleme yapabilirsiniz:
+```bash
+dotnet publish -c Release -r win-x64 --self-contained true -p:PublishSingleFile=true -p:EnableCompressionInSingleFile=true -o ./published
+```
+
+> [!NOTE]
+> Bu komut, tüm gerekli bağımlılıkları içeren ve Windows 64-bit için optimize edilmiş tek bir çalıştırılabilir dosya oluşturacaktır. Çalıştırılabilir dosya, proje dizinindeki `published` klasörüne kaydedilecektir.
+
+## Kod Yapısı ve Bileşenler
+
+### Ana Bileşenler
+
+#### İstemci Yükleyici (`InstallerClient.cs`)
+
+Tüm yükleme sürecini yöneten ana form. Adım adım bir sihirbaz arayüzü uygular:
+
+```csharp
+public partial class Installer_Client : Form
+{
+    // Ana modüller
+    private File_Extraction Extraction_Module;
+    private Language Language_Module;
+    private Language_Mapping LanguageMapping_Module;
+    private Social_Networks SocialNetworks_Module;
+
+    // Arayüz bileşenleri
+    private Label Description_Label, Status_Label;
+    private Custom_ProgressBar Progress_Bar;
+    private ListBox ExtractedFiles_List;
+}
+```
+
+Ana özellikler ve sorumluluklar:
+
+1. **Dil Seçimi**
+   ```csharp
+   private void CreateLanguage_Buttons()
+   {
+       // Bayraklarla dil düğmeleri için bir ızgara oluşturur
+       Panel Button_Panel = new Panel
+       {
+           AutoScroll = true,
+           Dock = DockStyle.None,
+           Location = new Point(0, 140),
+           Width = this.ClientSize.Width,
+           Height = this.ClientSize.Height - 140
+       };
+       
+       // Bayraklarla dinamik dil düğmeleri oluşturur
+       for (int i = 0; i < Available_Languages.Count; i++)
+       {
+           var Language = Available_Languages[i];
+           var Language_Button = CreateLanguage_Button(Language, Icon_Size, Button_Width, Button_Height, i, MaxButtons_PerRow, Padding);
+           Button_Panel.Controls.Add(Language_Button);
+       }
+   }
+   ```
+
+2. **Yükleme Dizini Seçimi**
+   ```csharp
+   private void Selecting_Folder()
+   {
+       // Klasör seçim diyaloğu ve doğrulama
+       using var Dialog = new FolderBrowserDialog();
+       if (Dialog.ShowDialog() == DialogResult.OK)
+       {
+           Selected_Path = Dialog.SelectedPath;
+           // GTA:SA yükleme dizinini doğrular
+           if (Path.GetFileName(Selected_Path) != "Grand Theft Auto San Andreas")
+           {
+               Status_Label.Text = Translate("invalid_folder");
+               Status_Label.ForeColor = Color.Red;
+           }
+       }
+   }
+   ```
+
+3. **Dosya Çıkartma Süreci**
+   ```csharp
+   private async Task<List<string>> ExtractClient_Files()
+   {
+       var progress = new Progress<(int progress, string fileName)>(update => 
+       {
+           Progress_Bar.Value = update.progress;
+           ExtractedFiles_List.Items.Add(update.fileName);
+       });
+       
+       return await Extraction_Module.ExtractClient_Files(Selected_Path, progress);
+   }
+   ```
+
+4. **Sosyal Medya Penceresi**
+   ```csharp
+   private void ShowSocial_Networks()
+   {
+       string[] Social_Networks = { 
+           "Discord SPC", 
+           "YouTube", 
+           "Instagram", 
+           "TikTok", 
+           "GitHub" 
+       };
+
+       // Her sosyal medya için simgelerle düğmeler oluşturur
+       for (int i = 0; i < Social_Networks.Length; i++)
+       {
+           var Social_Button = CreateSocial_NetworkButton(Social_Networks[i], Icon_Size, Button_Width, Button_Height, i, Padding);
+           Controls.Add(Social_Button);
+       }
+   }
+   ```
+
+### Servisler
+
+#### Dosya Çıkartma Servisi (`FileExtraction.cs`)
+
+İstemci SA:MP dosyalarının güvenli bir şekilde çıkartılmasını yönetir:
+
+```csharp
+public class File_Extraction
+{
+    public async Task<List<string>> ExtractClient_Files(string Target_Path, IProgress<(int progress, string fileName)> progress)
+    {
+        // Gömülü ZIP kaynağını yükler
+        var Current_Assembly = Assembly.GetExecutingAssembly();
+        var Zip_Resource = Current_Assembly.GetManifestResourceNames().FirstOrDefault(Res => Res.Contains("archives") && Res.EndsWith("samp-client-v.zip"));
+
+        using var Zip_Archive = new ZipArchive(Temp_Buffer, ZipArchiveMode.Read);
+        var Total_Files = Zip_Archive.Entries.Count;
+        var Processed_Files = new List<string>();
+
+        // Dosyaları ilerleme raporuyla çıkartır
+        for (int File_Index = 0; File_Index < Total_Files; File_Index++)
+        {
+            var Current_Entry = Zip_Archive.Entries[File_Index];
+            var File_Target_Path = Path.Combine(Target_Path, Current_Entry.FullName);
+
+            // Arayüz güncellemeleri için ilerlemeyi raporlar
+            int Completion_Percent = (int)((File_Index + 1) * 100.0 / Total_Files);
+            progress.Report((Completion_Percent, Current_Entry.FullName));
         }
-    ```
 
-Temel Özellikler:
+        return Processed_Files;
+    }
+}
+```
 
-3. **Fonksiyon Tablosu Yönetimi**
-    - AMX fonksiyon tablosunu saklamak için statik bir `pAMXFunctions` işaretçisi kullanır
-    - Tüm temel AMX fonksiyonlarına erişim sağlar
-    - Çalışma zamanında fonksiyon çözümlemeyi yönetir
+#### Dil Desteği (`Language.cs`)
 
-4. **Platform-Spesifik Optimizasyonlar**
-    - Windows 32-bit: Doğrudan assembly uygulaması için çıplak fonksiyonlar kullanır
-    - Diğer platformlar: Fonksiyon işaretçisi yönlendirmesi kullanır
-    - 64-bit sistemler için özel işleme
+XML kaynaklarını kullanarak çoklu dil desteği sistemini yönetir:
 
-5. **Uygulanan Fonksiyon Kategorileri**
+```csharp
+public class Language
+{
+    private Dictionary<string, string> Translation_Dictionary = new();
 
-    a. Bellek Yönetimi Fonksiyonları:
-    - `amx_Align16`, `amx_Align32`, `amx_Align64`
-    - `amx_Allot`, `amx_Release`
+    public List<string> GetAvailable_Languages()
+    {
+        var Current_Assembly = Assembly.GetExecutingAssembly();
+        Available_Languages = Current_Assembly.GetManifestResourceNames().Where(Resource => Resource.Contains("translations") && Resource.EndsWith(".xml"))
+            .Select(Resource => Path.GetFileNameWithoutExtension(Resource.Split('.').ElementAt(Resource.Split('.').Length - 2))).ToList();
 
-    b. Yürütme Fonksiyonları:
-    - `amx_Exec`, `amx_Callback`
-    - `amx_Init`, `amx_InitJIT`
-    - `amx_Cleanup`, `amx_Clone`
+        return Available_Languages;
+    }
+
+    public void Load_Translations(string Language_Name)
+    {
+        // Çeviri XML dosyasını yükler ve analiz eder
+        using var Resource_Stream = Current_Assembly.GetManifestResourceStream(Resource_Name);
+        var XML_Document = XDocument.Load(Resource_Stream);
+
+        Translation_Dictionary = XML_Document.Descendants("string").ToDictionary(Element => Element.Attribute("key")?.Value ?? string.Empty, Element => Element.Value);
+    }
+}
+```
+
+#### Dil Eşleştirme Servisi (`LanguageMapping.cs`)
+
+Dil isimleri ile bunlara karşılık gelen bayrak simge kodları arasındaki eşleştirmeyi yönetir:
+
+```csharp
+public class Language_Mapping : Language_Mapping_II
+{
+    private readonly Dictionary<string, string> LanguageTo_ImageCode;
+
+    public Language_Mapping()
+    {
+        LanguageTo_ImageCode = new Dictionary<string, string>
+        {
+            { "English", "en" },
+            { "Português", "pt" },
+            { "Español", "es" }
+            // Diğer dil eşleştirmeleri...
+        };
+    }
+
+    public string GetImage_Code(string Language_Name) =>
+        LanguageTo_ImageCode.TryGetValue(Path.GetFileNameWithoutExtension(Language_Name), out var Code) ? Code : Language_Name.ToLower();
+}
+```
+
+#### Sosyal Medya Servisi (`SocialNetworks.cs`)
+
+Sosyal medya bağlantılarının tarayıcıda açılmasını yönetir:
+
+```csharp
+public class Social_Networks
+{
+    public void OpenSocial_Network(string Network_Name)
+    {
+        string Network_Url = Network_Name switch
+        {
+            "Discord SPC" => "https://discord.gg/3fApZh66Tf",
+            "YouTube" => "https://youtube.com/@spc-samp",
+            // Diğer sosyal medya eşleştirmeleri...
+            _ => ""
+        };
+
+        if (!string.IsNullOrEmpty(Network_Url))
+        {
+            Process.Start(new ProcessStartInfo
+            {
+                FileName = Network_Url,
+                UseShellExecute = true
+            });
+        }
+    }
+}
+```
+
+#### Özelleştirilmiş Arayüz Bileşenleri
+
+##### İlerleme Çubuğu (`CustomProgressBar.cs`)
+
+Animasyonlar ve modern tarzla yüksek düzeyde özelleştirilmiş bir ilerleme çubuğu:
+
+```csharp
+public class Custom_ProgressBar : ProgressBar
+{
+    // Özelleştirme özellikleri
+    public Color GradientStart_Color { get; set; }
+    public Color GradientEnd_Color { get; set; }
+    public int Animation_Speed { get; set; }
+    public int Corner_Radius { get; set; }
+    public bool Show_Percentage { get; set; }
+
+    protected override void OnPaint(PaintEventArgs e)
+    {
+        // Özelleştirilmiş çizim, gradyanlar ve animasyonlar uygular
+        using (var Path = GetRounded_Rectangle(Progress_Rect, Corner_Radius_II))
+        using (var Gradient = new LinearGradientBrush(Progress_Rect, GradientStart_Color_II, GradientEnd_Color_II, LinearGradientMode.Horizontal))
+        {
+            // Yumuşak geçişler için renk karışımı uygular
+            ColorBlend Blend = new ColorBlend();
+            Blend.Positions = Positions;
+            Blend.Colors = Colors;
+            Gradient.InterpolationColors = Blend;
+
+            // Döndürme animasyonu uygular
+            Matrix Matrix = new Matrix();
+            Matrix.RotateAt(Animation_Step, new PointF(Progress_Rect.Left + Progress_Rect.Width / 2, Progress_Rect.Top + Progress_Rect.Height / 2));
+            Gradient.MultiplyTransform(Matrix);
+
+            e.Graphics.FillPath(Gradient, Path);
+        }
+    }
+}
+```
+
+##### Tema Renkleri (`Colors.cs`)
+
+Uygulamanın renk şemasını tanımlar:
+
+```csharp
+public static class Colors_Client
+{
+    public static readonly Color Background = Color.FromArgb(32, 34, 37);
+    public static readonly Color Secondary = Color.FromArgb(47, 49, 54);
+    public static readonly Color Accent = Color.FromArgb(0, 139, 139);
+    public static readonly Color Text = Color.White;
+    public static readonly Color Hover = Color.FromArgb(64, 68, 75);
+}
+```
+
+### Güvenlik Özellikleri
+
+#### Yönetici Yetkileri
+
+Yükleyici, SA:MP dosyalarını GTA:SA dizinine doğru şekilde yüklemek için yönetici yetkileri gerektirir. Bu, `adm.manifest` dosyası aracılığıyla yönetilir:
+
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<assembly xmlns="urn:schemas-microsoft-com:asm.v1" manifestVersion="1.0">
+  <trustInfo xmlns="urn:schemas-microsoft-com:asm.v3">
+    <security>
+      <requestedPrivileges xmlns="urn:schemas-microsoft-com:asm.v3">
+        <requestedExecutionLevel level="requireAdministrator" uiAccess="false" />
+      </requestedPrivileges>
+    </security>
+  </trustInfo>
+</assembly>
+```
+
+Yönetici yürütme özelliklerinin başlıca avantajları:
+- Yükleme için uygun dosya izinlerini garanti eder
+- Korunan sistem dizinlerini değiştirmeye izin verir
+- UAC (Kullanıcı Hesabı Denetimi) istemlerini otomatik olarak yönetir
+- Gerektiğinde kayıt defteri değişiklikleri için gereklidir
+
+Yönetici yürütmesini etkinleştirmek için, manifest dosyası proje dosyasına referans olarak eklenir:
+
+```xml
+<PropertyGroup>
+    <ApplicationManifest>adm.manifest</ApplicationManifest>
+</PropertyGroup>
+```
+
+#### Assembly İmzası
+
+Proje, gelişmiş güvenlik için güçlü adla imzalamayı destekler. Bu, proje dosyasında etkinleştirilebilir:
+
+```xml
+<PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+    <AssemblyOriginatorKeyFile>MyKey.snk</AssemblyOriginatorKeyFile>
+</PropertyGroup>
+```
+
+Güçlü ad anahtarı oluşturmak için:
+
+```bash
+sn -k MyKey.snk
+```
+
+Assembly imzasının faydaları:
+- Assembly'nin bütünlüğünü garanti eder
+- Assembly'nin değiştirilmesini engeller
+- Assembly'e benzersiz bir kimlik sağlar
+- GAC'a dağıtım yapmaya izin verir
+- ClickOnce dağıtımını destekler
+
+> [!NOT]
+> Güçlü ad anahtar dosyanızı (*.snk) güvende tutun ve asla kaynak kontrolüne göndermeyin.
+
+### Uluslararasılaştırma
+
+#### Çeviri Sistemi
+
+Çeviriler, aşağıdaki yapıya sahip XML dosyalarında saklanır:
+
+```xml
+<translations>
+  <string key="continue">Devam Et</string>
+  <string key="cancel">İptal Et</string>
+  <string key="finish">Tamamla</string>
+  <string key="close">Kapat</string>
+  <!-- Ek çeviriler -->
+</translations>
+```
+
+`Language` sınıfı bu çevirileri dinamik olarak yükler:
+
+```csharp
+public string Translate(string Key) => 
+    Translation_Dictionary.TryGetValue(Key, out var Value) ? Value : Key;
+```
+
+#### Bayrak Simgeleri
+
+Dil bayrakları, yerleşik kaynaklar olarak saklanır ve dinamik olarak yüklenir:
+
+```csharp
+private Bitmap GetFlag_Image(string Language, int Icon_Size)
+{
+    var Image_Code = LanguageMapping_Module.GetImage_Code(Language);
+    var Flag_Resource_Name = Get_Assembly.GetManifestResourceNames().FirstOrDefault(r => r.Contains("icons.languages") && r.EndsWith($"{Image_Code}.png"));
     
-    c. Sembol Yönetimi:
-    - `amx_FindPublic`, `amx_FindPubVar`
-    - `amx_FindNative`, `amx_FindTagId`
-    - `amx_GetPublic`, `amx_GetPubVar`
-    
-    d. String İşleme:
-    - `amx_GetString`, `amx_SetString`
-    - `amx_StrLen`
-    - UTF-8 destek fonksiyonları
-    
-    e. Hata Ayıklama ve Bilgi:
-    - `amx_SetDebugHook`
-    - `amx_Flags`, `amx_MemInfo`
-    - `amx_NameLength`
-
-6. **Koşullu Derleme**
-    - Önişlemci yönergeleri aracılığıyla farklı platformları yönetir
-    - 64-bit sistemler için özel işleme
-    - İsteğe bağlı JIT desteği
-    ```c
-    #if defined _I64_MAX || defined HAVE_I64
-        DEFINE_AMX_NAKED_FN(uint64_t* AMXAPI amx_Align64(uint64_t* v), 
-            PLUGIN_AMX_EXPORT_Align64)
-    #endif
-    ```
-
-7. **Hata Yönetimi Entegrasyonu**
-    - Hata raporlama için `amx_RaiseError` uygular
-    - Fonksiyon çağrıları arasında hata kodlarını korur
-    - AMX hata ayıklama sistemi ile entegre olur
-
-### AMX Native Fonksiyonları
-
-SDK, native fonksiyonlar oluşturmak ve yönetmek için kapsamlı destek sağlar:
-
-```c
-typedef cell (AMX_NATIVE_CALL *AMX_NATIVE)(struct tagAMX *amx, const cell *params);
-
-typedef struct tagAMX_NATIVE_INFO {
-    const char _FAR *name;
-    AMX_NATIVE func;
-} AMX_NATIVE_INFO;
+    if (Flag_Resource_Name != null)
+    {
+        using var Stream = Get_Assembly.GetManifestResourceStream(Flag_Resource_Name);
+        return new Bitmap(Image.FromStream(Stream), new Size(Icon_Size, Icon_Size));
+    }
+    return null;
+}
 ```
 
-Temel native fonksiyon işlemleri:
-- `amx_Register` üzerinden kayıt
-- Parametre erişimi ve doğrulama
-- Dönüş değeri işleme
-- Hata raporlama
+## Proje Yapılandırması (.csproj)
 
-## Teknik Detaylar
+`.csproj` dosyası, uygulamanın temel yapılandırmalarını ve özelliklerini tanımlayan önemli bir bileşendir. Aşağıda, kullanılan başlıca yapılandırmaların ayrıntılı yapısı verilmiştir:
 
-### Bellek Yönetimi
-
-SDK kapsamlı bellek yönetimi olanakları sağlar:
-
-1. **amx_memory.h**
-
-   Bellek tahsisi ve platforma özgü bellek işlemlerini yönetir:
-    ```c
-    #if defined HAVE_ALLOCA_H
-        #include <alloca.h>
-    #elif defined __BORLANDC__
-        #include <malloc.h>
-    #endif
-    ```
-
-2. **amx_alignment.h**
-
-    Bellek hizalama gereksinimlerini yönetir:
-    ```c
-    #if (defined SN_TARGET_PS2 || defined __GNUC__) && !defined AMX_NO_ALIGN
-        #define AMX_NO_ALIGN
-    #endif 
-    ```
-
-### Bellek İşlemleri
-
-SDK bellek manipülasyonu için çeşitli fonksiyonlar içerir:
-
-1. **Bellek Tahsisi**
-    ```c
-    int AMXAPI amx_Allot(AMX* amx, int cells, cell* amx_addr, cell** phys_addr);
-    ```
-    - AMX heap'inde bellek tahsis eder
-    - Hem AMX hem de fiziksel adresleri döndürür
-    - Hizalama gereksinimlerini yönetir
-
-2. **Bellek Erişimi**
-    ```c
-    int AMXAPI amx_GetAddr(AMX* amx, cell amx_addr, cell** phys_addr);
-    ```
-    - AMX adreslerini fiziksel adreslere dönüştürür
-    - Bellek erişimini doğrular
-    - Bellek sınırlarını yönetir
-
-3. **Bellek Bilgisi**
-    ```c
-    int AMXAPI amx_MemInfo(AMX* amx, long* codesize, long* datasize, long* stackheap);
-    ```
-    - Bellek düzeni bilgisini alır
-    - Segment boyutlarını raporlar
-    - Hata ayıklama ve optimizasyon için faydalıdır
-
-### Hata Yönetimi
-
-SDK, `amx_constants.h` içinde kapsamlı bir hata yönetim sistemi içerir:
-
-```c
-enum {
-    AMX_ERR_NONE,
-    AMX_ERR_EXIT,
-    AMX_ERR_ASSERT,
-    AMX_ERR_STACKERR,
-    AMX_ERR_BOUNDS,
-    AMX_ERR_MEMACCESS,
-    AMX_ERR_INVINSTR,
-    AMX_ERR_STACKLOW,
-    AMX_ERR_HEAPLOW,
-    AMX_ERR_CALLBACK,
-    AMX_ERR_NATIVE,
-    AMX_ERR_DIVIDE,
-    AMX_ERR_SLEEP,
-    AMX_ERR_INVSTATE,
-    
-    AMX_ERR_MEMORY = 16,
-    AMX_ERR_FORMAT,
-    AMX_ERR_VERSION,
-    AMX_ERR_NOTFOUND,
-    AMX_ERR_INDEX,
-    AMX_ERR_DEBUG,
-    AMX_ERR_INIT,
-    AMX_ERR_USERDATA,
-    AMX_ERR_INIT_JIT,
-    AMX_ERR_PARAMS,
-    AMX_ERR_DOMAIN,
-    AMX_ERR_GENERAL,
-};
+### Temel Yapılandırmalar
+```xml
+<PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net9.0-windows</TargetFramework>
+    <UseWindowsForms>true</UseWindowsForms>
+    <ApplicationManifest>adm.manifest</ApplicationManifest>
+    <ApplicationIcon>icons\social\ico-spc.ico</ApplicationIcon>
+</PropertyGroup>
 ```
 
-### String İşleme
+- `OutputType`: Çıktı türünü bir Windows yürütülebilir dosyası olarak tanımlar
+- `TargetFramework`: Kullanılan .NET Framework sürümünü belirtir (9.0)
+- `UseWindowsForms`: Grafiksel kullanıcı arayüzü için Windows Forms kullanımını etkinleştirir
+- `ApplicationManifest`: Uygulama için yönetici izinlerini tanımlayan manifest dosyasını belirler
+- `ApplicationIcon`: Uygulamanın ana simgesini tanımlar
 
-SDK, çeşitli makrolar ve fonksiyonlar aracılığıyla güçlü string işleme yetenekleri sağlar:
-
-```c
-#define amx_StrParam(amx,param,result) \
-    do { \
-        int result##_length_; \
-        amx_StrLen(amx_Address(amx,param),&result##_length_); \
-        if (result##_length_>0 && \
-            ((result)=(type)alloca((result##_length_+1)*sizeof(*(result))))!=NULL) \
-        amx_GetString((char*)(result),amx_Address(amx,param), \
-                            sizeof(*(result))>1,result##_length_+1); \
-        else (result)=NULL; \
-    } while(0)
+### Sürüm ve Şirket Bilgileri
+```xml
+<PropertyGroup>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+    <FileVersion>1.0.0.0</FileVersion>
+    <Company>SA-MP Programming Community</Company>
+    <Product>samp-client-v</Product>
+    <Copyright>Copyright © SPC</Copyright>
+    <Description>Mod yükleyicisi (San Andreas Multiplayer) sürüm 0.3.7 V.</Description>
+</PropertyGroup>
 ```
 
-### String İşlemleri
+- `AssemblyVersion`: Projenin assembly sürümü
+- `FileVersion`: Yürütülebilir dosyanın sürümü
+- `Company`: Şirket/organizasyon adı
+- `Product`: Ürün adı
+- `Copyright`: Telif hakkı bilgileri
+- `Description`: Proje açıklaması
 
-1. **String Uzunluğu**
-    ```c
-    int AMXAPI amx_StrLen(const cell* cstring, int* length);
-    ```
-    - String uzunluğunu hesaplar
-    - Paketlenmiş ve paketlenmemiş stringleri yönetir
-    - Karakter cinsinden uzunluğu döndürür
-
-2. **String Dönüşümü**
-    ```c
-    int AMXAPI amx_SetString(cell* dest, const char* source, int pack, int use_wchar, size_t size);
-    ```
-    - C stringlerini AMX stringlerine dönüştürür
-    - Paketlenmiş ve paketlenmemiş formatları destekler
-    - Unicode dönüşümünü yönetir
-
-## Unicode Desteği
-
-SDK, UTF-8 işleme fonksiyonları aracılığıyla kapsamlı Unicode desteği içerir:
-
-```c
-int AMXAPI amx_UTF8Check(const char* string, int* length);
-int AMXAPI amx_UTF8Get(const char* string, const char** endptr, cell* value);
-int AMXAPI amx_UTF8Len(const cell* cstr, int* length);
-int AMXAPI amx_UTF8Put(char* string, char** endptr, int maxchars, cell value);
+### Çalışma Zamanı Yapılandırmaları
+```xml
+<PropertyGroup>
+    <RollForward>LatestMajor</RollForward>
+    <RuntimeFrameworkVersion>9.0.0</RuntimeFrameworkVersion>
+</PropertyGroup>
 ```
 
-### Unicode İşlemleri
+- `RollForward`: Çalışma zamanının güncellenme davranışını yapılandırır
+- `RuntimeFrameworkVersion`: .NET çalışma zamanı sürümünü belirtir
 
-1. **UTF-8 Doğrulama**
-    ```c
-    int AMXAPI amx_UTF8Check(const char* string, int* length);
-    ```
-    - UTF-8 kodlu stringleri doğrular
-    - Karakter cinsinden string uzunluğunu raporlar
-    - Kodlama hatalarını tespit eder
-
-2. **Karakter Dönüşümü**
-    ```c
-    int AMXAPI amx_UTF8Get(const char* string, const char** endptr, cell* value);
-    ```
-    - Unicode karakterleri çıkarır
-    - Çok baytlı dizileri yönetir
-    - Ayrıştırma hatalarını raporlar
-
-## Çapraz Platform Uyumluluğu
-
-SDK, şunlar aracılığıyla çapraz platform uyumluluğunu sağlar:
-
-1. **Endianness Yönetimi**
-    ```c
-    #ifndef BYTE_ORDER
-        #if defined(UCLINUX)
-            #define BYTE_ORDER BIG_ENDIAN
-        #else
-            #define BYTE_ORDER LITTLE_ENDIAN
-        #endif
-    #endif
-    ```
-
-2. **Yol Yönetimi**
-    ```c
-    #if defined(__MSDOS__) || defined(__WIN32__) || defined(_Windows)
-        #define DIRSEP_CHAR '\\'
-    #elif defined(macintosh)
-        #define DIRSEP_CHAR ':'
-    #else
-        #define DIRSEP_CHAR '/'
-    #endif
-    ```
-
-## Sistem Gereksinimleri
-
-SDK birden çok platformu ve derleyiciyi destekler:
-- Windows (MSVC, MinGW)
-- Linux (GCC)
-- FreeBSD
-- OpenBSD
-- macOS
-
-### Derleyici Desteği
-
-1. **Microsoft Visual C++**
-   - Pragma yönetimi
-   - Uyarı bastırma
-   - Çağrı kuralları
-
-2. **GCC**
-   - Tanı kontrolleri
-   - Özellik tanımlamaları
-   - Platform-spesifik optimizasyonlar
-
-3. **Clang**
-   - Uyarı yapılandırmaları
-   - Çapraz platform uyumluluğu
-   - Modern C++ özellikleri
-
-## En İyi Uygulamalar
-
-SA-MP SDK'yı kullanırken aşağıdaki en iyi uygulamaları göz önünde bulundurun:
-
-1. **Bellek Yönetimi**
-   - Her zaman tahsis edilen kaynakları temizleyin
-   - Uygun bellek hizalaması kullanın
-   - Bellek hatalarını düzgün şekilde yönetin
-   - Heap kullanımını izleyin
-   - Uygun bellek sınırları kontrolü uygulayın
-   - Sık tahsisler için bellek havuzları kullanın
-   - Kaynakları tahsis sırasının tersine temizleyin
-
-2. **Hata Yönetimi**
-   - AMX fonksiyonlarından dönüş değerlerini kontrol edin
-   - Native fonksiyonlarda uygun hata yönetimi uygulayın
-   - Sağlanan hata sabitlerini kullanın
-   - Hataları uygun şekilde günlüğe kaydedin
-   - Hata kurtarma mekanizmaları uygulayın
-   - Anlamlı hata mesajları sağlayın
-   - Sisteme özgü hataları yönetin
-
-3. **Çapraz Platform Geliştirme**
-   - Platform-bağımsız tipler kullanın
-   - Platform-spesifik kod için sağlanan makroları kullanın
-   - Birden çok platformda test edin
-   - Endianness farklılıklarını yönetin
-   - Uygun yol ayırıcıları kullanın
-   - Dosya sistemi farklılıklarını dikkate alın
-   - Platform-spesifik optimizasyonlar uygulayın
-
-4. **Performans Düşünceleri**
-   - Uygun hücre boyutları kullanın
-   - Verimli string işleme uygulayın
-   - Native fonksiyon çağrılarını optimize edin
-   - Bellek tahsislerini minimize edin
-   - Uygun veri yapıları kullanın
-   - Uygun yerlerde önbelleğe alma uygulayın
-   - Kritik kod yollarını profilleyin
-
-`amxplugin.c` işlevselliğiyle çalışırken:
-
-1. **Platform-Spesifik Geliştirme**
-   - Fonksiyon uygulamalarında platform farklılıklarını dikkate alın
-   - Hem 32-bit hem de 64-bit sistemlerde test edin
-   - Platform-spesifik hizalama gereksinimlerini yönetin
-   - Kullanmadan önce fonksiyon tablosu işaretçisini doğrulayın
-   - Her platform için uygun hata kontrolü uygulayın
-   - Farklı uygulamaların performans etkilerini dikkate alın
-
-2. **Fonksiyon Tablosu Yönetimi**
-   - Kullanmadan önce fonksiyon tablosunu başlatın
-   - Fonksiyon kullanılabilirliğini doğrulayın
-   - Eksik fonksiyonları düzgün şekilde yönetin
-   - Uygun temizleme prosedürleri uygulayın
-   - Sık kullanılan fonksiyon işaretçilerini önbelleğe alın
-   - Fonksiyon tablosu bütünlüğünü doğrulayın
-
-3. **Hata Yönetimi**
-   - Platform-spesifik kod için uygun hata kontrolü uygulayın
-   - Hizalama hatalarını uygun şekilde yönetin
-   - Fonksiyon tablosu girişlerini doğrulayın
-   - Anlamlı hata mesajları sağlayın
-   - Kurtarma mekanizmaları uygulayın
-   - Platform-spesifik hataları günlüğe kaydedin
-
-## Dahili Yapılar
-
-### AMX Header Yapısı
-
-```c
-typedef struct tagAMX_HEADER {
-    int32_t size;          // "Dosya" boyutu
-    uint16_t magic;        // İmza
-    char    file_version;  // Dosya format versiyonu
-    char    amx_version;   // Gerekli AMX versiyonu
-    int16_t flags;         // Bayraklar
-    int16_t defsize;      // Tanımlama kaydı boyutu
-    int32_t cod;          // COD'un başlangıç değeri - kod bloğu
-    int32_t dat;          // DAT'ın başlangıç değeri - veri bloğu
-    int32_t hea;          // HEA'nın başlangıç değeri - heap başlangıcı
-    int32_t stp;          // STP'nin başlangıç değeri - stack üstü
-    int32_t cip;          // CIP'in başlangıç değeri - kod talimat işaretçisi
-    int32_t publics;      // Public fonksiyonlara offset
-    int32_t natives;      // Native fonksiyon tablosuna offset
-    int32_t libraries;    // Kütüphanelere offset
-    int32_t pubvars;      // Public değişkenlere offset
-    int32_t tags;         // Etiketlere offset
-    int32_t nametable;    // İsim tablosuna offset
-} AMX_HEADER;
+### Yerleşik Kaynaklar
+```xml
+<ItemGroup>
+    <EmbeddedResource Include="archives\**\*" />
+    <EmbeddedResource Include="icons\**\*" />
+    <EmbeddedResource Include="translations\**\*" />
+</ItemGroup>
 ```
 
-Bu yapı, AMX dosya formatını ve sanal makinenin scriptleri nasıl yüklediğini ve çalıştırdığını anlamak için çok önemlidir.
+Bu bölüm, son yürütülebilir dosyada yerleşik olacak kaynakları tanımlar:
+- `archives`: Yükleyici için gerekli dosyalar
+- `icons`: İkonlar ve görsel kaynaklar
+- `translations`: Farklı dillerdeki çeviri dosyaları
 
-## Gelişmiş Özellikler
+### Önemli Notlar
 
-### JIT Derleme Desteği
+1. Proje, grafiksel kullanıcı arayüzü oluşturmak için uygun olan bir Windows Forms uygulaması olarak yapılandırılmıştır.
+2. Uygulama, .NET 9.0'a yönelik olup, framework'ün son özellikleriyle uyumludur.
+3. İkonlar, dosyalar ve çeviriler gibi kaynaklar doğrudan yürütülebilir dosyaya yerleştirilmiş ve dağıtımı kolaylaştırılmıştır.
+4. Sürüm ve şirket bilgileri, yazılımın kimliğini belirlemek için önemlidir.
 
-SDK, Anında Derleme için destek içerir:
-```c
-int AMXAPI amx_InitJIT(AMX* amx, void* reloc_table, void* native_code);
-```
+## Screenshots
 
-### Hata Ayıklama Arayüzü
+![Screenshot 1 Client - SPC](/screenshots/screenshot_1.png)
+![Screenshot 2 Client - SPC](/screenshots/screenshot_2.png)
+![Screenshot 3 Client - SPC](/screenshots/screenshot_3.png)
+![Screenshot 4 Client - SPC](/screenshots/screenshot_4.png)
+![Screenshot 5 Client - SPC](/screenshots/screenshot_5.png)
+![Screenshot 6 Client - SPC](/screenshots/screenshot_6.png)
+![Screenshot 7 Client - SPC](/screenshots/screenshot_7.png)
+![Screenshot 8 Client - SPC](/screenshots/screenshot_8.png)
+![Screenshot 9 Client - SPC](/screenshots/screenshot_9.png)
+![Screenshot 10 Client - SPC](/screenshots/screenshot_10.png)
 
-Hata ayıklama desteği şunlar aracılığıyla sağlanır:
-```c
-typedef int (AMXAPI *AMX_DEBUG)(struct tagAMX *amx);
-int AMXAPI amx_SetDebugHook(AMX* amx, AMX_DEBUG debug);
-```
+Hatalar:
 
-### Public Fonksiyon Arayüzü
-
-SDK, public fonksiyonlarla çalışmak için kapsamlı destek sağlar:
-
-1. **Public Fonksiyonları Bulma**
-    ```c
-    int AMXAPI amx_FindPublic(AMX* amx, const char* funcname, int* index);
-    ```
-    - İsme göre public fonksiyonları bulur
-    - Fonksiyon indeksini döndürür
-    - Fonksiyon varlığını doğrular
-
-2. **Public Fonksiyonları Çalıştırma**
-    ```c
-    int AMXAPI amx_Exec(AMX* amx, cell* retval, int index);
-    ```
-    - Public fonksiyonları çalıştırır
-    - Dönüş değerlerini yönetir
-    - Çalıştırma bağlamını yönetir
-
-## Versiyon Bilgisi
-
-SDK, uyumluluk kontrolü için versiyon sabitleri içerir:
-```c
-#define CUR_FILE_VERSION  9
-#define MIN_FILE_VERSION  6
-#define MIN_AMX_VERSION   10
-#define MAX_FILE_VER_JIT  8
-#define MIN_AMX_VER_JIT   8
-```
-
-### Versiyon Uyumluluğu
-
-SDK, uyumluluğu şunlar aracılığıyla sürdürür:
-1. Dosya sürümü kontrolü  
-2. AMX sürüm doğrulaması  
-3. JIT uyumluluk doğrulaması  
-4. Özellik algılama  
-5. Platforma özgü sürüm yönetimi
+![Error 1 Client - SPC](/screenshots/error_1.png)
+![Error 2 Client - SPC](/screenshots/error_2.png)
 
 ## Lisans
 
 Copyright © **SA-MP Programming Community**
 
-Bu yazılım MIT Lisansı ("Lisans") şartları altında lisanslanmıştır; bu yazılımı Lisans şartlarına uygun olarak kullanabilirsiniz. Lisansın bir kopyasını şu adresten edinebilirsiniz: [MIT License](https://opensource.org/licenses/MIT)
+Bu yazılım Apache Lisansı, Sürüm 2.0 ("Lisans") şartları altında lisanslanmıştır; bu yazılımı Lisans ile uyumlu olmayan bir şekilde kullanamazsınız. Lisansın bir kopyasını şu adresten edinebilirsiniz: [Apache License 2.0](http://www.apache.org/licenses/LICENSE-2.0)
 
 ### Kullanım Şartları ve Koşulları
 
 #### 1. Verilen İzinler
 
-Bu lisans, bu yazılımın ve ilgili dokümantasyon dosyalarının bir kopyasını edinen herhangi bir kişiye ücretsiz olarak aşağıdaki hakları vermektedir:
-
-* Yazılımın kopyalarını kullanma, kopyalama, değiştirme, birleştirme, yayınlama, dağıtma, alt lisans verme ve/veya satma hakkı
-* Yazılımın sağlandığı kişilerin de aynısını yapmasına izin verme hakkı (aşağıdaki koşullara tabi olmak kaydıyla)
+Bu lisans, bu yazılımın ve ilgili belgelendirme dosyalarının bir kopyasını edinen herhangi bir kişiye ücretsiz olarak aşağıdaki hakları vermektedir:
+* Yazılımı herhangi bir ortamda veya formatta, ticari veya ticari olmayan herhangi bir amaçla kullanmak, kopyalamak, değiştirmek ve dağıtmak
+* Yazılımın kopyalarını birleştirmek, yayınlamak, dağıtmak, alt lisansını vermek ve/veya satmak
+* Yazılımın sağlandığı kişilerin aynısını yapmasına izin vermek
 
 #### 2. Zorunlu Koşullar
 
-Yazılımın tüm kopyaları veya önemli parçaları şunları içermelidir:
+Yazılımın veya türetilmiş çalışmaların tüm dağıtımları şunları içermelidir:
+* Bu lisansın tam bir kopyası
+* Orijinal kaynak kodunda yapılan değişikliklerin açıkça belirtilmesi
+* Tüm telif hakkı, patent, ticari marka bildirimleri ve atıfların korunması
+* Uygulanan değişikliklerin yeterli dokümantasyonu
+* Tüm kopyalarda lisans ve garanti bildiriminin korunması
 
-* Yukarıdaki telif hakkı bildirimi
-* Bu izin bildirimi
-* Aşağıdaki sorumluluk reddi
+#### 3. Kısıtlamalar ve Sınırlamalar
 
-#### 3. Telif Hakları
+* Bu lisans, **SA-MP Programming Community**'nin ticari markalarının, logolarının veya ticari isimlerinin kullanımı için izin vermez
+* Kaynak koduna yapılan katkılar bu lisansın aynı şartları altında lisanslanmalıdır
+* Katkıda bulunanların isimlerinin bu yazılımdan türetilen ürünleri desteklemek veya tanıtmak için kullanılması özel önceden izin gerektirir
 
-Yazılım ve ilgili tüm dokümantasyon telif hakkı yasaları ile korunmaktadır. **SA-MP Programming Community** yazılımın orijinal telif haklarını elinde tutmaktadır.
+#### 4. Fikri Mülkiyet
 
-#### 4. Garanti Reddi ve Sorumluluk Sınırlaması
+Yazılım ve ilgili tüm belgeler telif hakkı yasaları ve uluslararası anlaşmalar tarafından korunmaktadır. **SA-MP Programming Community**, bu lisans tarafından açıkça verilmeyen tüm hakları, unvanları ve çıkarları elinde tutar.
 
-YAZILIM "OLDUĞU GİBİ" SAĞLANMAKTADIR, HİÇBİR TÜRDE GARANTİ VERİLMEMEKTEDİR, AÇIK VEYA ZIMNİ, TİCARİ ELVERİŞLİLİK, BELİRLİ BİR AMACA UYGUNLUK VE İHLAL ETMEME GARANTİLERİ DAHİL ANCAK BUNLARLA SINIRLI OLMAMAK ÜZERE.
+#### 5. Garanti Reddi ve Sorumluluk Sınırlaması
 
-HİÇBİR KOŞULDA YAZARLAR VEYA TELİF HAKKI SAHİPLERİ HERHANGİ BİR İDDİA, HASAR VEYA DİĞER YÜKÜMLÜLÜKLERDEN SORUMLU TUTULAMAZ, İSTER SÖZLEŞME KAPSAMINDA, HAKSIZ FİİL VEYA BAŞKA BİR ŞEKİLDE OLSUN, YAZILIMDAN VEYA YAZILIMIN KULLANIMINDAN VEYA DİĞER İŞLEMLERDEN KAYNAKLANAN DURUMLAR İÇİN.
+YAZILIM "OLDUĞU GİBİ" SAĞLANIR, TİCARİ ELVERİŞLİLİK, BELİRLİ BİR AMACA UYGUNLUK VE İHLAL ETMEME GARANTİLERİ DAHİL ANCAK BUNLARLA SINIRLI OLMAMAK ÜZERE, AÇIK VEYA ZIMNİ HİÇBİR GARANTİ VERİLMEMEKTEDİR.
+
+HİÇBİR DURUMDA YAZARLAR VEYA TELİF HAKKI SAHİPLERİ, YAZILIMIN KULLANIMI VEYA YAZILIM İLE İLGİLİ DİĞER İŞLEMLERDEN KAYNAKLANAN VEYA BUNLARLA BAĞLANTILI HERHANGİ BİR İDDİA, HASAR VEYA DİĞER YÜKÜMLÜLÜKLERDEN, SÖZLEŞME, HAKSIZ FİİL VEYA BAŞKA BİR ŞEKİLDE SORUMLU TUTULAMAZ.
 
 ---
 
-MIT Lisansı hakkında detaylı bilgi için: https://opensource.org/licenses/MIT
+Apache Lisansı 2.0 hakkında detaylı bilgi için: http://www.apache.org/licenses/LICENSE-2.0

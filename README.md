@@ -1,16 +1,11 @@
-# samp-sdk
+# clients-samp
 
-[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
-[![Language](https://img.shields.io/badge/Language-C-00599C.svg)](https://en.wikipedia.org/wiki/C_(programming_language))
-[![SDK](https://img.shields.io/badge/SA--MP-SDK-orange.svg)](https://github.com/spc-samp/samp-sdk)
-[![Platform Windows](https://img.shields.io/badge/Windows-0078D6?style=flat&logo=windows&logoColor=white)](https://github.com/spc-samp/samp-sdk)
-[![Platform Linux](https://img.shields.io/badge/Linux-FCC624?style=flat&logo=linux&logoColor=black)](https://github.com/spc-samp/samp-sdk)
-[![Platform FreeBSD](https://img.shields.io/badge/FreeBSD-AB2B28?style=flat&logo=freebsd&logoColor=white)](https://github.com/spc-samp/samp-sdk)
-[![AMX](https://img.shields.io/badge/AMX-Powered-yellow.svg)](https://github.com/spc-samp/samp-sdk)
-[![Native Support](https://img.shields.io/badge/Natives-Supported-success.svg)](https://github.com/spc-samp/samp-sdk)
-[![Memory Safe](https://img.shields.io/badge/Memory-Safe-red.svg)](https://github.com/spc-samp/samp-sdk)
+[![Licença](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
+[![C#](https://img.shields.io/badge/C%23-11.0-blue.svg)](https://docs.microsoft.com/en-us/dotnet/csharp/)
+[![.NET](https://img.shields.io/badge/.NET-9.0-purple.svg)](https://dotnet.microsoft.com/)
+[![Windows Forms](https://img.shields.io/badge/Windows%20Forms-net9.0--windows-blue)](https://docs.microsoft.com/en-us/dotnet/desktop/winforms/)
 
-O SA-MP (San Andreas Multiplayer) Software Development Kit (SDK) é uma coleção abrangente de arquivos C, headers e itens que permitem aos desenvolvedores criar plugins para o servidor SA-MP. Este SDK fornece uma base para estender a funcionalidade do servidor SA-MP através de funções nativas, permitindo que os desenvolvedores implementem recursos além do que está disponível no script Pawn.
+Este repositório contém o código-fonte de vários instaladores de Client SA:MP (San Andreas Multiplayer) desenvolvidos pela SPC (SA-MP Programming Community). Esses instaladores foram criados para fornecer alternativas seguras e confiáveis aos instaladores originais do mod, que não são mais considerados confiáveis.
 
 ## Idiomas
 
@@ -26,644 +21,653 @@ O SA-MP (San Andreas Multiplayer) Software Development Kit (SDK) é uma coleçã
 
 ## Índice
 
-- [samp-sdk](#samp-sdk)
+- [clients-samp](#clients-samp)
   - [Idiomas](#idiomas)
   - [Índice](#índice)
-  - [Componentes Principais](#componentes-principais)
-    - [Sistema AMX](#sistema-amx)
-      - [Headers AMX Principais](#headers-amx-principais)
-    - [Suporte a Plataformas](#suporte-a-plataformas)
-    - [Sistema de Plugin](#sistema-de-plugin)
-      - [plugincommon.h](#plugincommonh)
-      - [amxplugin.c](#amxpluginc)
-    - [Funções Nativas AMX](#funções-nativas-amx)
-  - [Detalhes Técnicos](#detalhes-técnicos)
-    - [Gerenciamento de Memória](#gerenciamento-de-memória)
-    - [Operações de Memória](#operações-de-memória)
-    - [Tratamento de Erros](#tratamento-de-erros)
-    - [Manipulação de Strings](#manipulação-de-strings)
-    - [Operações com Strings](#operações-com-strings)
-  - [Suporte a Unicode](#suporte-a-unicode)
-    - [Operações Unicode](#operações-unicode)
-  - [Compatibilidade Multiplataforma](#compatibilidade-multiplataforma)
-  - [Requisitos do Sistema](#requisitos-do-sistema)
-    - [Suporte a Compiladores](#suporte-a-compiladores)
-  - [Melhores Práticas](#melhores-práticas)
-  - [Estruturas Internas](#estruturas-internas)
-    - [Estrutura do Header AMX](#estrutura-do-header-amx)
-  - [Recursos Avançados](#recursos-avançados)
-    - [Suporte à Compilação JIT](#suporte-à-compilação-jit)
-    - [Interface de Depuração](#interface-de-depuração)
-    - [Interface de Função Pública](#interface-de-função-pública)
-  - [Informações de Versão](#informações-de-versão)
-    - [Compatibilidade de Versão](#compatibilidade-de-versão)
+  - [Visão Geral](#visão-geral)
+  - [Versões Disponíveis](#versões-disponíveis)
+  - [Estrutura do Projeto](#estrutura-do-projeto)
+  - [Funcionalidades](#funcionalidades)
+  - [Instalação](#instalação)
+  - [Compilação](#compilação)
+    - [Pré-requisitos](#pré-requisitos)
+    - [Como compilar](#como-compilar)
+  - [Estrutura do Código e Componentes](#estrutura-do-código-e-componentes)
+    - [Componentes Principais](#componentes-principais)
+      - [Client Instalador (`InstallerClient.cs`)](#client-instalador-installerclientcs)
+    - [Serviços](#serviços)
+      - [Serviço de Extração de Arquivos (`FileExtraction.cs`)](#serviço-de-extração-de-arquivos-fileextractioncs)
+      - [Suporte a Idiomas (`Language.cs`)](#suporte-a-idiomas-languagecs)
+      - [Serviço de Mapeamento de Idiomas (`LanguageMapping.cs`)](#serviço-de-mapeamento-de-idiomas-languagemappingcs)
+      - [Serviço de Redes Sociais (`SocialNetworks.cs`)](#serviço-de-redes-sociais-socialnetworkscs)
+      - [Componentes de Interface Personalizados](#componentes-de-interface-personalizados)
+        - [Barra de Progresso (`CustomProgressBar.cs`)](#barra-de-progresso-customprogressbarcs)
+        - [Cores do Tema (`Colors.cs`)](#cores-do-tema-colorscs)
+    - [Recursos de Segurança](#recursos-de-segurança)
+      - [Privilégios Administrativos](#privilégios-administrativos)
+      - [Assinatura de Assembly](#assinatura-de-assembly)
+    - [Internacionalização](#internacionalização)
+      - [Sistema de Tradução](#sistema-de-tradução)
+      - [Ícones de Bandeiras](#ícones-de-bandeiras)
+  - [Configuração do Projeto (.csproj)](#configuração-do-projeto-csproj)
+    - [Configurações Básicas](#configurações-básicas)
+    - [Informações da Versão e Empresa](#informações-da-versão-e-empresa)
+    - [Configurações de Runtime](#configurações-de-runtime)
+    - [Recursos Incorporados](#recursos-incorporados)
+    - [Observações Importantes](#observações-importantes)
+  - [Screenshots](#screenshots)
   - [Licença](#licença)
     - [Termos e Condições de Uso](#termos-e-condições-de-uso)
       - [1. Permissões Concedidas](#1-permissões-concedidas)
       - [2. Condições Obrigatórias](#2-condições-obrigatórias)
-      - [3. Direitos Autorais](#3-direitos-autorais)
-      - [4. Isenção de Garantias e Limitação de Responsabilidade](#4-isenção-de-garantias-e-limitação-de-responsabilidade)
+      - [3. Restrições e Limitações](#3-restrições-e-limitações)
+      - [4. Propriedade Intelectual](#4-propriedade-intelectual)
+      - [5. Isenção de Garantias e Limitação de Responsabilidade](#5-isenção-de-garantias-e-limitação-de-responsabilidade)
 
-## Componentes Principais
+## Visão Geral
 
-### Sistema AMX
+O projeto tem como objetivo fornecer instaladores seguros e confiáveis para diferentes versões do mod SA:MP. Cada instalador é desenvolvido em C# usando Windows Forms, oferecendo uma interface moderna e amigável com suporte a múltiplos idiomas e uma janela com as redes sociais.
 
-O AMX (Abstract Machine eXecutor) é a máquina virtual que executa scripts Pawn no SA-MP. O SDK fornece suporte extensivo para interação com AMX através de vários arquivos C e headers:
+## Versões Disponíveis
 
-#### Headers AMX Principais
+O repositório inclui as seguintes versões de Client:
 
-1. **amx.h**
+- `samp-client-dl-r1`: Instalador do Client DL R1
+- `samp-client-r1`: Instalador do Client R1
+- `samp-client-r1-voip`: Client R1 com integração SAMPVOICE
+- `samp-client-r2`: Instalador do Client R2
+- `samp-client-r3`: Instalador do Client R3
+- `samp-client-r3-voip`: Client R3 com integração SAMPVOICE
+- `samp-client-r4`: Instalador do Client R4
+- `samp-client-r5`: Instalador do Client R5
 
-    O header principal que consolida todas as funcionalidades relacionadas ao AMX. Inclui:
-    - Funções principais do AMX para execução de script
-    - Gerenciamento de memória
-    - Registro de funções nativas
-    - Manipulação de strings
-    - Suporte a UTF-8
+## Estrutura do Projeto
 
-    Funções principais incluem:
-    ```c
-    int AMXAPI amx_Init(AMX* amx, void* program);
-    int AMXAPI amx_Exec(AMX* amx, cell* retval, int index);
-    int AMXAPI amx_Register(AMX* amx, const AMX_NATIVE_INFO* nativelist, int number);
-    ```
+Cada versão do Client segue uma estrutura de projeto consistente:
 
-2. **amx_cell.h**
-
-    Define os tipos de dados fundamentais usados no sistema AMX:
-    ```c
-    #if PAWN_CELL_SIZE==32
-        typedef uint32_t  ucell;
-        typedef int32_t   cell;
-    #elif PAWN_CELL_SIZE==64
-        typedef uint64_t  ucell;
-        typedef int64_t   cell;
-    #endif
-    ```
-
-3. **amx_structures.h**
-
-    Contém estruturas essenciais para operação do AMX:
-
-    ```c
-    typedef struct tagAMX {
-        unsigned char _FAR *base;    // Endereço base
-        unsigned char _FAR *data;    // Segmento de dados
-        AMX_CALLBACK callback;       // Função de callback
-        AMX_DEBUG debug;            // Callback de debug
-        cell cip;                   // Ponteiro de instrução de código
-        cell frm;                   // Base do frame da pilha
-        cell hea;                   // Base do heap
-        cell stk;                   // Ponteiro da pilha
-        // ... campos adicionais
-    } AMX;
-    ```
-
-### Suporte a Plataformas
-
-O SDK inclui tratamento robusto específico para plataformas através de vários headers:
-
-1. **amx_platform.h**
-
-    Fornece detecção e configuração de plataforma:
-    ```c
-    #if (defined __linux || defined __linux__) && !defined __LINUX__
-        #define __LINUX__
-    #endif
-    #if defined FREEBSD && !defined __FreeBSD__
-        #define __FreeBSD__
-    #endif
-    ```
-
-2. **osdefs.h**
-
-    Lida com definições específicas do sistema operacional:
-    ```c
-    #if defined(__WATCOMC__)
-        #if defined(__WINDOWS__) || defined(__NT__)
-            #define _Windows 1
-        #endif
-        #ifdef __386__
-            #define __32BIT__ 1
-        #endif
-    #endif
-    ```
-
-### Sistema de Plugin
-
-#### plugincommon.h
-
-Define a interface principal do plugin e estruturas de suporte:
-
-```c
-#define SAMP_PLUGIN_VERSION 0x0200
-
-enum SUPPORTS_FLAGS {
-    SUPPORTS_VERSION = SAMP_PLUGIN_VERSION,
-    SUPPORTS_VERSION_MASK = 0xffff,
-    SUPPORTS_AMX_NATIVES = 0x10000
-};
-
-enum PLUGIN_DATA_TYPE {
-    PLUGIN_DATA_LOGPRINTF = 0x00,
-    PLUGIN_DATA_AMX_EXPORTS = 0x10,
-    PLUGIN_DATA_CALLPUBLIC_FS = 0x11,
-    PLUGIN_DATA_CALLPUBLIC_GM = 0x12
-};
+```
+clients-samp/
+└── samp-client-v/
+    ├── archives/
+    │   └── samp-client-{v}.zip
+    ├── icons/
+    │   ├── languages/
+    │   │   └── [ícones de bandeiras dos idiomas]
+    │   └── social/
+    │       └── [ícones de redes sociais]
+    ├── src/
+    │   ├── Core/
+    │   │   └── InstallerClient.cs
+    │   ├── Models/
+    │   │   └── Colors.cs
+    │   ├── Services/
+    │   │   ├── FileExtraction.cs
+    │   │   ├── Language.cs
+    │   │   ├── LanguageMapping.cs
+    │   │   └── SocialNetworks.cs
+    │   └── UI/
+    │       └── CustomProgressBar.cs
+    ├── translations/
+    │   └── [30 arquivos XML de idiomas]
+    ├── adm.manifest
+    ├── compile.bat
+    ├── Main.cs
+    └── samp-client-{v}.csproj
 ```
 
-#### amxplugin.c
+## Funcionalidades
 
-O arquivo `amxplugin.c` é um componente crucial do SA-MP SDK que fornece implementações específicas de plataforma para funções AMX. Implementa duas abordagens diferentes baseadas na plataforma e compilador:
+- Suporte a múltiplos idiomas (30 idiomas)
+- Interface de usuário moderna e intuitiva
+- Extração e instalação segura de arquivos
+- Validação do diretório do jogo
+- Acompanhamento do progresso em tempo real
+- Janela com as redes sociais
+- Assinatura de assembly opcional para segurança aprimorada
+- Barra de progresso personalizada com animações
+- Esquema de cores e estilo consistentes
 
-1. **Implementação Windows MSVC (32-bit)**
-    - Usa funções naked com assembly para acesso direto à tabela de funções
-    - Fornece desempenho otimizado através de jumps diretos para funções AMX
-    - Exemplo de estrutura:
-    ```c
-    #define NUDE __declspec(naked)
-    #define AMX_JUMP_HELPER(index) { 
-        _asm { mov eax, pAMXFunctions } 
-        _asm { jmp dword ptr[eax + index * 4] } 
-    }
-    ```
+## Instalação
 
-2. **Implementação Multiplataforma**
-    - Usa ponteiros de função para independência de plataforma
-    - Implementa um sistema baseado em macros para definições de funções
-    - Exemplo de estrutura:
-    ```c
-    #define DEFINE_AMX_FN_TYPE(name, ret_type, ...) \
-        typedef ret_type AMXAPI (*name##_t)(__VA_ARGS__); \
-        ret_type AMXAPI name(__VA_ARGS__) { \
-            name##_t fn = ((name##_t*)pAMXFunctions)[PLUGIN_AMX_EXPORT_##name]; \
-            return fn(__VA_ARGS__); \
+1. Acesse a página de [releases](https://github.com/spc-samp/clients-samp/releases) do projeto
+2. Baixe a versão mais recente do Client já compilada
+3. Execute e prossiga para os procedimentos
+
+## Compilação
+
+### Pré-requisitos
+
+- SDK .NET 9.0 ou superior
+- Sistema operacional Windows
+- Visual Studio 2022 ou superior (opcional)
+- Visual Studio Code (opcional)
+
+### Como compilar
+
+A maneira mais fácil de compilar qualquer versão do Client é usando o arquivo batch fornecido:
+
+1. Abra um terminal no diretório da versão do Client
+2. Execute o comando de compilação:
+```bash
+.\compile
+```
+
+Você também pode compilar diretamente usando o CLI do .NET:
+```bash
+dotnet publish -c Release -r win-x64 --self-contained true -p:PublishSingleFile=true -p:EnableCompressionInSingleFile=true -o ./published
+```
+
+> [!NOTE]
+> Este comando irá gerar um arquivo executável único e otimizado para Windows 64-bit, contendo todas as dependências necessárias. O executável será criado dentro da pasta `published` no diretório do projeto.
+
+## Estrutura do Código e Componentes
+
+### Componentes Principais
+
+#### Client Instalador (`InstallerClient.cs`)
+
+O formulário principal que gerencia todo o processo de instalação. Implementa uma interface de assistente passo a passo:
+
+```csharp
+public partial class Installer_Client : Form
+{
+    // Módulos principais
+    private File_Extraction Extraction_Module;
+    private Language Language_Module;
+    private Language_Mapping LanguageMapping_Module;
+    private Social_Networks SocialNetworks_Module;
+
+    // Elementos da interface
+    private Label Description_Label, Status_Label;
+    private Custom_ProgressBar Progress_Bar;
+    private ListBox ExtractedFiles_List;
+}
+```
+
+Principais recursos e responsabilidades:
+
+1. **Seleção de Idioma**
+   ```csharp
+   private void CreateLanguage_Buttons()
+   {
+       // Cria uma grade de botões de idioma com bandeiras
+       Panel Button_Panel = new Panel
+       {
+           AutoScroll = true,
+           Dock = DockStyle.None,
+           Location = new Point(0, 140),
+           Width = this.ClientSize.Width,
+           Height = this.ClientSize.Height - 140
+       };
+       
+       // Criação dinâmica de botões com bandeiras
+       for (int i = 0; i < Available_Languages.Count; i++)
+       {
+           var Language = Available_Languages[i];
+           var Language_Button = CreateLanguage_Button(Language, Icon_Size, Button_Width, Button_Height, i, MaxButtons_PerRow, Padding);
+           Button_Panel.Controls.Add(Language_Button);
+       }
+   }
+   ```
+
+2. **Seleção do Diretório de Instalação**
+   ```csharp
+   private void Selecting_Folder()
+   {
+       // Diálogo de seleção de pasta com validação
+       using var Dialog = new FolderBrowserDialog();
+       if (Dialog.ShowDialog() == DialogResult.OK)
+       {
+           Selected_Path = Dialog.SelectedPath;
+           // Valida o diretório de instalação do GTA:SA
+           if (Path.GetFileName(Selected_Path) != "Grand Theft Auto San Andreas")
+           {
+               Status_Label.Text = Translate("invalid_folder");
+               Status_Label.ForeColor = Color.Red;
+           }
+       }
+   }
+   ```
+
+3. **Processo de Extração de Arquivos**
+   ```csharp
+   private async Task<List<string>> ExtractClient_Files()
+   {
+       var progress = new Progress<(int progress, string fileName)>(update => 
+       {
+           Progress_Bar.Value = update.progress;
+           ExtractedFiles_List.Items.Add(update.fileName);
+       });
+       
+       return await Extraction_Module.ExtractClient_Files(Selected_Path, progress);
+   }
+   ```
+
+4. **Janela com as Redes Sociais**
+   ```csharp
+   private void ShowSocial_Networks()
+   {
+       string[] Social_Networks = { 
+           "Discord SPC", 
+           "YouTube", 
+           "Instagram", 
+           "TikTok", 
+           "GitHub" 
+       };
+
+       // Cria botões para cada rede social com ícones
+       for (int i = 0; i < Social_Networks.Length; i++)
+       {
+           var Social_Button = CreateSocial_NetworkButton(Social_Networks[i], Icon_Size, Button_Width, Button_Height, i, Padding);
+           Controls.Add(Social_Button);
+       }
+   }
+   ```
+
+### Serviços
+
+#### Serviço de Extração de Arquivos (`FileExtraction.cs`)
+
+Gerencia a extração segura dos arquivos do Client SA:MP dos recursos incorporados:
+
+```csharp
+public class File_Extraction
+{
+    public async Task<List<string>> ExtractClient_Files(string Target_Path, IProgress<(int progress, string fileName)> progress)
+    {
+        // Carrega o recurso ZIP incorporado
+        var Current_Assembly = Assembly.GetExecutingAssembly();
+        var Zip_Resource = Current_Assembly.GetManifestResourceNames().FirstOrDefault(Res => Res.Contains("archives") && Res.EndsWith("samp-client-v.zip"));
+
+        using var Zip_Archive = new ZipArchive(Temp_Buffer, ZipArchiveMode.Read);
+        var Total_Files = Zip_Archive.Entries.Count;
+        var Processed_Files = new List<string>();
+
+        // Extrai arquivos com relatório de progresso
+        for (int File_Index = 0; File_Index < Total_Files; File_Index++)
+        {
+            var Current_Entry = Zip_Archive.Entries[File_Index];
+            var File_Target_Path = Path.Combine(Target_Path, Current_Entry.FullName);
+
+            // Relata progresso para atualizações da interface
+            int Completion_Percent = (int)((File_Index + 1) * 100.0 / Total_Files);
+            progress.Report((Completion_Percent, Current_Entry.FullName));
         }
-    ```
 
-Características Principais:
+        return Processed_Files;
+    }
+}
+```
 
-3. **Gerenciamento de Tabela de Funções**
-    - Usa um ponteiro estático `pAMXFunctions` para armazenar a tabela de funções AMX
-    - Fornece acesso a todas as funções principais do AMX
-    - Lida com resolução de função em tempo de execução
+#### Suporte a Idiomas (`Language.cs`)
 
-4. **Otimizações Específicas de Plataforma**
-    - Windows 32-bit: Usa funções naked para implementação direta em assembly
-    - Outras plataformas: Usa indireção de ponteiro de função
-    - Tratamento especial para sistemas 64-bit
+Gerencia o sistema de suporte a múltiplos idiomas usando recursos XML:
 
-5. **Categorias de Funções Implementadas**
+```csharp
+public class Language
+{
+    private Dictionary<string, string> Translation_Dictionary = new();
 
-    a. Funções de Gerenciamento de Memória:
-    - `amx_Align16`, `amx_Align32`, `amx_Align64`
-    - `amx_Allot`, `amx_Release`
+    public List<string> GetAvailable_Languages()
+    {
+        var Current_Assembly = Assembly.GetExecutingAssembly();
+        Available_Languages = Current_Assembly.GetManifestResourceNames().Where(Resource => Resource.Contains("translations") && Resource.EndsWith(".xml"))
+            .Select(Resource => Path.GetFileNameWithoutExtension(Resource.Split('.').ElementAt(Resource.Split('.').Length - 2))).ToList();
 
-    b. Funções de Execução:
-    - `amx_Exec`, `amx_Callback`
-    - `amx_Init`, `amx_InitJIT`
-    - `amx_Cleanup`, `amx_Clone`
+        return Available_Languages;
+    }
+
+    public void Load_Translations(string Language_Name)
+    {
+        // Carrega e analisa o arquivo XML de tradução
+        using var Resource_Stream = Current_Assembly.GetManifestResourceStream(Resource_Name);
+        var XML_Document = XDocument.Load(Resource_Stream);
+
+        Translation_Dictionary = XML_Document.Descendants("string").ToDictionary(Element => Element.Attribute("key")?.Value ?? string.Empty, Element => Element.Value);
+    }
+}
+```
+
+#### Serviço de Mapeamento de Idiomas (`LanguageMapping.cs`)
+
+Gerencia o mapeamento entre nomes de idiomas e seus códigos de imagem de bandeira correspondentes:
+
+```csharp
+public class Language_Mapping : Language_Mapping_II
+{
+    private readonly Dictionary<string, string> LanguageTo_ImageCode;
+
+    public Language_Mapping()
+    {
+        LanguageTo_ImageCode = new Dictionary<string, string>
+        {
+            { "English", "en" },
+            { "Português", "pt" },
+            { "Español", "es" }
+            // Mapeamentos adicionais de idiomas...
+        };
+    }
+
+    public string GetImage_Code(string Language_Name) =>
+        LanguageTo_ImageCode.TryGetValue(Path.GetFileNameWithoutExtension(Language_Name), out var Code) ? Code : Language_Name.ToLower();
+}
+```
+
+#### Serviço de Redes Sociais (`SocialNetworks.cs`)
+
+Gerencia a abertura de links de redes sociais no navegador padrão:
+
+```csharp
+public class Social_Networks
+{
+    public void OpenSocial_Network(string Network_Name)
+    {
+        string Network_Url = Network_Name switch
+        {
+            "Discord SPC" => "https://discord.gg/3fApZh66Tf",
+            "YouTube" => "https://youtube.com/@spc-samp",
+            // Mapeamentos adicionais de redes...
+            _ => ""
+        };
+
+        if (!string.IsNullOrEmpty(Network_Url))
+        {
+            Process.Start(new ProcessStartInfo
+            {
+                FileName = Network_Url,
+                UseShellExecute = true
+            });
+        }
+    }
+}
+```
+
+#### Componentes de Interface Personalizados
+
+##### Barra de Progresso (`CustomProgressBar.cs`)
+
+Uma barra de progresso altamente personalizada com animações e estilo moderno:
+
+```csharp
+public class Custom_ProgressBar : ProgressBar
+{
+    // Propriedades de personalização
+    public Color GradientStart_Color { get; set; }
+    public Color GradientEnd_Color { get; set; }
+    public int Animation_Speed { get; set; }
+    public int Corner_Radius { get; set; }
+    public bool Show_Percentage { get; set; }
+
+    protected override void OnPaint(PaintEventArgs e)
+    {
+        // Implementa desenho personalizado com gradientes e animações
+        using (var Path = GetRounded_Rectangle(Progress_Rect, Corner_Radius_II))
+        using (var Gradient = new LinearGradientBrush(Progress_Rect, GradientStart_Color_II, GradientEnd_Color_II, LinearGradientMode.Horizontal))
+        {
+            // Aplica mistura de cores para transições suaves
+            ColorBlend Blend = new ColorBlend();
+            Blend.Positions = Positions;
+            Blend.Colors = Colors;
+            Gradient.InterpolationColors = Blend;
+
+            // Aplica animação de rotação
+            Matrix Matrix = new Matrix();
+            Matrix.RotateAt(Animation_Step, new PointF(Progress_Rect.Left + Progress_Rect.Width / 2, Progress_Rect.Top + Progress_Rect.Height / 2));
+            Gradient.MultiplyTransform(Matrix);
+
+            e.Graphics.FillPath(Gradient, Path);
+        }
+    }
+}
+```
+
+##### Cores do Tema (`Colors.cs`)
+
+Define o esquema de cores da aplicação:
+
+```csharp
+public static class Colors_Client
+{
+    public static readonly Color Background = Color.FromArgb(32, 34, 37);
+    public static readonly Color Secondary = Color.FromArgb(47, 49, 54);
+    public static readonly Color Accent = Color.FromArgb(0, 139, 139);
+    public static readonly Color Text = Color.White;
+    public static readonly Color Hover = Color.FromArgb(64, 68, 75);
+}
+```
+
+### Recursos de Segurança
+
+#### Privilégios Administrativos
+
+O instalador requer privilégios administrativos para instalar corretamente os arquivos do SA:MP no diretório do GTA:SA. Isso é gerenciado através do arquivo `adm.manifest`:
+
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<assembly xmlns="urn:schemas-microsoft-com:asm.v1" manifestVersion="1.0">
+  <trustInfo xmlns="urn:schemas-microsoft-com:asm.v3">
+    <security>
+      <requestedPrivileges xmlns="urn:schemas-microsoft-com:asm.v3">
+        <requestedExecutionLevel level="requireAdministrator" uiAccess="false" />
+      </requestedPrivileges>
+    </security>
+  </trustInfo>
+</assembly>
+```
+
+Principais recursos da execução administrativa:
+- Garante permissões adequadas de arquivo para instalação
+- Permite modificação de diretórios protegidos do sistema
+- Gerencia automaticamente prompts do UAC (Controle de Conta de Usuário)
+- Necessário para modificações no registro, se necessário
+
+Para habilitar a execução administrativa, o arquivo de manifesto é referenciado no arquivo do projeto:
+
+```xml
+<PropertyGroup>
+    <ApplicationManifest>adm.manifest</ApplicationManifest>
+</PropertyGroup>
+```
+
+#### Assinatura de Assembly
+
+O projeto suporta assinatura de nome forte para segurança aprimorada. Isso pode ser habilitado no arquivo do projeto:
+
+```xml
+<PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+    <AssemblyOriginatorKeyFile>MyKey.snk</AssemblyOriginatorKeyFile>
+</PropertyGroup>
+```
+
+Para gerar uma chave de nome forte:
+
+```bash
+sn -k MyKey.snk
+```
+
+Benefícios da assinatura de assembly:
+- Garante a integridade do assembly
+- Previne adulteração do assembly
+- Fornece identidade única ao assembly
+- Permite implantação no GAC
+- Suporta implantação ClickOnce
+
+> [!NOTE]
+> Mantenha seu arquivo de chave de nome forte (*.snk) seguro e nunca o submeta ao controle de fonte.
+
+### Internacionalização
+
+#### Sistema de Tradução
+
+As traduções são armazenadas em arquivos XML com a seguinte estrutura:
+
+```xml
+<translations>
+  <string key="continue">Prosseguir</string>
+  <string key="cancel">Cancelar</string>
+  <string key="finish">Concluir</string>
+  <string key="close">Fechar</string>
+  <!-- Traduções adicionais -->
+</strings>
+```
+
+A classe `Language` carrega essas traduções dinamicamente:
+
+```csharp
+public string Translate(string Key) => 
+    Translation_Dictionary.TryGetValue(Key, out var Value) ? Value : Key;
+```
+
+#### Ícones de Bandeiras
+
+As bandeiras dos idiomas são armazenadas como recursos incorporados e carregadas dinamicamente:
+
+```csharp
+private Bitmap GetFlag_Image(string Language, int Icon_Size)
+{
+    var Image_Code = LanguageMapping_Module.GetImage_Code(Language);
+    var Flag_Resource_Name = Get_Assembly.GetManifestResourceNames().FirstOrDefault(r => r.Contains("icons.languages") && r.EndsWith($"{Image_Code}.png"));
     
-    c. Gerenciamento de Símbolos:
-    - `amx_FindPublic`, `amx_FindPubVar`
-    - `amx_FindNative`, `amx_FindTagId`
-    - `amx_GetPublic`, `amx_GetPubVar`
-    
-    d. Manipulação de Strings:
-    - `amx_GetString`, `amx_SetString`
-    - `amx_StrLen`
-    - Funções de suporte UTF-8
-    
-    e. Debug e Informações:
-    - `amx_SetDebugHook`
-    - `amx_Flags`, `amx_MemInfo`
-    - `amx_NameLength`
-
-6. **Compilação Condicional**
-    - Lida com diferentes plataformas através de diretivas de pré-processador
-    - Tratamento especial para sistemas 64-bit
-    - Suporte JIT opcional
-    ```c
-    #if defined _I64_MAX || defined HAVE_I64
-        DEFINE_AMX_NAKED_FN(uint64_t* AMXAPI amx_Align64(uint64_t* v), 
-            PLUGIN_AMX_EXPORT_Align64)
-    #endif
-    ```
-
-7. **Integração de Tratamento de Erros**
-    - Implementa `amx_RaiseError` para relatório de erros
-    - Preserva códigos de erro através de chamadas de função
-    - Integra com sistema de debug AMX
-
-### Funções Nativas AMX
-
-O SDK fornece suporte abrangente para criar e gerenciar funções nativas:
-
-```c
-typedef cell (AMX_NATIVE_CALL *AMX_NATIVE)(struct tagAMX *amx, const cell *params);
-
-typedef struct tagAMX_NATIVE_INFO {
-    const char _FAR *name;
-    AMX_NATIVE func;
-} AMX_NATIVE_INFO;
+    if (Flag_Resource_Name != null)
+    {
+        using var Stream = Get_Assembly.GetManifestResourceStream(Flag_Resource_Name);
+        return new Bitmap(Image.FromStream(Stream), new Size(Icon_Size, Icon_Size));
+    }
+    return null;
+}
 ```
 
-Operações principais de funções nativas:
-- Registro através de `amx_Register`
-- Acesso e validação de parâmetros
-- Manipulação de valor de retorno
-- Relatório de erros
+## Configuração do Projeto (.csproj)
 
-## Detalhes Técnicos
+O arquivo `.csproj` é um componente crucial do projeto, que define as configurações e propriedades fundamentais da aplicação. Abaixo está a estrutura detalhada das principais configurações utilizadas:
 
-### Gerenciamento de Memória
-
-O SDK fornece facilidades abrangentes de gerenciamento de memória:
-
-1. **amx_memory.h**
-
-   Lida com alocação de memória e operações específicas de plataforma:
-    ```c
-    #if defined HAVE_ALLOCA_H
-        #include <alloca.h>
-    #elif defined __BORLANDC__
-        #include <malloc.h>
-    #endif
-    ```
-
-2. **amx_alignment.h**
-
-    Gerencia requisitos de alinhamento de memória:
-    ```c
-    #if (defined SN_TARGET_PS2 || defined __GNUC__) && !defined AMX_NO_ALIGN
-        #define AMX_NO_ALIGN
-    #endif 
-    ```
-
-### Operações de Memória
-
-O SDK inclui várias funções para manipulação de memória:
-
-1. **Alocação de Memória**
-    ```c
-    int AMXAPI amx_Allot(AMX* amx, int cells, cell* amx_addr, cell** phys_addr);
-    ```
-    - Aloca memória no heap AMX
-    - Retorna endereços AMX e físicos
-    - Lida com requisitos de alinhamento
-
-2. **Acesso à Memória**
-    ```c
-    int AMXAPI amx_GetAddr(AMX* amx, cell amx_addr, cell** phys_addr);
-    ```
-    - Converte endereços AMX para endereços físicos
-    - Valida acesso à memória
-    - Lida com limites de memória
-
-3. **Informações de Memória**
-    ```c
-    int AMXAPI amx_MemInfo(AMX* amx, long* codesize, long* datasize, long* stackheap);
-    ```
-    - Recupera informações de layout de memória
-    - Reporta tamanhos de segmento
-    - Útil para depuração e otimização
-
-### Tratamento de Erros
-
-O SDK inclui um sistema abrangente de tratamento de erros definido em `amx_constants.h`:
-
-```c
-enum {
-    AMX_ERR_NONE,
-    AMX_ERR_EXIT,
-    AMX_ERR_ASSERT,
-    AMX_ERR_STACKERR,
-    AMX_ERR_BOUNDS,
-    AMX_ERR_MEMACCESS,
-    AMX_ERR_INVINSTR,
-    AMX_ERR_STACKLOW,
-    AMX_ERR_HEAPLOW,
-    AMX_ERR_CALLBACK,
-    AMX_ERR_NATIVE,
-    AMX_ERR_DIVIDE,
-    AMX_ERR_SLEEP,
-    AMX_ERR_INVSTATE,
-    
-    AMX_ERR_MEMORY = 16,
-    AMX_ERR_FORMAT,
-    AMX_ERR_VERSION,
-    AMX_ERR_NOTFOUND,
-    AMX_ERR_INDEX,
-    AMX_ERR_DEBUG,
-    AMX_ERR_INIT,
-    AMX_ERR_USERDATA,
-    AMX_ERR_INIT_JIT,
-    AMX_ERR_PARAMS,
-    AMX_ERR_DOMAIN,
-    AMX_ERR_GENERAL,
-};
+### Configurações Básicas
+```xml
+<PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net9.0-windows</TargetFramework>
+    <UseWindowsForms>true</UseWindowsForms>
+    <ApplicationManifest>adm.manifest</ApplicationManifest>
+    <ApplicationIcon>icons\social\ico-spc.ico</ApplicationIcon>
+</PropertyGroup>
 ```
 
-### Manipulação de Strings
+- `OutputType`: Define o tipo de saída como um executável Windows
+- `TargetFramework`: Especifica a versão do .NET Framework utilizada (9.0)
+- `UseWindowsForms`: Habilita o uso de Windows Forms para a interface gráfica
+- `ApplicationManifest`: Define o manifesto da aplicação para permissões administrativas
+- `ApplicationIcon`: Define o ícone principal da aplicação
 
-O SDK fornece capacidades robustas de manipulação de strings através de vários macros e funções:
-
-```c
-#define amx_StrParam(amx,param,result) \
-    do { \
-        int result##_length_; \
-        amx_StrLen(amx_Address(amx,param),&result##_length_); \
-        if (result##_length_>0 && \
-            ((result)=(type)alloca((result##_length_+1)*sizeof(*(result))))!=NULL) \
-        amx_GetString((char*)(result),amx_Address(amx,param), \
-                            sizeof(*(result))>1,result##_length_+1); \
-        else (result)=NULL; \
-    } while(0)
+### Informações da Versão e Empresa
+```xml
+<PropertyGroup>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+    <FileVersion>1.0.0.0</FileVersion>
+    <Company>SA-MP Programming Community</Company>
+    <Product>samp-client-v</Product>
+    <Copyright>Copyright © SPC</Copyright>
+    <Description>Instalador do mod (San Andreas Multiplayer) versão 0.3.7 V.</Description>
+</PropertyGroup>
 ```
 
-### Operações com Strings
+- `AssemblyVersion`: Versão do assembly do projeto
+- `FileVersion`: Versão do arquivo executável
+- `Company`: Nome da empresa/organização
+- `Product`: Nome do produto
+- `Copyright`: Informações de direitos autorais
+- `Description`: Descrição do projeto
 
-1. **Comprimento de String**
-    ```c
-    int AMXAPI amx_StrLen(const cell* cstring, int* length);
-    ```
-    - Calcula comprimento da string
-    - Lida com strings empacotadas e não empacotadas
-    - Retorna comprimento em caracteres
-
-2. **Conversão de String**
-    ```c
-    int AMXAPI amx_SetString(cell* dest, const char* source, int pack, int use_wchar, size_t size);
-    ```
-    - Converte strings C para strings AMX
-    - Suporta formatos empacotados e não empacotados
-    - Lida com conversão Unicode
-
-## Suporte a Unicode
-
-O SDK inclui suporte abrangente a Unicode através de funções de manipulação UTF-8:
-
-```c
-int AMXAPI amx_UTF8Check(const char* string, int* length);
-int AMXAPI amx_UTF8Get(const char* string, const char** endptr, cell* value);
-int AMXAPI amx_UTF8Len(const cell* cstr, int* length);
-int AMXAPI amx_UTF8Put(char* string, char** endptr, int maxchars, cell value);
+### Configurações de Runtime
+```xml
+<PropertyGroup>
+    <RollForward>LatestMajor</RollForward>
+    <RuntimeFrameworkVersion>9.0.0</RuntimeFrameworkVersion>
+</PropertyGroup>
 ```
 
-### Operações Unicode
+- `RollForward`: Configura o comportamento de atualização do runtime
+- `RuntimeFrameworkVersion`: Especifica a versão exata do runtime do .NET
 
-1. **Validação UTF-8**
-    ```c
-    int AMXAPI amx_UTF8Check(const char* string, int* length);
-    ```
-    - Valida strings codificadas em UTF-8
-    - Reporta comprimento da string em caracteres
-    - Detecta erros de codificação
-
-2. **Conversão de Caracteres**
-    ```c
-    int AMXAPI amx_UTF8Get(const char* string, const char** endptr, cell* value);
-    ```
-    - Extrai caracteres Unicode
-    - Lida com sequências multi-byte
-    - Reporta erros de análise
-
-## Compatibilidade Multiplataforma
-
-O SDK garante compatibilidade multiplataforma através de:
-
-1. **Tratamento de Endianness**
-    ```c
-    #ifndef BYTE_ORDER
-        #if defined(UCLINUX)
-            #define BYTE_ORDER BIG_ENDIAN
-        #else
-            #define BYTE_ORDER LITTLE_ENDIAN
-        #endif
-    #endif
-    ```
-
-2. **Tratamento de Caminhos**
-    ```c
-    #if defined(__MSDOS__) || defined(__WIN32__) || defined(_Windows)
-        #define DIRSEP_CHAR '\\'
-    #elif defined(macintosh)
-        #define DIRSEP_CHAR ':'
-    #else
-        #define DIRSEP_CHAR '/'
-    #endif
-    ```
-
-## Requisitos do Sistema
-
-O SDK suporta múltiplas plataformas e compiladores:
-- Windows (MSVC, MinGW)
-- Linux (GCC)
-- FreeBSD
-- OpenBSD
-- macOS
-
-### Suporte a Compiladores
-
-1. **Microsoft Visual C++**
-   - Tratamento de pragmas
-   - Supressão de avisos
-   - Convenções de chamada
-
-2. **GCC**
-   - Controles de diagnóstico
-   - Especificações de atributos
-   - Otimizações específicas de plataforma
-
-3. **Clang**
-   - Configurações de aviso
-   - Compatibilidade multiplataforma
-   - Recursos modernos de C++
-
-## Melhores Práticas
-
-Ao usar o SA-MP SDK, considere as seguintes melhores práticas:
-
-1. **Gerenciamento de Memória**
-   - Sempre limpe recursos alocados
-   - Use alinhamento de memória apropriado
-   - Trate erros de memória graciosamente
-   - Monitore uso do heap
-   - Implemente verificação adequada de limites de memória
-   - Use pools de memória para alocações frequentes
-   - Limpe recursos na ordem inversa da alocação
-
-2. **Tratamento de Erros**
-   - Verifique valores de retorno das funções AMX
-   - Implemente tratamento adequado de erros em funções nativas
-   - Use as constantes de erro fornecidas
-   - Registre erros apropriadamente
-   - Implemente mecanismos de recuperação de erros
-   - Forneça mensagens de erro significativas
-   - Trate erros específicos do sistema
-
-3. **Desenvolvimento Multiplataforma**
-   - Use tipos independentes de plataforma
-   - Utilize macros fornecidos para código específico de plataforma
-   - Teste em múltiplas plataformas
-   - Lide com diferenças de endianness
-   - Use separadores de caminho apropriados
-   - Considere diferenças do sistema de arquivos
-   - Implemente otimizações específicas de plataforma
-
-4. **Considerações de Performance**
-   - Use tamanhos de cell apropriados
-   - Implemente manipulação eficiente de strings
-   - Otimize chamadas de funções nativas
-   - Minimize alocações de memória
-   - Use estruturas de dados apropriadas
-   - Implemente cache quando apropriado
-   - Profile caminhos críticos de código
-
-Ao trabalhar com funcionalidade `amxplugin.c`:
-
-1. **Desenvolvimento Específico de Plataforma**
-   - Considere diferenças de plataforma nas implementações de função
-   - Teste em sistemas 32-bit e 64-bit
-   - Lide com requisitos de alinhamento específicos de plataforma
-   - Valide ponteiro da tabela de funções antes do uso
-   - Implemente verificação de erro apropriada para cada plataforma
-   - Considere implicações de performance de diferentes implementações
-
-2. **Gerenciamento de Tabela de Funções**
-   - Inicialize tabela de funções antes do uso
-   - Verifique disponibilidade de função
-   - Lide graciosamente com funções ausentes
-   - Implemente procedimentos adequados de limpeza
-   - Cache ponteiros de função frequentemente usados
-   - Valide integridade da tabela de funções
-
-3. **Tratamento de Erros**
-   - Implemente verificação de erro adequada para código específico de plataforma
-   - Trate erros de alinhamento apropriadamente
-   - Valide entradas da tabela de funções
-   - Forneça mensagens de erro significativas
-   - Implemente mecanismos de recuperação
-   - Registre erros específicos de plataforma
-
-## Estruturas Internas
-
-### Estrutura do Header AMX
-
-```c
-typedef struct tagAMX_HEADER {
-    int32_t size;          // Tamanho do "arquivo"
-    uint16_t magic;        // Assinatura
-    char    file_version;  // Versão do formato do arquivo
-    char    amx_version;   // Versão AMX requerida
-    int16_t flags;         // Flags
-    int16_t defsize;      // Tamanho de um registro de definição
-    int32_t cod;          // Valor inicial de COD - bloco de código
-    int32_t dat;          // Valor inicial de DAT - bloco de dados
-    int32_t hea;          // Valor inicial de HEA - início do heap
-    int32_t stp;          // Valor inicial de STP - topo da pilha
-    int32_t cip;          // Valor inicial de CIP - ponteiro de instrução de código
-    int32_t publics;      // Offset para funções públicas
-    int32_t natives;      // Offset para tabela de funções nativas
-    int32_t libraries;    // Offset para bibliotecas
-    int32_t pubvars;      // Offset para variáveis públicas
-    int32_t tags;         // Offset para tags
-    int32_t nametable;    // Offset para tabela de nomes
-} AMX_HEADER;
+### Recursos Incorporados
+```xml
+<ItemGroup>
+    <EmbeddedResource Include="archives\**\*" />
+    <EmbeddedResource Include="icons\**\*" />
+    <EmbeddedResource Include="translations\**\*" />
+</ItemGroup>
 ```
 
-Esta estrutura é crucial para entender o formato de arquivo AMX e como a máquina virtual carrega e executa scripts.
+Esta seção define os recursos que serão incorporados no executável final:
+- `archives`: Arquivos necessários para o instalador
+- `icons`: Ícones e recursos visuais
+- `translations`: Arquivos de tradução para diferentes idiomas
 
-## Recursos Avançados
+### Observações Importantes
 
-### Suporte à Compilação JIT
+1. O projeto é configurado como um executável Windows Forms, adequado para criar uma interface gráfica de usuário.
+2. A aplicação é direcionada para o .NET 9.0, garantindo compatibilidade com as últimas funcionalidades do framework.
+3. Recursos como ícones, arquivos e traduções são incorporados diretamente no executável, facilitando a distribuição.
+4. As configurações de versão e informações da empresa são importantes para identificação do software.
 
-O SDK inclui suporte para compilação Just-In-Time:
-```c
-int AMXAPI amx_InitJIT(AMX* amx, void* reloc_table, void* native_code);
-```
+## Screenshots
 
-### Interface de Depuração
+![Screenshot 1 Client - SPC](screenshots/screenshot_1.png)
+![Screenshot 2 Client - SPC](screenshots/screenshot_2.png)
+![Screenshot 3 Client - SPC](screenshots/screenshot_3.png)
+![Screenshot 4 Client - SPC](screenshots/screenshot_4.png)
+![Screenshot 5 Client - SPC](screenshots/screenshot_5.png)
+![Screenshot 6 Client - SPC](screenshots/screenshot_6.png)
+![Screenshot 7 Client - SPC](screenshots/screenshot_7.png)
+![Screenshot 8 Client - SPC](screenshots/screenshot_8.png)
+![Screenshot 9 Client - SPC](screenshots/screenshot_9.png)
+![Screenshot 10 Client - SPC](screenshots/screenshot_10.png)
 
-Suporte à depuração é fornecido através de:
-```c
-typedef int (AMXAPI *AMX_DEBUG)(struct tagAMX *amx);
-int AMXAPI amx_SetDebugHook(AMX* amx, AMX_DEBUG debug);
-```
+Erros:
 
-### Interface de Função Pública
-
-O SDK fornece suporte abrangente para trabalhar com funções públicas:
-
-1. **Encontrando Funções Públicas**
-    ```c
-    int AMXAPI amx_FindPublic(AMX* amx, const char* funcname, int* index);
-    ```
-    - Localiza funções públicas por nome
-    - Retorna índice da função
-    - Valida existência da função
-
-2. **Executando Funções Públicas**
-    ```c
-    int AMXAPI amx_Exec(AMX* amx, cell* retval, int index);
-    ```
-    - Executa funções públicas
-    - Lida com valores de retorno
-    - Gerencia contexto de execução
-
-## Informações de Versão
-
-O SDK inclui constantes de versão para verificação de compatibilidade:
-```c
-#define CUR_FILE_VERSION  9
-#define MIN_FILE_VERSION  6
-#define MIN_AMX_VERSION   10
-#define MAX_FILE_VER_JIT  8
-#define MIN_AMX_VER_JIT   8
-```
-
-### Compatibilidade de Versão
-
-O SDK mantém compatibilidade através de:
-1. Verificação de versão do arquivo
-2. Validação de versão AMX
-3. Verificação de compatibilidade JIT
-4. Detecção de recursos
-5. Tratamento de versão específico de plataforma
+![Error 1 Client - SPC](screenshots/error_1.png)
+![Error 2 Client - SPC](screenshots/error_2.png)
 
 ## Licença
 
 Copyright © **SA-MP Programming Community**
 
-Este software é licenciado sob os termos da Licença MIT ("Licença"); você pode utilizar este software de acordo com as condições da Licença. Uma cópia da Licença pode ser obtida em: [MIT License](https://opensource.org/licenses/MIT)
+Este software é licenciado sob os termos da Licença Apache, Versão 2.0 ("Licença"); você não pode utilizar este software exceto em conformidade com a Licença. Uma cópia da Licença pode ser obtida em: [Apache License 2.0](http://www.apache.org/licenses/LICENSE-2.0)
 
 ### Termos e Condições de Uso
 
 #### 1. Permissões Concedidas
 
 A presente licença concede, gratuitamente, a qualquer pessoa que obtenha uma cópia deste software e arquivos de documentação associados, os seguintes direitos:
-
-* Utilizar, copiar, modificar, mesclar, publicar, distribuir, sublicenciar e/ou vender cópias do software sem restrições
-* Permitir que pessoas para as quais o software é fornecido façam o mesmo, desde que sujeitas às condições a seguir
+* Utilizar, copiar, modificar e distribuir o software em qualquer meio ou formato, para qualquer finalidade, comercial ou não-comercial
+* Mesclar, publicar, distribuir, sublicenciar e/ou vender cópias do software
+* Permitir que pessoas para as quais o software é fornecido façam o mesmo
 
 #### 2. Condições Obrigatórias
 
-Todas as cópias ou partes substanciais do software devem incluir:
+Todas as distribuições do software ou trabalhos derivados devem:
+* Incluir uma cópia completa desta licença
+* Indicar claramente quaisquer modificações realizadas no código-fonte original
+* Preservar todos os avisos de direitos autorais, patentes, marcas registradas e atribuições
+* Fornecer documentação adequada das alterações implementadas
+* Manter o aviso de licença e garantia em todas as cópias
 
-* O aviso de direitos autorais acima
-* Este aviso de permissão
-* O aviso de isenção de responsabilidade abaixo
+#### 3. Restrições e Limitações
 
-#### 3. Direitos Autorais
+* Esta licença não concede permissão para uso de marcas registradas, logotipos ou nomes comerciais da **SA-MP Programming Community**
+* As contribuições para o código-fonte devem ser licenciadas sob os mesmos termos desta licença
+* O uso de nomes dos contribuidores para endossar ou promover produtos derivados deste software requer permissão prévia específica
 
-O software e toda a documentação associada são protegidos por leis de direitos autorais. A **SA-MP Programming Community** mantém a titularidade dos direitos autorais originais do software.
+#### 4. Propriedade Intelectual
 
-#### 4. Isenção de Garantias e Limitação de Responsabilidade
+O software e toda a documentação associada são protegidos por leis de direitos autorais e tratados internacionais. A **SA-MP Programming Community** retém todos os direitos, títulos e interesses não expressamente concedidos por esta licença.
 
-O SOFTWARE É FORNECIDO "COMO ESTÁ", SEM GARANTIA DE QUALQUER TIPO, EXPRESSA OU IMPLÍCITA, INCLUINDO, MAS NÃO SE LIMITANDO ÀS GARANTIAS DE COMERCIALIZAÇÃO, ADEQUAÇÃO A UM DETERMINADO FIM E NÃO VIOLAÇÃO. 
+#### 5. Isenção de Garantias e Limitação de Responsabilidade
 
-EM NENHUMA CIRCUNSTÂNCIA OS AUTORES OU TITULARES DOS DIREITOS AUTORAIS SERÃO RESPONSÁVEIS POR QUALQUER REIVINDICAÇÃO, DANOS OU OUTRA RESPONSABILIDADE, SEJA EM AÇÃO DE CONTRATO, DELITO OU DE OUTRA FORMA, DECORRENTE DE, FORA DE OU EM CONEXÃO COM O SOFTWARE OU O USO OU OUTRAS NEGOCIAÇÕES NO SOFTWARE.
+O SOFTWARE É FORNECIDO "COMO ESTÁ", SEM GARANTIAS DE QUALQUER NATUREZA, EXPRESSAS OU IMPLÍCITAS, INCLUINDO, MAS NÃO SE LIMITANDO A, GARANTIAS DE COMERCIALIZAÇÃO, ADEQUAÇÃO A UM PROPÓSITO ESPECÍFICO E NÃO VIOLAÇÃO. 
+
+EM NENHUMA CIRCUNSTÂNCIA OS AUTORES OU TITULARES DOS DIREITOS AUTORAIS SERÃO RESPONSÁVEIS POR QUAISQUER REIVINDICAÇÕES, DANOS OU OUTRAS RESPONSABILIDADES, SEJA EM AÇÃO DE CONTRATO, DELITO OU DE OUTRA FORMA, DECORRENTES DE, OU EM CONEXÃO COM O SOFTWARE OU O USO OU OUTRAS NEGOCIAÇÕES NO SOFTWARE.
 
 ---
 
-Para informações detalhadas sobre a Licença MIT, consulte: https://opensource.org/licenses/MIT
+Para informações detalhadas sobre a Licença Apache 2.0, consulte: http://www.apache.org/licenses/LICENSE-2.0
