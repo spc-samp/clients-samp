@@ -57,9 +57,12 @@ Este repositorio contiene el código fuente de varios instaladores de Client SA:
     - [Observaciones Importantes](#observaciones-importantes)
   - [Screenshots](#screenshots)
   - [Licencia](#licencia)
-    - [Lo que puedes hacer ✅](#lo-que-puedes-hacer-)
-    - [Lo que debes hacer ⚠️](#lo-que-debes-hacer-️)
-    - [Lo que no puedes hacer ❌](#lo-que-no-puedes-hacer-)
+    - [Términos y Condiciones de Uso](#términos-y-condiciones-de-uso)
+      - [1. Permisos Concedidos](#1-permisos-concedidos)
+      - [2. Condiciones Obligatorias](#2-condiciones-obligatorias)
+      - [3. Restricciones y Limitaciones](#3-restricciones-y-limitaciones)
+      - [4. Propiedad Intelectual](#4-propiedad-intelectual)
+      - [5. Exención de Garantías y Limitación de Responsabilidad](#5-exención-de-garantías-y-limitación-de-responsabilidad)
 
 ## Visión General
 
@@ -627,77 +630,46 @@ Errores:
 
 ## Licencia
 
-Copyright © SA-MP Programming Community
+Copyright © **SA-MP Programming Community**
 
-Licensed under the Apache License, Version 2.0 (the "License");
-you may not use this file except in compliance with the License.
-You may obtain a copy of the License at
+Este software está licenciado bajo los términos de la Licencia Apache, Versión 2.0 ("Licencia"); no puede utilizar este software excepto en conformidad con la Licencia. Puede obtener una copia de la Licencia en: [Apache License 2.0](http://www.apache.org/licenses/LICENSE-2.0)
 
-http://www.apache.org/licenses/LICENSE-2.0
+### Términos y Condiciones de Uso
 
-Unless required by applicable law or agreed to in writing, software
-distributed under the License is distributed on an "AS IS" BASIS,
-WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-See the License for the specific language governing permissions and
-limitations under the License.
+#### 1. Permisos Concedidos
 
-### Lo que puedes hacer ✅
+La presente licencia otorga, de forma gratuita, a cualquier persona que obtenga una copia de este software y archivos de documentación asociados, los siguientes derechos:
 
-1. **Uso Comercial**: 
-   - Puedes usar el código para fines comerciales
-   - Puedes vender productos que utilicen este código
-   - Puedes incorporarlo en soluciones empresariales
+* Utilizar, copiar, modificar y distribuir el software en cualquier medio o formato, para cualquier finalidad, comercial o no comercial
+* Fusionar, publicar, distribuir, sublicenciar y/o vender copias del software
+* Permitir que las personas a quienes se les proporciona el software hagan lo mismo
 
-2. **Modificación**: 
-   - Puedes modificar el código fuente
-   - Puedes adaptarlo a tus necesidades
-   - Puedes crear trabajos derivados
+#### 2. Condiciones Obligatorias
 
-3. **Distribución**: 
-   - Puedes distribuir el software
-   - Puedes compartir tus modificaciones
-   - Puedes incluirlo en otros proyectos
+Todas las distribuciones del software o trabajos derivados deben:
 
-4. **Uso Privado**: 
-   - Puedes usar y modificar el código de forma privada
-   - No hay obligación de hacerlo público
-   - Puedes usarlo en proyectos internos
+* Incluir una copia completa de esta licencia
+* Indicar claramente cualquier modificación realizada en el código fuente original
+* Preservar todos los avisos de derechos de autor, patentes, marcas registradas y atribuciones
+* Proporcionar documentación adecuada de los cambios implementados
+* Mantener el aviso de licencia y garantía en todas las copias
 
-5. **Concesión de Patente**: 
-   - Esta licencia proporciona explícitamente derechos de patente
-   - Protección contra reclamos de patentes de los contribuyentes
-   - Garantía de uso sin preocupaciones por patentes
+#### 3. Restricciones y Limitaciones
 
-### Lo que debes hacer ⚠️
+* Esta licencia no otorga permiso para usar marcas registradas, logotipos o nombres comerciales de la **SA-MP Programming Community**
+* Las contribuciones al código fuente deben ser licenciadas bajo los mismos términos de esta licencia
+* El uso de nombres de los contribuyentes para respaldar o promover productos derivados de este software requiere permiso previo específico
 
-1. **Incluir Licencia**: 
-   - Una copia de la licencia debe incluirse con el código
-   - Debe ser fácilmente accesible
-   - Debe estar en el formato original
+#### 4. Propiedad Intelectual
 
-2. **Declarar Cambios**: 
-   - Los cambios significativos deben ser declarados
-   - Documentar alteraciones importantes
-   - Mantener un registro de modificaciones
+El software y toda la documentación asociada están protegidos por leyes de derechos de autor y tratados internacionales. La **SA-MP Programming Community** retiene todos los derechos, títulos e intereses no expresamente otorgados por esta licencia.
 
-3. **Aviso de Derechos de Autor**: 
-   - Preserva todos los avisos de derechos de autor
-   - Mantén atribuciones originales
-   - Incluye avisos en todas las copias
+#### 5. Exención de Garantías y Limitación de Responsabilidad
 
-4. **Documentar Alteraciones**: 
-   - Documenta todos los cambios realizados
-   - Mantén un changelog
-   - Explica modificaciones importantes
+EL SOFTWARE SE PROPORCIONA "TAL CUAL", SIN GARANTÍAS DE NINGÚN TIPO, EXPRESAS O IMPLÍCITAS, INCLUYENDO, PERO NO LIMITÁNDOSE A, GARANTÍAS DE COMERCIABILIDAD, IDONEIDAD PARA UN PROPÓSITO PARTICULAR Y NO INFRACCIÓN.
 
-### Lo que no puedes hacer ❌
+EN NINGÚN CASO LOS AUTORES O TITULARES DE LOS DERECHOS DE AUTOR SERÁN RESPONSABLES POR CUALQUIER RECLAMACIÓN, DAÑOS U OTRAS RESPONSABILIDADES, YA SEA EN UNA ACCIÓN DE CONTRATO, AGRAVIO O DE OTRO TIPO, QUE SURJA DE, O EN CONEXIÓN CON EL SOFTWARE O EL USO U OTROS TRATOS EN EL SOFTWARE.
 
-1. **Usar Marcas Registradas**: 
-   - Esta licencia no otorga derechos para uso de marcas
-   - No puedes usar nombres y logos sin permiso
-   - Requiere autorización separada para marcas
+---
 
-2. **Responsabilizar a los Autores**: 
-   - Los autores no son responsables por daños
-   - Sin garantías de funcionamiento
-   - Úsalo bajo tu propio riesgo
+Para información detallada sobre la Licencia Apache 2.0, consulte: http://www.apache.org/licenses/LICENSE-2.0

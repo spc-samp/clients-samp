@@ -57,9 +57,12 @@ Questo repository contiene il codice sorgente di diversi installer per il Client
     - [Osservazioni Importanti](#osservazioni-importanti)
   - [Screenshots](#screenshots)
   - [Licenza](#licenza)
-    - [Cosa puoi fare ✅](#cosa-puoi-fare-)
-    - [Cosa devi fare ⚠️](#cosa-devi-fare-️)
-    - [Cosa non puoi fare ❌](#cosa-non-puoi-fare-)
+    - [Termini e Condizioni d'Uso](#termini-e-condizioni-duso)
+      - [1. Permessi Concessi](#1-permessi-concessi)
+      - [2. Condizioni Obbligatorie](#2-condizioni-obbligatorie)
+      - [3. Restrizioni e Limitazioni](#3-restrizioni-e-limitazioni)
+      - [4. Proprietà Intellettuale](#4-proprietà-intellettuale)
+      - [5. Esclusione di Garanzie e Limitazione di Responsabilità](#5-esclusione-di-garanzie-e-limitazione-di-responsabilità)
 
 ## Panoramica
 
@@ -627,77 +630,46 @@ Errori:
 
 ## Licenza
 
-Copyright © SA-MP Programming Community
+Copyright © **SA-MP Programming Community**
 
-Licensed under the Apache License, Version 2.0 (the "License");
-you may not use this file except in compliance with the License.
-You may obtain a copy of the License at
+Questo software è concesso in licenza secondo i termini della Licenza Apache, Versione 2.0 ("Licenza"); non è possibile utilizzare questo software se non in conformità con la Licenza. Una copia della Licenza può essere ottenuta su: [Apache License 2.0](http://www.apache.org/licenses/LICENSE-2.0)
 
-http://www.apache.org/licenses/LICENSE-2.0
+### Termini e Condizioni d'Uso
 
-Unless required by applicable law or agreed to in writing, software
-distributed under the License is distributed on an "AS IS" BASIS,
-WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-See the License for the specific language governing permissions and
-limitations under the License.
+#### 1. Permessi Concessi
 
-### Cosa puoi fare ✅
+La presente licenza concede gratuitamente a chiunque ottenga una copia di questo software e dei file di documentazione associati i seguenti diritti:
 
-1. **Uso Commerciale**: 
-   - Puoi utilizzare il codice per scopi commerciali
-   - Puoi vendere prodotti che utilizzano questo codice
-   - Puoi incorporarlo in soluzioni aziendali
+* Utilizzare, copiare, modificare e distribuire il software in qualsiasi mezzo o formato, per qualsiasi scopo, commerciale o non commerciale
+* Unire, pubblicare, distribuire, sublicenziare e/o vendere copie del software
+* Permettere alle persone a cui il software viene fornito di fare lo stesso
 
-2. **Modifiche**: 
-   - Puoi modificare il codice sorgente
-   - Puoi adattarlo alle tue esigenze
-   - Puoi creare lavori derivati
+#### 2. Condizioni Obbligatorie
 
-3. **Distribuzione**: 
-   - Puoi distribuire il software
-   - Puoi condividere le tue modifiche
-   - Puoi includerlo in altri progetti
+Tutte le distribuzioni del software o opere derivate devono:
 
-4. **Uso Privato**: 
-   - Puoi utilizzare e modificare il codice privatamente
-   - Non c'è obbligo di renderlo pubblico
-   - Puoi usarlo in progetti interni
+* Includere una copia completa di questa licenza
+* Indicare chiaramente qualsiasi modifica apportata al codice sorgente originale
+* Preservare tutti gli avvisi di copyright, brevetti, marchi registrati e attribuzioni
+* Fornire documentazione adeguata delle modifiche implementate
+* Mantenere l'avviso di licenza e garanzia in tutte le copie
 
-5. **Concessione di Brevetto**: 
-   - Questa licenza fornisce esplicitamente diritti di brevetto
-   - Protezione contro rivendicazioni di brevetti dai contributori
-   - Garanzia di utilizzo senza preoccupazioni sui brevetti
+#### 3. Restrizioni e Limitazioni
 
-### Cosa devi fare ⚠️
+* Questa licenza non concede il permesso di utilizzare marchi registrati, loghi o nomi commerciali della **SA-MP Programming Community**
+* I contributi al codice sorgente devono essere concessi in licenza secondo gli stessi termini di questa licenza
+* L'uso dei nomi dei contributori per approvare o promuovere prodotti derivati da questo software richiede una specifica autorizzazione preventiva
 
-1. **Includere la Licenza**: 
-   - Una copia della licenza deve essere inclusa con il codice
-   - Deve essere facilmente accessibile
-   - Deve essere nel formato originale
+#### 4. Proprietà Intellettuale
 
-2. **Dichiarare le Modifiche**: 
-   - Le modifiche significative devono essere dichiarate
-   - Documentare le modifiche importanti
-   - Mantenere un registro delle modifiche
+Il software e tutta la documentazione associata sono protetti dalle leggi sul copyright e dai trattati internazionali. La **SA-MP Programming Community** mantiene tutti i diritti, titoli e interessi non espressamente concessi da questa licenza.
 
-3. **Avviso di Copyright**: 
-   - Preservare tutti gli avvisi di copyright
-   - Mantenere le attribuzioni originali
-   - Includere gli avvisi in tutte le copie
+#### 5. Esclusione di Garanzie e Limitazione di Responsabilità
 
-4. **Documentare le Modifiche**: 
-   - Documentare tutte le modifiche effettuate
-   - Mantenere un changelog
-   - Spiegare le modifiche importanti
+IL SOFTWARE VIENE FORNITO "COSÌ COM'È", SENZA GARANZIE DI ALCUN TIPO, ESPLICITE O IMPLICITE, INCLUSE, MA NON LIMITATE A, GARANZIE DI COMMERCIABILITÀ, IDONEITÀ PER UNO SCOPO PARTICOLARE E NON VIOLAZIONE.
 
-### Cosa non puoi fare ❌
+IN NESSUN CASO GLI AUTORI O I TITOLARI DEL COPYRIGHT SARANNO RESPONSABILI PER QUALSIASI RECLAMO, DANNO O ALTRA RESPONSABILITÀ, SIA IN UN'AZIONE DI CONTRATTO, ILLECITO O ALTRO, DERIVANTE DA, O IN CONNESSIONE CON IL SOFTWARE O L'USO O ALTRE OPERAZIONI NEL SOFTWARE.
 
-1. **Usare Marchi Registrati**: 
-   - Questa licenza non concede diritti per l'uso dei marchi
-   - Non puoi usare nomi e loghi senza permesso
-   - Richiede autorizzazione separata per i marchi
+---
 
-2. **Responsabilizzare gli Autori**: 
-   - Gli autori non sono responsabili per danni
-   - Nessuna garanzia di funzionamento
-   - Uso a proprio rischio
+Per informazioni dettagliate sulla Licenza Apache 2.0, consultare: http://www.apache.org/licenses/LICENSE-2.0

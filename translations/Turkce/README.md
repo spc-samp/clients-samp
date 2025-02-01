@@ -57,9 +57,12 @@ Bu depo, SPC (SA-MP Programlama Topluluğu) tarafından geliştirilen çeşitli 
     - [Önemli Notlar](#önemli-notlar)
   - [Screenshots](#screenshots)
   - [Lisans](#lisans)
-    - [Yapabilecekleriniz ✅](#yapabilecekleriniz-)
-    - [Yapmanız Gerekenler ⚠️](#yapmanız-gerekenler-️)
-    - [Yapamayacaklarınız ❌](#yapamayacaklarınız-)
+    - [Kullanım Şartları ve Koşulları](#kullanım-şartları-ve-koşulları)
+      - [1. Verilen İzinler](#1-verilen-i̇zinler)
+      - [2. Zorunlu Koşullar](#2-zorunlu-koşullar)
+      - [3. Kısıtlamalar ve Sınırlamalar](#3-kısıtlamalar-ve-sınırlamalar)
+      - [4. Fikri Mülkiyet](#4-fikri-mülkiyet)
+      - [5. Garanti Reddi ve Sorumluluk Sınırlaması](#5-garanti-reddi-ve-sorumluluk-sınırlaması)
 
 ## Genel Bakış
 
@@ -627,77 +630,46 @@ Hatalar:
 
 ## Lisans
 
-Copyright © SA-MP Programming Community
+Copyright © **SA-MP Programming Community**
 
-Licensed under the Apache License, Version 2.0 (the "License");
-you may not use this file except in compliance with the License.
-You may obtain a copy of the License at
+Bu yazılım Apache Lisansı, Sürüm 2.0 ("Lisans") şartları altında lisanslanmıştır; bu yazılımı Lisans ile uyumlu olmayan bir şekilde kullanamazsınız. Lisansın bir kopyasını şu adresten edinebilirsiniz: [Apache License 2.0](http://www.apache.org/licenses/LICENSE-2.0)
 
-http://www.apache.org/licenses/LICENSE-2.0
+### Kullanım Şartları ve Koşulları
 
-Unless required by applicable law or agreed to in writing, software
-distributed under the License is distributed on an "AS IS" BASIS,
-WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-See the License for the specific language governing permissions and
-limitations under the License.
+#### 1. Verilen İzinler
 
-### Yapabilecekleriniz ✅
+Bu lisans, bu yazılımın ve ilgili belgelendirme dosyalarının bir kopyasını edinen herhangi bir kişiye ücretsiz olarak aşağıdaki hakları vermektedir:
 
-1. **Ticari Kullanım**: 
-   - Kodu ticari amaçlarla kullanabilirsiniz
-   - Bu kodu kullanan ürünleri satabilirsiniz
-   - Kurumsal çözümlere entegre edebilirsiniz
+* Yazılımı herhangi bir ortamda veya formatta, ticari veya ticari olmayan herhangi bir amaçla kullanmak, kopyalamak, değiştirmek ve dağıtmak
+* Yazılımın kopyalarını birleştirmek, yayınlamak, dağıtmak, alt lisansını vermek ve/veya satmak
+* Yazılımın sağlandığı kişilerin aynısını yapmasına izin vermek
 
-2. **Değişiklik**: 
-   - Kaynak kodunu değiştirebilirsiniz
-   - İhtiyaçlarınıza göre uyarlayabilirsiniz
-   - Türev çalışmalar oluşturabilirsiniz
+#### 2. Zorunlu Koşullar
 
-3. **Dağıtım**: 
-   - Yazılımı dağıtabilirsiniz
-   - Değişikliklerinizi paylaşabilirsiniz
-   - Diğer projelere dahil edebilirsiniz
+Yazılımın veya türetilmiş çalışmaların tüm dağıtımları şunları içermelidir:
 
-4. **Özel Kullanım**: 
-   - Kodu özel olarak kullanabilir ve değiştirebilirsiniz
-   - Halka açık hale getirme zorunluluğu yoktur
-   - İç projelerde kullanabilirsiniz
+* Bu lisansın tam bir kopyası
+* Orijinal kaynak kodunda yapılan değişikliklerin açıkça belirtilmesi
+* Tüm telif hakkı, patent, ticari marka bildirimleri ve atıfların korunması
+* Uygulanan değişikliklerin yeterli dokümantasyonu
+* Tüm kopyalarda lisans ve garanti bildiriminin korunması
 
-5. **Patent Verme**: 
-   - Bu lisans açıkça patent hakları sağlar
-   - Katkıda bulunanların patent iddialarına karşı koruma
-   - Patentlerle ilgili endişe duymadan kullanım garantisi
+#### 3. Kısıtlamalar ve Sınırlamalar
 
-### Yapmanız Gerekenler ⚠️
+* Bu lisans, **SA-MP Programming Community**'nin ticari markalarının, logolarının veya ticari isimlerinin kullanımı için izin vermez
+* Kaynak koduna yapılan katkılar bu lisansın aynı şartları altında lisanslanmalıdır
+* Katkıda bulunanların isimlerinin bu yazılımdan türetilen ürünleri desteklemek veya tanıtmak için kullanılması özel önceden izin gerektirir
 
-1. **Lisans Ekleme**: 
-   - Kodla birlikte lisansın bir kopyası eklenmelidir
-   - Kolayca erişilebilir olmalıdır
-   - Orijinal formatta olmalıdır
+#### 4. Fikri Mülkiyet
 
-2. **Değişiklikleri Bildirme**: 
-   - Önemli değişiklikler bildirilmelidir
-   - Önemli değişiklikleri belgelendirin
-   - Değişiklik kaydı tutun
+Yazılım ve ilgili tüm belgeler telif hakkı yasaları ve uluslararası anlaşmalar tarafından korunmaktadır. **SA-MP Programming Community**, bu lisans tarafından açıkça verilmeyen tüm hakları, unvanları ve çıkarları elinde tutar.
 
-3. **Telif Hakkı Bildirimi**: 
-   - Tüm telif hakkı bildirimlerini koruyun
-   - Orijinal atıfları koruyun
-   - Tüm kopyalara bildirimleri ekleyin
+#### 5. Garanti Reddi ve Sorumluluk Sınırlaması
 
-4. **Değişiklikleri Belgelendirme**: 
-   - Yapılan tüm değişiklikleri belgeleyin
-   - Bir değişiklik günlüğü tutun
-   - Önemli değişiklikleri açıklayın
+YAZILIM "OLDUĞU GİBİ" SAĞLANIR, TİCARİ ELVERİŞLİLİK, BELİRLİ BİR AMACA UYGUNLUK VE İHLAL ETMEME GARANTİLERİ DAHİL ANCAK BUNLARLA SINIRLI OLMAMAK ÜZERE, AÇIK VEYA ZIMNİ HİÇBİR GARANTİ VERİLMEMEKTEDİR.
 
-### Yapamayacaklarınız ❌
+HİÇBİR DURUMDA YAZARLAR VEYA TELİF HAKKI SAHİPLERİ, YAZILIMIN KULLANIMI VEYA YAZILIM İLE İLGİLİ DİĞER İŞLEMLERDEN KAYNAKLANAN VEYA BUNLARLA BAĞLANTILI HERHANGİ BİR İDDİA, HASAR VEYA DİĞER YÜKÜMLÜLÜKLERDEN, SÖZLEŞME, HAKSIZ FİİL VEYA BAŞKA BİR ŞEKİLDE SORUMLU TUTULAMAZ.
 
-1. **Ticari Marka Kullanımı**: 
-   - Bu lisans marka kullanım hakları vermez
-   - İzin almadan isim ve logoları kullanamazsınız
-   - Markalar için ayrı izin gerekir
+---
 
-2. **Yazarları Sorumlu Tutma**: 
-   - Yazarlar hasarlardan sorumlu değildir
-   - Çalışma garantisi yoktur
-   - Kendi sorumluluğunuzda kullanın
+Apache Lisansı 2.0 hakkında detaylı bilgi için: http://www.apache.org/licenses/LICENSE-2.0

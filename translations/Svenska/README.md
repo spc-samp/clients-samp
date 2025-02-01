@@ -57,9 +57,12 @@ Detta repository innehåller källkoden för flera installatörer för Client SA
     - [Viktiga Observationer](#viktiga-observationer)
   - [Screenshots](#screenshots)
   - [Licens](#licens)
-    - [Vad du kan göra ✅](#vad-du-kan-göra-)
-    - [Vad du måste göra ⚠️](#vad-du-måste-göra-️)
-    - [Vad du inte kan göra ❌](#vad-du-inte-kan-göra-)
+    - [Användarvillkor](#användarvillkor)
+      - [1. Beviljade Tillstånd](#1-beviljade-tillstånd)
+      - [2. Obligatoriska Villkor](#2-obligatoriska-villkor)
+      - [3. Begränsningar](#3-begränsningar)
+      - [4. Immateriella Rättigheter](#4-immateriella-rättigheter)
+      - [5. Garantifriskrivning och Ansvarsbegränsning](#5-garantifriskrivning-och-ansvarsbegränsning)
 
 ## Översikt
 
@@ -627,77 +630,46 @@ Fel:
 
 ## Licens
 
-Copyright © SA-MP Programming Community
+Copyright © **SA-MP Programming Community**
 
-Licensed under the Apache License, Version 2.0 (the "License");
-you may not use this file except in compliance with the License.
-You may obtain a copy of the License at
+Denna programvara är licensierad under villkoren i Apache License, Version 2.0 ("Licensen"); du får inte använda denna programvara förutom i enlighet med Licensen. En kopia av Licensen kan erhållas på: [Apache License 2.0](http://www.apache.org/licenses/LICENSE-2.0)
 
-http://www.apache.org/licenses/LICENSE-2.0
+### Användarvillkor
 
-Unless required by applicable law or agreed to in writing, software
-distributed under the License is distributed on an "AS IS" BASIS,
-WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-See the License for the specific language governing permissions and
-limitations under the License.
+#### 1. Beviljade Tillstånd
 
-### Vad du kan göra ✅
+Denna licens ger, utan kostnad, varje person som erhåller en kopia av denna programvara och tillhörande dokumentationsfiler följande rättigheter:
 
-1. **Kommersiell användning**: 
-   - Du kan använda koden för kommersiella ändamål
-   - Du kan sälja produkter som använder denna kod
-   - Du kan integrera den i företagslösningar
+* Att använda, kopiera, modifiera och distribuera programvaran i alla medier eller format, för alla ändamål, kommersiella eller icke-kommersiella
+* Att slå samman, publicera, distribuera, underlicensiera och/eller sälja kopior av programvaran
+* Att tillåta personer för vilka programvaran tillhandahålls att göra detsamma
 
-2. **Modifiering**: 
-   - Du kan modifiera källkoden
-   - Du kan anpassa den efter dina behov
-   - Du kan skapa derivatverk
+#### 2. Obligatoriska Villkor
 
-3. **Distribution**: 
-   - Du kan distribuera programvaran
-   - Du kan dela dina modifieringar
-   - Du kan inkludera den i andra projekt
+Alla distributioner av programvaran eller härledda verk måste:
 
-4. **Privat användning**: 
-   - Du kan använda och modifiera koden privat
-   - Ingen skyldighet att göra det offentligt
-   - Du kan använda den i interna projekt
+* Inkludera en fullständig kopia av denna licens
+* Tydligt ange eventuella ändringar som gjorts i den ursprungliga källkoden
+* Bevara alla meddelanden om upphovsrätt, patent, varumärken och erkännanden
+* Tillhandahålla lämplig dokumentation av genomförda ändringar
+* Behålla licens- och garantimeddelandet i alla kopior
 
-5. **Patentbeviljande**: 
-   - Denna licens ger uttryckligen patenträttigheter
-   - Skydd mot patentanspråk från bidragsgivare
-   - Garanti för användning utan patentbekymmer
+#### 3. Begränsningar
 
-### Vad du måste göra ⚠️
+* Denna licens ger inte tillstånd att använda varumärken, logotyper eller handelsnamn tillhörande **SA-MP Programming Community**
+* Bidrag till källkoden måste licensieras under samma villkor som denna licens
+* Användning av bidragsgivares namn för att godkänna eller marknadsföra produkter som härletts från denna programvara kräver specifikt föregående tillstånd
 
-1. **Inkludera licens**: 
-   - En kopia av licensen måste inkluderas med koden
-   - Måste vara lättillgänglig
-   - Måste vara i originalformat
+#### 4. Immateriella Rättigheter
 
-2. **Deklarera ändringar**: 
-   - Betydande ändringar måste deklareras
-   - Dokumentera viktiga ändringar
-   - Håll en ändringslogg
+Programvaran och all tillhörande dokumentation skyddas av upphovsrättslagar och internationella fördrag. **SA-MP Programming Community** behåller alla rättigheter, titlar och intressen som inte uttryckligen beviljats genom denna licens.
 
-3. **Upphovsrättsmeddelande**: 
-   - Bevara alla upphovsrättsmeddelanden
-   - Behåll ursprungliga attributioner
-   - Inkludera meddelanden i alla kopior
+#### 5. Garantifriskrivning och Ansvarsbegränsning
 
-4. **Dokumentera ändringar**: 
-   - Dokumentera alla gjorda ändringar
-   - Håll en ändringslogg
-   - Förklara viktiga modifieringar
+PROGRAMVARAN TILLHANDAHÅLLS "I BEFINTLIGT SKICK", UTAN GARANTIER AV NÅGOT SLAG, UTTRYCKLIGA ELLER UNDERFÖRSTÅDDA, INKLUSIVE MEN INTE BEGRÄNSAT TILL GARANTIER OM SÄLJBARHET, LÄMPLIGHET FÖR ETT SÄRSKILT SYFTE OCH ICKE-INTRÅNG.
 
-### Vad du inte kan göra ❌
+UNDER INGA OMSTÄNDIGHETER SKA FÖRFATTARNA ELLER UPPHOVSRÄTTSINNEHAVARNA VARA ANSVARIGA FÖR NÅGRA ANSPRÅK, SKADOR ELLER ANDRA ANSVAR, VARE SIG I EN AVTALSHANDLING, SKADESTÅND ELLER PÅ ANNAT SÄTT, SOM UPPSTÅR FRÅN, UT ELLER I SAMBAND MED PROGRAMVARAN ELLER ANVÄNDNINGEN ELLER ANDRA HANTERINGAR I PROGRAMVARAN.
 
-1. **Använda varumärken**: 
-   - Denna licens ger inga rättigheter till varumärkesanvändning
-   - Du kan inte använda namn och logotyper utan tillstånd
-   - Kräver separat godkännande för varumärken
+---
 
-2. **Hålla författarna ansvariga**: 
-   - Författarna är inte ansvariga för skador
-   - Inga garantier för funktionalitet
-   - Använd på egen risk
+För detaljerad information om Apache License 2.0, besök: http://www.apache.org/licenses/LICENSE-2.0

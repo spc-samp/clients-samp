@@ -57,9 +57,12 @@ Dieses Repository enthält den Quellcode verschiedener Installer für den SA:MP-
     - [Wichtige Hinweise](#wichtige-hinweise)
   - [Screenshots](#screenshots)
   - [Lizenz](#lizenz)
-    - [Was Sie tun können ✅](#was-sie-tun-können-)
-    - [Was Sie tun müssen ⚠️](#was-sie-tun-müssen-️)
-    - [Was Sie nicht tun dürfen ❌](#was-sie-nicht-tun-dürfen-)
+    - [Nutzungsbedingungen](#nutzungsbedingungen)
+      - [1. Gewährte Berechtigungen](#1-gewährte-berechtigungen)
+      - [2. Verpflichtende Bedingungen](#2-verpflichtende-bedingungen)
+      - [3. Einschränkungen und Beschränkungen](#3-einschränkungen-und-beschränkungen)
+      - [4. Geistiges Eigentum](#4-geistiges-eigentum)
+      - [5. Gewährleistungsausschluss und Haftungsbeschränkung](#5-gewährleistungsausschluss-und-haftungsbeschränkung)
 
 ### Übersicht
 
@@ -627,77 +630,46 @@ Fehler:
 
 ## Lizenz
 
-Copyright © SA-MP Programming Community
+Copyright © **SA-MP Programming Community**
 
-Licensed under the Apache License, Version 2.0 (the "License");
-you may not use this file except in compliance with the License.
-You may obtain a copy of the License at
+Diese Software ist unter den Bedingungen der Apache-Lizenz Version 2.0 (die "Lizenz") lizenziert; Sie dürfen diese Software nur in Übereinstimmung mit der Lizenz verwenden. Eine Kopie der Lizenz erhalten Sie unter: [Apache License 2.0](http://www.apache.org/licenses/LICENSE-2.0)
 
-http://www.apache.org/licenses/LICENSE-2.0
+### Nutzungsbedingungen
 
-Unless required by applicable law or agreed to in writing, software
-distributed under the License is distributed on an "AS IS" BASIS,
-WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-See the License for the specific language governing permissions and
-limitations under the License.
+#### 1. Gewährte Berechtigungen
 
-### Was Sie tun können ✅
+Diese Lizenz gewährt jeder Person, die eine Kopie dieser Software und der zugehörigen Dokumentationsdateien erhält, kostenlos folgende Rechte:
 
-1. **Kommerzielle Nutzung**: 
-   - Sie können den Code für kommerzielle Zwecke nutzen
-   - Sie können Produkte verkaufen, die diesen Code verwenden
-   - Sie können ihn in Unternehmenslösungen integrieren
+* Die Software in jedem Medium oder Format für jeden Zweck, kommerziell oder nicht-kommerziell, zu nutzen, zu kopieren, zu modifizieren und zu verteilen
+* Die Software zu verschmelzen, zu veröffentlichen, zu verteilen, unterzulizenzieren und/oder Kopien zu verkaufen
+* Personen, denen die Software zur Verfügung gestellt wird, dies ebenfalls zu ermöglichen
 
-2. **Modifikation**: 
-   - Sie können den Quellcode modifizieren
-   - Sie können ihn an Ihre Bedürfnisse anpassen
-   - Sie können abgeleitete Werke erstellen
+#### 2. Verpflichtende Bedingungen
 
-3. **Distribution**: 
-   - Sie können die Software verteilen
-   - Sie können Ihre Änderungen teilen
-   - Sie können sie in andere Projekte einbinden
+Alle Verteilungen der Software oder abgeleiteten Werke müssen:
 
-4. **Private Nutzung**: 
-   - Sie können den Code privat nutzen und modifizieren
-   - Keine Verpflichtung zur Veröffentlichung
-   - Kann in internen Projekten verwendet werden
+* Eine vollständige Kopie dieser Lizenz enthalten
+* Alle Änderungen am ursprünglichen Quellcode deutlich kennzeichnen
+* Alle Urheberrechts-, Patent-, Marken- und Zuordnungshinweise bewahren
+* Angemessene Dokumentation der implementierten Änderungen bereitstellen
+* Den Lizenz- und Gewährleistungshinweis in allen Kopien beibehalten
 
-5. **Patentlizenz**: 
-   - Diese Lizenz gewährt ausdrücklich Patentrechte
-   - Schutz vor Patentansprüchen der Mitwirkenden
-   - Garantierte Nutzung ohne Patentsorgen
+#### 3. Einschränkungen und Beschränkungen
 
-### Was Sie tun müssen ⚠️
+* Diese Lizenz gewährt keine Erlaubnis zur Nutzung von Markenzeichen, Logos oder Handelsnamen der **SA-MP Programming Community**
+* Beiträge zum Quellcode müssen unter denselben Bedingungen dieser Lizenz lizenziert werden
+* Die Verwendung von Namen der Mitwirkenden zur Befürwortung oder Bewerbung von aus dieser Software abgeleiteten Produkten erfordert eine spezifische vorherige Genehmigung
 
-1. **Lizenz einbinden**: 
-   - Eine Kopie der Lizenz muss dem Code beigefügt werden
-   - Muss leicht zugänglich sein
-   - Muss im Originalformat vorliegen
+#### 4. Geistiges Eigentum
 
-2. **Änderungen angeben**: 
-   - Wesentliche Änderungen müssen angegeben werden
-   - Wichtige Änderungen dokumentieren
-   - Änderungsprotokoll führen
+Die Software und alle zugehörige Dokumentation sind durch Urheberrechtsgesetze und internationale Verträge geschützt. Die **SA-MP Programming Community** behält sich alle Rechte, Titel und Interessen vor, die nicht ausdrücklich durch diese Lizenz gewährt werden.
 
-3. **Urheberrechtsvermerk**: 
-   - Alle Urheberrechtsvermerke bewahren
-   - Ursprüngliche Zuschreibungen beibehalten
-   - Vermerke in allen Kopien einfügen
+#### 5. Gewährleistungsausschluss und Haftungsbeschränkung
 
-4. **Änderungen dokumentieren**: 
-   - Alle vorgenommenen Änderungen dokumentieren
-   - Changelog pflegen
-   - Wichtige Modifikationen erklären
+DIE SOFTWARE WIRD "WIE BESEHEN" OHNE JEGLICHE AUSDRÜCKLICHE ODER IMPLIZIERTE GEWÄHRLEISTUNG BEREITGESTELLT, EINSCHLIESSLICH, ABER NICHT BESCHRÄNKT AUF DIE GEWÄHRLEISTUNG DER MARKTFÄHIGKEIT, DER EIGNUNG FÜR EINEN BESTIMMTEN ZWECK UND DER NICHTVERLETZUNG VON RECHTEN DRITTER.
 
-### Was Sie nicht tun dürfen ❌
+IN KEINEM FALL HAFTEN DIE AUTOREN ODER URHEBERRECHTSINHABER FÜR ANSPRÜCHE, SCHÄDEN ODER ANDERE VERPFLICHTUNGEN, OB IN EINER VERTRAGS- ODER HAFTUNGSKLAGE, EINER UNERLAUBTEN HANDLUNG ODER ANDERWEITIG, DIE SICH AUS ODER IN VERBINDUNG MIT DER SOFTWARE ODER DER NUTZUNG ODER ANDEREN GESCHÄFTEN MIT DER SOFTWARE ERGEBEN.
 
-1. **Marken verwenden**: 
-   - Diese Lizenz gewährt keine Rechte zur Markennutzung
-   - Namen und Logos dürfen nicht ohne Erlaubnis verwendet werden
-   - Separate Genehmigung für Marken erforderlich
+---
 
-2. **Autoren haftbar machen**: 
-   - Die Autoren sind nicht für Schäden verantwortlich
-   - Keine Garantien für die Funktionalität
-   - Nutzung auf eigene Gefahr
+Für detaillierte Informationen zur Apache License 2.0 besuchen Sie: http://www.apache.org/licenses/LICENSE-2.0
